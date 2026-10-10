@@ -2,6 +2,7 @@
 // Copyright © 2021-2022 Adrian <adrian.eddy at gmail>
 
 use itertools::Itertools;
+use cpp::*;
 use qmetaobject::*;
 use nalgebra::Vector4;
 use std::sync::Arc;
@@ -226,6 +227,7 @@ pub struct Controller {
     get_urls_from_gyroflow_file: qt_method!(fn(&mut self, url: QUrl) -> QStringList),
     get_version_from_gyroflow_file: qt_method!(fn(&mut self, url: QUrl) -> u32),
     import_gyroflow_file: qt_method!(fn(&mut self, url: QUrl)),
+    import_queued_project: qt_method!(fn(&mut self, url: QUrl, queued_color: QString)),
     import_gyroflow_data: qt_method!(fn(&mut self, data: QString)),
     gyroflow_file_loaded: qt_signal!(obj: QJsonObject),
     export_gyroflow_file: qt_method!(fn(&self, url: QUrl, typ: QString, additional_data: QJsonObject)),
@@ -257,6 +259,14 @@ pub struct Controller {
     copy_to_clipboard: qt_method!(fn(&self, text: QString)),
 
     image_to_b64: qt_method!(fn(&self, img: QImage) -> QString),
+    prepare_preview_grade: qt_method!(fn(&self, exposure: f64, saturation: f64, warmth: f64, tint: f64) -> QString),
+    prepare_preview_tone: qt_method!(fn(&self, shadows: f64, highlights: f64) -> QString),
+    prepare_preview_lut: qt_method!(fn(&self, url: QUrl) -> QString),
+    ocio_runtime_enabled: qt_method!(fn(&self) -> bool),
+    prepare_preview_ocio: qt_method!(fn(&self, request_id: i32, lut_url: QUrl, brightness: f64, contrast: f64, shadows: f64, highlights: f64, exposure: f64, saturation: f64, warmth: f64, tint: f64)),
+    ocio_preview_ready: qt_signal!(result: QString),
+    create_ocio_preview_texture: qt_method!(fn(&self, parent: QJSValue, error_target: QJSValue, token: QString) -> QVariant),
+    release_ocio_preview_texture: qt_method!(fn(&self, item: QJSValue)),
     export_preset: qt_method!(fn(&self, url: QUrl, data: QJsonObject, save_type: QString, preset_name: QString) -> QString),
     export_full_metadata: qt_method!(fn(&self, url: QUrl, gyro_url: QUrl)),
     export_parsed_metadata: qt_method!(fn(&self, url: QUrl)),
@@ -320,6 +330,9 @@ pub struct Controller {
 
     ongoing_computations: BTreeSet<u64>,
     optical_analysis_running: bool,
+
+    #[cfg(feature = "ocio-runtime")]
+    ocio_preview_state: Arc<parking_lot::Mutex<crate::qt_gpu::ocio_preview::PreviewState>>,
 
     pub stabilizer: Arc<StabilizationManager>,
 }
@@ -1016,6 +1029,9 @@ impl Controller {
                 self.chart_data_changed();
 
                 vid.setSurfaceSize(new_w, new_h);
+                // Surface changes must synchronize the scene-graph texture,
+                // not only redraw the existing (possibly 32x32 placeholder) one.
+                (vid as &dyn qmetaobject::qtdeclarative::QQuickItem).update();
                 vid.setRotation(vid.getRotation());
                 // vid.setCurrentFrame(vid.currentFrame);
             }
@@ -1465,6 +1481,13 @@ impl Controller {
     }
 
     fn import_gyroflow_file(&mut self, url: QUrl) {
+        self.import_gyroflow_file_with_color(url, None);
+    }
+    /// Edit on a queued project job: the job's own colour travels with this import only
+    fn import_queued_project(&mut self, url: QUrl, queued_color: QString) {
+        self.import_gyroflow_file_with_color(url, serde_json::from_str(&queued_color.to_string()).ok());
+    }
+    fn import_gyroflow_file_with_color(&mut self, url: QUrl, queued_color: Option<serde_json::Value>) {
         let url = util::qurl_to_encoded(url);
         let progress = util::qt_queued_callback_mut(QPointer::from(self as &Self), move |this, progress: f64| {
             this.loading_gyro_in_progress = progress < 1.0;
@@ -1490,7 +1513,8 @@ impl Controller {
                 std::thread::sleep(std::time::Duration::from_millis(200));
             }
             cancel_flag.store(false, SeqCst);
-            finished(stab.import_gyroflow_file(&url, false, progress, cancel_flag, false));
+            let result = stab.import_gyroflow_file(&url, false, progress, cancel_flag, false);
+            finished(result.map(|obj| rendering::render_queue::with_queued_color(obj, queued_color.as_ref())));
         });
     }
     fn import_gyroflow_data(&mut self, data: QString) {
@@ -1723,12 +1747,12 @@ impl Controller {
             this.updates_available(QString::from(version), QString::from(changelog))
         });
         core::run_threaded(move || {
-            if let Ok(Ok(body)) = ureq::get("https://api.github.com/repos/gyroflow/gyroflow/releases").call().map(|x| x.into_body().read_to_string()) {
+            if let Ok(Ok(body)) = ureq::get("https://api.github.com/repos/rsmith4321/gyrograde/releases").call().map(|x| x.into_body().read_to_string()) {
                 if let Ok(v) = serde_json::from_str(&body) as serde_json::Result<serde_json::Value> {
                     if let Some(v) = v.as_array() {
                         for itm in v {
                             if let Some(obj) = itm.as_object() {
-                                let name = obj.get("name").and_then(|x| x.as_str());
+                                let name = obj.get("tag_name").and_then(|x| x.as_str()).filter(|x| x.starts_with("plus-v"));
                                 let body = obj.get("body").and_then(|x| x.as_str());
                                 let is_prerelease = obj.get("prerelease").and_then(|x| x.as_bool()).unwrap_or_default();
                                 if is_prerelease { continue; }
@@ -1736,7 +1760,7 @@ impl Controller {
                                 if let Some(name) = name {
                                     ::log::info!("Latest version: {}, current version: {}", name, util::get_version());
 
-                                    if let Ok(latest_version) = semver::Version::parse(name.trim_start_matches('v')) {
+                                    if let Ok(latest_version) = semver::Version::parse(name.trim_start_matches("plus-v")) {
                                         if let Ok(this_version) = semver::Version::parse(env!("CARGO_PKG_VERSION")) {
                                             if latest_version > this_version {
                                                 update((name.to_owned(), body.unwrap_or_default().to_owned()));
@@ -2660,6 +2684,123 @@ impl Controller {
 
     // Utilities
     fn get_username(&self) -> QString { let realname = whoami::realname().unwrap_or_default(); QString::from(if realname.is_empty() { whoami::username().unwrap_or_default() } else { realname }) }
+    fn ocio_runtime_enabled(&self) -> bool { cfg!(feature = "ocio-runtime") }
+    fn prepare_preview_ocio(&self, request_id: i32, lut_url: QUrl, brightness: f64, contrast: f64, shadows: f64, highlights: f64, exposure: f64, saturation: f64, warmth: f64, tint: f64) {
+        #[cfg(feature = "ocio-runtime")]
+        {
+            let settings = rendering::ocio_runtime::Settings { brightness, contrast, shadows, highlights, exposure, saturation, warmth, tint };
+            let state = self.ocio_preview_state.clone();
+            {
+                let mut guard = state.lock();
+                guard.generation = guard.generation.wrapping_add(1);
+                let generation = guard.generation;
+                guard.pending = Some((generation, request_id, settings, util::qurl_to_encoded(lut_url)));
+                if guard.running { return; }
+                guard.running = true;
+            }
+            let finished = util::qt_queued_callback(QPointer::from(self as &Self), |this, (generation, request_id, result): (u64, i32, Result<crate::qt_gpu::ocio_preview::PreparedPreview, String>)| {
+                if this.ocio_preview_state.lock().generation != generation { return; }
+                match result {
+                    Ok(preview) => {
+                        let data = serde_json::json!({ "request_id": request_id, "source": preview.source, "active": preview.active, "texture_token": preview.texture_token() });
+                        // Keep the RAII lease alive through the synchronous GUI
+                        // signal so QML can claim its native texture/asset item.
+                        this.ocio_preview_ready(QString::from(data.to_string()));
+                    },
+                    Err(error) => this.ocio_preview_ready(QString::from(serde_json::json!({ "request_id": request_id, "error": error }).to_string())),
+                }
+            });
+            // Coalesce requests onto one worker. A slow compile cannot create an
+            // unbounded queue of shader jobs, and obsolete completions are ignored.
+            core::run_threaded(move || loop {
+                let job = {
+                    let mut guard = state.lock();
+                    // The worker is the only remaining owner after controller
+                    // destruction. Discard its pending request instead of compiling.
+                    if Arc::strong_count(&state) == 1 { guard.pending = None; guard.running = false; break; }
+                    match guard.pending.take() {
+                        Some(job) => job,
+                        None => { guard.running = false; break; },
+                    }
+                };
+                let (generation, request_id, settings, lut_url) = job;
+                let result = crate::qt_gpu::ocio_preview::prepare(settings, &lut_url);
+                if state.lock().generation == generation { finished((generation, request_id, result)); }
+            });
+        }
+        #[cfg(not(feature = "ocio-runtime"))]
+        {
+            let _ = (lut_url, brightness, contrast, shadows, highlights, exposure, saturation, warmth, tint);
+            self.ocio_preview_ready(QString::from(serde_json::json!({ "request_id": request_id, "error": "The experimental OCIO runtime is not enabled." }).to_string()));
+        }
+    }
+    fn create_ocio_preview_texture(&self, parent: QJSValue, error_target: QJSValue, token: QString) -> QVariant {
+        #[cfg(feature = "ocio-runtime")]
+        { crate::qt_gpu::ocio_preview::create_texture(parent, error_target, token) }
+        #[cfg(not(feature = "ocio-runtime"))]
+        { let _ = (parent, error_target, token); QVariant::default() }
+    }
+    fn release_ocio_preview_texture(&self, item: QJSValue) {
+        #[cfg(feature = "ocio-runtime")]
+        crate::qt_gpu::ocio_preview::retire_texture(item);
+        #[cfg(not(feature = "ocio-runtime"))]
+        let _ = item;
+    }
+    fn prepare_preview_grade(&self, exposure: f64, saturation: f64, warmth: f64, tint: f64) -> QString {
+        let result = rendering::basic_grade::BasicGrade::new(rendering::basic_grade::BasicGradeSettings { exposure, saturation, warmth, tint });
+        QString::from(match result {
+            Ok(g) => serde_json::json!({ "gains": g.gains, "saturation": g.saturation, "active": g.is_active() }).to_string(),
+            Err(error) => serde_json::json!({ "error": error }).to_string(),
+        })
+    }
+    fn prepare_preview_tone(&self, shadows: f64, highlights: f64) -> QString {
+        let result = (|| -> Result<String, String> {
+            let tone = rendering::tone_curve::ToneCurve::new(shadows, highlights)?;
+            let Some(tone) = tone else { return Ok(String::new()); };
+            let data = tone.texture_bytes();
+            let ptr = data.as_ptr();
+            let png = cpp!(unsafe [ptr as "const unsigned char *"] -> QString as "QString" {
+                QImage image(ptr, 256, 33, 256 * 3, QImage::Format_RGB888);
+                QByteArray bytes;
+                QBuffer buffer(&bytes);
+                buffer.open(QIODevice::WriteOnly);
+                if (!image.save(&buffer, "PNG")) return QString();
+                return QStringLiteral("data:image/png;base64,") + QString::fromLatin1(bytes.toBase64());
+            });
+            if png.is_empty() { return Err("Could not prepare the video tone preview.".into()); }
+            Ok(png.to_string())
+        })();
+        QString::from(match result {
+            Ok(source) => serde_json::json!({ "source": source }).to_string(),
+            Err(error) => serde_json::json!({ "error": error }).to_string(),
+        })
+    }
+    fn prepare_preview_lut(&self, url: QUrl) -> QString {
+        let result = (|| -> Result<serde_json::Value, String> {
+            let mut file = filesystem::open_file(&util::qurl_to_encoded(url), false, false).map_err(|e| e.to_string())?;
+            let bytes = rendering::cube_lut::CubeLut::read_bounded(file.get_file())?;
+            let cube = rendering::cube_lut::CubeLut::parse(&bytes)?;
+            #[cfg(feature = "ocio-runtime")]
+            return Ok(serde_json::json!({ "size": cube.size }));
+            #[cfg(not(feature = "ocio-runtime"))]
+            {
+            let (width, height, data) = cube.atlas();
+            let width = width as i32; let height = height as i32;
+            let ptr = data.as_ptr();
+            let png = cpp!(unsafe [ptr as "const unsigned char *", width as "int", height as "int"] -> QString as "QString" {
+                QImage image(ptr, width, height, width * 3, QImage::Format_RGB888);
+                QByteArray bytes;
+                QBuffer buffer(&bytes);
+                buffer.open(QIODevice::WriteOnly);
+                if (!image.save(&buffer, "PNG")) return QString();
+                return QStringLiteral("data:image/png;base64,") + QString::fromLatin1(bytes.toBase64());
+            });
+            if png.is_empty() { return Err("Could not prepare the LUT preview texture.".into()); }
+            Ok(serde_json::json!({ "size": cube.size, "source": png.to_string() }))
+            }
+        })();
+        QString::from(match result { Ok(v) => v.to_string(), Err(e) => serde_json::json!({ "error": e }).to_string() })
+    }
     fn image_to_b64(&self, img: QImage) -> QString { util::image_to_b64(img) }
     fn copy_to_clipboard(&self, text: QString) { util::copy_to_clipboard(text) }
     fn data_folder(&self) -> QUrl { QUrl::from(QString::from(gyroflow_core::filesystem::path_to_url(gyroflow_core::settings::data_dir().to_str().unwrap_or_default()))) }
@@ -2689,6 +2830,7 @@ pub struct Filesystem {
     save_allowed_folders:     qt_method!(fn(&self)),
     restore_allowed_folders:  qt_method!(fn(&self)),
     get_next_file_url:        qt_method!(fn(&self, current_url: QUrl, index: i32) -> QUrl),
+    list_lut_files:           qt_method!(fn(&self, folder: QUrl) -> QString),
     url_opened:               qt_signal!(url: QUrl),
 }
 impl Filesystem {
@@ -2739,6 +2881,15 @@ impl Filesystem {
                 Err(e) => ::log::error!("Failed to move file to trash: {e:?}"),
             }
         }
+    }
+
+    fn list_lut_files(&self, folder: QUrl) -> QString {
+        let mut entries: Vec<_> = filesystem::list_folder(&util::qurl_to_encoded(folder))
+            .into_iter().filter(|(name, _)| name.to_ascii_lowercase().ends_with(".cube"))
+            .collect();
+        entries.sort_by(|a, b| human_sort::compare(&a.0, &b.0));
+        entries.truncate(512);
+        QString::from(serde_json::to_string(&entries).unwrap_or_else(|_| "[]".into()))
     }
 
     fn get_next_file_url(&self, current_url: QUrl, index: i32) -> QUrl {

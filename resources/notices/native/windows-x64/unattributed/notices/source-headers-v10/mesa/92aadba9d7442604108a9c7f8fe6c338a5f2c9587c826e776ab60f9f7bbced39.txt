@@ -1,0 +1,5 @@
+# Dutch translations for PACKAGE package.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#  <manfred.stienstra@dwerg.net>, 2005.
+#

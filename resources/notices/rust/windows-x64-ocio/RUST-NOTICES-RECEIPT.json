@@ -1,0 +1,52 @@
+{
+ "commit": "0b5ba007bfad303f88c143615a9d2baf384de4cb",
+ "targets": [
+  "x86_64-pc-windows-msvc"
+ ],
+ "no_default_features": true,
+ "features": [
+  "opencv",
+  "ocio-runtime"
+ ],
+ "resolved_features": {
+  "x86_64-pc-windows-msvc": {
+   "ffmpeg-next": [
+    "codec",
+    "filter",
+    "format",
+    "software-resampling",
+    "software-scaling"
+   ],
+   "ffmpeg-sys-next": [
+    "avcodec",
+    "avfilter",
+    "avformat",
+    "swresample",
+    "swscale"
+   ],
+   "gyroflow": [
+    "ocio-runtime",
+    "opencv"
+   ],
+   "gyroflow-core": [
+    "default",
+    "ocl",
+    "ocl-interop",
+    "opencv",
+    "use-opencl",
+    "use-opencv"
+   ]
+  }
+ },
+ "absent_checked": [
+  "breakpad-sys"
+ ],
+ "tool": "cargo-about 0.9.2",
+ "cargo_lock_sha256": "5acbf75ad08addadf56d0c6793b595632351592cb30c4af141f5b4dd060c33e7",
+ "cargo_toml_sha256": "6535261accde3014647feed912de18dc03f61b42224998abd9fa4db2c8c3651c",
+ "about_toml_sha256": "4894f658d1f223dc855cb30822653aac3e62bbf7ec4cf48eebda6a325d0a16e0",
+ "template_sha256": "2e5d5c0b6edc6ea4b7ed3ccacafa1e46c3b2eb8cfae3780165ab83e1b5e6f273",
+ "gate_sha256": "f28ba35158e93837126fba3bfc06fa924f7ce96c69bde21d8a1a1949ee18553c",
+ "supplement_sha256": "c3ef55bfa0001ef453cfa5ebd5863857dcdd6bceb1c65fb0148c17569a4f4edc",
+ "notices_txt_sha256": "8462c06460774dd7b7d78eff27f7f8830dc80792cece838b0164f504464ac845"
+}

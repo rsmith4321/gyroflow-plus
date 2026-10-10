@@ -1,0 +1,7 @@
+/**
+ * Many similar implementations exist. See for example libwsbm
+ * or the linux kernel include/atomic.h
+ *
+ * No copyright claimed on this file.
+ *
+ */

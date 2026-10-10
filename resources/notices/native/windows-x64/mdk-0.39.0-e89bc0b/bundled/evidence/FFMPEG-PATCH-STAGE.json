@@ -1,0 +1,1873 @@
+{
+  "schema": 1,
+  "status": "verified ordered patch-stage source; incomplete final build source",
+  "upstream_repositories": [
+    "https://github.com/FFmpeg/FFmpeg",
+    "https://github.com/wang-bin/avbuild"
+  ],
+  "archives": [
+    {
+      "name": "FFmpeg",
+      "commit": "590fb407b09bbf19aac0ea2fbd0ba16f93494601",
+      "sha256": "88426d6a00bbeb6be30107eac9a8e591cea5badaea077a5a4c8c7be2021303e6",
+      "bytes": 17390152
+    },
+    {
+      "name": "avbuild",
+      "commit": "d91e8a9505ea38746053a8986a3a438c7261bed7",
+      "sha256": "ab017b56a585e0e3e70767dc53f78cd8fb524ee49be6d47806ae21a9743bc98c",
+      "bytes": 618239
+    }
+  ],
+  "source_archive": {
+    "name": "MDK-FFmpeg-590fb407-patch-stage-source.tar.gz",
+    "bytes": 17361025,
+    "sha256": "885e81857d736048ca31c3995663572e80c729181b10de8fcbe3cc7dbdb42421"
+  },
+  "vendor_job_url": "https://github.com/wang-bin/avbuild/actions/runs/35299810794/job/105459864279",
+  "vendor_log_sha256": "4518dc9999f7a80452701eb2d6d0ea07483fb79231156d712998aba03de5a3c4",
+  "patch_tool": "patch 2.0-12u11-Apple",
+  "recorded_hunk_replay_exact": true,
+  "real_replay_source_bytes_equal": true,
+  "patch_attempts": 40,
+  "hunks": 169,
+  "source_files": 10714,
+  "changed_existing_source_files": 44,
+  "new_source_files": 5,
+  "diagnostic_files_excluded": 21,
+  "changed_files": [
+    {
+      "path": "compat/windows/makedef",
+      "bytes": 3760,
+      "sha256": "ffa7d0156b55a985fe075ea4b342d47bd54230cfdc0e0898f91aaf6328964ee6",
+      "original_sha256": "289c5eee3ff1cbf7f1d96cb7838a49b4cb3645780592ce78165cf9e418bc64f8"
+    },
+    {
+      "path": "compat/windows/mslink",
+      "bytes": 280,
+      "sha256": "7e99e7c7617f785737cafc22a39a4cea4d3a5883b1a8800967dec24f15777d09",
+      "original_sha256": "2bb2eec3579f9d21d55a2f5ff360bc0e0238ada4e01d9e533f5ceb7db42dcf4b"
+    },
+    {
+      "path": "configure",
+      "bytes": 308885,
+      "sha256": "a2b4cb256c2514b807ea28360c55f671c6e70f4e5eead05dbfa5cac40646f24d",
+      "original_sha256": "10cd7c275b2aed339ec5e72d984f4a538c95e0f9acc2f4d3328668c4039f844e"
+    },
+    {
+      "path": "ffbuild/common.mak",
+      "bytes": 7726,
+      "sha256": "48add61bd36550ca0d0c3997dff834d61d9fffe1c9c21ce391adb74350332a8c",
+      "original_sha256": "17d34069fa79a3fccf1b87b90fb7a687c2733544e95c49b60256b7f3d3bd87b5"
+    },
+    {
+      "path": "libavcodec/Makefile",
+      "bytes": 86253,
+      "sha256": "e508489869f83e80121f8f16ed16658ee68921cca23a06de4c43760362c5ad3a",
+      "original_sha256": "8432e8e5caf0f617af9674d8d3eeaa50853fcfbb134bbdc437ff56a089739e95"
+    },
+    {
+      "path": "libavcodec/allcodecs.c",
+      "bytes": 39896,
+      "sha256": "8699071efed745c6f94a49a9d058b3efed79ca6392ad9ae60086cd7b9bceb2da",
+      "original_sha256": "dd05377b05e5c3460c75b6c3dc935a0bd15ac9819ec96eba7d3d575bfdbbbff0"
+    },
+    {
+      "path": "libavcodec/avcodec.h",
+      "bytes": 110656,
+      "sha256": "611368255a3b6cd1dca1d0cf1e105678ca4af750131d58a6d10ba63e63df9d3a",
+      "original_sha256": "bb25f6590d93e65d1c303230a29d3adaf0def38e00068d9c0858ce03417ef472"
+    },
+    {
+      "path": "libavcodec/h264chroma.c",
+      "bytes": 2334,
+      "sha256": "ff26d5f52a145484f71cbe9f85f31d2dc92eb2a9e94f3fcba14f04a6e64b3b9f",
+      "original_sha256": "0c9608aa463c5a6ed0b8bb427a11a5c2c78df5d31a3ec960714d324de9a198ea"
+    },
+    {
+      "path": "libavcodec/h264dec.h",
+      "bytes": 22121,
+      "sha256": "6c0c2aa5012e8119f298289a39b7679af61e3b005ea9fad276086dd75256ac28",
+      "original_sha256": "a3ef8d04af90d1e3906419ee28983dc0a870aed5ec33ba7471951a67c9b50e84"
+    },
+    {
+      "path": "libavcodec/h264dsp.c",
+      "bytes": 6396,
+      "sha256": "54f37e139ff8eb7f661c7e310f04edd9ef2275976cd6be39f6ef626f3cd29344",
+      "original_sha256": "d4481e57e317b149aa2d6a5ba6a37f1a9be241f9cf3a5c2eb45274e4f90b0978"
+    },
+    {
+      "path": "libavcodec/h264idct.c",
+      "bytes": 1438,
+      "sha256": "c27ea0e678d75a17077374174ad1916b844125a8a171541a3c11603adcffd85b",
+      "original_sha256": "f9c2a5c05a821b8d2ff2c340028c72cf6235498c0643d3724e6c59f5cd9a1d84"
+    },
+    {
+      "path": "libavcodec/h264pred.c",
+      "bytes": 22576,
+      "sha256": "285fdc6014f0287456a2c26a30ccb0aa2295105765d0dac29c8497ea5bfbebce",
+      "original_sha256": "fcc8ad5264d823b3a21b35a11519c1eaf4f6d1d1c29aee45400940cd19964c9e"
+    },
+    {
+      "path": "libavcodec/h264qpel.c",
+      "bytes": 4244,
+      "sha256": "a5a8b4556bd71074233fbdd9b947c71832c9330efe5607d3b58e218c3d9e55dc",
+      "original_sha256": "f520b5d7c52a0b137927c0d77a67d9a96c5a6725314f7cc939f22169429f022d"
+    },
+    {
+      "path": "libavcodec/hevc/dsp.c",
+      "bytes": 16224,
+      "sha256": "2c63b642f9a3f7e4bceffc537c2013a4e4ecb86db1295cb186afcc3f164d7301",
+      "original_sha256": "af6aba392f82f537ade0d1879755207aff12e691aae2ef759aa8bb8976ca2985"
+    },
+    {
+      "path": "libavcodec/hevc/pred.c",
+      "bytes": 3104,
+      "sha256": "d431e5ca72ec13955def1458538c381405ca7ba42c9d71bea8d040c496ae8879",
+      "original_sha256": "1bbb93d03d395cc8a573be04f1b9a691a5f49b07ef82a72f61a281c7b2196599"
+    },
+    {
+      "path": "libavcodec/mediacodecdec_common.c",
+      "bytes": 41283,
+      "sha256": "6bddc3874928dfd730bfd438c9c5a4d63433c971bf279b6e4d55c06f09c93a60",
+      "original_sha256": "be4c92ebf2d3c3557b3e64591251b1837776c85a3d751ef5b470bc9fc893cced"
+    },
+    {
+      "path": "libavcodec/mmaldec.c",
+      "bytes": 29904,
+      "sha256": "d956a97e552f28c2db578d72fed689a563c2bdc2c6e8b13d89f3bb389dd9e21a",
+      "original_sha256": "8ac59079abe70f941a2ea485ec58da5db44623001d8efe120417c8e1f5f3ac2b"
+    },
+    {
+      "path": "libavcodec/nvenc.c",
+      "bytes": 122215,
+      "sha256": "6cc1940650c8c2bf6a8ad900eef84fd78ff892eb3ca16daf2c24165c269bbe17",
+      "original_sha256": "a807e240a6e0aa8ab1369bea8753c5de2043b002e75f40a33efb464ce4532527"
+    },
+    {
+      "path": "libavcodec/nvenc.h",
+      "bytes": 6933,
+      "sha256": "bfd4b4d32b9533ec39fa653a768b2f30bb0ef27e2d9adb38a07c7af41700e9c3",
+      "original_sha256": "ba2dcd8fe6f2eb12196fb24f89ba2c9e44e10256f91677e7fcb5fb5e5cb3f084"
+    },
+    {
+      "path": "libavcodec/nvenc_av1.c",
+      "bytes": 25617,
+      "sha256": "d92d87ebd75552f1976071a9585f6d62164f3c8d1b244b8da8f965b0a4bae54c",
+      "original_sha256": "0ad689a56c1ca19453e6d33da081fb822fdb2716d0a69883e3c84a20bf4a8a6c"
+    },
+    {
+      "path": "libavcodec/nvenc_h264.c",
+      "bytes": 25648,
+      "sha256": "ac1b70619a178e1bd2af1a465a344e42737234fd60b9b725ab6475166298392b",
+      "original_sha256": "6db726ee68e41dae73821777a4917798cc1be946b04efe1080863f82756af3b7"
+    },
+    {
+      "path": "libavcodec/nvenc_hevc.c",
+      "bytes": 25206,
+      "sha256": "98945912a67864de081b82ad13beb7a918dbf5da2901a15b6b0cf7eb27d4b5fc",
+      "original_sha256": "3caf11b3279dd9370aaaf03f260c87eb542609d472bddb68e7f4a33d611ea425"
+    },
+    {
+      "path": "libavcodec/options_table.h",
+      "bytes": 53913,
+      "sha256": "8bbe643d29cff0c243d9cfc9109bc7b0ca5d76b7946d85c511986077779b269d",
+      "original_sha256": "749ebb697f2f6e31bf4365a45456e88be11ca24e90529682e66a51fcfa6dfa8a"
+    },
+    {
+      "path": "libavcodec/videotoolbox.c",
+      "bytes": 51852,
+      "sha256": "0748d3e9e61800d016710a2bfc363606e545e3e89788b61cdd359628ed266d93",
+      "original_sha256": "353bc64d41f0f01d576ab6f0e3543dc85c679e04c8f714fccde42814fd006b6b"
+    },
+    {
+      "path": "libavcodec/x86/h264_intrapred_init.c",
+      "bytes": 14195,
+      "sha256": "901ba95d37cc2b77224df87c533debf938f2515d67eb0830127026a629a902e9",
+      "original_sha256": "9e5130a276b05f3c720858752fb2403de64d70404f91cdf37013eaf767eeb5e3"
+    },
+    {
+      "path": "libavcodec/x86/h264chroma_init.c",
+      "bytes": 4100,
+      "sha256": "4d459bac59ced46af8498b85df489d5f5974b38875f03c290e5d3ded2a44fbcb",
+      "original_sha256": "5c58b1795d3fa8a6b16f32d502947035986ff8e01a204c79712f6d5062ad6969"
+    },
+    {
+      "path": "libavcodec/x86/h264dsp_init.c",
+      "bytes": 15292,
+      "sha256": "24883413ca0547d4449d0ec7cf94434c02eb5d2e91a259aead0a03578755d400",
+      "original_sha256": "bc1d93430fc050a37a03a8746428a8ddff83cbf02216561ebc464816250a2cf7"
+    },
+    {
+      "path": "libavdevice/avfoundation.m",
+      "bytes": 59059,
+      "sha256": "9d869eb10b96b0c2beebbfc0ec003cfd9a9740ad601235f1ddb39fa24f416f7b",
+      "original_sha256": "bc10b1f18d85ce108ca5261da0508c326a13a0609d9795de374f75f7725ab604"
+    },
+    {
+      "path": "libavfilter/af_atempo.c",
+      "bytes": 38465,
+      "sha256": "fe245fb61e01bfb47264cd4e6f9ad2bdbb3f0e312d1a2070d24e90c8b5578b38",
+      "original_sha256": "96b40923aa3d12da6a8a0b093faf36f58c5b9f011a960acb6c6907fe67b7a1b0"
+    },
+    {
+      "path": "libavfilter/vf_yadif_videotoolbox.m",
+      "bytes": 15809,
+      "sha256": "53d6111203475c774a4e483ca6fd0bf6b9db1ed950dae5bb1b6657c6da756d43",
+      "original_sha256": "dad7ff78662f5e6eda23e36a8f9fb4c155e6606d2dd8178df81063a657fb8d3c"
+    },
+    {
+      "path": "libavformat/Makefile",
+      "bytes": 46103,
+      "sha256": "8533098cf310e7c0a90684e2a07155d027b3ab40fd14c9ce9f05db084ea12577",
+      "original_sha256": "4974d3040aabbec98070a6fc7ffd5456b1c93341d279fc4f7ea362eb31e7a075"
+    },
+    {
+      "path": "libavformat/hls.c",
+      "bytes": 117325,
+      "sha256": "bc65e255548978eabeac99569196f7ac6ed2f31761e53421928910708c4b7d96",
+      "original_sha256": "65ebf928221ea73aa3623e7227c9a5e5ea2e734f4784b08afe9fd75cc21676df"
+    },
+    {
+      "path": "libavformat/matroska.c",
+      "bytes": 5774,
+      "sha256": "82c249e86c4f8c6652010b3055f00442101f95e804e869a9a32ddcf5d5f0c2ee",
+      "original_sha256": "40eaeb64621cdc7cec3e42627fe81ad336ae8bf030bd5918e2b0c742972b7a34"
+    },
+    {
+      "path": "libavformat/matroskadec.c",
+      "bytes": 191241,
+      "sha256": "ce29a4f279be8a4f9e715396c6e089c8c4679090890e77904540d2d1867494fe",
+      "original_sha256": "1c4149b5c6f94fca754dcd8525581b02860dcf5a6f79eaf4c6038705401e2750"
+    },
+    {
+      "path": "libavformat/mpegts.c",
+      "bytes": 137339,
+      "sha256": "82f3661c44b4a3e71e2defa7250d358278ba0aadadf6829d383045d8687c6910",
+      "original_sha256": "6706b3e51c24c74e974de91d47aebfbfce731b574e735990690e6a32ac1d5b13"
+    },
+    {
+      "path": "libavformat/network.c",
+      "bytes": 18799,
+      "sha256": "2ab3480de8a98dde5cb5c0db1d172a1444296463b83bedeefeb99db0edd8e45c",
+      "original_sha256": "07488e69871c14d639652a18f6e1e89bf89520ac84b60c841ee651d6108a557f"
+    },
+    {
+      "path": "libavformat/tls.h",
+      "bytes": 6118,
+      "sha256": "f148119f1fbe4432feb6662ba1d6f6c76e6038352558e0d3333cadbb1ed0db35",
+      "original_sha256": "49a2cf5cc90d7c4ab2230fa5db5e94a078f3e1a48c74cc822fd7dae092059d96"
+    },
+    {
+      "path": "libavformat/tls_securetransport.c",
+      "bytes": 12816,
+      "sha256": "89366c48dca727698e22b7e63c28fd8d14db3f89c079c6309b66b219e8e50371",
+      "original_sha256": "89638b397786ba5e54ff5c1b544902be131efe1b657d752088ec6fcdb8216761"
+    },
+    {
+      "path": "libavutil/hwcontext_d3d11va.c",
+      "bytes": 26042,
+      "sha256": "0e030fe9eb8d31ddb6e880526f5b91ed699d52d42efd99d5f1d096c6edce1f2e",
+      "original_sha256": "696516f84b83ae07223163145b6273c239cb9fb50a4091e16b1318babc718a59"
+    },
+    {
+      "path": "libavutil/mem_internal.h",
+      "bytes": 4450,
+      "sha256": "3a335e51a4e38d2dff50bbfd5476b22806e3201f5beee782b68cdee0dd572e89",
+      "original_sha256": "cfa03ed880bba87fac53e899e109c0b3080831f8a007c436761c7a1ac35084d6"
+    },
+    {
+      "path": "libavutil/time.c",
+      "bytes": 2677,
+      "sha256": "faa0768b0e3b59084216202c1893c8d1a9632a9e673639e6b02b66f36ec72b20",
+      "original_sha256": "afb6b9bb5182ea615309c25d9fd530a032198cdb2c2c9da1f0c020ae11294d5f"
+    },
+    {
+      "path": "libavutil/timestamp.h",
+      "bytes": 2863,
+      "sha256": "a1a113e41ef622f2304290b03424cbaa009813fea53c82005c06ffbaf12c19bd",
+      "original_sha256": "dfd2e2071577f04ddc3cae200abd96ba0fb7d38f53359025af319d4b902f1947"
+    },
+    {
+      "path": "tests/ref/fate/filter-metadata-scdet",
+      "bytes": 967,
+      "sha256": "38b444e9de67229824916bf5da267636fa8d39a2ad85b811a65c76fdd06a7ec4",
+      "original_sha256": "1e33d760be69cbda4d1859590c331d7e5b9af9b3931526cf3c47a7501fd4f6a1"
+    },
+    {
+      "path": "tests/ref/fate/filter-metadata-silencedetect",
+      "bytes": 323,
+      "sha256": "01d6f3a3cbd1e64aa40173c93b56475a6da5f030759753bc4e5b14aeda61f2d6",
+      "original_sha256": "4168370c8dfc25a783557617a5520766254a1bd867daa9096f7215fd3e2566e4"
+    }
+  ],
+  "patches": [
+    {
+      "patch": "patches/master/0001-use-CreateMutexEx-instead-of-CreateMutex-to-fix-win8.patch",
+      "hunks": [
+        {
+          "file": "libavutil/hwcontext_d3d11va.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 43,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavutil/hwcontext_d3d11va.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 514,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0002-mmal-enable-0-copy-for-egl-interop.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 305,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 344,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0003-configure-fix-mmal-probing-in-cross-build.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 7401,
+          "fuzz": 0,
+          "offset": -95
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0004-videotoolbox-check-runtime-availability.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/videotoolbox.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 43,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/videotoolbox.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 749,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/videotoolbox.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 761,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/videotoolbox.c",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 913,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/videotoolbox.c",
+          "hunk": 5,
+          "status": "succeeded",
+          "position": 1010,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0005-mediacodec-check-whether-cropping-is-set-before-use.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/mediacodecdec_common.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 598,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0006-avcodec-add-AV_HWACCEL_FLAG_ALLOW_SOFTWARE.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/avcodec.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 2048,
+          "fuzz": 0,
+          "offset": 15
+        },
+        {
+          "file": "libavcodec/options_table.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 407,
+          "fuzz": 0,
+          "offset": 3
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0007-videotoolbox-allow-software-implementation.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/videotoolbox.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 851,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0008-h264-increase-MAX_SLICES-to-64.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/h264dec.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 56,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0009-mmal-add-vp8-mjpeg-wmv3.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 3655,
+          "fuzz": 0,
+          "offset": -16
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 3685,
+          "fuzz": 0,
+          "offset": -16
+        },
+        {
+          "file": "configure",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 3708,
+          "fuzz": 0,
+          "offset": -16
+        },
+        {
+          "file": "libavcodec/allcodecs.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 896,
+          "fuzz": 0,
+          "offset": 3
+        },
+        {
+          "file": "libavcodec/allcodecs.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 915,
+          "fuzz": 0,
+          "offset": 3
+        },
+        {
+          "file": "libavcodec/allcodecs.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 927,
+          "fuzz": 0,
+          "offset": 3
+        },
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 388,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 834,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 880,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0010-mmal-add-option-copy_frame-to-support-retrieving-sw-.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 72,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 149,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 653,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/mmaldec.c",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 865,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0011-videotoolbox-remove-opengl-compatibility-attribute.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/videotoolbox.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 825,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0012-configure-do-not-filter-libpath-for-msvc.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 5192,
+          "fuzz": 1,
+          "offset": -12
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0013-configure-enable-icf.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 7965,
+          "fuzz": 2,
+          "offset": -100
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0014-configure-suppor-static-build-via-clang-cl.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 6223,
+          "fuzz": 0,
+          "offset": -73
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0015-nvenc-use-runtime-api-version-to-work-with-old-drive.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 300,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 336,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 395,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 457,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 5,
+          "status": "succeeded",
+          "position": 856,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 6,
+          "status": "succeeded",
+          "position": 1719,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 7,
+          "status": "succeeded",
+          "position": 1747,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 8,
+          "status": "succeeded",
+          "position": 1924,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 9,
+          "status": "succeeded",
+          "position": 1940,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 10,
+          "status": "succeeded",
+          "position": 2028,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 11,
+          "status": "succeeded",
+          "position": 2060,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 12,
+          "status": "succeeded",
+          "position": 2286,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 13,
+          "status": "succeeded",
+          "position": 2365,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 14,
+          "status": "succeeded",
+          "position": 2385,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 15,
+          "status": "succeeded",
+          "position": 2644,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 16,
+          "status": "succeeded",
+          "position": 2870,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 17,
+          "status": "succeeded",
+          "position": 3042,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 170,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0016-nvenc-check-sdk-10.0-ptrs-at-runtime.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1737,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0017-lavfi-atempo-fix-large-tempo-4-crash-lower-min.patch",
+      "hunks": [
+        {
+          "file": "libavfilter/af_atempo.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 154,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavfilter/af_atempo.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 442,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0018-msvc-fix-long-argument-list-error-on-windows.patch",
+      "hunks": [
+        {
+          "file": "compat/windows/makedef",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 59,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "compat/windows/mslink",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0019-configure-rewrite-flags-from-pkg-config-for-msvc-in-.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 5195,
+          "fuzz": 0,
+          "offset": -12
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0020-win-enable-windres-for-small-and-msvc.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 6153,
+          "fuzz": 0,
+          "offset": -73
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 6203,
+          "fuzz": 0,
+          "offset": -73
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0021-configure-add-extra-windresflags.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 427,
+          "fuzz": 0,
+          "offset": 1
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 1034,
+          "fuzz": 0,
+          "offset": 6
+        },
+        {
+          "file": "configure",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 4697,
+          "fuzz": 0,
+          "offset": -6
+        },
+        {
+          "file": "configure",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 5518,
+          "fuzz": 0,
+          "offset": -73
+        },
+        {
+          "file": "configure",
+          "hunk": 5,
+          "status": "succeeded",
+          "position": 8542,
+          "fuzz": 0,
+          "offset": -138
+        },
+        {
+          "file": "ffbuild/common.mak",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 105,
+          "fuzz": 2,
+          "offset": 3
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0022-add-h264-max-bit-depth-to-disable-rarely-used-depths.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 451,
+          "fuzz": 0,
+          "offset": 1
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 2866,
+          "fuzz": 0,
+          "offset": -19
+        },
+        {
+          "file": "configure",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 4470,
+          "fuzz": 0,
+          "offset": -12
+        },
+        {
+          "file": "configure",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 8646,
+          "fuzz": 0,
+          "offset": -138
+        },
+        {
+          "file": "libavcodec/h264chroma.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 26,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264chroma.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 45,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264dsp.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 39,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264dsp.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 89,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264dsp.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 145,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264idct.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 31,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264pred.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 37,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264pred.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 546,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264qpel.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 28,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/h264qpel.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 97,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/x86/h264_intrapred_init.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 245,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/x86/h264_intrapred_init.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 307,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/x86/h264chroma_init.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 62,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/x86/h264chroma_init.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 88,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/x86/h264dsp_init.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 263,
+          "fuzz": 0,
+          "offset": -5
+        },
+        {
+          "file": "libavcodec/x86/h264dsp_init.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 341,
+          "fuzz": 0,
+          "offset": -5
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0023-wolfSSL-new-TLS-backend-patch.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 210,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 288,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 301,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 327,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 5,
+          "status": "succeeded",
+          "position": 337,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 6,
+          "status": "succeeded",
+          "position": 2154,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 7,
+          "status": "succeeded",
+          "position": 4094,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 8,
+          "status": "succeeded",
+          "position": 4130,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "configure",
+          "hunk": 9,
+          "status": "succeeded",
+          "position": 7214,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/Makefile",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 729,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/network.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 42,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/network.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 55,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/tls.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 125,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/tls_wolfssl.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0024-avformat-mpegts-index-only-keyframes-to-ensure-accur.patch",
+      "hunks": [
+        {
+          "file": "libavformat/mpegts.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 3800,
+          "fuzz": 0,
+          "offset": 9
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0025-windows-shared-static-libs-in-one-build.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 6217,
+          "fuzz": 0,
+          "offset": -73
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 6247,
+          "fuzz": 0,
+          "offset": -73
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0026-Revert-avutil-timestamp-change-precision-of-av_ts_ma.patch",
+      "hunks": [
+        {
+          "file": "libavutil/timestamp.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 73,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "tests/ref/fate/filter-metadata-scdet",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "tests/ref/fate/filter-metadata-silencedetect",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0027-hls-support-segments-pretend-to-be-gif-png.patch",
+      "hunks": [
+        {
+          "file": "libavformat/hls.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 238,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/hls.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 2503,
+          "fuzz": 0,
+          "offset": 1
+        },
+        {
+          "file": "libavformat/hls.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 3190,
+          "fuzz": 0,
+          "offset": 21
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0028-matroskadec-support-S_TEXT-WEBVTT.patch",
+      "hunks": [
+        {
+          "file": "libavformat/matroska.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 63,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/matroskadec.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 3892,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/matroskadec.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 3902,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/matroskadec.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 3939,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/matroskadec.c",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 3959,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/matroskadec.c",
+          "hunk": 5,
+          "status": "succeeded",
+          "position": 3974,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/matroskadec.c",
+          "hunk": 6,
+          "status": "succeeded",
+          "position": 4428,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0029-avutil-mem_internal-fix-clang-vcrt-build.patch",
+      "hunks": [
+        {
+          "file": "libavutil/mem_internal.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 24,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavutil/mem_internal.h",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 80,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0030-add-h265-bit-depths.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 454,
+          "fuzz": 0,
+          "offset": 1
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 2871,
+          "fuzz": 0,
+          "offset": -19
+        },
+        {
+          "file": "configure",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 4478,
+          "fuzz": 0,
+          "offset": -12
+        },
+        {
+          "file": "configure",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 8659,
+          "fuzz": 0,
+          "offset": -138
+        },
+        {
+          "file": "libavcodec/hevc/dsp.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 109,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/hevc/dsp.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 253,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/hevc/pred.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 24,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/hevc/pred.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 73,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0031-nvenc-support-api-version-12.0-api-option.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 310,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 349,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 1756,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 1984,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 5,
+          "status": "succeeded",
+          "position": 2105,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 6,
+          "status": "succeeded",
+          "position": 2335,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 7,
+          "status": "succeeded",
+          "position": 2697,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 8,
+          "status": "succeeded",
+          "position": 2928,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 9,
+          "status": "succeeded",
+          "position": 3102,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 222,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc_av1.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 26,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc_h264.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 26,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc_hevc.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 26,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0032-nvenc-support-all-versions-in-1-build.patch",
+      "hunks": [
+        {
+          "file": "libavcodec/Makefile",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 280,
+          "fuzz": 0,
+          "offset": -1
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 44,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 106,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 3,
+          "status": "succeeded",
+          "position": 388,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 4,
+          "status": "succeeded",
+          "position": 2104,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 5,
+          "status": "succeeded",
+          "position": 2193,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 6,
+          "status": "succeeded",
+          "position": 3269,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.c",
+          "hunk": 7,
+          "status": "succeeded",
+          "position": 3321,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.h",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 175,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc.h",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 278,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc_111.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc_120.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc_121.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavcodec/nvenc_dispatch.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 1,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0033-hls-allow-playlist-w-o-extension.patch",
+      "hunks": [
+        {
+          "file": "libavformat/hls.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 3140,
+          "fuzz": 0,
+          "offset": 21
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0034-apple-fix-build-for-low-target-version.patch",
+      "hunks": [
+        {
+          "file": "libavdevice/avfoundation.m",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 225,
+          "fuzz": 0,
+          "offset": 1
+        },
+        {
+          "file": "libavfilter/vf_yadif_videotoolbox.m",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 248,
+          "fuzz": 0,
+          "offset": 0
+        },
+        {
+          "file": "libavformat/tls_securetransport.c",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 166,
+          "fuzz": 0,
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "patch": "patches/master/0035-ffbuild-filter-out-showIncludes-for-windres.patch",
+      "hunks": [
+        {
+          "file": "ffbuild/common.mak",
+          "hunk": 1,
+          "status": "succeeded",
+          "position": 105,
+          "fuzz": 0,
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "patch": "patches/common/0001-add-h265-bit-depths.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "skipped"
+        },
+        {
+          "file": "configure",
+          "hunk": 2,
+          "status": "skipped"
+        },
+        {
+          "file": "configure",
+          "hunk": 3,
+          "status": "skipped"
+        },
+        {
+          "file": "configure",
+          "hunk": 4,
+          "status": "skipped"
+        },
+        {
+          "file": "libavcodec/hevc/dsp.c",
+          "hunk": 1,
+          "status": "skipped"
+        },
+        {
+          "file": "libavcodec/hevc/dsp.c",
+          "hunk": 2,
+          "status": "skipped"
+        },
+        {
+          "file": "libavcodec/hevc/pred.c",
+          "hunk": 1,
+          "status": "FAILED"
+        },
+        {
+          "file": "libavcodec/hevc/pred.c",
+          "hunk": 2,
+          "status": "FAILED"
+        }
+      ]
+    },
+    {
+      "patch": "patches/common/0001-add-spirv_compiler-to-avfilter_suggest.patch",
+      "hunks": [
+        {
+          "file": "configure",
+          "hunk": 1,
+          "status": "FAILED"
+        }
+      ]
+    },
+    {
+      "patch": "patches/common/0001-avfilter-vf_scale_d3d11-ensure-guids-are-defined.patch",
+      "hunks": [
+        {
+          "file": "libavfilter/vf_scale_d3d11.c",
+          "hunk": 1,
+          "status": "skipped"
+        }
+      ]
+    },
+    {
+      "patch": "patches/common/0001-lavfi-fix-undefined-ff_vk_shader_print-if-vulkan-fil.patch",
+      "hunks": [
+        {
+          "file": "libavfilter/Makefile",
+          "hunk": 1,
+          "status": "FAILED"
+        }
+      ]
+    },
+    {
+      "patch": "patches/common/0001-lavu-monotonic-av_gettime_relative-for-msvc.patch",
+      "hunks": [
+        {
+          "file": "libavutil/time.c",
+          "hunk": 1,
+          "status": "FAILED"
+        },
+        {
+          "file": "libavutil/time.c",
+          "hunk": 2,
+          "status": "succeeded",
+          "position": 85,
+          "fuzz": 2,
+          "offset": 9
+        }
+      ]
+    }
+  ],
+  "later_sed_conditional_configure_edits_reconstructed": false,
+  "binary_reproduced": false,
+  "complete_corresponding_source": false,
+  "public_release_approved": false,
+  "limits": [
+    "Installed Apple patch is not the vendor GNU patch binary; diagnostic line reporting differs.",
+    "Independent data-only replay validates source bytes using vendor-recorded hunk outcomes, offsets and fuzz.",
+    "Backup/reject files excluded; all original10709 files and5newsourcefiles included.",
+    "Later conditional patches, sed edits, configure output, build/generated files and full dependency closure are excluded.",
+    "Does not establish shipped DLL reproduction or complete corresponding source; current release requirements remain."
+  ],
+  "retained_delivery": {
+    "release_id": 408304995,
+    "draft": true,
+    "published_at": null,
+    "tag": "codex/ocio-source-prep-20261009",
+    "target": "de78d0da0fa54def28ac6ec08d015aec578d40f0",
+    "asset_count": 41,
+    "prior37assets_preserved": true,
+    "new_assets": [
+      {
+        "id": 626410600,
+        "name": "MDK-FFmpeg-590fb407-patch-stage-README.txt",
+        "bytes": 1172,
+        "sha256": "b1c3ebb3161fa38b7d37b02d2ee4ee6b2acb2be09c023c2b9be95243bb31650d"
+      },
+      {
+        "id": 626410615,
+        "name": "MDK-FFmpeg-590fb407-patch-stage-reviewed.json",
+        "bytes": 1804784,
+        "sha256": "a7dfeab3722384b24b1ef24e82ee2fccbf689afd55c01db9e2d37e98024da6ea"
+      },
+      {
+        "id": 626410635,
+        "name": "MDK-FFmpeg-590fb407-patch-stage-source.tar.gz",
+        "bytes": 17361025,
+        "sha256": "885e81857d736048ca31c3995663572e80c729181b10de8fcbe3cc7dbdb42421"
+      },
+      {
+        "id": 626410679,
+        "name": "MDK-FFmpeg-590fb407-patch-stage.sha256",
+        "bytes": 333,
+        "sha256": "4bf1289b2f2a627bcf8b723c321e78d85c3389f69755a7854b3c6836b8a72092"
+      }
+    ],
+    "complete_corresponding_source": false,
+    "public_release_approved": false
+  },
+  "review_asset_source_inventory_sha256": "e581dc66050ec6a34a71aa3d9628567c3699b509832ee88d33f5ad9daac5b28a",
+  "diagnostic_position_comparison": "Rejected: Apple and vendor GNU patch logs differ in reported line positions/offsets. No equality inferred from those strings.",
+  "independent_replay": "All 169 hunks were processed from the original source using vendor-recorded successes, offsets, fuzz, failures and skips, with exact application where no exception was recorded. All 10,714 source files equal the installed Apple patch result byte for byte. Explicit no-newline-at-EOF markers are preserved."
+}

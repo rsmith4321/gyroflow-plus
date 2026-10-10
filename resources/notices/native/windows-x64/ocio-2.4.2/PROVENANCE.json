@@ -1,0 +1,97 @@
+{
+ "component": "OpenColorIO",
+ "version": "2.4.2",
+ "staged": [
+  {
+   "name": "OpenColorIO_2_4.dll",
+   "bytes": 4625408,
+   "sha256": "787245b4d932531065b492ed3508971a66450213b94db734d8d93235dd3181e9"
+  }
+ ],
+ "notice_location": "Tracked in the repository and staged by _scripts/package_plus.py (copy_ocio_notices) as Notices/OpenColorIO-BSD-3-Clause.txt and Notices/OpenColorIO-third-party/. Not duplicated here.",
+ "pinned_public_source": "41bc192cd945454834f5a799fb722e6e2944b2c9",
+ "repo_paths": [
+  {
+   "path": "resources/color/OCIO-LICENSE.txt",
+   "bytes": 1485,
+   "sha256": "82a40c52065ee968aa62015735e84378ac11425db7a233e6a2dcd2c83fc24276"
+  },
+  {
+   "path": "resources/color/ocio-third-party/Imath-3.1.12-LICENSE.md",
+   "bytes": 1497,
+   "sha256": "c20236d3b39fd20eba8e3d1fb3b892a5483df2e7d8d61bf43f165d3fac22f601"
+  },
+  {
+   "path": "resources/color/ocio-third-party/README.md",
+   "bytes": 2601,
+   "sha256": "834e68ea64234a4e00297569de3928ffc1274587d8689f6a93d0721bafdc9f32"
+  },
+  {
+   "path": "resources/color/ocio-third-party/expat/COPYING",
+   "bytes": 1144,
+   "sha256": "122f2c27000472a201d337b9b31f7eb2b52d091b02857061a8880371612d9534"
+  },
+  {
+   "path": "resources/color/ocio-third-party/manifest.json",
+   "bytes": 7453,
+   "sha256": "523de6e75ec118aee22128b111f60669653b1ef7e959ec36bf503c1125626898"
+  },
+  {
+   "path": "resources/color/ocio-third-party/minizip-ng/LICENSE",
+   "bytes": 877,
+   "sha256": "675181c03fc1302a1c8554c00f7be9bb420c5dbc9dcc2013433cec144413de03"
+  },
+  {
+   "path": "resources/color/ocio-third-party/ocio-internal/cdl/FileFormatCDL-notice.txt",
+   "bytes": 1506,
+   "sha256": "ae7e09d2524f0bde84b632ad6d7b4fb99981255caec0be9fa16a6b4f3cf46578"
+  },
+  {
+   "path": "resources/color/ocio-third-party/ocio-internal/sampleicc/README.md",
+   "bytes": 872,
+   "sha256": "0f5c2635a201a686c938155884bd9db96c4ec0b12e099efc943dc29d454632ff"
+  },
+  {
+   "path": "resources/color/ocio-third-party/ocio-internal/sampleicc/src/include/icProfileHeader.h",
+   "bytes": 59478,
+   "sha256": "310bf0fea7a146b87a727731a42c709a7fb8d22dbeaaccd2b4edbc3cce0856e1"
+  },
+  {
+   "path": "resources/color/ocio-third-party/ocio-internal/sampleicc/src/include/iccProfileReader.h",
+   "bytes": 23371,
+   "sha256": "dd1b7f5519461cb31cd54e231872209e575c7d3249a5e193f749a53e5a2cba36"
+  },
+  {
+   "path": "resources/color/ocio-third-party/ocio-internal/xxHash/src/include/xxhash.h",
+   "bytes": 209646,
+   "sha256": "d4f2b91b547c79061649186721a6b331609f2bf8595485a21ea631c82ec3ef93"
+  },
+  {
+   "path": "resources/color/ocio-third-party/pystring/LICENSE",
+   "bytes": 1512,
+   "sha256": "7b565d49be50a0490b38ae69d22f1e93ce9449546a99a8a1efcaf0ae922b7442"
+  },
+  {
+   "path": "resources/color/ocio-third-party/sse2neon/LICENSE",
+   "bytes": 1083,
+   "sha256": "5c347d431a555ec6e5bc9720ceba2119570357dab5203372d469be9bcce374cc"
+  },
+  {
+   "path": "resources/color/ocio-third-party/yaml-cpp/LICENSE",
+   "bytes": 1061,
+   "sha256": "aa6fcc27be034e41e21dd832f9175bfe694a48491d9e14ff0fa278e19ad14f1b"
+  },
+  {
+   "path": "resources/color/ocio-third-party/zlib/LICENSE",
+   "bytes": 1002,
+   "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "ocio-build-receipt",
+   "class": "advisory",
+   "text": "The build receipt for OpenColorIO_2_4.dll is not in the supplied facts; the tracked OCIO notice manifest records the recipe and pins."
+  }
+ ]
+}

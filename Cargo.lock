@@ -1268,8 +1268,6 @@ dependencies = [
 [[package]]
 name = "ffmpeg-sys-next"
 version = "9.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9b939bf79dd5949412a4b81cfe21a07f48ea21b47fcbb5f57816c8c2de5ae30b"
 dependencies = [
  "bindgen",
  "cc",
@@ -1639,7 +1637,7 @@ dependencies = [
 
 [[package]]
 name = "gyroflow"
-version = "1.6.3"
+version = "1.0.1"
 dependencies = [
  "argh",
  "breakpad-sys",
@@ -1762,6 +1760,7 @@ dependencies = [
  "rand_xoshiro",
  "rayon",
  "regex",
+ "ring",
  "rs-sync",
  "rustfft",
  "sample-consensus",
@@ -3386,7 +3385,6 @@ dependencies = [
 [[package]]
 name = "qmetaobject_impl"
 version = "0.2.10"
-source = "git+https://github.com/AdrianEddy/qmetaobject-rs.git?rev=ff1e23d#ff1e23dcdd722a0c335bbd51f7dcfdb722384db2"
 dependencies = [
  "proc-macro2",
  "quote",

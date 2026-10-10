@@ -1,0 +1,15 @@
+Gyroflow Plus distribution acknowledgment
+
+This software uses the FreeType font engine, including FreeType code in
+MDK's libass.dll. The FreeType Project is credited for that code.
+
+For the FreeType 2.14.3 font-engine portion identified in this notice
+packet, Gyroflow Plus elects the FreeType License (FTL) option described
+in FreeType LICENSE.TXT. The original FTL, alternate GPLv2 text and
+FreeType license-selection document are retained under:
+  libass.dll/freetype-2.14.3-0a0221a1/
+
+Files with separate licenses keep those licenses, including the FreeType
+gzip module and contributed files described in LICENSE.TXT. This credit
+does not change those notices, the license of libass/FriBidi/HarfBuzz,
+source-delivery requirements, or the MDK provider terms.

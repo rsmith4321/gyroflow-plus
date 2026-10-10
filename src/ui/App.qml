@@ -57,6 +57,8 @@ Rectangle {
             syncHr  .parent = paramsTab.inner;
             stab    .parent = paramsTab.inner;
             stabHr  .parent = paramsTab.inner;
+            colorSettings.parent = paramsTab.inner;
+            colorHr.parent = paramsTab.inner;
             advanced.parent = paramsTab.inner;
             advancedHr.parent = paramsTab.inner;
             nlePlugins.parent = paramsTab.inner;
@@ -75,6 +77,8 @@ Rectangle {
             syncHr        .parent = rightPanel.col;
             stab          .parent = rightPanel.col;
             stabHr        .parent = rightPanel.col;
+            colorSettings .parent = rightPanel.col;
+            colorHr       .parent = rightPanel.col;
             exportSettings.parent = rightPanel.col;
             exportHr      .parent = rightPanel.col;
             advanced      .parent = rightPanel.col;
@@ -93,6 +97,7 @@ Rectangle {
     property alias sync: sync.item;
     property alias stab: stab.item;
     property alias exportSettings: exportSettings.item;
+    property alias colorSettings: colorSettings.item;
     property alias advanced: advanced.item;
     property alias renderBtn: renderBtn;
 
@@ -119,7 +124,7 @@ Rectangle {
         function onUrl_opened(url: url): void { pendingOpenFileOrg = ""; pendingOpenFileOrg = url; }
     }
     function onItemLoaded(): void {
-        if (window.vidInfo && window.stab && window.exportSettings && window.sync && window.motionData && pendingOpenFile.toString()) {
+        if (window.vidInfo && window.stab && window.exportSettings && window.colorSettings && window.sync && window.motionData && pendingOpenFile.toString()) {
             pendingFileLoadTimer.start();
         }
         tabs.updateHeights();
@@ -156,12 +161,46 @@ Rectangle {
 
                 Item {
                     width: parent.width;
-                    height: children[0].height * 1.5;
+                    height: children[0].height * 1.4;
                     Image {
-                        source: "qrc:/resources/logo" + (style === "dark"? "_white" : "_black") + ".svg"
+                        source: "qrc:/resources/gyrograde/wordmark" + (style === "dark"? "_white" : "_black") + ".svg";
                         sourceSize.width: Math.min(300 * dpiScale, parent.width * 0.9);
                         anchors.centerIn: parent;
                     }
+                }
+                BasicText {
+                    width: parent.width;
+                    text: qsTr("Stabilize · Color correct · Export");
+                    horizontalAlignment: Text.AlignHCenter;
+                    font.pixelSize: 11 * dpiScale;
+                    font.bold: true;
+                    color: styleAccentColor;
+                    wrapMode: Text.WordWrap;
+                    leftPadding: 12 * dpiScale;
+                    rightPadding: 12 * dpiScale;
+                    bottomPadding: 5 * dpiScale;
+                }
+                BasicText {
+                    width: parent.width;
+                    text: qsTr("Fine-tune your footage with LUTs and color correction.");
+                    horizontalAlignment: Text.AlignHCenter;
+                    wrapMode: Text.WordWrap;
+                    font.pixelSize: 10 * dpiScale;
+                    opacity: 0.7;
+                    leftPadding: 12 * dpiScale;
+                    rightPadding: 12 * dpiScale;
+                    bottomPadding: 4 * dpiScale;
+                }
+                BasicText {
+                    width: parent.width;
+                    text: qsTr("Based on %1").arg("<a href=\"https://gyroflow.xyz\">Gyroflow</a>");
+                    textFormat: Text.StyledText;
+                    horizontalAlignment: Text.AlignHCenter;
+                    font.pixelSize: 9 * dpiScale;
+                    opacity: 0.6;
+                    leftPadding: 12 * dpiScale;
+                    rightPadding: 12 * dpiScale;
+                    bottomPadding: 10 * dpiScale;
                 }
                 Hr { }
             }
@@ -509,6 +548,12 @@ Rectangle {
             Hr { id: syncHr; }
             ItemLoader { id: stab; sourceComponent: Component { Menu.Stabilization { } } }
             Hr { id: stabHr; }
+            ItemLoader {
+                id: colorSettings;
+                active: !!exportSettings.item;
+                sourceComponent: Component { Menu.ColorSettings { exportOptions: window.exportSettings; } }
+            }
+            Hr { id: colorHr; }
             ItemLoader { id: exportSettings; sourceComponent: Component { Menu.Export { showBtn: !window.isMobileLayout; } } }
             Hr { id: exportHr; visible: !isMobileLayout; }
             ItemLoader { id: advanced; sourceComponent: Component { Menu.Advanced { } } }
@@ -620,18 +665,7 @@ Rectangle {
             Qt.callLater(controller.recompute_threaded);
         }
         function openUpdatePage(): void {
-            if (Qt.platform.os == "android") {
-                Qt.openUrlExternally("https://play.google.com/store/apps/details?id=xyz.gyroflow");
-            } else if (Qt.platform.os == "ios") {
-                Qt.openUrlExternally("https://apps.apple.com/us/app/gyroflow/id6447994244");
-            } else if (Qt.platform.os == "osx" && isStorePackage) {
-                Qt.openUrlExternally("https://apps.apple.com/us/app/gyroflow/id6447994244");
-            } else if (Qt.platform.os == "windows" && isStorePackage) {
-                // https://apps.microsoft.com/store/detail/gyroflow/9NZG7T0JCG9H
-                Qt.openUrlExternally("ms-windows-store://pdp/?ProductId=9NZG7T0JCG9H");
-            } else {
-                Qt.openUrlExternally("https://github.com/gyroflow/gyroflow/releases");
-            }
+            Qt.openUrlExternally("https://github.com/rsmith4321/gyrograde/releases");
         }
         function onUpdates_available(version: string, changelog: string): void {
             const heading = "<p align=\"center\">" + qsTr("There's a newer version available: %1.").arg("<b>" + version + "</b>") + "</p>\n\n";
@@ -678,7 +712,8 @@ Rectangle {
     }
 
     Component.onCompleted: {
-        controller.check_updates();
+        // The App Store edition is updated by the App Store.
+        if (!isStorePackage) controller.check_updates();
 
         QT_TRANSLATE_NOOP("App", "An error occurred: %1");
         QT_TRANSLATE_NOOP("App", "Gyroflow file exported to %1.");

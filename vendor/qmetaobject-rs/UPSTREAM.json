@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/AdrianEddy/qmetaobject-rs.git",
+  "revision": "ff1e23dcdd722a0c335bbd51f7dcfdb722384db2",
+  "crate": "qmetaobject_impl",
+  "version": "0.2.10",
+  "original_sha256": {
+    "LICENSE": "7564ed93a1bbad139cebdfdf5e0540c3c30d3f2c22a1f5c744150fd90cb738b6",
+    "README.md": "4154ba3effcc07bd3d398666c9684ef907171a7ae7c43da7de8610462e43d328",
+    "qmetaobject_impl/Cargo.toml": "ef03eddfafb2fd42777c255bededf053a779f6c860646aca3c2b0f811ed754ea",
+    "qmetaobject_impl/src/lib.rs": "d35c3762694cad6b4624c66b1b928e7313e1e2d103f4f4dd45f0bb99fd66effe",
+    "qmetaobject_impl/src/qbjs.rs": "064a95860fdeef1ebd771e1e2eb657fcd1356416dff9878e6e55966e7ef86f15",
+    "qmetaobject_impl/src/qobject_impl.rs": "a61534009a1628f9c44ce7fbccbfc329aabe1a057e6eca7e6f4536f210114e1c",
+    "qmetaobject_impl/src/qrc_impl.rs": "9340a1d81c30673bcd1c1d170c4bd03429e6846adc2e4ac3d2c9aeb4132e566b",
+    "qmetaobject_impl/src/simplelistitem_impl.rs": "d811ecfe58cd8f1d4ab0ea8f72b22345aaef76eef85a138a1e81c22f19ea7a50"
+  },
+  "vendored_sha256": {
+    "LICENSE": "7564ed93a1bbad139cebdfdf5e0540c3c30d3f2c22a1f5c744150fd90cb738b6",
+    "README.md": "4154ba3effcc07bd3d398666c9684ef907171a7ae7c43da7de8610462e43d328",
+    "qmetaobject_impl/Cargo.toml": "ef03eddfafb2fd42777c255bededf053a779f6c860646aca3c2b0f811ed754ea",
+    "qmetaobject_impl/src/lib.rs": "d35c3762694cad6b4624c66b1b928e7313e1e2d103f4f4dd45f0bb99fd66effe",
+    "qmetaobject_impl/src/qbjs.rs": "064a95860fdeef1ebd771e1e2eb657fcd1356416dff9878e6e55966e7ef86f15",
+    "qmetaobject_impl/src/qobject_impl.rs": "9295065fdacea3892097909744a08a72b28fcbe7e24d69e248e9fb18f39b8ec9",
+    "qmetaobject_impl/src/qrc_impl.rs": "9340a1d81c30673bcd1c1d170c4bd03429e6846adc2e4ac3d2c9aeb4132e566b",
+    "qmetaobject_impl/src/simplelistitem_impl.rs": "d811ecfe58cd8f1d4ab0ea8f72b22345aaef76eef85a138a1e81c22f19ea7a50"
+  },
+  "modified_files": [
+    "qmetaobject_impl/src/qobject_impl.rs"
+  ],
+  "patch": "Replace null-reference field-offset calculation with std::mem::offset_of!; generated-code Rust floor 1.77; Gyroflow uses Rust2024 (1.85 or newer)."
+}

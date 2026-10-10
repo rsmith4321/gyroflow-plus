@@ -114,7 +114,7 @@ MenuItem {
                 root.loader = true;
                 if (Qt.platform.os == "osx" && isSandboxed) {
                     const folder = "/Library/Application Support/Adobe/Common/Plug-ins/7.0/MediaCore";
-                    messageBox(Modal.Info, qsTr("At the next prompt, click <b>\"Open\"</b> to grant access to the %1 folder in order for Gyroflow to install the plugin.").arg("<b>\"" + folder + "\"</b>"), [ { text: qsTr("Ok"), accent: true, clicked: () => {
+                    messageBox(Modal.Info, qsTr("At the next prompt, click <b>\"Open\"</b> to grant access to the %1 folder in order for GyroGrade to install the plugin.").arg("<b>\"" + folder + "\"</b>"), [ { text: qsTr("Ok"), accent: true, clicked: () => {
                         root.selectFolder("adobe", folder);
                     } } ]);
                 } else {
@@ -151,7 +151,7 @@ MenuItem {
                         tf.text = "sudo install -m 0755 -o $USER -d /Library/OFX/Plugins";
                         tf.width = mb.mainColumn.width;
                     } else {
-                        messageBox(Modal.Info, qsTr("At the next prompt, click <b>\"Open\"</b> to grant access to the %1 folder in order for Gyroflow to install the plugin.").arg("<b>\"" + folder + "\"</b>"), [ { text: qsTr("Ok"), accent: true, clicked: () => {
+                        messageBox(Modal.Info, qsTr("At the next prompt, click <b>\"Open\"</b> to grant access to the %1 folder in order for GyroGrade to install the plugin.").arg("<b>\"" + folder + "\"</b>"), [ { text: qsTr("Ok"), accent: true, clicked: () => {
                             root.selectFolder("openfx", folder);
                         } } ]);
                     }

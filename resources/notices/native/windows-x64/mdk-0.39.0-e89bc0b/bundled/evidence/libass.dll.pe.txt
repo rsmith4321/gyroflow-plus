@@ -1,0 +1,16 @@
+# libass.dll sha256 cb7b8f511ebc5c62dad517906a7b9280e9fcf69bd8215cdc59d0fca24c21b749 bytes 1766400
+libass.dll coff_timedatestamp 0x6abbb0e8 2026-09-29T12:36:56+00:00 linker 14.51
+libass.dll debug_type 13 timestamp 0x6abbb0e8
+libass.dll export-name libass.dll
+libass.dll import GDI32.dll
+libass.dll import USER32.dll
+libass.dll import KERNEL32.dll
+libass.dll import VCRUNTIME140.dll
+libass.dll import api-ms-win-crt-runtime-l1-1-0.dll
+libass.dll import api-ms-win-crt-stdio-l1-1-0.dll
+libass.dll import api-ms-win-crt-heap-l1-1-0.dll
+libass.dll import api-ms-win-crt-convert-l1-1-0.dll
+libass.dll import api-ms-win-crt-string-l1-1-0.dll
+libass.dll import api-ms-win-crt-math-l1-1-0.dll
+libass.dll import api-ms-win-crt-utility-l1-1-0.dll
+libass.dll import api-ms-win-crt-environment-l1-1-0.dll

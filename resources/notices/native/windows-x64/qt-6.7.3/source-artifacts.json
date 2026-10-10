@@ -1,0 +1,66 @@
+{
+  "schema": "gyroflow-plus/qt-source-artifacts/v1",
+  "qt_version": "6.7.3",
+  "provider_target": "msvc2019_64",
+  "source_status": "Official mirror commit archives retained and verified; public package delivery remains pending.",
+  "archives": [
+    {
+      "module": "qtbase",
+      "commit": "92b685784960eea6eb353688cf0edeb94d69c6cd",
+      "path": "qtbase-92b685784960eea6eb353688cf0edeb94d69c6cd.tar.gz",
+      "url": "https://codeload.github.com/qt/qtbase/tar.gz/92b685784960eea6eb353688cf0edeb94d69c6cd",
+      "bytes": 64344808,
+      "sha256": "5c93f82982c68d8066654837b7f7a7b34d73b493ba81952fbc2b82ba40e5bcb8",
+      "archive_root": "qtbase-92b685784960eea6eb353688cf0edeb94d69c6cd",
+      "extract_to": "qtbase"
+    },
+    {
+      "module": "qtdeclarative",
+      "commit": "34ffe0c15a9564fefcf01a738eb0bde370399959",
+      "path": "qtdeclarative-34ffe0c15a9564fefcf01a738eb0bde370399959.tar.gz",
+      "url": "https://codeload.github.com/qt/qtdeclarative/tar.gz/34ffe0c15a9564fefcf01a738eb0bde370399959",
+      "bytes": 38989556,
+      "sha256": "4a53613ca6b97199342f490f2b8fd93466996f985c8df755f14fd7f6781f4682",
+      "archive_root": "qtdeclarative-34ffe0c15a9564fefcf01a738eb0bde370399959",
+      "extract_to": "qtdeclarative"
+    },
+    {
+      "module": "qtsvg",
+      "commit": "10400f65367a093589a1a3ef366219250b7d8706",
+      "path": "qtsvg-10400f65367a093589a1a3ef366219250b7d8706.tar.gz",
+      "url": "https://codeload.github.com/qt/qtsvg/tar.gz/10400f65367a093589a1a3ef366219250b7d8706",
+      "bytes": 2050635,
+      "sha256": "af59beffaeac5eedd227734e583975332ee4ca1ee61275066e93277165a98db1",
+      "archive_root": "qtsvg-10400f65367a093589a1a3ef366219250b7d8706",
+      "extract_to": "qtsvg"
+    },
+    {
+      "module": "qtshadertools",
+      "commit": "0d1782b43e6262f8592bee5dbbe638d65c8e9dfd",
+      "path": "qtshadertools-0d1782b43e6262f8592bee5dbbe638d65c8e9dfd.tar.gz",
+      "url": "https://codeload.github.com/qt/qtshadertools/tar.gz/0d1782b43e6262f8592bee5dbbe638d65c8e9dfd",
+      "bytes": 1666516,
+      "sha256": "d9f775f97f8aff4ac444503e3344767362256509eb3f41111e82daf506ea7f67",
+      "archive_root": "qtshadertools-0d1782b43e6262f8592bee5dbbe638d65c8e9dfd",
+      "extract_to": "qtshadertools"
+    },
+    {
+      "module": "qtdeclarative-testsuites",
+      "commit": "a0efb7e1ab1cee24c387abe1897ff18fa116c17d",
+      "path": "qtdeclarative-testsuites-a0efb7e1ab1cee24c387abe1897ff18fa116c17d.tar.gz",
+      "url": "https://codeload.github.com/qt/qtdeclarative-testsuites/tar.gz/a0efb7e1ab1cee24c387abe1897ff18fa116c17d",
+      "bytes": 4214892,
+      "sha256": "e2f775565f228a624b3100025f1a59a710d8f31a9fcc589b41ca5979131b9a5c",
+      "archive_root": "qtdeclarative-testsuites-a0efb7e1ab1cee24c387abe1897ff18fa116c17d",
+      "extract_to": "qtdeclarative/tests/auto/qml/ecmascripttests/test262"
+    }
+  ],
+  "main_module_tags_verified": "v6.7.3 annotated tags resolve to the four listed commits",
+  "selected_notice_files_matched": 86,
+  "gitlink_coverage": "The sole main-module Git submodule is test262; its exact archive is included and contains no nested submodules.",
+  "limits": [
+    "This identifies source artifacts, not binary reproducibility or provider modifications.",
+    "Deliver the source bundle with any eventual package and verify provider/build provenance before closing the recorded source obligation.",
+    "No public binary release approval or written source offer."
+  ]
+}

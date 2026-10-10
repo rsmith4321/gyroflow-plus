@@ -1,0 +1,211 @@
+{
+ "component": "MDK SDK (wang-bin)",
+ "observed_runtime_version": "0.39.0 git e89bc0b",
+ "recorded_archive_sha256": "5620e05359f692f6d9ecabc6e49bf62adf4e061f568a18355210bfac70f716a5",
+ "recorded_archive_hash_source": "docs/WINDOWS-LUT-TESTING.md:122 at dd3e49c42ce8e469544774bd348803bf492e1f39",
+ "original_archive_filename": null,
+ "original_download_url": null,
+ "staged": [
+  {
+   "name": "mdk.dll",
+   "bytes": 2281472,
+   "sha256": "5d2e5151184dc137a1a0d29f28a6f20cb517164c4a1b5ce83203339b3a65630c"
+  },
+  {
+   "name": "mdk-braw.dll",
+   "bytes": 111616,
+   "sha256": "28493e1195e7a9f72d0718d1470100863f164e49d4bdc3fffdca5e50a0f2ef6a"
+  },
+  {
+   "name": "mdk-r3d.dll",
+   "bytes": 138752,
+   "sha256": "9783fe00285b3a37d6016dd1847c76a72196ba98cfba15d509b6ba22980749f9"
+  }
+ ],
+ "sdk_files_observed_not_staged": [
+  {
+   "name": "mdk.lib",
+   "bytes": 362394,
+   "sha256": "14a76b29a737c957a28ffc420e456a94cd0a5d3a0779f886f6e3e4c704111805"
+  },
+  {
+   "name": "mdk.pdb",
+   "bytes": 32108544,
+   "sha256": "3fce6d4b7ca8b5c1dd07edd9f62b4baf100d50304858a2a7b61925cac18f9878"
+  }
+ ],
+ "official_comparison": {
+  "official": {
+   "release": "github.com/wang-bin/mdk-sdk v0.39.0 mdk-sdk-windows-clang.7z",
+   "archive_sha256": "b4663245fa77ceb598455098594437712898a678dbec440202380c2064f54925",
+   "git": "eed59da",
+   "x64": {
+    "mdk.dll": [
+     2281472,
+     "709f5e5b5ccf1e52d87632eb1c91e082287309179c28d31bafa7d104f807c950"
+    ],
+    "mdk-braw.dll": [
+     111616,
+     "31ac9424890c375ecf82c319ead1f07ff4f7bfd52d9652215104a164648fd936"
+    ],
+    "mdk-r3d.dll": [
+     138752,
+     "d622b6939d8e8b20804787ca67ebeedb5bebe8e5873f911a79c138d734f2c6dd"
+    ],
+    "mdk.pdb": [
+     32108544,
+     "34ad83f96ba48d2e15cb0eafe4087ad508759514f0bff4226828e0f8e4d09205"
+    ],
+    "mdk.lib": [
+     362394,
+     "14a76b29a737c957a28ffc420e456a94cd0a5d3a0779f886f6e3e4c704111805"
+    ]
+   }
+  },
+  "nightly": {
+   "release": "SourceForge mdk-sdk nightly/mdk-sdk-windows-clang.7z (mutable; observed 2026-10-09)",
+   "archive_sha256": "97721c65469b166f6089ce3dbf3997e02c2614445357c2711d232a64f6a2cd64",
+   "git": "474d079",
+   "x64": {
+    "mdk.dll": [
+     2283520,
+     "fa65c1d8226fe0bce60a6275799d40b721df2d14f7ec4b9c50e2111f8486c2c1"
+    ],
+    "mdk-braw.dll": [
+     113152,
+     "e375f3e251f5668dac438226e60c5397bd6d21195cee6980e8cf8c11ef63e479"
+    ],
+    "mdk-r3d.dll": [
+     138752,
+     "32505550e33b49b430f285a5b52d89b3d709f72a89461ee188f763f933d341f1"
+    ],
+    "mdk.pdb": [
+     32120832,
+     "f607b0f190ec03a2d5e5d94ef6bb7b8914ce86a159554fcd6285b02e6d08d6aa"
+    ],
+    "mdk.lib": [
+     362394,
+     "14a76b29a737c957a28ffc420e456a94cd0a5d3a0779f886f6e3e4c704111805"
+    ]
+   }
+  },
+  "result": [
+   {
+    "file": "mdk.dll",
+    "staged_bytes": 2281472,
+    "staged_sha256": "5d2e5151184dc137a1a0d29f28a6f20cb517164c4a1b5ce83203339b3a65630c",
+    "official_v0.39.0_eed59da": "same size, different bytes",
+    "nightly_474d079": "different size"
+   },
+   {
+    "file": "mdk-braw.dll",
+    "staged_bytes": 111616,
+    "staged_sha256": "28493e1195e7a9f72d0718d1470100863f164e49d4bdc3fffdca5e50a0f2ef6a",
+    "official_v0.39.0_eed59da": "same size, different bytes",
+    "nightly_474d079": "different size"
+   },
+   {
+    "file": "mdk-r3d.dll",
+    "staged_bytes": 138752,
+    "staged_sha256": "9783fe00285b3a37d6016dd1847c76a72196ba98cfba15d509b6ba22980749f9",
+    "official_v0.39.0_eed59da": "same size, different bytes",
+    "nightly_474d079": "same size, different bytes"
+   },
+   {
+    "file": "mdk.lib",
+    "staged_bytes": 362394,
+    "staged_sha256": "14a76b29a737c957a28ffc420e456a94cd0a5d3a0779f886f6e3e4c704111805",
+    "official_v0.39.0_eed59da": "exact match",
+    "nightly_474d079": "exact match"
+   },
+   {
+    "file": "mdk.pdb",
+    "staged_bytes": 32108544,
+    "staged_sha256": "3fce6d4b7ca8b5c1dd07edd9f62b4baf100d50304858a2a7b61925cac18f9878",
+    "official_v0.39.0_eed59da": "same size, different bytes",
+    "nightly_474d079": "different size"
+   }
+  ],
+  "note": "mdk.lib is identical in the release and the nightly, so its match is not build identity. No official archive equals the recorded archive hash."
+ },
+ "notice_text": "README.md is the original installed SDK README; it carries the SDK copyright and terms lines. No other archive's text is substituted.",
+ "gaps": [
+  {
+   "id": "mdk-archive-origin",
+   "class": "advisory",
+   "text": "Original filename and download URL of archive 5620e05359f692f6d9ecabc6e49bf62adf4e061f568a18355210bfac70f716a5 remain unknown.",
+   "v4_gap": "mdk-1"
+  },
+  {
+   "id": "mdk-build-identity",
+   "class": "advisory",
+   "text": "Staged mdk.dll, mdk-braw.dll and mdk-r3d.dll (git e89bc0b) differ from the official v0.39.0 release (git eed59da) and the 2026-10-09 nightly (git 474d079); only mdk.lib matches and it is identical across both.",
+   "v4_gap": "mdk-3"
+  },
+  {
+   "id": "mdk-ffmpeg9-notice",
+   "class": "blocker",
+   "text": "Staged ffmpeg-9.dll (12207104 B) is the official MDK v0.39.0 bundled FFmpeg runtime: embedded strings report \"FFmpeg version git-2026-09-17-590fb40-avbuild\" and \"LGPL version 2.1 or later\" for every library, built with --enable-libvpl. No notice text for it or for libvpl is in the package.",
+   "needed_artifact": "FFmpeg LGPL-2.1 licence text for that build and the libvpl licence text, at the versions used by avbuild."
+  },
+  {
+   "id": "mdk-ffmpeg9-source",
+   "class": "obligation",
+   "text": "LGPL-2.1-or-later: the corresponding source for ffmpeg-9.dll (FFmpeg 590fb40 plus the avbuild configuration) must accompany or be offered with the package.",
+   "needed_artifact": "Source archive or written offer for FFmpeg 590fb40 as built by avbuild."
+  },
+  {
+   "id": "mdk-libass-notice",
+   "class": "blocker",
+   "text": "Staged libass.dll (1766400 B) is the official MDK v0.39.0 bundled libass; embedded strings name FreeType, FriBidi 1.0.13 and HarfBuzz. No notice text for libass or those libraries is in the package; versions other than FriBidi are not established.",
+   "needed_artifact": "Licence texts for libass and the FreeType, FriBidi and HarfBuzz versions built into it, from the MDK/avbuild provider or upstream at those versions."
+  }
+ ],
+ "installed_readme": {
+  "path": "README.md",
+  "bytes": 7106,
+  "sha256": "56c34a138306e25611c897714d61cc95b49c719767b1833650cf732c61585317",
+  "equals_official_v0.39.0_and_nightly_README": true,
+  "terms_lines": "README.md:109-110 (copyright line and free-use statement)",
+  "licence_files_checked_absent": [
+   "mdk/LICENSE",
+   "mdk/LICENSE.txt",
+   "mdk/LICENSE.md",
+   "mdk/COPYING"
+  ]
+ },
+ "bundled_runtime_dlls": {
+  "ffmpeg-9.dll": {
+   "bytes": 12207104,
+   "sha256": "9b9526af072d898875a24eb9825c7e1b19f1bd82a179ae406e25f1ed13e2b1cd",
+   "equals_official_members_in": [
+    "github-v0.39.0-mdk-sdk-windows-clang",
+    "github-v0.39.0-mdk-sdk-windows-vs2026",
+    "github-v0.39.0-mdk-sdk-windows-x64-vs2026"
+   ],
+   "embedded_strings": [
+    "FFmpeg version git-2026-09-17-590fb40-avbuild",
+    "libavcodec license: LGPL version 2.1 or later",
+    "libavdevice license: LGPL version 2.1 or later",
+    "libavfilter license: LGPL version 2.1 or later",
+    "libavformat license: LGPL version 2.1 or later",
+    "libavutil license: LGPL version 2.1 or later",
+    "libswresample license: LGPL version 2.1 or later",
+    "libswscale license: LGPL version 2.1 or later"
+   ]
+  },
+  "libass.dll": {
+   "bytes": 1766400,
+   "sha256": "cb7b8f511ebc5c62dad517906a7b9280e9fcf69bd8215cdc59d0fca24c21b749",
+   "equals_official_members_in": [
+    "github-v0.39.0-mdk-sdk-windows-clang",
+    "github-v0.39.0-mdk-sdk-windows-vs2026",
+    "github-v0.39.0-mdk-sdk-windows-x64-vs2026"
+   ],
+   "embedded_strings": [
+    "Raster: FreeType %d.%d.%d",
+    "Shaper: FriBidi 1.0.13 (SIMPLE) HarfBuzz-ng %s (COMPLEX)"
+   ]
+  }
+ }
+}

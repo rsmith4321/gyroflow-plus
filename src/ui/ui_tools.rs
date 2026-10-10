@@ -94,32 +94,34 @@ impl UITools {
             match self.is_dark {
                 true => {
                     engine.set_property("style"                 .into(), QString::from("dark").into());
-                    engine.set_property("styleBackground"       .into(), QString::from("#1e1e1e").into());
-                    engine.set_property("styleBackground2"      .into(), QString::from("#191919").into());
-                    engine.set_property("styleButtonColor"      .into(), QString::from("#282828").into());
-                    engine.set_property("styleTextColor"        .into(), QString::from("#ffffff").into());
-                    engine.set_property("styleAccentColor"      .into(), QString::from("#76baed").into());
-                    engine.set_property("styleVideoBorderColor" .into(), QString::from("#2b2b2b").into());
-                    engine.set_property("styleTextColorOnAccent".into(), QString::from("#000000").into());
-                    engine.set_property("styleHrColor"          .into(), QString::from("#2e2e2e").into());
-                    engine.set_property("stylePopupBorder"      .into(), QString::from("#0f0f0f").into());
-                    engine.set_property("styleSliderHandle"     .into(), QString::from("#454545").into());
-                    engine.set_property("styleSliderBackground" .into(), QString::from("#949494").into());
+                    engine.set_property("styleBackground"       .into(), QString::from("#171c22").into());
+                    engine.set_property("styleBackground2"      .into(), QString::from("#12171d").into());
+                    engine.set_property("styleButtonColor"      .into(), QString::from("#242c35").into());
+                    engine.set_property("styleTextColor"        .into(), QString::from("#edf3f6").into());
+                    engine.set_property("styleAccentColor"      .into(), QString::from("#65b7ed").into());
+                    engine.set_property("styleVideoBorderColor" .into(), QString::from("#303b46").into());
+                    engine.set_property("styleTextColorOnAccent".into(), QString::from("#0b1a26").into());
+                    engine.set_property("styleHrColor"          .into(), QString::from("#303b46").into());
+                    engine.set_property("stylePopupBorder"      .into(), QString::from("#10151a").into());
+                    engine.set_property("styleSliderHandle"     .into(), QString::from("#4e6171").into());
+                    engine.set_property("styleSliderAccentColor".into(), QString::from("#65b7ed").into());
+                    engine.set_property("styleSliderBackground" .into(), QString::from("#899ba8").into());
                     engine.set_property("styleHighlightColor"   .into(), QString::from("#10ffffff").into());
                 },
                 false => {
                     engine.set_property("style"                 .into(), QString::from("light").into());
-                    engine.set_property("styleBackground"       .into(), QString::from("#f9f9f9").into());
-                    engine.set_property("styleBackground2"      .into(), QString::from("#f3f3f3").into());
-                    engine.set_property("styleButtonColor"      .into(), QString::from("#fbfbfb").into());
-                    engine.set_property("styleTextColor"        .into(), QString::from("#111111").into());
-                    engine.set_property("styleAccentColor"      .into(), QString::from("#116cad").into());
-                    engine.set_property("styleVideoBorderColor" .into(), QString::from("#d5d5d5").into());
+                    engine.set_property("styleBackground"       .into(), QString::from("#f5f8f9").into());
+                    engine.set_property("styleBackground2"      .into(), QString::from("#edf2f4").into());
+                    engine.set_property("styleButtonColor"      .into(), QString::from("#ffffff").into());
+                    engine.set_property("styleTextColor"        .into(), QString::from("#182730").into());
+                    engine.set_property("styleAccentColor"      .into(), QString::from("#2879ae").into());
+                    engine.set_property("styleVideoBorderColor" .into(), QString::from("#cddade").into());
                     engine.set_property("styleTextColorOnAccent".into(), QString::from("#ffffff").into());
-                    engine.set_property("styleHrColor"          .into(), QString::from("#e5e5e5").into());
-                    engine.set_property("stylePopupBorder"      .into(), QString::from("#d5d5d5").into());
-                    engine.set_property("styleSliderHandle"     .into(), QString::from("#c2c2c2").into());
-                    engine.set_property("styleSliderBackground" .into(), QString::from("#cdcdcd").into());
+                    engine.set_property("styleHrColor"          .into(), QString::from("#dae3e7").into());
+                    engine.set_property("stylePopupBorder"      .into(), QString::from("#cddade").into());
+                    engine.set_property("styleSliderHandle"     .into(), QString::from("#b7c9cc").into());
+                    engine.set_property("styleSliderAccentColor".into(), QString::from("#2879ae").into());
+                    engine.set_property("styleSliderBackground" .into(), QString::from("#c8d7db").into());
                     engine.set_property("styleHighlightColor"   .into(), QString::from("#10000000").into());
                 }
             }
@@ -131,6 +133,10 @@ impl UITools {
         if let Some(engine) = self.engine_ptr {
             let engine = unsafe { &mut *(engine) };
             let mut dpi = cpp!(unsafe[] -> f64 as "double" { return QGuiApplication::primaryScreen()->logicalDotsPerInch() / 96.0; }) * dpi_scale;
+            // macOS reports 72 dpi, which made the UI three quarters size; use its points as-is.
+            if cfg!(target_os = "macos") {
+                dpi *= 96.0 / 72.0;
+            }
             if cfg!(any(target_os = "android", target_os = "ios")) {
                 dpi *= 1.2;
             }

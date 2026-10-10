@@ -1,0 +1,4 @@
+/*
+ * Copyright 2006-2008, Philippe Houdoin. All rights reserved.
+ * Distributed under the terms of the MIT License.
+ */

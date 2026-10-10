@@ -1,0 +1,61 @@
+{
+ "component": "Qt",
+ "version": "6.7.3",
+ "provider_target": "msvc2019_64",
+ "licence": "Qt modules: LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only (commercial option not used); third-party attributions per QT-THIRD-PARTY-ATTRIBUTIONS.txt",
+ "upstream_sources": {
+  "tag": "v6.7.3",
+  "host": "github.com/qt (official mirror)",
+  "qtbase": "92b685784960eea6eb353688cf0edeb94d69c6cd",
+  "qtdeclarative": "34ffe0c15a9564fefcf01a738eb0bde370399959",
+  "qtsvg": "10400f65367a093589a1a3ef366219250b7d8706",
+  "qtshadertools": "0d1782b43e6262f8592bee5dbbe638d65c8e9dfd"
+ },
+ "attributions": {
+  "selected": 46,
+  "excluded": 21,
+  "selection": "provenance/qt-attribution-selection.json"
+ },
+ "staged_identity_supplied": {
+  "files": 79,
+  "qt6_dlls": 30,
+  "plugins": 49,
+  "inventory": "MANIFEST.json staged_inventory (component \"qt\")",
+  "absent_from_accepted_stage": [
+   "Qt6QmlCore.dll",
+   "Qt6QuickEffects.dll"
+  ],
+  "qconfig_pri": {
+   "bytes": 816,
+   "sha256": "d012f6d64936ae4ec3aa7ef8e7dc3e03e790718393d7708c345acded757b9ce5",
+   "delivered": false
+  },
+  "provider_licence_files": "none in the 4 checked direct provider locations (owner facts)"
+ },
+ "gaps": [
+  {
+   "id": "qt-provider-licences",
+   "class": "advisory",
+   "text": "No Licenses/, SBOM or attribution files exist in the checked direct provider locations; notices come from the official v6.7.3 source texts already in qt-6.7.3/.",
+   "v4_gap": "qt-3"
+  },
+  {
+   "id": "qt-source-archives",
+   "class": "advisory",
+   "text": "The Qt 6.7.3 source archives on download.qt.io were unreachable here; the notice texts come from the official github.com/qt mirror at tag v6.7.3.",
+   "v4_gap": "qt-4"
+  },
+  {
+   "id": "qt-source",
+   "class": "obligation",
+   "text": "LGPL-3.0 Qt libraries are shipped as separate DLLs; the corresponding source for the shipped modules (qtbase, qtdeclarative, qtsvg, qtshadertools 6.7.3) must accompany or be offered with the package.",
+   "needed_artifact": "Qt 6.7.3 source archives for the shipped modules with hashes, or a written source offer.",
+   "v4_gap": "qt-5"
+  },
+  {
+   "id": "qt-qmltooling",
+   "class": "advisory",
+   "text": "11 QML debugging plugins (qmltooling/qmldbg_*.dll) are staged. They are Qt code under the module licences; shipping them is optional."
+  }
+ ]
+}

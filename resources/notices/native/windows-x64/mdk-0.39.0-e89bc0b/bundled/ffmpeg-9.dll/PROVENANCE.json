@@ -1,0 +1,87 @@
+{
+ "schema": "gyroflow-plus/mdk-bundled-provenance/v1",
+ "staged_identity": {
+  "path": "ffmpeg-9.dll",
+  "bytes": 12207104,
+  "sha256": "9b9526af072d898875a24eb9825c7e1b19f1bd82a179ae406e25f1ed13e2b1cd",
+  "equals_official_archive_member": "mdk-sdk/bin/x64/ffmpeg-9.dll",
+  "official_archives": [
+   "mdk-sdk-windows-vs2026.7z c3fe4c8f5b2ac6622040678a9d5665bfa54f6434a0bb2ac29c27295eeb9c9a96",
+   "mdk-sdk-windows-clang.7z b4663245fa77ceb598455098594437712898a678dbec440202380c2064f54925",
+   "mdk-sdk-windows-x64-vs2026.7z e492fd45f3a6828e44f75ce665708c9040abaa60602605437b71c95c714808e3"
+  ]
+ },
+ "components": [
+  {
+   "directory": "avbuild-d91e8a95",
+   "identity_basis": "inferred",
+   "basis": "ffmpeg-9.dll was linked 2026-09-18T02:49:06Z (COFF timestamp). avbuild d91e8a95 was committed 2026-09-18T02:31:47Z and is the only push between the FFmpeg commit time and the link time; it adds patches/master/0035 (windres for MSVC) and the DLL carries a VERSIONINFO resource. Not proven by an embedded id.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/avbuild-d91e8a95/LICENSE"
+   ]
+  },
+  {
+   "directory": "ffmpeg-590fb407",
+   "identity_basis": "exact",
+   "basis": "Embedded ProductVersion and every library banner read \"git-2026-09-17-590fb40-avbuild\"; 590fb40 resolves to exactly one FFmpeg master commit, 590fb407b09bbf19aac0ea2fbd0ba16f93494601, committed 2026-09-17T21:55:48Z.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/ffmpeg-590fb407/LICENSE.md",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/ffmpeg-590fb407/COPYING.LGPLv2.1"
+   ]
+  },
+  {
+   "directory": "libva_loader-7d814d7b",
+   "identity_basis": "inferred",
+   "basis": "va* loader symbols and \"VAAPI %s\" strings are present; devpkgs pins src/libva_loader at 7d814d7b (MIT) in the same window.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva_loader-7d814d7b/LICENSE"
+   ]
+  },
+  {
+   "directory": "libvpl-2.17.0-wang-bin-oneVPL-3a3ca48d",
+   "identity_basis": "inferred",
+   "basis": "The Intel VPL dispatcher (LoaderCtxVPL symbols, MSVCP140 import) is statically linked. avbuild builds against devpkgs dep-av; devpkgs pins src/oneVPL at 3a3ca48d (version.txt 2.17.0) in every commit from 2026-07-12 through 2026-09-29. The devpkgs run actually used is not visible here.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libvpl-2.17.0-wang-bin-oneVPL-3a3ca48d/LICENSE",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libvpl-2.17.0-wang-bin-oneVPL-3a3ca48d/third-party-programs.txt"
+   ]
+  },
+  {
+   "directory": "nv-codec-headers-eddcea9e",
+   "identity_basis": "inferred",
+   "basis": "NVENC/NVDEC dynlink strings are present. avbuild checks out nv-codec-headers master for FFmpeg master; eddcea9e (2026-07-15) is the last master commit before the 2026-09-18 link time. Licence lines are verbatim excerpts of each header.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_cuda.h.licence-lines-1-26.txt",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_cuviddec.h.licence-lines-1-26.txt",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_loader.h.licence-lines-1-26.txt",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_nvcuvid.h.licence-lines-1-26.txt",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/nvEncodeAPI.h.licence-lines-1-26.txt"
+   ],
+   "vendor_job_identity": {
+    "commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+    "basis": "Direct full vendor log checkout override at lines426-433; original15ee327 gitlink is not the final unsuffixed source.",
+    "evidence": "mdk-0.39.0-e89bc0b/bundled/evidence/FFMPEG-LATER-EDITS.json",
+    "staged_dll_identity_basis_unchanged": "inferred; Actions DLL defined payloads match, raw header/padding differ"
+   }
+  },
+  {
+   "directory": "vulkan-headers-1.4.337-450bd223",
+   "identity_basis": "inferred",
+   "basis": "Vulkan filters and hwcontext are compiled in; avbuild d91e8a95 pins tools/Vulkan-Headers at 450bd223 (Vulkan-Docs 1.4.337) and adds it to --extra-cflags.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSE.md",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSES/Apache-2.0.txt",
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSES/MIT.txt"
+   ]
+  },
+  {
+   "directory": "zlib-1.3.2-da607da7",
+   "identity_basis": "inferred",
+   "basis": "zlib inflate and z_errmsg strings are present and no zlib DLL is imported. devpkgs packs zs.lib from src/zlib at da607da7 (zlib 1.3.2) into dep-av/windows/<arch>/lib/zlib.lib; pin unchanged 2026-07-12 through 2026-09-29.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/zlib-1.3.2-da607da7/LICENSE"
+   ]
+  }
+ ],
+ "limits": "Identities come from embedded strings, PE metadata and public repository history read offline. Build-run logs were not reachable here; inferred items say so. Not a legal opinion."
+}

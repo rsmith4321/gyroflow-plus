@@ -1,0 +1,21 @@
+diff --git a/build.rs b/build.rs
+--- a/build.rs
++++ b/build.rs
+@@ -1290,14 +1290,14 @@
+             println!("cargo:rustc-link-lib=framework={f}");
+         }
+ 
+-        // Frameworks only available on macOS
++        // Frameworks only available on macOS. QTKit and VideoDecodeAcceleration are
++        // not requested: FFmpeg dropped its QTKit input device in 3.4 and its VDA
++        // hwaccel in 4.0, so no library this crate supports references them.
+         if target_os == "macos" {
+             let macos_frameworks = vec![
+                 "AppKit",
+                 "OpenCL",
+                 "OpenGL",
+-                "QTKit",
+-                "VideoDecodeAcceleration",
+             ];
+             for f in &macos_frameworks {
+                 println!("cargo:rustc-link-lib=framework={f}");

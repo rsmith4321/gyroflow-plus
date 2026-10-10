@@ -1,0 +1,169 @@
+{
+  "schema": "gyroflow-plus/libass-source-qualification/v1",
+  "scope": "Later hosted source-rebuild qualification and draft source-kit retention; historical input-collection records and shipped DLL identities remain unchanged.",
+  "qualification_run": {
+    "repository": "rsmith4321/gyroflow-plus",
+    "workflow": "Native libass retained source archives",
+    "trigger": "workflow_dispatch",
+    "branch": "codex/lut-preview-controls",
+    "source_commit": "4dd7582a606ec39ba7e9385f58b4195085ae6a4b",
+    "source_commit_url": "https://github.com/rsmith4321/gyroflow-plus/commit/4dd7582a606ec39ba7e9385f58b4195085ae6a4b",
+    "run_id": 38017550683,
+    "run_url": "https://github.com/rsmith4321/gyroflow-plus/actions/runs/38017550683",
+    "job_id": 114111143371,
+    "runner_image": "windows-2025 (GitHub-hosted)",
+    "toolchain_note": "The hosted MSVC installation is recorded in TOOLCHAIN.json; separate per-tool records contain paths and hashes for CMake, Ninja, Perl and the compiler. NASM is built from pinned source.",
+    "terminal_status": "success",
+    "result_status": "source build and relink passed",
+    "build_seconds": 151.016,
+    "build_ended_utc": "2026-10-10T02:38:54.581165Z",
+    "independent_acceptance_utc": "2026-10-10T02:40:04.722913+00:00",
+    "independent_inspector_sha256": "dd8bf38e36416860b5fffd2a481b910391b569ee115c4bc11b16e7a077521694",
+    "git_checkout_of_sources_used": false,
+    "network_isolation_enforced": false,
+    "workflow_artifacts": [
+      {
+        "id": 11657230100,
+        "name": "native-libass-archive-evidence-38017550683-1",
+        "size_in_bytes": 44722,
+        "digest": "sha256:b36c26d9c0e2f21f6b24090f2c2751ebf36807ba3d50f0932abeae9f8478b6ac",
+        "retention": "14 days; text evidence is preserved in the source kit"
+      },
+      {
+        "id": 11655799916,
+        "name": "retained-libass-source-38017550683-1",
+        "size_in_bytes": 61385964,
+        "digest": "sha256:25f19fc2317a9260a2b2a99cce29a33432ba292af2a4da5ef78e1fd00ec5d6b1",
+        "retention": "1 day; inter-job transfer of the retained source ZIP"
+      }
+    ]
+  },
+  "source_inputs": {
+    "retained_archive_count": 12,
+    "archive_manifest_url": "https://github.com/rsmith4321/gyroflow-plus/blob/4dd7582a606ec39ba7e9385f58b4195085ae6a4b/_scripts/notices/libass-source-archives.json",
+    "bundle": {
+      "asset": "libass-retained-source-archives-v18.zip",
+      "draft_release_id": 408304995,
+      "tag": "codex/ocio-source-prep-20261009",
+      "bytes": 62447389,
+      "sha256": "8cdbf56eb72add8f592bccd9dfc93a39395d51e4bc91c77f67d6781a5e8ea2e5"
+    },
+    "git_checkout_of_sources_used": false
+  },
+  "checks": {
+    "successful_commands": 14,
+    "public_logs_hashed": 13,
+    "private_environment_capture_excluded": true,
+    "libass_build_steps": 187,
+    "assembly_objects": 7,
+    "libass_object_inputs": 34,
+    "unique_static_dependencies": 3,
+    "ordered_static_libraries": [
+      "FriBidi",
+      "FreeType",
+      "HarfBuzz",
+      "FreeType"
+    ],
+    "exports_before_and_after_relink": 50,
+    "export_names_match_pinned_libass_sym": true,
+    "initial_and_relink_export_rows_identical": true,
+    "retained_object_static_library_hash_records": 181,
+    "retained_hashes_unchanged_by_runner": true,
+    "first_dll_sha256": "d5b7a67b01c374ced6ee73dbcc9e4e22271ed363c384d89fd229ea85d868350a",
+    "relinked_dll_sha256": "1da759fde69fc9f224174480615fc5595ee7144a3602c4840f7b24ee3e02b1d5",
+    "fribidi_outputs_match_reference_run": 38014071478,
+    "generated_fribidi_outputs": [
+      {
+        "name": "fribidi-unicode-version.h",
+        "generator": "gen-unicode-version",
+        "bytes": 340,
+        "sha256": "32dccbe9126bfe31ed973183487a02d57107fa198272276a64f4c829249684b1"
+      },
+      {
+        "name": "bidi-type.tab.i",
+        "generator": "gen-bidi-type-tab",
+        "bytes": 296102,
+        "sha256": "ee650572b8e453f1e93d5a0bffcb173c1e91494bd71aa17cf4a26d0f94b5c52a"
+      },
+      {
+        "name": "joining-type.tab.i",
+        "generator": "gen-joining-type-tab",
+        "bytes": 201907,
+        "sha256": "c7eceea96102f72597a51235eb131d09c368de0459748ff2794ce356b94cb09e"
+      },
+      {
+        "name": "arabic-shaping.tab.i",
+        "generator": "gen-arabic-shaping-tab",
+        "bytes": 6948,
+        "sha256": "b943ee51712f66a94fbbeee6c4df4b94510d8ea293202a4e487c185686b4ecd2"
+      },
+      {
+        "name": "mirroring.tab.i",
+        "generator": "gen-mirroring-tab",
+        "bytes": 84046,
+        "sha256": "8830511f527f6928427216c1850947295ce33433f6210c7ac72c01ecbd3d780c"
+      },
+      {
+        "name": "brackets.tab.i",
+        "generator": "gen-brackets-tab",
+        "bytes": 39816,
+        "sha256": "b4870d470c276b42fc058c9ce301d877034adf5bd33d9968a8caebe0752c592e"
+      },
+      {
+        "name": "brackets-type.tab.i",
+        "generator": "gen-brackets-type-tab",
+        "bytes": 23013,
+        "sha256": "4954ebd99fb8ba59835cd26e109df820f5c01133e2d697608f7f3cc4849d789b"
+      }
+    ]
+  },
+  "retained_source_kit": {
+    "file": "Gyroflow-Plus-libass-source-kit-6f17b323e32d.zip",
+    "bytes": 63264030,
+    "sha256": "154d2e09f724744168554775a140a20a353649f22053b1c91318414e9c9f1b8f",
+    "kit_source_commit": "6f17b323e32d0e49386941120c2d034a31d101bf",
+    "draft_release_id": 408304995,
+    "tag": "codex/ocio-source-prep-20261009",
+    "asset_id": 626832350,
+    "uploaded_to_draft": true,
+    "published_at": null,
+    "public_download_claimed": false,
+    "members": {
+      "libass-retained-source-archives-v18.zip": "the retained source bundle described above, unchanged",
+      "libass-build-glue.tar": "git archive from the kit commit containing exactly 9 files: the build script, archive manifest, two test files, manual workflow, LICENSE, repository README.md, acceptance documentation and the source-kit instructions",
+      "libass-qualification-evidence.tar": "the 28 original JSON and log evidence files from run 38017550683, plus root acceptance; no binary products or private capture",
+      "SOURCE-KIT-MANIFEST.json": "sizes, SHA-256 values and file maps for the three payload members, the kit commit, the draft and tag, and the qualification identities; the outer ZIP hash covers it"
+    },
+    "glue_file_count": 9,
+    "original_evidence_file_count": 28,
+    "root_acceptance_included": true,
+    "qualified_recipe_byte_identical": true
+  },
+  "verification_basis": {
+    "runner_asserted": "The hosted runner checked that all 181 retained object/static-library hashes stayed unchanged during relinking and that seven generated FriBidi output records matched the pinned archive manifest. The two candidate DLL hashes and generated-output hashes are runner-reported; root did not independently rehash absent product bytes.",
+    "root_independently_checked": "Root checked the 13 hashed public logs, JSON evidence, source pins, recipe diff and counts with an independent inspector. Root also compared all seven reported FriBidi output records with BUILD-PROOF.json from reference run 38014071478; names, sizes and hashes match.",
+    "root_did_not_rehash": "Binary products and generated table bytes are absent from the text-only evidence. Root therefore did not rehash them."
+  },
+  "shipped_vendor_binary": {
+    "file": "libass.dll",
+    "sha256": "cb7b8f511ebc5c62dad517906a7b9280e9fcf69bd8215cdc59d0fca24c21b749",
+    "is_rebuilt_candidate": false,
+    "replaced": false,
+    "note": "The raw vendor DLL stays the shipped identity. Neither rebuilt candidate DLL in checks is this file, is shown to match it, or was installed in its place."
+  },
+  "remaining": {
+    "obligation": "mdk-libass-fribidi-source",
+    "status": "open",
+    "class": "obligation",
+    "public_source_delivery": "Prepared source kit is retained on an unpublished draft. Public delivery alongside the package and the remaining corresponding-source/provider checks are not established.",
+    "complete_corresponding_source": false,
+    "public_release_approved": false
+  },
+  "limits": [
+    "Archive-only source acquisition was qualified; the runner still had network access.",
+    "The hosted toolchain and generated metadata are not shown to match the vendor build.",
+    "Rebuild and relink DLL hashes differ; no deterministic or vendor-identical binary claim.",
+    "Text evidence is retained in the source kit; root checked logs and runtime assertions, not absent binary/table bytes.",
+    "This record changes no app binary, installed package, runtime default, native GUI acceptance or release approval."
+  ]
+}

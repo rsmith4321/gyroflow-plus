@@ -1,0 +1,4 @@
+# Keep vendored bytes exactly as verified (no line-ending conversion on checkout).
+* -text
+# Unified diffs prefix empty context lines with a space; retain the exact patch.
+ffmpeg-sys-next-9.0.0.patch whitespace=-blank-at-eol

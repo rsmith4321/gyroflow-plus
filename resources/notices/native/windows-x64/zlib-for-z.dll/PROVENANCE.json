@@ -1,0 +1,47 @@
+{
+ "component": "zlib (z.dll)",
+ "staged": [
+  {
+   "name": "z.dll",
+   "bytes": 91648,
+   "sha256": "756f80aae08dea8fad0322f76d2a6c2a1a7cdb02ba446bef6f700346bde46dae"
+  }
+ ],
+ "installed_package": {
+  "name": "zlib",
+  "version": "1.3.2",
+  "port_version": 2,
+  "triplet": "x64-windows",
+  "abi": "f06c7de59b5fb016d0340094ad5bff204a74ccbb51bc3136371e801da6b45788",
+  "spdx_license_concluded": "Zlib",
+  "source": "git+https://github.com/madler/zlib@v1.3.2",
+  "files": {
+   "copyright": {
+    "bytes": 1002,
+    "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+   },
+   "vcpkg.spdx.json": {
+    "bytes": 16548,
+    "sha256": "2bcb842547505868472b0488c2a2d4cdabc0b8a419702e5fa3d0d1cf90d28e51"
+   },
+   "vcpkg-spdx-resources.json": {
+    "bytes": 508,
+    "sha256": "218690b327af2e792c6a5bb271ce93a4c128cf8143edfef105e40b4e84d7431d"
+   },
+   "vcpkg_abi_info.txt": {
+    "bytes": 1442,
+    "sha256": "f06c7de59b5fb016d0340094ad5bff204a74ccbb51bc3136371e801da6b45788"
+   }
+  }
+ },
+ "installed_copyright_equals_upstream_LICENSE": true,
+ "licence_text_source": "LICENSE: github.com/madler/zlib tag v1.3.2 = da607da739fa6047df13e66a2af6b8bec7c2a498",
+ "gaps": [
+  {
+   "id": "zlib-byte-link",
+   "class": "advisory",
+   "text": "z.dll (91648 B, 756f80aa...) is attributed to the installed zlib by the owner brief; the facts carry no installed-bin hash to tie the bytes. The licence text is the same either way.",
+   "v4_gap": "zlib-1"
+  }
+ ]
+}

@@ -4,6 +4,7 @@
 use qmetaobject::*;
 
 use crate::{ core, rendering, util };
+use super::queued_color;
 use crate::core::StabilizationManager;
 use core::filesystem;
 use core::stabilization_params::ReadoutDirection;
@@ -38,6 +39,21 @@ pub struct RenderQueueItem {
 }
 impl RenderQueueItem {
     pub fn get_status(&self) -> &JobStatus { &self.status }
+}
+
+// A queued job's LUT, like its project file, is bookmarked in app scope: the queue is kept in the app settings
+#[cfg(any(target_os = "macos", target_os = "ios"))]
+fn create_lut_bookmark(url: &str) -> Option<String> { Some(filesystem::apple::create_bookmark(url, false, None)) }
+#[cfg(any(target_os = "macos", target_os = "ios"))]
+fn resolve_lut_bookmark(bookmark: &str) -> Option<String> { Some(filesystem::apple::resolve_bookmark(bookmark, None).0) }
+#[cfg(not(any(target_os = "macos", target_os = "ios")))]
+fn create_lut_bookmark(_url: &str) -> Option<String> { None }
+#[cfg(not(any(target_os = "macos", target_os = "ios")))]
+fn resolve_lut_bookmark(_bookmark: &str) -> Option<String> { None }
+
+/// A project imported for the queue's Edit, with that job's own colour laid over its output
+pub(crate) fn with_queued_color(project: serde_json::Value, queued_color: Option<&serde_json::Value>) -> serde_json::Value {
+    queued_color::restore_project(project, queued_color, resolve_lut_bookmark)
 }
 
 #[derive(Default, Clone, Debug, Eq, PartialEq)]
@@ -78,6 +94,15 @@ pub struct RenderOptions {
     pub use_gpu: bool,
     pub audio: bool,
     pub pixel_format: String,
+    pub lut_url: String,
+    pub brightness: f64,
+    pub contrast: f64,
+    pub shadows: f64,
+    pub highlights: f64,
+    pub exposure: f64,
+    pub saturation: f64,
+    pub warmth: f64,
+    pub tint: f64,
 
     // Advanced
     pub encoder_options: String,
@@ -118,7 +143,21 @@ impl RenderOptions {
     }
     pub fn get_metadata_dict(&self) -> ffmpeg_next::Dictionary<'_> {
         let mut metadata = ffmpeg_next::Dictionary::new();
-        metadata.set("comment", format!("Original filename: {}\n{}", self.input_filename, self.metadata.comment).trim());
+        let mut comment = format!("Original filename: {}\n{}", self.input_filename, self.metadata.comment);
+        if !self.lut_url.is_empty() {
+            let name = filesystem::get_filename(&self.lut_url).replace(['\r', '\n'], " ");
+            comment.push_str(&format!("\nGyroflow export LUT applied: {name}"));
+        }
+        if self.brightness != 0.0 || self.contrast != 0.0 {
+            comment.push_str(&format!("\nGyroflow color adjustments: brightness {:+.0}%, contrast {:+.0}%", self.brightness * 100.0, self.contrast * 100.0));
+        }
+        if self.shadows != 0.0 || self.highlights != 0.0 {
+            comment.push_str(&format!("\nGyroGrade video tone v1: shadows {:+.2}%, highlights {:+.2}%", self.shadows * 100.0, self.highlights * 100.0));
+        }
+        if self.exposure != 0.0 || self.saturation != 0.0 || self.warmth != 0.0 || self.tint != 0.0 {
+            comment.push_str(&format!("\nGyroGrade basic grade v1: display exposure {:+.2} stops, saturation {:+.2}%, temperature {:+.2}%, tint {:+.2}%", self.exposure, self.saturation*100.0, self.warmth*100.0, self.tint*100.0));
+        }
+        metadata.set("comment", comment.trim());
         metadata
     }
     pub fn update_from_json(&mut self, obj: &serde_json::Value) {
@@ -131,6 +170,17 @@ impl RenderOptions {
             if let Some(v) = obj.get("use_gpu")        .and_then(|x| x.as_bool()) { self.use_gpu = v; }
             if let Some(v) = obj.get("audio")          .and_then(|x| x.as_bool()) { self.audio = v; }
             if let Some(v) = obj.get("pixel_format")   .and_then(|x| x.as_str())  { self.pixel_format = v.to_string(); }
+
+            if let Some(v) = obj.get("lut_url").and_then(|x| x.as_str()) { self.lut_url = v.to_string(); }
+            if let Some(v) = obj.get("brightness").and_then(|x| x.as_f64()) { self.brightness = v; }
+            if let Some(v) = obj.get("contrast").and_then(|x| x.as_f64()) { self.contrast = v; }
+            if let Some(v) = obj.get("shadows").and_then(|x| x.as_f64()) { self.shadows = v; }
+            if let Some(v) = obj.get("highlights").and_then(|x| x.as_f64()) { self.highlights = v; }
+
+            if let Some(v) = obj.get("exposure").and_then(|x| x.as_f64()) { self.exposure = v; }
+            if let Some(v) = obj.get("saturation").and_then(|x| x.as_f64()) { self.saturation = v; }
+            if let Some(v) = obj.get("warmth").and_then(|x| x.as_f64()) { self.warmth = v; }
+            if let Some(v) = obj.get("tint").and_then(|x| x.as_f64()) { self.tint = v; }
 
             // Advanced
             if let Some(v) = obj.get("encoder_options")        .and_then(|x| x.as_str())  { self.encoder_options = v.to_string(); }
@@ -741,7 +791,7 @@ impl RenderQueue {
                         let (resolved, _is_stale) = filesystem::apple::resolve_bookmark(bookmark, None);
                         if !resolved.is_empty() { project = resolved; }
                     }
-                    self.add_file(project, String::new(), additional_data.clone());
+                    self.add_file_with_color(project, String::new(), additional_data.clone(), x.get("queued_color").cloned());
                 } else if let Ok(data) = serde_json::to_string(&x) {
                     self.add_file(data, String::new(), additional_data.clone());
                 }
@@ -754,13 +804,15 @@ impl RenderQueue {
     fn get_gyroflow_data_internal(stab: &StabilizationManager, additional_data: &str, render_options: &RenderOptions) -> Option<String> {
         if let Some(url) = stab.input_file.read().project_file_url.as_ref() {
             if filesystem::exists(url) {
+                // The project file can be saved again with another grade before this job renders
+                let color = serde_json::to_value(render_options).ok().and_then(|x| queued_color::snapshot(&x, create_lut_bookmark));
                 #[cfg(any(target_os = "macos", target_os = "ios"))]
                 {
-                    return Some(serde_json::json!({ "project_file": url, "project_file_bookmark": filesystem::apple::create_bookmark(&url, false, None) }).to_string());
+                    return Some(serde_json::json!({ "project_file": url, "project_file_bookmark": filesystem::apple::create_bookmark(&url, false, None), "queued_color": color }).to_string());
                 }
                 #[cfg(not(any(target_os = "macos", target_os = "ios")))]
                 {
-                    return Some(serde_json::json!({ "project_file": url }).to_string());
+                    return Some(serde_json::json!({ "project_file": url, "queued_color": color }).to_string());
                 }
             }
         }
@@ -1095,6 +1147,11 @@ impl RenderQueue {
                     loop {
                         let result = rendering::render(stab.clone(), progress.clone(), &input_file, &render_options, i, range, cancel_flag.clone(), pause_flag.clone(), encoder_initialized.clone());
                         if let Err(e) = result {
+                            if matches!(e, rendering::FFmpegError::ExportLut(_)) {
+                                // A bad LUT cannot be fixed by trying another decoder.
+                                err(("An error occurred: %1".to_string(), e.to_string()));
+                                break 'ranges;
+                            }
                             if let rendering::FFmpegError::PixelFormatNotSupported((fmt, supported, candidate)) = e {
                                 let candidate = if let Some(c) = candidate { format!("{c:?}").to_ascii_lowercase().to_string() } else { String::new() };
                                 convert_format((format!("{fmt:?}"), supported.into_iter().map(|v| format!("{:?}", v)).collect::<Vec<String>>().join(","), candidate));
@@ -1160,6 +1217,10 @@ impl RenderQueue {
     }
 
     pub fn add_file(&mut self, url: String, gyro_url: String, additional_data: String) -> u32 {
+        self.add_file_with_color(url, gyro_url, additional_data, None)
+    }
+
+    fn add_file_with_color(&mut self, url: String, gyro_url: String, additional_data: String, job_color: Option<serde_json::Value>) -> u32 {
         let job_id = fastrand::u32(1..2147483640);
 
         let is_gf_data = url.starts_with('{');
@@ -1308,6 +1369,7 @@ impl RenderQueue {
                             match result {
                                 Ok(obj) => {
                                     if let Some(out) = obj.get("output") {
+                                        let out = &queued_color::restore(out, job_color.as_ref(), resolve_lut_bookmark);
                                         if let Ok(mut render_options2) = serde_json::from_value(out.clone()) as serde_json::Result<RenderOptions> {
                                             render_options2.update_from_json(out);
                                             loaded(render_options2);

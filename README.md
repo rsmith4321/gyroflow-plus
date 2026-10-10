@@ -1,3 +1,76 @@
+## GyroGrade: Gyroflow stabilization with LUTs and color grading
+
+[GyroGrade website](https://gyrograde.com/) · [Download for Mac](https://github.com/rsmith4321/gyrograde/releases/latest)
+
+GyroGrade is Ryan Smith's app based on [Gyroflow](https://github.com/gyroflow/gyroflow).
+It was called Gyroflow Plus until version 1.0.1. It is not affiliated with or endorsed by the Gyroflow project.
+It keeps Gyroflow's existing stabilization workflow and adds user-selected `.cube`
+LUT preview/export and eight basic grading controls: exposure, temperature,
+tint, brightness, contrast, highlights, shadows and saturation, plus supporting
+compatibility fixes. The controls are in a separate **Color settings** section.
+One **LUT** dropdown combines the active file, up to eight recent selections
+remembered across restarts, and files in your chosen folder. Selecting another
+LUT replaces the active conversion. **Find & organize LUTs** provides folder
+management and remembered camera/profile choices with links to official DJI,
+GoPro and Insta360 downloads; manufacturer files are not bundled.
+See [LUT library usage](docs/LUT-LIBRARY.md). Source footage and embedded motion data are preserved.
+
+GyroGrade combines **Gyroflow stabilization with LUTs and simple color
+correction** to help you finish drone and action-camera clips in one place.
+The optional `ocio-runtime` build integrates pinned official
+[OpenColorIO](https://opencolorio.org/) **2.4.2** for both CPU export and generated
+GPU preview. OpenColorIO evaluates the selected LUT and grading operations;
+our integration maps the controls, validates frame layouts and connects the
+processor to Gyroflow's preview, stabilization and encoding. For faster CPU
+export, Highlights/Shadows use a sampled curve generated and evaluated by
+OpenColorIO. A general OCIO configuration/color-space workflow is not included.
+
+The Mac release and the private Windows validation build use this official
+runtime. **Cargo's default features still select the earlier lightweight
+implementation**; build with `ocio-runtime` to match the release. Windows
+interactive preview and project persistence still need acceptance, and there is
+no Windows release yet. OpenColorIO copyright and license notices are retained.
+See the [implementation and library integration notes](docs/OPENCOLORIO-INTEGRATION.md)
+and the processing order, native Mac acceptance and measured limits in the
+[basic grading report](docs/BASIC-GRADING-PLAN.md).
+
+Edits are nondestructive: original recordings and embedded motion data are
+untouched, while projects retain the selected LUT and adjustment values for
+later refinement. Export creates a new video. DJI O4 Pro D-Log M is 10-bit log
+video, not camera RAW; this does not provide Lightroom-style RAW recovery.
+Current adjustments follow the LUT and use a bounded video curve, so a LUT or
+processing clamp may discard values within the working image even though the
+original file remains available. Do not claim unclipped RAW/HDR processing or
+recovery of detail that was never recorded.
+
+The latest upstream stable release is [v1.6.3, published September 4, 2025](https://github.com/gyroflow/gyroflow/releases/tag/v1.6.3).
+As of October 7, 2026, that is over a year without a new stable release; upstream
+development is still active. I made this fork so I could use the LUT feature now.
+The feature has also been submitted upstream in [PR #1249](https://github.com/gyroflow/gyroflow/pull/1249).
+
+See [tone prototype and measured limits](docs/COLOR-TONE-PROTOTYPE.md),
+[independent application and distribution foundation](docs/PLUS-DISTRIBUTION.md),
+[LUT usage and supported formats](docs/EXPORT-LUT.md),
+[build instructions](https://docs.gyroflow.xyz/app/technical-details/building-from-source),
+and [Windows testing and build notes](docs/WINDOWS-LUT-TESTING.md).
+This repository currently provides the feature source; it does not yet have a
+public packaged binary release. The official Download link below points to
+upstream Gyroflow, which does not include this unmerged feature.
+
+### Related workflows
+
+These are my companion projects for importing footage and sharing finished work:
+
+- [Easy Eject](https://github.com/rsmith4321/Ejector): import and organize camera
+  media, then open the imported footage in Gyroflow for stabilization and color.
+- [ShootCal](https://shootcal.com/): share finished videos through ShootCal Galleries.
+
+A typical workflow is **Easy Eject import → Gyroflow stabilize and apply LUT →
+ShootCal sharing**. Select the LUT that matches your recording profile and avoid
+applying the same conversion again to an already color-corrected export.
+
+---
+
 <p align="center">
   <h1 align="center">
     <a href="https://github.com/gyroflow/gyroflow#gh-light-mode-only">

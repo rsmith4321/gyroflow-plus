@@ -58,6 +58,14 @@ Modal {
             "Focal length smoothing":     ["focal_length_smoothing_enabled", "focal_length_max_zoom_rate", "lens_metadata_delay_frames"],
             "Lens breathing":             ["lens_breathing_enabled"],
         },
+        "Color settings|output": {
+            "LUT": ["lut_url"],
+            "Exposure": ["exposure"],
+            "Color balance": ["warmth", "tint"],
+            "Saturation": ["saturation"],
+            "Brightness and contrast": ["brightness", "contrast"],
+            "Highlights and shadows": ["highlights", "shadows"],
+        },
         "Export settings|output": {
             "Codec":       ["codec", "codec_options", "bitrate", "use_gpu"],
             "Audio":       ["audio"],
@@ -130,6 +138,13 @@ Modal {
             QT_TR_NOOP("Zooming");
             QT_TR_NOOP("Lens correction strength");
             QT_TR_NOOP("Video speed");
+        QT_TR_NOOP("Color settings");
+            QT_TR_NOOP("LUT");
+            QT_TR_NOOP("Brightness and contrast");
+            QT_TR_NOOP("Highlights and shadows");
+            QT_TR_NOOP("Exposure");
+            QT_TR_NOOP("Color balance");
+            QT_TR_NOOP("Saturation");
         QT_TR_NOOP("Export settings");
             QT_TR_NOOP("Codec");
             QT_TR_NOOP("Audio");

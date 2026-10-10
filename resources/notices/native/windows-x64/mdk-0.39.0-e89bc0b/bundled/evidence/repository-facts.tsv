@@ -1,0 +1,72 @@
+fact	value
+ffmpeg 590fb40 disambiguation	590fb407b09bbf19aac0ea2fbd0ba16f93494601 
+ffmpeg 590fb407 commit	590fb407b09bbf19aac0ea2fbd0ba16f93494601 committed 2026-09-17T21:55:48+00:00 avfilter/vf_decimate: reject blocks smaller than one chroma sample
+ffmpeg master commits after 590fb407 committed before 2026-09-18T02:49:06Z	0
+avbuild commit	47212f6d02f361ceca5bb43e266ce56fae0bb915 committed 2026-10-08T14:58:42+08:00 Fix dSYM traversal during macOS strip
+avbuild commit	d91e8a9505ea38746053a8986a3a438c7261bed7 committed 2026-09-18T10:31:47+08:00 fix msvc windres arguments
+avbuild commit	976b0d58d13521781060a9c2a8db00cf6779c697 committed 2026-09-11T11:04:11+08:00 libffmpeg: fix duplicated ff_reverse
+avbuild d91e8a95 tools/Vulkan-Headers gitlink	450bd2232225d6c7728a4108055ac2e37cef6475
+devpkgs commit	ce43c819981bb7ca028d08d1baa4847f1136f576 committed 2026-09-29T13:56:41+08:00 submodule: add nghttp3, update
+devpkgs commit	5e7b21a7d98033be4b1c7e603cd8aa6d9f78b148 committed 2026-09-15T11:54:01+08:00 add zstd
+devpkgs commit	8d4709e2d9053ee119b29d31105a373989f15e99 committed 2026-09-14T14:13:56+08:00 disable zlib shared
+devpkgs commit	1504248bb5e35107ba0a36d27b74421b37871ec2 committed 2026-08-11T00:30:50+08:00 libass: wire Android NDK font provider
+devpkgs commit	611673f9ec7d34200d307c26548cd4b1981ecd25 committed 2026-08-10T20:13:08+08:00 dav1d: read package and API versions from source instead of hardcoding
+devpkgs commit	a88c142b5647c251f755a3d20a6183a541acedf1 committed 2026-08-10T20:12:05+08:00 libass: don't hardcode version in cmake
+devpkgs commit	1b3b509c941d54308c53db0b9b9416204083d825 committed 2026-08-07T23:33:59+08:00 libass: wire OHOS native_drawing font provider
+devpkgs commit	900c9e940b63e79a3aa479e5beed13a50b5d312f committed 2026-08-07T11:49:59+08:00 libass: wire ASS_Face into CMake and gate tests on BUILD_TESTING
+devpkgs commit	753c2042cc4b6741c17bdb173a1048d0601d659c committed 2026-08-03T11:11:55+08:00 clang 24, update submodules
+devpkgs commit	5262ad45920510ec84134e774d5da69abdc61589 committed 2026-08-03T10:38:27+08:00 add ngtcp2
+devpkgs commit	bf63a4c442ac276627c0da684524879e80eb76dc committed 2026-07-12T17:33:15+08:00 update submodules
+devpkgs commit	86e4b9312af3583fef78c176586de8d4bb405299 committed 2026-07-09T02:59:24+08:00 wolfssl: turn on alternative cert chain
+devpkgs commit	7ef6898a05f6bdb7c00e0f38502a5f51f2ddcd77 committed 2026-07-08T09:05:47+08:00 build(deps): bump openharmony-rs/setup-ohos-sdk from 1.0.0 to 1.0.1 (#12)
+devpkgs commit	7ea33370350d20fd4d96415b694bb15a51e4f3c7 committed 2026-07-08T09:05:29+08:00 build(deps): bump actions/cache from 5 to 6 (#13)
+devpkgs commit	2d2cd54e2668501935d706d8b7d61e2e3229d1ec committed 2026-07-08T09:04:58+08:00 build(deps): bump actions/checkout from 6 to 7 (#11)
+devpkgs commit	5f79d81bc16a904fe25a21075ee599e64d0ff3b8 committed 2026-07-08T09:04:17+08:00 fix: use HB_NO_PRAGMA_GCC_DIAGNOSTIC_ERROR for harfbuzz instead of -Wno-unused-template (#14)
+devpkgs commit	f4e41fcdf57258a0a40b11fc416a09e9484eff02 committed 2026-07-07T17:12:41+08:00 ignore -Wunused-template
+devpkgs commit	839f0332a82d31a48edbfc62671adf545aa6028b committed 2026-07-07T11:27:38+08:00 enable ohos x64
+devpkgs commit	eafdd2697a730ef13b15221e7904f2cc863692fe committed 2026-07-06T15:01:54+08:00 enable ca required options
+devpkgs bf63a4c src/oneVPL	3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c
+devpkgs bf63a4c src/zlib	da607da739fa6047df13e66a2af6b8bec7c2a498
+devpkgs bf63a4c src/libva_loader	7d814d7b6496246d729a085ec1d6d3d0e823cb2b
+devpkgs bf63a4c src/libass	4a05d8127f525943ebf45fdc6497c9e665947f0d
+devpkgs bf63a4c src/harfbuzz	56feae4035bdd48f62ba2b8d8c16232d4d89b3a4
+devpkgs bf63a4c src/fribidi	68162babff4f39c4e2dc164a5e825af93bda9983
+devpkgs bf63a4c src/freetype	0a0221a1347e2f1e07c395263540026e9a0aa7c7
+devpkgs 8d4709e2 src/oneVPL	3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c
+devpkgs 8d4709e2 src/zlib	da607da739fa6047df13e66a2af6b8bec7c2a498
+devpkgs 8d4709e2 src/libva_loader	7d814d7b6496246d729a085ec1d6d3d0e823cb2b
+devpkgs 8d4709e2 src/libass	af5f116d243f060a708c82f0c6e3102a2270a336
+devpkgs 8d4709e2 src/harfbuzz	36cb489cb02ce4b92099669ba9f9bea348eff93f
+devpkgs 8d4709e2 src/fribidi	68162babff4f39c4e2dc164a5e825af93bda9983
+devpkgs 8d4709e2 src/freetype	0a0221a1347e2f1e07c395263540026e9a0aa7c7
+devpkgs 5e7b21a7 src/oneVPL	3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c
+devpkgs 5e7b21a7 src/zlib	da607da739fa6047df13e66a2af6b8bec7c2a498
+devpkgs 5e7b21a7 src/libva_loader	7d814d7b6496246d729a085ec1d6d3d0e823cb2b
+devpkgs 5e7b21a7 src/libass	af5f116d243f060a708c82f0c6e3102a2270a336
+devpkgs 5e7b21a7 src/harfbuzz	36cb489cb02ce4b92099669ba9f9bea348eff93f
+devpkgs 5e7b21a7 src/fribidi	68162babff4f39c4e2dc164a5e825af93bda9983
+devpkgs 5e7b21a7 src/freetype	0a0221a1347e2f1e07c395263540026e9a0aa7c7
+devpkgs ce43c819 src/oneVPL	3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c
+devpkgs ce43c819 src/zlib	da607da739fa6047df13e66a2af6b8bec7c2a498
+devpkgs ce43c819 src/libva_loader	7d814d7b6496246d729a085ec1d6d3d0e823cb2b
+devpkgs ce43c819 src/libass	af5f116d243f060a708c82f0c6e3102a2270a336
+devpkgs ce43c819 src/harfbuzz	863d3f7787c6df18d20e4535c5906bf3eb803bd5
+devpkgs ce43c819 src/fribidi	b93119f5fdc7ea47672cc304c1455ffa6dfe7536
+devpkgs ce43c819 src/freetype	0a0221a1347e2f1e07c395263540026e9a0aa7c7
+devpkgs projects/fribidi/CMakeLists.txt version label	set(VERSION_MAJOR 1) set(VERSION_MINOR 0) set(VERSION_MICRO 13) 
+harfbuzz 863d3f7787c6df18d20e4535c5906bf3eb803bd5	#define HB_VERSION_STRING "14.5.0"
+harfbuzz 36cb489cb02ce4b92099669ba9f9bea348eff93f	#define HB_VERSION_STRING "14.4.0"
+fribidi b93119f5fdc7ea47672cc304c1455ffa6dfe7536	project('fribidi', 'c', version: '1.0.17',
+fribidi 68162babff4f39c4e2dc164a5e825af93bda9983	project('fribidi', 'c', version: '1.0.16',
+freetype 0a0221a1	#define FREETYPE_MAJOR 2 #define FREETYPE_MINOR 14 #define FREETYPE_PATCH 3 
+libass af5f116d	af5f116d243f060a708c82f0c6e3102a2270a336 committed 2026-08-11T00:30:01+08:00 ohos: fix dangling PostScript font name
+oneVPL 3a3ca48d version.txt	2.17.0
+zlib da607da7	#define ZLIB_VERSION "1.3.2"
+vulkan-headers 450bd223	450bd2232225d6c7728a4108055ac2e37cef6475 committed 2025-12-18T22:39:03+00:00 Update for Vulkan-Docs 1.4.337
+nv-codec-headers master	eddcea9e27f6b772057c9b3f87de2cc1737faffc committed 2026-07-15T01:26:14+02:00 Bump for (in-dev) 13.1.15.1
+nv-codec-headers master	0a6fba9a2820628b8103464f4c8753ee05838baa committed 2026-07-15T01:25:14+02:00 Bump package version for initial release
+nv-codec-headers master	15ee32753c92faddbabbff11676779618fc6db7e committed 2026-06-30T14:23:06+02:00 Load nvEncodeAPI.dll for native Windows ARM64
+nv-codec-headers master	1b5a81ada8874efb2af0534ffe74049c557e212d committed 2026-06-10T01:15:04+02:00 Update headers for Video Codec SDK 13.1
+nv-codec-headers master	f5a07297dba62ab42920b72dd85a672db208bd6d committed 2026-06-10T01:14:54+02:00 Add missing CUDA functions for Video Codec SDK 13.1 interaction
+devpkgs ce43c819 Windows libva headers source	https://www.nuget.org/api/v2/package/Microsoft.Direct3D.VideoAccelerationCompatibilityPack
+avbuild d91e8a95 AMF headers source	https://github.com/GPUOpen-LibrariesAndSDKs/AMF/releases/download/v$AMF_VER/AMF-headers-v$AMF_VER.tar.gz

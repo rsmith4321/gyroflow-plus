@@ -1,0 +1,163 @@
+{
+  "schema": 1,
+  "comparison": "All bytes compared. Raw DLL hashes differ; section headers and defined payloads match. No DLL executed.",
+  "limitations": "Does not prove who or which tool changed the header/padding, exact reproducible output, relinkability, or complete corresponding source. No general claim about arbitrary execution outside defined payloads.",
+  "comparisons": [
+    {
+      "dll": "ffmpeg-9.dll",
+      "artifact_id": 10529433028,
+      "job_id": 105459864279,
+      "raw_artifact_dll_sha256": "2d1c9454806507b01677237b576d49493a2d4ca4d91b1fa4d9a0e561211a0c80",
+      "staged_official_mdk_dll_sha256": "9b9526af072d898875a24eb9825c7e1b19f1bd82a179ae406e25f1ed13e2b1cd",
+      "bytes": 12207104,
+      "size_of_initialized_data_offset": 320,
+      "size_of_initialized_data_artifact": 7937536,
+      "size_of_initialized_data_mdk": 3393024,
+      "changed_bytes": 417,
+      "allowed_differences": "SizeOfInitializedData and .text raw padding beyond VirtualSize; zero bytes in Actions artifact, 0xcc bytes in MDK",
+      "all_other_bytes_equal": true,
+      "sections": [
+        {
+          "name": ".text",
+          "virtual_size": 8812641,
+          "raw_size": 8813056,
+          "raw_offset": 1024,
+          "defined_payload_sha256": "76cf9b5439926ecb399fb36e4e385b4af35306fb78d873ec849e9af1dc3cf95a"
+        },
+        {
+          "name": ".rdata",
+          "virtual_size": 3149192,
+          "raw_size": 3149312,
+          "raw_offset": 8814080,
+          "defined_payload_sha256": "45848bccf9e6d035e6024d052ecaa4c494c022e1a8ddfdfaf376e261b10bec0f"
+        },
+        {
+          "name": ".data",
+          "virtual_size": 4553920,
+          "raw_size": 9728,
+          "raw_offset": 11963392,
+          "defined_payload_sha256": "cf86cc2978317c093499be76a6097e36d2c1f193ff5a4b392dcfd343d0be9cc4"
+        },
+        {
+          "name": ".pdata",
+          "virtual_size": 170640,
+          "raw_size": 171008,
+          "raw_offset": 11973120,
+          "defined_payload_sha256": "40ed43964cbd39184783d3e5a47f6600d7acca12f3b9de0d8a4579dce46307f3"
+        },
+        {
+          "name": ".rsrc",
+          "virtual_size": 976,
+          "raw_size": 1024,
+          "raw_offset": 12144128,
+          "defined_payload_sha256": "ddb71fbbe87f6b585a1a98bfe9d7adf686280a4c14d75307a5eb7569001cbc75"
+        },
+        {
+          "name": ".reloc",
+          "virtual_size": 61912,
+          "raw_size": 61952,
+          "raw_offset": 12145152,
+          "defined_payload_sha256": "d2436b71ce90f0819f239f372b73fd343161ec5d445a83bf1771c9ab6a0b377c"
+        }
+      ]
+    },
+    {
+      "dll": "libass.dll",
+      "artifact_id": 11033217927,
+      "job_id": 109406241216,
+      "raw_artifact_dll_sha256": "0fa994c7a3401b9c5e7b2261b9cdfbce1b51996dbb6d2dad8770d80d69d530fe",
+      "staged_official_mdk_dll_sha256": "cb7b8f511ebc5c62dad517906a7b9280e9fcf69bd8215cdc59d0fca24c21b749",
+      "bytes": 1766400,
+      "size_of_initialized_data_offset": 328,
+      "size_of_initialized_data_artifact": 463360,
+      "size_of_initialized_data_mdk": 462336,
+      "changed_bytes": 425,
+      "allowed_differences": "SizeOfInitializedData and .text raw padding beyond VirtualSize; zero bytes in Actions artifact, 0xcc bytes in MDK",
+      "all_other_bytes_equal": true,
+      "sections": [
+        {
+          "name": ".text",
+          "virtual_size": 1302616,
+          "raw_size": 1303040,
+          "raw_offset": 1024,
+          "defined_payload_sha256": "ccb4e31456e2ca2fe5aa09e0f2e5f1ec8aecce2b7b3bf2e0949e5d58b33e0c1e"
+        },
+        {
+          "name": ".rdata",
+          "virtual_size": 420560,
+          "raw_size": 420864,
+          "raw_offset": 1304064,
+          "defined_payload_sha256": "5e88493dd55b26651a2292cf242e075f696eb30b69d8f8d8da4e8db7fd8b70c0"
+        },
+        {
+          "name": ".data",
+          "virtual_size": 10936,
+          "raw_size": 10240,
+          "raw_offset": 1724928,
+          "defined_payload_sha256": "2bac69dec1533e140f020480b0bdbc6e381bd5de38a0771c6937e2f7f0edb63f"
+        },
+        {
+          "name": ".pdata",
+          "virtual_size": 26892,
+          "raw_size": 27136,
+          "raw_offset": 1735168,
+          "defined_payload_sha256": "303e0fa8d66c8527cb4b69ff162b1f1cd74faab49c9e27b34d233e77a01722b8"
+        },
+        {
+          "name": ".rsrc",
+          "virtual_size": 480,
+          "raw_size": 512,
+          "raw_offset": 1762304,
+          "defined_payload_sha256": "6ba6e287dad83f76139f4db03daedf2b33d0d1a36c631a51e295e856deef8040"
+        },
+        {
+          "name": ".reloc",
+          "virtual_size": 3340,
+          "raw_size": 3584,
+          "raw_offset": 1762816,
+          "defined_payload_sha256": "eecbc03a8f8f1eb9094b50655d8869e01b2562cf6873acdded5135abce862535"
+        }
+      ]
+    }
+  ],
+  "amf": {
+    "version": "1.5.2",
+    "repository": "GPUOpen-LibrariesAndSDKs/AMF",
+    "commit": "eadd00804d5f7e5cd8c85d540073198312870776",
+    "release_headers_sha256": "d3c12eb324edf05e214608b6a395a51dd95770ed9d45520185d6c3a206811c99",
+    "actions_run": 35299810794,
+    "actions_job": 105459864279,
+    "log_sha256": "4518dc9999f7a80452701eb2d6d0ea07483fb79231156d712998aba03de5a3c4",
+    "amf_environment_line": 76,
+    "environment_value": "AMF_VER: 1.5.2",
+    "ffmpeg_version_line": 3148,
+    "license_blob": "7e6e2140915b281143e056ff88c941f7d31d64c2"
+  },
+  "artifacts": [
+    {
+      "repository": "wang-bin/avbuild",
+      "run": 35299810794,
+      "head_sha": "d91e8a9505ea38746053a8986a3a438c7261bed7",
+      "artifact": 10529433028,
+      "bytes": 40079474,
+      "zip_sha256": "0537ffec71fa979ee47dd1ba4bc321ed089c58b9bb1e59d573e53e11f7763e35",
+      "archive_sha256": "c0e2e0e98e9fd89716744ef3feea60d97a6476d934deb046a3bf079a14340ace"
+    },
+    {
+      "repository": "wang-bin/devpkgs",
+      "run": 36568481997,
+      "head_sha": "ce43c819981bb7ca028d08d1baa4847f1136f576",
+      "artifact": 11033217927,
+      "bytes": 116405875,
+      "zip_sha256": "f425986a86fe6ee4405b380e9be88a73004c8a9f2329f04a695f1c868bd60bf1",
+      "archive_sha256": "88b17b6ba58533282ff8231e8960700196b2f8d9cfcb1290ad38f8403a0a0cff"
+    },
+    {
+      "repository": "wang-bin/mdk-sdk",
+      "release_tag": "v0.39.0",
+      "asset": 599896479,
+      "bytes": 14505229,
+      "archive_sha256": "e492fd45f3a6828e44f75ce665708c9040abaa60602605437b71c95c714808e3"
+    }
+  ]
+}

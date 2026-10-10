@@ -1,0 +1,39 @@
+{
+ "component": "Software OpenGL DLL distributed with Qt",
+ "observed_utc": "2026-10-09T21:11:28.973376+00:00",
+ "file": "opengl32sw.dll",
+ "staged": {
+  "bytes": 20639888,
+  "sha256": "b04de4541863bc7d8879040a78889c4849c1b1da2784c4630f734c146c2998ce"
+ },
+ "accepted_provider": {
+  "family": "Qt 6.7.3 msvc2019_64 bin",
+  "file_identity": {
+   "bytes": 20639888,
+   "sha256": "b04de4541863bc7d8879040a78889c4849c1b1da2784c4630f734c146c2998ce"
+  }
+ },
+ "same_bytes": true,
+ "implementation_version": null,
+ "implementation_license": null,
+ "local_attribution_search": {
+  "doc_files_examined": 128,
+  "matching_local_text_files": [],
+  "known_license_paths": {
+   "LICENSES": false,
+   "Licenses": false,
+   "LICENSE.txt": false,
+   "LICENSE": false,
+   "licenses": false,
+   "sbom": false,
+   "lib/sbom": false
+  }
+ },
+ "historical_provenance": "PROVENANCE.json retains the original unknown-provider snapshot; this observation identifies the immediate Qt package provider only.",
+ "limits": [
+  "Matching Qt provider bytes does not identify the implementation source revision or its applicable license texts.",
+  "No provider binary was replaced, omitted or reclassified as release-ready."
+ ],
+ "blocking_gap_retained": "opengl32sw-provider",
+ "public_release_approved": false
+}

@@ -1,0 +1,12 @@
+[package]
+name = "gyroflow-lens-input-tests"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+path = "../../src/core/lens_db_input.rs"
+
+[dependencies]
+ring = "=0.17.14"
+flate2 = "=1.1.10"

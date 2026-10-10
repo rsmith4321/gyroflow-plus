@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "scope": "Exact installed-provider notice retention, not complete redistribution approval",
+  "application_source": "ab680a27d75d1f109e92935b360c33e2d421758b",
+  "target": "x86_64-pc-windows-msvc",
+  "application_features": [
+    "opencv",
+    "ocio-runtime"
+  ],
+  "provider_package": "opencv4",
+  "provider_version": "4.14.0",
+  "provider_triplet": "x64-windows",
+  "installed_features": [
+    "calib3d",
+    "intrinsics",
+    "opencl",
+    "thread"
+  ],
+  "observed_vcpkg_checkout_head": "f451d04d496aa089e294a1a2d799a269788d47ba",
+  "checkout_head_limit": "Observed checkout revision, not independent proof of installed package build revision",
+  "provider_relative_notice": "installed/x64-windows/share/opencv4/copyright",
+  "retained_notice": {
+    "path": "COPYRIGHT.txt",
+    "bytes": 18203,
+    "sha256": "303a7e8934a8f707ad91380ae076d24963dbec4be6d536222c372737360c8dd2"
+  },
+  "installed_status": {
+    "bytes": 2250,
+    "sha256": "3aaaacbc65e12c143bc89477632c8d12fc0873bd3e977b95b5650d832972f4c4"
+  },
+  "installed_spdx": {
+    "relative_path": "installed/x64-windows/share/opencv4/vcpkg.spdx.json",
+    "bytes": 149957,
+    "sha256": "9e52d0f640952c81b68abf6a36786243a875aa3330e4e42916b47898e2af764f",
+    "spdx_version": "SPDX-2.3",
+    "license_assertion": "Package metadata includes NOASSERTION / LicenseRef-vcpkg-null; supplied copyright text retained separately"
+  },
+  "collection": {
+    "date_utc": "2026-10-09",
+    "read_only": true,
+    "original_files_unchanged": true,
+    "source_tool": "exec-df6a9c97-02e7-4bdc-865a-399a1ac1cca1",
+    "transfer_tools": [
+      "exec-af83db08-8d3d-47a0-b429-dc27f6190c65",
+      "exec-8f26eaea-f54f-4b3c-9685-fbedf17e37be",
+      "exec-940b7399-fbef-42e4-9ab3-13d71018697f"
+    ],
+    "source_handback_sha256": "683b8d72b1b48908d887a0d83880debce47f3430ebc9e5a441544909f70d66a7"
+  },
+  "public_release_approved": false
+}

@@ -69,7 +69,7 @@ MenuItem {
 
     signal selectFileRequest();
 
-    function loadFromVideoMetadata(md: var, org_w: int, org_h: int): void {
+    function loadFromVideoMetadata(md: var, org_w: int, org_h: int, duration_ms: real): void {
         const framerate = +md["stream.video[0].codec.frame_rate"] || 0;
         const w = org_w || md["stream.video[0].codec.width"] || 0;
         const h = org_h || md["stream.video[0].codec.height"] || 0;
@@ -89,7 +89,7 @@ MenuItem {
         root.videoRotation = (360 - (md["stream.video[0].rotation"] || 0)) % 360; // Constrain to 0-360
 
         list.model["Dimensions"]   = w && h? w + "x" + h : "---";
-        list.model["Duration"]     = getDuration(md) || "---";
+        list.model["Duration"]     = getDuration(md, duration_ms) || "---";
         list.model["Frame rate"]   = framerate? framerate.toFixed(3) + " fps" : "---";
         list.model["Codec"]        = getCodec(md) || "---";
         list.model["Pixel format"] = root.pixelFormat;
@@ -120,8 +120,9 @@ MenuItem {
         list.updateEntryWithTrigger(key, value);
     }
 
-    function getDuration(md): string {
-        const s = +md["stream.video[0].duration"] / 1000;
+    function getDuration(md, duration_ms: real): string {
+        // The player's metadata snapshot can predate the new clip's duration, so prefer the loaded value.
+        const s = (duration_ms > 0? duration_ms : +md["stream.video[0].duration"]) / 1000;
         if (s > 60) {
             return Math.floor(s / 60) + " m " + Math.floor(s % 60) + " s";
         } else if (s > 0) {

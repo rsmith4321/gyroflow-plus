@@ -1,0 +1,39 @@
+{
+ "component": "Qt-distributed software OpenGL",
+ "observed_utc": "2026-10-09T21:40:16.061625+00:00",
+ "immediate_provider": "Qt6.7.3 msvc2019_64 bin",
+ "reference_archive": {
+  "started_utc": "2026-10-09T21:23:11.141473+00:00",
+  "url": "https://download.qt.io/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_11_2_2-signed_sha256.7z",
+  "final_url": "https://qt.mirror.constant.com/development_releases/prebuilt/llvmpipe/windows/opengl32sw-64-mesa_11_2_2-signed_sha256.7z",
+  "bytes": 5023568,
+  "sha256": "c61f801c1760aa24b02c7a8354323cddf368b86f8f5c34b50b3b224f7d728afd",
+  "expected_sha256": "c61f801c1760aa24b02c7a8354323cddf368b86f8f5c34b50b3b224f7d728afd",
+  "official_checksum_url": "https://download.qt.io/development_releases/prebuilt/llvmpipe/windows/sha256sums.txt",
+  "reference_only": true,
+  "provider_binary_replaced": false
+ },
+ "reference_member": {
+  "path": "opengl32sw.dll",
+  "bytes": 20639888,
+  "sha256": "b04de4541863bc7d8879040a78889c4849c1b1da2784c4630f734c146c2998ce"
+ },
+ "staged_dll_same_bytes": true,
+ "static_version_strings": [
+  "Mesa 11.2.2",
+  "llvm-mc (based on LLVM 3.6.2)"
+ ],
+ "implementation_versions": {
+  "Mesa": "11.2.2",
+  "LLVM": "3.6.2"
+ },
+ "not_executed": true,
+ "provider_or_stage_replaced": false,
+ "limits": [
+  "The official Qt archive is a byte-identical reference, not a binary replacement.",
+  "Version attribution does not establish Qt patches or corresponding build-source revision.",
+  "Notice coverage review is pending; opengl32sw-provider remains blocking.",
+  "No software renderer behavior, native Windows preview or public-release approval is established."
+ ],
+ "public_release_approved": false
+}

@@ -1,0 +1,7 @@
+# Lens profile database used only when GYROFLOW_LENS_PROFILES=pinned (release and
+# portable builds). Ordinary builds and the app's runtime updates are unaffected.
+# Official gyroflow/lens_profiles release asset; the digest is GitHub's published
+# asset SHA-256 and matches the retained private-build input (asset 492091898).
+tag=v41
+url=https://github.com/gyroflow/lens_profiles/releases/download/v41/profiles.cbor.gz
+sha256=5b9136697b75ddf9cda20965f17e786b6c8530e3d59109f87505069602e7f676

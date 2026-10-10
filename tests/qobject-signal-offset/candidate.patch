@@ -1,0 +1,18 @@
+--- a/qmetaobject_impl/src/qobject_impl.rs
++++ b/qmetaobject_impl/src/qobject_impl.rs
+@@ -900,13 +900,8 @@
+         let sig_name = &signal.name;
+         // if signal == offset_of(signal field) then *result = index and return.
+         quote! { /* externally defined variables: signal, result. */
+-            // SAFETY: no dereference of null pointer, only calculation of field's offset over
+-            // imaginary struct located at null. In Rust null is 0, thus aligned for any type.
+-            let offset = unsafe {
+-                let base = ::std::ptr::null() as *const #name #ty_generics;
+-                let field = (&(*base).#sig_name) as *const _ as usize;
+-                field - (base as usize)
+-            };
++            // Compute the actual field offset without forming a reference through null.
++            let offset = ::std::mem::offset_of!(#name #ty_generics, #sig_name);
+             if signal == offset  {
+                 *result = #i as i32;
+                 return;

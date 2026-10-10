@@ -61,6 +61,7 @@ pub enum Status {
 
 #[derive(Debug)]
 pub enum FFmpegError {
+    ExportLut(String),
     EncoderNotFound,
     DecoderNotFound,
     NoSupportedFormats,
@@ -86,6 +87,7 @@ pub enum FFmpegError {
 impl std::fmt::Display for FFmpegError {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match self {
+            FFmpegError::ExportLut(e) => write!(f, "Could not apply the selected export LUT: {e}"),
             FFmpegError::EncoderNotFound             => write!(f, "Encoder not found"),
             FFmpegError::DecoderNotFound             => write!(f, "Decoder not found"),
             FFmpegError::NoSupportedFormats          => write!(f, "No supported formats"),
@@ -456,7 +458,10 @@ impl<'a> FfmpegProcessor<'a> {
                                 }
                             },
                             Err(e) => {
-                                if !any_encoded {
+                                // A color-processing failure must stop the export even
+                                // after earlier frames were encoded. Decoder recovery
+                                // cannot repair a failed LUT/OCIO processor.
+                                if !any_encoded || matches!(&e, FFmpegError::ExportLut(_)) {
                                     return Err(e);
                                 }
                             }

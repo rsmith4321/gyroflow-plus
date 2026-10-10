@@ -1,0 +1,6 @@
+/*
+ * Mesa 3-D graphics library ATI Fragment Shader
+ *
+ * Copyright (C) 2004  David Airlie   All Rights Reserved.
+ *
+ */

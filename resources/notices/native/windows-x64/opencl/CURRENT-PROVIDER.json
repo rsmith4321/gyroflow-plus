@@ -1,0 +1,76 @@
+{
+ "component": "OpenCL SDK loader and utilities",
+ "observed_utc": "2026-10-09T21:11:28.973376+00:00",
+ "provider": "vcpkg opencl:x64-windows",
+ "installed_version": "2024.10.24#1",
+ "dlls": {
+  "OpenCL.dll": {
+   "staged": {
+    "bytes": 57344,
+    "sha256": "1fe479702ef9a9bf49881d7f2ebd4bf5e8000fd6a53d85ed528e8acca4f719c7"
+   },
+   "accepted_provider": {
+    "bytes": 57344,
+    "sha256": "1fe479702ef9a9bf49881d7f2ebd4bf5e8000fd6a53d85ed528e8acca4f719c7"
+   },
+   "same_bytes": true,
+   "provider_family": "vcpkg x64-windows bin",
+   "native_file_version": [
+    3,
+    0,
+    6,
+    0
+   ]
+  },
+  "OpenCLUtils.dll": {
+   "staged": {
+    "bytes": 25088,
+    "sha256": "bb1293dc4f40c060cf40d8139093df0b1ba98742da75ebef655719b691ec4481"
+   },
+   "accepted_provider": {
+    "bytes": 25088,
+    "sha256": "bb1293dc4f40c060cf40d8139093df0b1ba98742da75ebef655719b691ec4481"
+   },
+   "same_bytes": true,
+   "provider_family": "vcpkg x64-windows bin",
+   "native_file_version": null
+  },
+  "OpenCLUtilsCpp.dll": {
+   "staged": {
+    "bytes": 68096,
+    "sha256": "85019b95cae9fc38ac67551f6f73de913a7c46f3abd2bf921c5156e8929441f7"
+   },
+   "accepted_provider": {
+    "bytes": 68096,
+    "sha256": "85019b95cae9fc38ac67551f6f73de913a7c46f3abd2bf921c5156e8929441f7"
+   },
+   "same_bytes": true,
+   "provider_family": "vcpkg x64-windows bin",
+   "native_file_version": null
+  }
+ },
+ "installed_version_evidence": [
+  "provider/installed-status.txt",
+  "provider/vcpkg.spdx.json",
+  "provider/OpenCLConfigVersion.cmake"
+ ],
+ "installed_import_target_evidence": [
+  "provider/OpenCLICDLoaderTargets-release.cmake",
+  "provider/OpenCLUtilsTargets-release.cmake",
+  "provider/OpenCLUtilsCppTargets-release.cmake"
+ ],
+ "notice": {
+  "path": "COPYRIGHT.txt",
+  "sha256": "b8b41526b31a0672d7a994749de038aad0bcfd03dee6ef332860588aa8c0268c",
+  "installed_license_expression": "Apache-2.0 AND (MIT OR WTFPL)",
+  "retained_texts": "Apache-2.0 and the MIT alternative for whereami; original provider copyright retained verbatim"
+ },
+ "historical_provenance": "PROVENANCE.json is the original incomplete v6 snapshot; this later byte-linked observation supplies its missing provider/version/notice facts.",
+ "limits": [
+  "Current port metadata is not independent proof of the installed build revision.",
+  "Native file version 3.0.6.0 of OpenCL.dll is not the SDK package version.",
+  "No shader, hardware, runtime or binary change was made.",
+  "Complete application source delivery, other dependency requirements and public release remain separate."
+ ],
+ "public_release_approved": false
+}

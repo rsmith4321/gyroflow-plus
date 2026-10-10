@@ -1,0 +1,5 @@
+# French translations for DRI driver options.
+# Copyright (C) 2005 Stephane Marchesin
+# This file is distributed under the same license as the Mesa package.
+# Stephane Marchesin <marchesin@icps.u-strasbg.fr>, 2005.
+#

@@ -102,6 +102,9 @@ Item {
         if (obj.toString() != '[object Object]') {
             // obj is url
             controller.import_gyroflow_file(obj);
+        } else if (obj.project_file && obj.queued_color) {
+            // A queued job: the project file may have been saved with another grade since
+            controller.import_queued_project(obj.project_file, JSON.stringify(obj.queued_color));
         } else if (obj.project_file) {
             controller.import_gyroflow_file(obj.project_file);
         } else {
@@ -185,16 +188,16 @@ Item {
                     window.isDialogOpened = false;
                     if (!error_string) {
                         if (url == "ffmpeg_gpl") {
-                            messageBox(Modal.Success, qsTr("Component was installed successfully.\nYou need to restart Gyroflow for changes to take effect.\nYour render queue and current file is saved automatically."), [ { text: qsTr("Ok") } ]);
+                            messageBox(Modal.Success, qsTr("Component was installed successfully.\nYou need to restart GyroGrade for changes to take effect.\nYour render queue and current file is saved automatically."), [ { text: qsTr("Ok") } ]);
                         } else {
                             loadFile(url, false);
                         }
                     } else {
                         if (Qt.platform.os == "osx") {
-                            error_string += "\n" + qsTr("This is often caused by read-only file system.\nMake sure you copied the Gyroflow app to your Applications folder, instead of running from the .dmg directly.");
+                            error_string += "\n" + qsTr("This is often caused by read-only file system.\nMake sure you copied the GyroGrade app to your Applications folder, instead of running from the .dmg directly.");
                         }
                         if (Qt.platform.os == "windows") {
-                            error_string += "\n" + qsTr("This is often caused by read-only file system.\nIf you have Gyroflow in C:\\Program Files\\, then you'll need to run Gyroflow as Administrator in order to extract the SDK to the Gyroflow folder.");
+                            error_string += "\n" + qsTr("This is often caused by read-only file system.\nIf you have GyroGrade in C:\\Program Files\\, then you'll need to run GyroGrade as Administrator in order to extract the SDK to the Gyroflow folder.");
                         }
                         messageBox(Modal.Error, error_string, [ { text: qsTr("Ok") } ]);
                     }
@@ -242,7 +245,7 @@ Item {
                         messageBox(Modal.Warning, qsTr("File format was detected, but no motion data was found.\nThe camera probably doesn't record motion data in this particular shooting mode."), [ { "text": qsTr("Ok") } ]);
                     }
                     if (additional_data.unsupported_lens) {
-                        messageBox(Modal.Warning, qsTr("This video cannot be stabilized, because this lens doesn't support OSS metadata.\nDisable lens stabilization (Optical SteadyShot) in order to use Gyroflow."), [ { "text": qsTr("Ok") } ]);
+                        messageBox(Modal.Warning, qsTr("This video cannot be stabilized, because this lens doesn't support OSS metadata.\nDisable lens stabilization (Optical SteadyShot) in order to use GyroGrade."), [ { "text": qsTr("Ok") } ]);
                     }
                     if (additional_data.contains_raw_gyro && !additional_data.contains_quats) timeline.setDisplayMode(0); // Switch to gyro view
                     if (!additional_data.contains_raw_gyro && additional_data.contains_quats) timeline.setDisplayMode(3); // Switch to quaternions view
@@ -645,6 +648,42 @@ Item {
                     anchors.fill: parent;
                     property bool loaded: false;
 
+                    layer.enabled: loaded && window.exportSettings && window.exportSettings.previewColors
+                        && !window.exportSettings.lutPreviewError && !window.exportSettings.tonePreviewError && !window.exportSettings.gradePreviewError && !window.exportSettings.ocioPreviewError
+                        && (!window.exportSettings.ocioRuntimeEnabled || !!window.exportSettings.ocioPreviewShader)
+                        && (window.exportSettings.ocioRuntimeEnabled ? window.exportSettings.ocioPreviewActive
+                            : window.exportSettings.lutPreviewSize >= 2 || window.exportSettings.brightness !== 0 || window.exportSettings.contrast !== 0
+                                || !!window.exportSettings.tonePreviewSource || window.exportSettings.gradePreviewParameters.active);
+                    layer.effect: ShaderEffect {
+                        property var source;
+                        property var ocioLutTexture: window.exportSettings ? window.exportSettings.ocioPreviewTexture : null;
+                        property real brightness: window.exportSettings ? window.exportSettings.brightness / 100 : 0;
+                        property real contrast: window.exportSettings ? window.exportSettings.contrast / 100 : 0;
+                        property real gradeRed: window.exportSettings ? window.exportSettings.gradePreviewParameters.gains[0] : 1;
+                        property real gradeGreen: window.exportSettings ? window.exportSettings.gradePreviewParameters.gains[1] : 1;
+                        property real gradeBlue: window.exportSettings ? window.exportSettings.gradePreviewParameters.gains[2] : 1;
+                        property real gradeSaturation: window.exportSettings ? window.exportSettings.gradePreviewParameters.saturation : 1;
+                        property real toneEnabled: window.exportSettings && window.exportSettings.tonePreviewSource ? 1 : 0;
+                        property var toneTexture: Image {
+                            visible: false; smooth: false; mipmap: false; cache: false;
+                            source: window.exportSettings ? window.exportSettings.tonePreviewSource : "";
+                        }
+                        property real lutSize: window.exportSettings ? window.exportSettings.lutPreviewSize : 0;
+                        property var lutTexture: Image {
+                            visible: false;
+                            source: window.exportSettings ? window.exportSettings.lutPreviewSource : "";
+                            smooth: false;
+                            mipmap: false;
+                            cache: false;
+                        }
+                        fragmentShader: window.exportSettings && window.exportSettings.ocioRuntimeEnabled
+                            ? window.exportSettings.ocioPreviewShader : "qrc:/src/qt_gpu/compiled/color_preview.frag.qsb";
+                        onStatusChanged: {
+                            if (status === ShaderEffect.Error && window.exportSettings && window.exportSettings.ocioRuntimeEnabled) {
+                                window.exportSettings.ocioPreviewError = qsTr("OCIO color preview could not be rendered. %1").arg(log);
+                            }
+                        }
+                    }
                     property bool stabEnabled: stabEnabledBtn.checked;
                     transform: [
                         Scale {
@@ -711,7 +750,7 @@ Item {
                         } else {
                             controller.load_telemetry(root.loadedFileUrl, true, vid, -1, 0);
                         }
-                        vidInfo.loadFromVideoMetadata(md, vid.videoWidth, vid.videoHeight);
+                        vidInfo.loadFromVideoMetadata(md, vid.videoWidth, vid.videoHeight, vid.duration);
                         window.sync.customSyncTimestamps = [];
 
                         if (root.mergedFiles.length > 1) {

@@ -414,7 +414,7 @@ MenuItem {
 
                     if (lenses) settings.setValue("lensProfileFavorites", lenses);
 
-                    messageBox(Modal.Info, qsTr("Settings cleared, please restart Gyroflow for the changes to take effect."), [
+                    messageBox(Modal.Info, qsTr("Settings cleared, please restart GyroGrade for the changes to take effect."), [
                         { text: qsTr("Exit"), accent: true, clicked: Qt.quit},
                         { text: qsTr("Ok") },
                     ]);

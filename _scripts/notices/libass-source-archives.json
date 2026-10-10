@@ -1,0 +1,319 @@
+{
+  "schema": 1,
+  "scope": "Retained source-archive acquisition for separate hosted libass build/relink qualification; not public release or complete corresponding source.",
+  "source_bundle": {
+    "asset": "libass-retained-source-archives-v18.zip",
+    "draft_release_id": 408304995,
+    "tag": "codex/ocio-source-prep-20261009",
+    "bytes": 62447389,
+    "sha256": "8cdbf56eb72add8f592bccd9dfc93a39395d51e4bc91c77f67d6781a5e8ea2e5"
+  },
+  "archives": [
+    {
+      "location": "devpkgs",
+      "repository": "wang-bin/devpkgs",
+      "commit": "ce43c819981bb7ca028d08d1baa4847f1136f576",
+      "archive": "devpkgs-ce43c819.tar.gz",
+      "bytes": 42840,
+      "sha256": "376c8908d652a5212c38e9d3e7fde4f9ba916d95edbf9996fc17fe29f246bd85",
+      "archive_members": 61,
+      "source_execution": false,
+      "root": "devpkgs-ce43c819981bb7ca028d08d1baa4847f1136f576",
+      "member_types": {
+        "dir": 37,
+        "file": 24
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 235772,
+      "maximum_member_bytes": 39120,
+      "maximum_path_chars": 105
+    },
+    {
+      "location": "devpkgs/cmake/tools",
+      "repository": "wang-bin/cmake-tools",
+      "commit": "a8a52d31cb5f2ab8916160069cbc7183c5e92a18",
+      "archive": "devpkgs-cmake-tools-a8a52d31.tar.gz",
+      "bytes": 35554,
+      "sha256": "db1347d58a96f19859d2c1347d0b55bd5673218704f5f84adc83739c6c28706a",
+      "archive_members": 22,
+      "source_execution": false,
+      "root": "cmake-tools-a8a52d31cb5f2ab8916160069cbc7183c5e92a18",
+      "member_types": {
+        "dir": 2,
+        "file": 20
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 125538,
+      "maximum_member_bytes": 47118,
+      "maximum_path_chars": 90
+    },
+    {
+      "location": "devpkgs/src/freetype",
+      "repository": "freetype/freetype",
+      "commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+      "archive": "devpkgs-src-freetype-0a0221a1.tar.gz",
+      "bytes": 2484792,
+      "sha256": "07ff1c932e35dfac27f220ddf82eda6c287a1ddd7a10c62c6d7898d762b4b378",
+      "archive_members": 818,
+      "source_execution": false,
+      "root": "FreeType-0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+      "member_types": {
+        "dir": 74,
+        "file": 744
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 11168866,
+      "maximum_member_bytes": 591749,
+      "maximum_path_chars": 96
+    },
+    {
+      "location": "devpkgs/src/freetype/subprojects/dlg",
+      "repository": "nyorain/dlg",
+      "commit": "395ccad2c1e0daae535c4d20bb0a3f2424648e17",
+      "archive": "devpkgs-src-freetype-subprojects-dlg-395ccad2.tar.gz",
+      "bytes": 837047,
+      "sha256": "a4ac4f5303e2f1ff49a0f7f5c53ee26f219cb9f1a0d705d9c09e8e2d383c1a06",
+      "archive_members": 38,
+      "source_execution": false,
+      "root": "nyorain-dlg-395ccad",
+      "member_types": {
+        "dir": 10,
+        "file": 28
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 918104,
+      "maximum_member_bytes": 798923,
+      "maximum_path_chars": 45
+    },
+    {
+      "location": "devpkgs/src/harfbuzz",
+      "repository": "harfbuzz/harfbuzz",
+      "commit": "863d3f7787c6df18d20e4535c5906bf3eb803bd5",
+      "archive": "devpkgs-src-harfbuzz-863d3f77.tar.gz",
+      "bytes": 38660531,
+      "sha256": "8a2c75c09603b06515e1199033ed76bf7de5beabd2c80a4c92688aaf7db4f2fa",
+      "archive_members": 4024,
+      "source_execution": false,
+      "root": "HarfBuzz-863d3f7787c6df18d20e4535c5906bf3eb803bd5",
+      "member_types": {
+        "dir": 173,
+        "file": 3850,
+        "symlink": 1
+      },
+      "link_members": [
+        {
+          "name": "HarfBuzz-863d3f7787c6df18d20e4535c5906bf3eb803bd5/CLAUDE.md",
+          "target": "AGENTS.md"
+        }
+      ],
+      "uncompressed_file_bytes": 103630449,
+      "maximum_member_bytes": 4133100,
+      "maximum_path_chars": 209
+    },
+    {
+      "location": "devpkgs/src/fribidi",
+      "repository": "fribidi/fribidi",
+      "commit": "b93119f5fdc7ea47672cc304c1455ffa6dfe7536",
+      "archive": "devpkgs-src-fribidi-b93119f5.tar.gz",
+      "bytes": 2189234,
+      "sha256": "51056192d61fa537f374739670b6b214b8510bb1d35c350cd5a991a645bf4d66",
+      "archive_members": 147,
+      "source_execution": false,
+      "root": "FriBidi-b93119f5fdc7ea47672cc304c1455ffa6dfe7536",
+      "member_types": {
+        "dir": 13,
+        "file": 134
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 17716488,
+      "maximum_member_bytes": 7959988,
+      "maximum_path_chars": 108
+    },
+    {
+      "location": "devpkgs/src/libass",
+      "repository": "wang-bin/libass",
+      "commit": "af5f116d243f060a708c82f0c6e3102a2270a336",
+      "archive": "devpkgs-src-libass-af5f116d.tar.gz",
+      "bytes": 407760,
+      "sha256": "99c78073de5f059996ca0bc61e8e2c875761624316e8ecb3e0131cb9ba4b5b98",
+      "archive_members": 175,
+      "source_execution": false,
+      "root": "libass-af5f116d243f060a708c82f0c6e3102a2270a336",
+      "member_types": {
+        "dir": 20,
+        "file": 155
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 1537667,
+      "maximum_member_bytes": 124161,
+      "maximum_path_chars": 97
+    },
+    {
+      "location": "devpkgs/src/snappy",
+      "repository": "google/snappy",
+      "commit": "9c28114a38866f6deeaa826db918293bc28ae410",
+      "archive": "devpkgs-src-snappy-9c28114a.tar.gz",
+      "bytes": 1116683,
+      "sha256": "6672d6c9a4bdb2fe47eb0146390e70b86ce5f9939f1f5f4cb41db584e38386c4",
+      "archive_members": 62,
+      "source_execution": false,
+      "root": "google-snappy-9c28114",
+      "member_types": {
+        "dir": 9,
+        "file": 53
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 3377428,
+      "maximum_member_bytes": 702087,
+      "maximum_path_chars": 62
+    },
+    {
+      "location": "devpkgs/src/glfw",
+      "repository": "glfw/glfw",
+      "commit": "d9d6f0f1f967807ffade6598ea9a631ebaf37a56",
+      "archive": "devpkgs-src-glfw-d9d6f0f1.tar.gz",
+      "bytes": 904402,
+      "sha256": "9661abd9f79025053bfd69e71e4340d3ad6e799b0ecc260f1971996764fcb953",
+      "archive_members": 165,
+      "source_execution": false,
+      "root": "glfw-d9d6f0f1f967807ffade6598ea9a631ebaf37a56",
+      "member_types": {
+        "file": 165
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 4867367,
+      "maximum_member_bytes": 990828,
+      "maximum_path_chars": 94
+    },
+    {
+      "location": "devpkgs/src/zlib",
+      "repository": "madler/zlib",
+      "commit": "da607da739fa6047df13e66a2af6b8bec7c2a498",
+      "archive": "devpkgs-src-zlib-da607da7.tar.gz",
+      "bytes": 1557825,
+      "sha256": "58f1b6c65b2a0fee772cee15e5f63b53551f9b36731d912c0b822874bf5a9b85",
+      "archive_members": 299,
+      "source_execution": false,
+      "root": "zlib-da607da739fa6047df13e66a2af6b8bec7c2a498",
+      "member_types": {
+        "dir": 37,
+        "file": 262
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 3604622,
+      "maximum_member_bytes": 776142,
+      "maximum_path_chars": 112
+    },
+    {
+      "location": "devpkgs/src/oneVPL",
+      "repository": "wang-bin/oneVPL",
+      "commit": "3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c",
+      "archive": "devpkgs-src-oneVPL-3a3ca48d.tar.gz",
+      "bytes": 12959134,
+      "sha256": "42703c46f769b5e2b9ecdaec1dca7fd0295b95ca83a517b844941b5cf28e81d1",
+      "archive_members": 783,
+      "source_execution": false,
+      "root": "oneVPL-3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c",
+      "member_types": {
+        "dir": 124,
+        "file": 659
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 27478364,
+      "maximum_member_bytes": 9216000,
+      "maximum_path_chars": 141
+    },
+    {
+      "location": "nasm",
+      "repository": "netwide-assembler/nasm",
+      "commit": "d41598b3359d39c14e80f56bd8c3749f1d097932",
+      "archive": "nasm-d41598b3.tar.gz",
+      "bytes": 1249847,
+      "sha256": "f49d357e02f66832744dc75dcc84788d686e3250e158aa9f8ff1cc519ace1273",
+      "archive_members": 1137,
+      "source_execution": false,
+      "root": "netwide-assembler-nasm-d41598b",
+      "member_types": {
+        "dir": 27,
+        "file": 1110
+      },
+      "link_members": [],
+      "uncompressed_file_bytes": 8582704,
+      "maximum_member_bytes": 1206718,
+      "maximum_path_chars": 71
+    }
+  ],
+  "unicode_data": [
+    {
+      "path": "gen.tab/unidata/ReadMe.txt",
+      "bytes": 729,
+      "sha256": "b0ea442f29dee90584aacd3665a6e1ce87ffc917a4d31f34e1916d2d6f7f9205"
+    },
+    {
+      "path": "gen.tab/unidata/UnicodeData.txt",
+      "bytes": 2243593,
+      "sha256": "0736451de439ae7baf1425136617da495e09ee5afbe6e394374db7009ea08950"
+    },
+    {
+      "path": "gen.tab/unidata/ArabicShaping.txt",
+      "bytes": 42356,
+      "sha256": "8ccde4ebd070500a68e8bcb9d5514522fb0bebe57b9ebad3ff925b8e1e669f83"
+    },
+    {
+      "path": "gen.tab/unidata/BidiMirroring.txt",
+      "bytes": 27294,
+      "sha256": "cd54810ebf52f0e61a730c8b9cb25975de6c85f6d788a559b416afd548923fd6"
+    },
+    {
+      "path": "gen.tab/unidata/BidiBrackets.txt",
+      "bytes": 8992,
+      "sha256": "4b3b62e4a14b84ee752808c810c602534921c09a4a1bf78cfbee566d66c125b3"
+    }
+  ],
+  "expected_fribidi_outputs": [
+    {
+      "name": "fribidi-unicode-version.h",
+      "generator": "gen-unicode-version",
+      "bytes": 340,
+      "sha256": "32dccbe9126bfe31ed973183487a02d57107fa198272276a64f4c829249684b1"
+    },
+    {
+      "name": "bidi-type.tab.i",
+      "generator": "gen-bidi-type-tab",
+      "bytes": 296102,
+      "sha256": "ee650572b8e453f1e93d5a0bffcb173c1e91494bd71aa17cf4a26d0f94b5c52a"
+    },
+    {
+      "name": "joining-type.tab.i",
+      "generator": "gen-joining-type-tab",
+      "bytes": 201907,
+      "sha256": "c7eceea96102f72597a51235eb131d09c368de0459748ff2794ce356b94cb09e"
+    },
+    {
+      "name": "arabic-shaping.tab.i",
+      "generator": "gen-arabic-shaping-tab",
+      "bytes": 6948,
+      "sha256": "b943ee51712f66a94fbbeee6c4df4b94510d8ea293202a4e487c185686b4ecd2"
+    },
+    {
+      "name": "mirroring.tab.i",
+      "generator": "gen-mirroring-tab",
+      "bytes": 84046,
+      "sha256": "8830511f527f6928427216c1850947295ce33433f6210c7ac72c01ecbd3d780c"
+    },
+    {
+      "name": "brackets.tab.i",
+      "generator": "gen-brackets-tab",
+      "bytes": 39816,
+      "sha256": "b4870d470c276b42fc058c9ce301d877034adf5bd33d9968a8caebe0752c592e"
+    },
+    {
+      "name": "brackets-type.tab.i",
+      "generator": "gen-brackets-type-tab",
+      "bytes": 23013,
+      "sha256": "4954ebd99fb8ba59835cd26e109df820f5c01133e2d697608f7f3cc4849d789b"
+    }
+  ],
+  "reference_hosted_run": 38014071478,
+  "public_release_approved": false
+}

@@ -1,0 +1,10 @@
+/**
+ * \file simple_list.h
+ * Simple macros for type-safe, intrusive lists.
+ *
+ *  Intended to work with a list sentinal which is created as an empty
+ *  list.  Insert & delete are O(1).
+ *  
+ * \author
+ *  (C) 1997, Keith Whitwell
+ */

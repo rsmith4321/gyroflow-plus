@@ -1,0 +1,4 @@
+component	pin	file	bytes	sha256	official_source
+opencore-amr	7dba8c322384	LICENSE	10271	8b3f1762349248d444ab9acbafe73941254e36e1064954da56bb9ddbd5873ddb	https://sourceforge.net/p/opencore-amr/code/ci/7dba8c32238418ce0b316a852b2224df586ca896/tree/LICENSE?format=raw
+lame	r6835	COPYING	25281	e64f9c5a18f56828c10a575df13ade641aa3af4512a7afe6c411256943b57aaf	https://sourceforge.net/p/lame/svn/6835/tree/trunk/lame/COPYING?format=raw
+lame	r6835	LICENSE	503	5c1f8d44f1eacbea3e1c31ff6ee11a4e1690ccbed4ee4af16de3b6eb61dc69a8	https://sourceforge.net/p/lame/svn/6835/tree/trunk/lame/LICENSE?format=raw

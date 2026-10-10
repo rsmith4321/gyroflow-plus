@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Direct3D.VideoAccelerationCompatibilityPack</id>
+    <version>1.0.2</version>
+    <title>Microsoft.Direct3D.VideoAccelerationCompatibilityPack</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">License.txt</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <projectUrl>http://aka.ms/direct3dvideocompatibilitypack</projectUrl>
+    <description>Microsoft.Direct3D.VideoAccelerationCompatibilityPack</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+  </metadata>
+</package>

@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "scope": "Sources reached by original devpkgs CMake configuration, not evidence of linkage into libass",
+  "vendor_log_sha256": "ec06b3224d7f0ccfe9228fe503381235e67d210341a722225775924cda324f98",
+  "logged_checkout_pins": [
+    {
+      "component": "snappy",
+      "commit": "9c28114a38866f6deeaa826db918293bc28ae410",
+      "line": 229,
+      "text": "2026-09-29T12:32:37.7702337Z Submodule path 'src/snappy': checked out '9c28114a38866f6deeaa826db918293bc28ae410'"
+    },
+    {
+      "component": "glfw",
+      "commit": "d9d6f0f1f967807ffade6598ea9a631ebaf37a56",
+      "line": 198,
+      "text": "2026-09-29T12:32:27.6870991Z Submodule path 'src/glfw': checked out 'd9d6f0f1f967807ffade6598ea9a631ebaf37a56'"
+    }
+  ],
+  "archives": [
+    {
+      "name": "snappy",
+      "commit": "9c28114a38866f6deeaa826db918293bc28ae410",
+      "repository": "https://github.com/google/snappy",
+      "git_tree": "67ea644d44f5b1b00ad12b1f12ecab6683bb94b5",
+      "archive": "Snappy-9c28114a-source.tar.gz",
+      "bytes": 1116683,
+      "sha256": "6672d6c9a4bdb2fe47eb0146390e70b86ce5f9939f1f5f4cb41db584e38386c4",
+      "original_official_archive_sha256": "6672d6c9a4bdb2fe47eb0146390e70b86ce5f9939f1f5f4cb41db584e38386c4",
+      "files": 53,
+      "all_git_blobs_exact": true,
+      "export_ignored_files_restored": [],
+      "nested_gitlinks": [
+        {
+          "path": "third_party/benchmark",
+          "mode": "160000",
+          "type": "commit",
+          "sha": "b20cea674170b2ba45da0dfaf03953cdea473d0d"
+        },
+        {
+          "path": "third_party/googletest",
+          "mode": "160000",
+          "type": "commit",
+          "sha": "b796f7d44681514f58a683a3a71ff17c94edb0c1"
+        }
+      ]
+    },
+    {
+      "name": "glfw",
+      "commit": "d9d6f0f1f967807ffade6598ea9a631ebaf37a56",
+      "repository": "https://github.com/glfw/glfw",
+      "git_tree": "011f64ad6d52b2947947eb68b5fddc448a4aadb0",
+      "archive": "GLFW-d9d6f0f1-complete-source.tar.gz",
+      "bytes": 904402,
+      "sha256": "9661abd9f79025053bfd69e71e4340d3ad6e799b0ecc260f1971996764fcb953",
+      "original_official_archive_sha256": "f9fbae6dfdb7add707dfc9ed0119d5d180cc5acc99bc5f3b5056448f16109ccb",
+      "files": 165,
+      "all_git_blobs_exact": true,
+      "export_ignored_files_restored": [
+        ".appveyor.yml",
+        ".gitattributes",
+        ".github/CODEOWNERS",
+        ".github/workflows/build.yml",
+        ".gitignore",
+        ".mailmap"
+      ],
+      "nested_gitlinks": []
+    }
+  ],
+  "source_inventory_asset": "libass-configure-inputs-reviewed.json",
+  "retained_delivery": {
+    "release_id": 408304995,
+    "draft": true,
+    "published_at": null,
+    "tag": "codex/ocio-source-prep-20261009",
+    "target": "de78d0da0fa54def28ac6ec08d015aec578d40f0",
+    "asset_count": 50,
+    "prior45assets_preserved": true,
+    "new_assets": [
+      {
+        "id": 626452684,
+        "name": "GLFW-d9d6f0f1-complete-source.tar.gz",
+        "bytes": 904402,
+        "sha256": "9661abd9f79025053bfd69e71e4340d3ad6e799b0ecc260f1971996764fcb953"
+      },
+      {
+        "id": 626452706,
+        "name": "Snappy-9c28114a-source.tar.gz",
+        "bytes": 1116683,
+        "sha256": "6672d6c9a4bdb2fe47eb0146390e70b86ce5f9939f1f5f4cb41db584e38386c4"
+      },
+      {
+        "id": 626452734,
+        "name": "libass-configure-inputs-README.txt",
+        "bytes": 1147,
+        "sha256": "9d8a89cd390f7f27a94a516f72718811c3bebd3ed83e5a86949536eb5cbe92a6"
+      },
+      {
+        "id": 626452756,
+        "name": "libass-configure-inputs-reviewed.json",
+        "bytes": 61743,
+        "sha256": "b433bd9ed31751834391bfa4c5b1f5f684ff95f7254f7cc00f470eb67527fb9c"
+      },
+      {
+        "id": 626452774,
+        "name": "libass-configure-inputs.sha256",
+        "bytes": 404,
+        "sha256": "fb6d30a8a935fe1fe93b5010fb3fdf1f04909a5473c7246d202354e4b8a90ebd"
+      }
+    ],
+    "complete_corresponding_source": false,
+    "public_release_approved": false
+  },
+  "archive_omission": "Initial GLFW exact-archive check rejected six missing export-ignore files. All six were fetched from their exact official Git blob IDs and restored. The resulting archive has all165blobs; original archive and rejected guard retained privately.",
+  "snappy_test_gitlinks": "benchmark/googletest gitlinks are listed, not included. Original devpkgs explicitly disables both tests and benchmarks before add_subdirectory under CMP0077 NEW. No claim of full recursive Snappy repository closure.",
+  "offline_configure_requirements": "Original top-level x64 configure also reaches zlib, oneVPL and shaderc_loader. Retaining Snappy and GLFW resolves two missing directory inputs, not an executed standalone build. Disabling unrelated optional projects changes the command and must be qualified separately. Building only ass differs from building/installing every top-level target.",
+  "source_executed": false,
+  "offline_rebuild_verified": false,
+  "complete_corresponding_source": false,
+  "public_release_approved": false
+}

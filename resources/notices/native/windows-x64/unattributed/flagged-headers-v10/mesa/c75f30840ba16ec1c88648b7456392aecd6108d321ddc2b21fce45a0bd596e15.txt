@@ -1,0 +1,3 @@
+   /* Bubble-sort the resulting scores. Pixelformats with higher scores go first.
+    * TODO: Find out if there are any patent issues with it.
+    */

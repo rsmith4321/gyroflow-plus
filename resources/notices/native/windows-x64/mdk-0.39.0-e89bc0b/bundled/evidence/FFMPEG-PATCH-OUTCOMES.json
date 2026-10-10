@@ -1,0 +1,902 @@
+{
+  "schema": 1,
+  "source_repository": "wang-bin/avbuild",
+  "source_commit": "d91e8a9505ea38746053a8986a3a438c7261bed7",
+  "ffmpeg_commit": "590fb407b09bbf19aac0ea2fbd0ba16f93494601",
+  "actions_run": 35299810794,
+  "actions_job": 105459864279,
+  "job_url": "https://github.com/wang-bin/avbuild/actions/runs/35299810794/job/105459864279",
+  "log_sha256": "4518dc9999f7a80452701eb2d6d0ea07483fb79231156d712998aba03de5a3c4",
+  "basis": "Public successful VS2026 lite build log. Its artifact defined section payloads match the official and staged MDK FFmpeg DLL; raw header/padding differences are recorded separately in ACTIONS-BUILD-CONTENT.json.",
+  "summary": {
+    "master_patches": 35,
+    "master_logged_failures": 0,
+    "common_patches": 5,
+    "common_patches_with_logged_failures_or_skips": 5,
+    "partially_applied_common_patch": "patches/common/0001-lavu-monotonic-av_gettime_relative-for-msvc.patch",
+    "successful_common_hunk": "Hunk #2 succeeded at 85 with fuzz 2 (offset 9 lines)."
+  },
+  "attempts": [
+    {
+      "path": "patches/master/0001-use-CreateMutexEx-instead-of-CreateMutex-to-fix-win8.patch",
+      "start_line": 3150,
+      "lines": [
+        {
+          "line": 3152,
+          "text": "2026-09-18T02:35:30.0633610Z patching file libavutil/hwcontext_d3d11va.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "e617086876d09b51642cb579c65860810c434e05f2a36575ab3758fc63becf76",
+      "source_git_blob_sha1": "86d9ef674121efd5963588445334523715880e1a"
+    },
+    {
+      "path": "patches/master/0002-mmal-enable-0-copy-for-egl-interop.patch",
+      "start_line": 3153,
+      "lines": [
+        {
+          "line": 3155,
+          "text": "2026-09-18T02:35:30.0872949Z patching file libavcodec/mmaldec.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "2ab5be6b901faeb2299baa21410c9946c5f8bea15fed7a8a9d666784724c8cd1",
+      "source_git_blob_sha1": "0ee02677abfef739c0dd703499154aa56bf06001"
+    },
+    {
+      "path": "patches/master/0003-configure-fix-mmal-probing-in-cross-build.patch",
+      "start_line": 3156,
+      "lines": [
+        {
+          "line": 3158,
+          "text": "2026-09-18T02:35:30.1109297Z patching file configure"
+        },
+        {
+          "line": 3159,
+          "text": "2026-09-18T02:35:30.1117689Z Hunk #1 succeeded at 7401 (offset -95 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "fd53dd4f5c5a49acf3e1051c5ff39609499250d501aa66f51a941a5e202a2414",
+      "source_git_blob_sha1": "f04ca901a14dd3b54e7099ea06484d27749feb47"
+    },
+    {
+      "path": "patches/master/0004-videotoolbox-check-runtime-availability.patch",
+      "start_line": 3160,
+      "lines": [
+        {
+          "line": 3162,
+          "text": "2026-09-18T02:35:30.1355884Z patching file libavcodec/videotoolbox.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "96a1974335285ab0110aea7e17a559f0a68ceacaf6e5e9dd4404125238b74a59",
+      "source_git_blob_sha1": "14d9210da5b9bf237561b3503215390ff59a9a36"
+    },
+    {
+      "path": "patches/master/0005-mediacodec-check-whether-cropping-is-set-before-use.patch",
+      "start_line": 3163,
+      "lines": [
+        {
+          "line": 3165,
+          "text": "2026-09-18T02:35:30.1589817Z patching file libavcodec/mediacodecdec_common.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "17acef8ba85a05eb5df9d9d1bf221f62ad7447c6345cd81c18c14b828b222898",
+      "source_git_blob_sha1": "502386fac9be82fbce7e9dfd4541c9225e455260"
+    },
+    {
+      "path": "patches/master/0006-avcodec-add-AV_HWACCEL_FLAG_ALLOW_SOFTWARE.patch",
+      "start_line": 3166,
+      "lines": [
+        {
+          "line": 3168,
+          "text": "2026-09-18T02:35:30.1825552Z patching file libavcodec/avcodec.h"
+        },
+        {
+          "line": 3169,
+          "text": "2026-09-18T02:35:30.1829006Z Hunk #1 succeeded at 2048 (offset 15 lines)."
+        },
+        {
+          "line": 3171,
+          "text": "2026-09-18T02:35:30.1838706Z patching file libavcodec/options_table.h"
+        },
+        {
+          "line": 3172,
+          "text": "2026-09-18T02:35:30.1840652Z Hunk #1 succeeded at 407 (offset 3 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "c02cb1fa716d1a1d42777b390d22fa0481090cfff3ee09d6272b41b629f410f8",
+      "source_git_blob_sha1": "6b93899dfa96b9368fd38f8a692adb61a59b400e"
+    },
+    {
+      "path": "patches/master/0007-videotoolbox-allow-software-implementation.patch",
+      "start_line": 3173,
+      "lines": [
+        {
+          "line": 3175,
+          "text": "2026-09-18T02:35:30.2116644Z patching file libavcodec/videotoolbox.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "221272a47b69085247b14e576ef142dd30f966204060b49a19d394d47524c28f",
+      "source_git_blob_sha1": "1ff3e2ff9eeb6fd06fcb6c14a466f4544042f0be"
+    },
+    {
+      "path": "patches/master/0008-h264-increase-MAX_SLICES-to-64.patch",
+      "start_line": 3176,
+      "lines": [
+        {
+          "line": 3178,
+          "text": "2026-09-18T02:35:30.2365356Z patching file libavcodec/h264dec.h"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "8fd1485be82a945da2d2299f9d7baf3e5a0df27f3216fc38395d917540a9fbaa",
+      "source_git_blob_sha1": "645ac901e2e5584d1ad977ccbc944965f799c0ce"
+    },
+    {
+      "path": "patches/master/0009-mmal-add-vp8-mjpeg-wmv3.patch",
+      "start_line": 3179,
+      "lines": [
+        {
+          "line": 3181,
+          "text": "2026-09-18T02:35:30.2606682Z patching file configure"
+        },
+        {
+          "line": 3182,
+          "text": "2026-09-18T02:35:30.2611744Z Hunk #1 succeeded at 3655 (offset -16 lines)."
+        },
+        {
+          "line": 3183,
+          "text": "2026-09-18T02:35:30.2612254Z Hunk #2 succeeded at 3685 (offset -16 lines)."
+        },
+        {
+          "line": 3184,
+          "text": "2026-09-18T02:35:30.2612959Z Hunk #3 succeeded at 3708 (offset -16 lines)."
+        },
+        {
+          "line": 3186,
+          "text": "2026-09-18T02:35:30.2627800Z patching file libavcodec/allcodecs.c"
+        },
+        {
+          "line": 3187,
+          "text": "2026-09-18T02:35:30.2629182Z Hunk #1 succeeded at 896 (offset 3 lines)."
+        },
+        {
+          "line": 3188,
+          "text": "2026-09-18T02:35:30.2629687Z Hunk #2 succeeded at 915 (offset 3 lines)."
+        },
+        {
+          "line": 3189,
+          "text": "2026-09-18T02:35:30.2630039Z Hunk #3 succeeded at 927 (offset 3 lines)."
+        },
+        {
+          "line": 3191,
+          "text": "2026-09-18T02:35:30.2639103Z patching file libavcodec/mmaldec.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "0cd665eeb6a4aea3500189c5ebd9e6f4fcfbc0d3114d6830589d53d9d8ba6555",
+      "source_git_blob_sha1": "03fdf75642a928942ac9af046824b84ce9c57b4e"
+    },
+    {
+      "path": "patches/master/0010-mmal-add-option-copy_frame-to-support-retrieving-sw-.patch",
+      "start_line": 3192,
+      "lines": [
+        {
+          "line": 3194,
+          "text": "2026-09-18T02:35:30.2902371Z patching file libavcodec/mmaldec.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "612569a4da25ee68ed3ce33591d7fef5d2ec0b77eb810c3948c0681a048085f8",
+      "source_git_blob_sha1": "40b1f7b58010c8517176cdea9a76fbb8b20e53d6"
+    },
+    {
+      "path": "patches/master/0011-videotoolbox-remove-opengl-compatibility-attribute.patch",
+      "start_line": 3195,
+      "lines": [
+        {
+          "line": 3197,
+          "text": "2026-09-18T02:35:30.3139448Z patching file libavcodec/videotoolbox.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "0a7ceb2eb38e5fb5f955484489c4aadbefac321c21b6ba3717cfd4c0cf853d5a",
+      "source_git_blob_sha1": "b8448620089185d62cfed36f3f0256ed4832f972"
+    },
+    {
+      "path": "patches/master/0012-configure-do-not-filter-libpath-for-msvc.patch",
+      "start_line": 3198,
+      "lines": [
+        {
+          "line": 3200,
+          "text": "2026-09-18T02:35:30.3377659Z patching file configure"
+        },
+        {
+          "line": 3201,
+          "text": "2026-09-18T02:35:30.3385925Z Hunk #1 succeeded at 5192 with fuzz 1 (offset -12 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "75f742b2b91d5018001f7a1f1f61df0e56a4d9d7cd3354ee3d2009939536a47b",
+      "source_git_blob_sha1": "3290a1d8e0f2ce28be9c32a90588aa65a209c5ec"
+    },
+    {
+      "path": "patches/master/0013-configure-enable-icf.patch",
+      "start_line": 3202,
+      "lines": [
+        {
+          "line": 3204,
+          "text": "2026-09-18T02:35:30.3634287Z patching file configure"
+        },
+        {
+          "line": 3205,
+          "text": "2026-09-18T02:35:30.3646520Z Hunk #1 succeeded at 7965 with fuzz 2 (offset -100 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "99e04a2365f75821fd95827b85f4bba3fe21ded15d21a23a63a6904759c18c95",
+      "source_git_blob_sha1": "5614aee7cc3330ad85d3e0f2732de24ba2f93329"
+    },
+    {
+      "path": "patches/master/0014-configure-suppor-static-build-via-clang-cl.patch",
+      "start_line": 3206,
+      "lines": [
+        {
+          "line": 3208,
+          "text": "2026-09-18T02:35:30.3896182Z patching file configure"
+        },
+        {
+          "line": 3209,
+          "text": "2026-09-18T02:35:30.3903418Z Hunk #1 succeeded at 6223 (offset -73 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "ebc9cbaf0b56314a30124a4735ac2befeac6fcbf3ecfe350f6526c462359f08d",
+      "source_git_blob_sha1": "79b04853836ae01e333941f59c3ff20c644d2615"
+    },
+    {
+      "path": "patches/master/0015-nvenc-use-runtime-api-version-to-work-with-old-drive.patch",
+      "start_line": 3210,
+      "lines": [
+        {
+          "line": 3212,
+          "text": "2026-09-18T02:35:30.4157083Z patching file libavcodec/nvenc.c"
+        },
+        {
+          "line": 3214,
+          "text": "2026-09-18T02:35:30.4174062Z patching file libavcodec/nvenc.h"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "9b59f50948afb31778f8773267a330be4cdb613f5e5d57ba295d9c4ba1718cc8",
+      "source_git_blob_sha1": "410561aa6935830b9b4487f6e56469b5e54ea3f4"
+    },
+    {
+      "path": "patches/master/0016-nvenc-check-sdk-10.0-ptrs-at-runtime.patch",
+      "start_line": 3215,
+      "lines": [
+        {
+          "line": 3217,
+          "text": "2026-09-18T02:35:30.4416967Z patching file libavcodec/nvenc.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "461022a2e9b56c6da6b9317cf1c96418e2b6b3e84587c4f1919343b31b6c4411",
+      "source_git_blob_sha1": "f2210bcf20d48840cb5b2dba3251b2edbb420986"
+    },
+    {
+      "path": "patches/master/0017-lavfi-atempo-fix-large-tempo-4-crash-lower-min.patch",
+      "start_line": 3218,
+      "lines": [
+        {
+          "line": 3220,
+          "text": "2026-09-18T02:35:30.4659142Z patching file libavfilter/af_atempo.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "b91ae9988e8d612f13dd183484cda38d23febd3c3f45f67f6f18a761aeef4f60",
+      "source_git_blob_sha1": "8b68305de8aa21399ff8b6cf71da15491774123b"
+    },
+    {
+      "path": "patches/master/0018-msvc-fix-long-argument-list-error-on-windows.patch",
+      "start_line": 3221,
+      "lines": [
+        {
+          "line": 3223,
+          "text": "2026-09-18T02:35:30.4896550Z patching file compat/windows/makedef"
+        },
+        {
+          "line": 3225,
+          "text": "2026-09-18T02:35:30.4905975Z patching file compat/windows/mslink"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "5494986631e32b033e2ec805c6ca41839db0d3794ce5a2c2ea0d89a7d6bbac6e",
+      "source_git_blob_sha1": "230c8a9d80591d5d959f2d51ff9eb57510536035"
+    },
+    {
+      "path": "patches/master/0019-configure-rewrite-flags-from-pkg-config-for-msvc-in-.patch",
+      "start_line": 3226,
+      "lines": [
+        {
+          "line": 3228,
+          "text": "2026-09-18T02:35:30.5150166Z patching file configure"
+        },
+        {
+          "line": 3229,
+          "text": "2026-09-18T02:35:30.5156173Z Hunk #1 succeeded at 5195 (offset -12 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "081c524d6825a0f8459eeefb3e862c6948d24ca4140c71fa0e3be137818eef6e",
+      "source_git_blob_sha1": "a51a0d8312fe8a2966285113f2ea53dedb6712bc"
+    },
+    {
+      "path": "patches/master/0020-win-enable-windres-for-small-and-msvc.patch",
+      "start_line": 3230,
+      "lines": [
+        {
+          "line": 3232,
+          "text": "2026-09-18T02:35:30.5408888Z patching file configure"
+        },
+        {
+          "line": 3233,
+          "text": "2026-09-18T02:35:30.5415660Z Hunk #1 succeeded at 6153 (offset -73 lines)."
+        },
+        {
+          "line": 3234,
+          "text": "2026-09-18T02:35:30.5416181Z Hunk #2 succeeded at 6203 (offset -73 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "a1b029e34b19746942f38f2c84b3611b9e9d4204d551e855e9ad283c30ef1c18",
+      "source_git_blob_sha1": "08277712af92a44f1f68d9d73dc1c4a8638db818"
+    },
+    {
+      "path": "patches/master/0021-configure-add-extra-windresflags.patch",
+      "start_line": 3235,
+      "lines": [
+        {
+          "line": 3237,
+          "text": "2026-09-18T02:35:30.5666663Z patching file configure"
+        },
+        {
+          "line": 3238,
+          "text": "2026-09-18T02:35:30.5668146Z Hunk #1 succeeded at 427 (offset 1 line)."
+        },
+        {
+          "line": 3239,
+          "text": "2026-09-18T02:35:30.5669343Z Hunk #2 succeeded at 1034 (offset 6 lines)."
+        },
+        {
+          "line": 3240,
+          "text": "2026-09-18T02:35:30.5673814Z Hunk #3 succeeded at 4697 (offset -6 lines)."
+        },
+        {
+          "line": 3241,
+          "text": "2026-09-18T02:35:30.5675314Z Hunk #4 succeeded at 5518 (offset -73 lines)."
+        },
+        {
+          "line": 3242,
+          "text": "2026-09-18T02:35:30.5678538Z Hunk #5 succeeded at 8542 (offset -138 lines)."
+        },
+        {
+          "line": 3244,
+          "text": "2026-09-18T02:35:30.5688822Z patching file ffbuild/common.mak"
+        },
+        {
+          "line": 3245,
+          "text": "2026-09-18T02:35:30.5690236Z Hunk #1 succeeded at 105 with fuzz 2 (offset 3 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "86a0ba4845e66bde923b016af5f5544dd12cf75f073d1c50eeae0bceada61898",
+      "source_git_blob_sha1": "c97ad122bc5a562e1528f2f80b4aac356d83a092"
+    },
+    {
+      "path": "patches/master/0022-add-h264-max-bit-depth-to-disable-rarely-used-depths.patch",
+      "start_line": 3246,
+      "lines": [
+        {
+          "line": 3248,
+          "text": "2026-09-18T02:35:30.5965742Z patching file configure"
+        },
+        {
+          "line": 3249,
+          "text": "2026-09-18T02:35:30.5974769Z Hunk #1 succeeded at 451 (offset 1 line)."
+        },
+        {
+          "line": 3250,
+          "text": "2026-09-18T02:35:30.5985332Z Hunk #2 succeeded at 2866 (offset -19 lines)."
+        },
+        {
+          "line": 3251,
+          "text": "2026-09-18T02:35:30.5988159Z Hunk #3 succeeded at 4470 (offset -12 lines)."
+        },
+        {
+          "line": 3252,
+          "text": "2026-09-18T02:35:30.5993109Z Hunk #4 succeeded at 8646 (offset -138 lines)."
+        },
+        {
+          "line": 3254,
+          "text": "2026-09-18T02:35:30.6012001Z patching file libavcodec/h264chroma.c"
+        },
+        {
+          "line": 3256,
+          "text": "2026-09-18T02:35:30.6041762Z patching file libavcodec/h264dsp.c"
+        },
+        {
+          "line": 3258,
+          "text": "2026-09-18T02:35:30.6085714Z patching file libavcodec/h264idct.c"
+        },
+        {
+          "line": 3260,
+          "text": "2026-09-18T02:35:30.6125192Z patching file libavcodec/h264pred.c"
+        },
+        {
+          "line": 3262,
+          "text": "2026-09-18T02:35:30.6151165Z patching file libavcodec/h264qpel.c"
+        },
+        {
+          "line": 3264,
+          "text": "2026-09-18T02:35:30.6171986Z patching file libavcodec/x86/h264_intrapred_init.c"
+        },
+        {
+          "line": 3266,
+          "text": "2026-09-18T02:35:30.6218978Z patching file libavcodec/x86/h264chroma_init.c"
+        },
+        {
+          "line": 3268,
+          "text": "2026-09-18T02:35:30.6266755Z patching file libavcodec/x86/h264dsp_init.c"
+        },
+        {
+          "line": 3269,
+          "text": "2026-09-18T02:35:30.6269628Z Hunk #1 succeeded at 263 (offset -5 lines)."
+        },
+        {
+          "line": 3270,
+          "text": "2026-09-18T02:35:30.6276953Z Hunk #2 succeeded at 341 (offset -5 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "4df6735619b3b34d89fcff026b9b74aef5a07ab4389531ce8f1ef6a6b9159130",
+      "source_git_blob_sha1": "f297268c7c6ec25f569df518d0e9dcce24b82f5a"
+    },
+    {
+      "path": "patches/master/0023-wolfSSL-new-TLS-backend-patch.patch",
+      "start_line": 3271,
+      "lines": [
+        {
+          "line": 3273,
+          "text": "2026-09-18T02:35:30.6830830Z patching file configure"
+        },
+        {
+          "line": 3275,
+          "text": "2026-09-18T02:35:30.6852467Z patching file libavformat/Makefile"
+        },
+        {
+          "line": 3277,
+          "text": "2026-09-18T02:35:30.6862182Z patching file libavformat/network.c"
+        },
+        {
+          "line": 3279,
+          "text": "2026-09-18T02:35:30.6871402Z patching file libavformat/tls.h"
+        },
+        {
+          "line": 3281,
+          "text": "2026-09-18T02:35:30.6878675Z patching file libavformat/tls_wolfssl.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "da535aa5a6459b7b2729ad236a20b5c4386d8484bf84d0845814214a200bfea6",
+      "source_git_blob_sha1": "4f5b3653cd53e5972844a3bc4b304d6eb7804c3e"
+    },
+    {
+      "path": "patches/master/0024-avformat-mpegts-index-only-keyframes-to-ensure-accur.patch",
+      "start_line": 3282,
+      "lines": [
+        {
+          "line": 3284,
+          "text": "2026-09-18T02:35:30.7146899Z patching file libavformat/mpegts.c"
+        },
+        {
+          "line": 3285,
+          "text": "2026-09-18T02:35:30.7152416Z Hunk #1 succeeded at 3800 (offset 9 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "d23c876518abfb44e2510f8d8b9b93b065ff73a462ccb5cc121acb89cb35e3a6",
+      "source_git_blob_sha1": "f6511d59b378ceb529aad66c7370fdb8f699503f"
+    },
+    {
+      "path": "patches/master/0025-windows-shared-static-libs-in-one-build.patch",
+      "start_line": 3286,
+      "lines": [
+        {
+          "line": 3288,
+          "text": "2026-09-18T02:35:30.7392508Z patching file configure"
+        },
+        {
+          "line": 3289,
+          "text": "2026-09-18T02:35:30.7399547Z Hunk #1 succeeded at 6217 (offset -73 lines)."
+        },
+        {
+          "line": 3290,
+          "text": "2026-09-18T02:35:30.7400014Z Hunk #2 succeeded at 6247 (offset -73 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "961f1d3542f4ee8261fba63f5a899adcc98dc60956a38bce87f5e1a65e3ce764",
+      "source_git_blob_sha1": "c562bfed7b71079399cac7865a33c3ff9d16d0e3"
+    },
+    {
+      "path": "patches/master/0026-Revert-avutil-timestamp-change-precision-of-av_ts_ma.patch",
+      "start_line": 3291,
+      "lines": [
+        {
+          "line": 3293,
+          "text": "2026-09-18T02:35:30.7670424Z patching file libavutil/timestamp.h"
+        },
+        {
+          "line": 3295,
+          "text": "2026-09-18T02:35:30.7680814Z patching file tests/ref/fate/filter-metadata-scdet"
+        },
+        {
+          "line": 3297,
+          "text": "2026-09-18T02:35:30.7690422Z patching file tests/ref/fate/filter-metadata-silencedetect"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "b6166006d78173bceb4b2e63cf593e5c69c7e38ab1360d01a3a13cbcc2437311",
+      "source_git_blob_sha1": "8baaac55397098cbc4a2255406c4cbe75085a8e2"
+    },
+    {
+      "path": "patches/master/0027-hls-support-segments-pretend-to-be-gif-png.patch",
+      "start_line": 3298,
+      "lines": [
+        {
+          "line": 3300,
+          "text": "2026-09-18T02:35:30.7948959Z patching file libavformat/hls.c"
+        },
+        {
+          "line": 3301,
+          "text": "2026-09-18T02:35:30.7953768Z Hunk #2 succeeded at 2503 (offset 1 line)."
+        },
+        {
+          "line": 3302,
+          "text": "2026-09-18T02:35:30.7955084Z Hunk #3 succeeded at 3190 (offset 21 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "4c32f4913e3fdd7869577ad439c6ce7d10b43cce44c9b61c24ad123e147d1b18",
+      "source_git_blob_sha1": "1f8b11b3cc4e45b8a2e24eb500296642dcd7cfa1"
+    },
+    {
+      "path": "patches/master/0028-matroskadec-support-S_TEXT-WEBVTT.patch",
+      "start_line": 3303,
+      "lines": [
+        {
+          "line": 3305,
+          "text": "2026-09-18T02:35:30.8187907Z patching file libavformat/matroska.c"
+        },
+        {
+          "line": 3307,
+          "text": "2026-09-18T02:35:30.8201044Z patching file libavformat/matroskadec.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "46880dfc5d161a8d8453164d624265b2af1c54e4dd34eedc75ec4e60f3b32983",
+      "source_git_blob_sha1": "0b955d12b11a541c7e201da32f826749ab588bf7"
+    },
+    {
+      "path": "patches/master/0029-avutil-mem_internal-fix-clang-vcrt-build.patch",
+      "start_line": 3308,
+      "lines": [
+        {
+          "line": 3310,
+          "text": "2026-09-18T02:35:30.8448082Z patching file libavutil/mem_internal.h"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "628f72eb7251760523c3b9a99e7fc31217421ba31fc6dbab7143bdb3a4a02fd6",
+      "source_git_blob_sha1": "7313e8b72e855039f7a09711e0567ee27980ceab"
+    },
+    {
+      "path": "patches/master/0030-add-h265-bit-depths.patch",
+      "start_line": 3311,
+      "lines": [
+        {
+          "line": 3313,
+          "text": "2026-09-18T02:35:30.8681863Z patching file configure"
+        },
+        {
+          "line": 3314,
+          "text": "2026-09-18T02:35:30.8683145Z Hunk #1 succeeded at 454 (offset 1 line)."
+        },
+        {
+          "line": 3315,
+          "text": "2026-09-18T02:35:30.8686016Z Hunk #2 succeeded at 2871 (offset -19 lines)."
+        },
+        {
+          "line": 3316,
+          "text": "2026-09-18T02:35:30.8687876Z Hunk #3 succeeded at 4478 (offset -12 lines)."
+        },
+        {
+          "line": 3317,
+          "text": "2026-09-18T02:35:30.8691592Z Hunk #4 succeeded at 8659 (offset -138 lines)."
+        },
+        {
+          "line": 3319,
+          "text": "2026-09-18T02:35:30.8701923Z patching file libavcodec/hevc/dsp.c"
+        },
+        {
+          "line": 3321,
+          "text": "2026-09-18T02:35:30.8710232Z patching file libavcodec/hevc/pred.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "bb17365539cd2e2b1d597802f55808e59ab92ec7460f12807aab12529c9a2a75",
+      "source_git_blob_sha1": "2ae3314c5a17b26b7fd63fba75beee783a0a6ce9"
+    },
+    {
+      "path": "patches/master/0031-nvenc-support-api-version-12.0-api-option.patch",
+      "start_line": 3322,
+      "lines": [
+        {
+          "line": 3324,
+          "text": "2026-09-18T02:35:30.8971361Z patching file libavcodec/nvenc.c"
+        },
+        {
+          "line": 3326,
+          "text": "2026-09-18T02:35:30.8987761Z patching file libavcodec/nvenc.h"
+        },
+        {
+          "line": 3328,
+          "text": "2026-09-18T02:35:30.8997260Z patching file libavcodec/nvenc_av1.c"
+        },
+        {
+          "line": 3330,
+          "text": "2026-09-18T02:35:30.9006426Z patching file libavcodec/nvenc_h264.c"
+        },
+        {
+          "line": 3332,
+          "text": "2026-09-18T02:35:30.9015533Z patching file libavcodec/nvenc_hevc.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "a9319dcbaca05c2dfffd2f48820ae7bf2bfc8b5b3f46753bca0474334ed2a043",
+      "source_git_blob_sha1": "a5e0f5971efd0db030911c7950d5c7b9371e64a7"
+    },
+    {
+      "path": "patches/master/0032-nvenc-support-all-versions-in-1-build.patch",
+      "start_line": 3333,
+      "lines": [
+        {
+          "line": 3335,
+          "text": "2026-09-18T02:35:30.9283735Z patching file libavcodec/Makefile"
+        },
+        {
+          "line": 3336,
+          "text": "2026-09-18T02:35:30.9285209Z Hunk #1 succeeded at 280 (offset -1 lines)."
+        },
+        {
+          "line": 3338,
+          "text": "2026-09-18T02:35:30.9297197Z patching file libavcodec/nvenc.c"
+        },
+        {
+          "line": 3340,
+          "text": "2026-09-18T02:35:30.9309818Z patching file libavcodec/nvenc.h"
+        },
+        {
+          "line": 3342,
+          "text": "2026-09-18T02:35:30.9316967Z patching file libavcodec/nvenc_111.c"
+        },
+        {
+          "line": 3344,
+          "text": "2026-09-18T02:35:30.9329070Z patching file libavcodec/nvenc_120.c"
+        },
+        {
+          "line": 3346,
+          "text": "2026-09-18T02:35:30.9341165Z patching file libavcodec/nvenc_121.c"
+        },
+        {
+          "line": 3348,
+          "text": "2026-09-18T02:35:30.9352616Z patching file libavcodec/nvenc_dispatch.c"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "f42805e38679108ec03ca7acfd045767fb50884a7224446f2a11da179b4bd6c6",
+      "source_git_blob_sha1": "8f37277fb3c7f40b09d9382ec9ea39810f2153b5"
+    },
+    {
+      "path": "patches/master/0033-hls-allow-playlist-w-o-extension.patch",
+      "start_line": 3349,
+      "lines": [
+        {
+          "line": 3351,
+          "text": "2026-09-18T02:35:30.9613816Z patching file libavformat/hls.c"
+        },
+        {
+          "line": 3352,
+          "text": "2026-09-18T02:35:30.9618122Z Hunk #1 succeeded at 3140 (offset 21 lines)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "e5262d587f7456fe9ffce42d08175df8a66819a10b3fcc95640c5f93fa6e2951",
+      "source_git_blob_sha1": "ddba168957d47ad314ab7af4497a6a0783526591"
+    },
+    {
+      "path": "patches/master/0034-apple-fix-build-for-low-target-version.patch",
+      "start_line": 3353,
+      "lines": [
+        {
+          "line": 3355,
+          "text": "2026-09-18T02:35:30.9867660Z patching file libavdevice/avfoundation.m"
+        },
+        {
+          "line": 3356,
+          "text": "2026-09-18T02:35:30.9868783Z Hunk #1 succeeded at 225 (offset 1 line)."
+        },
+        {
+          "line": 3358,
+          "text": "2026-09-18T02:35:30.9878536Z patching file libavfilter/vf_yadif_videotoolbox.m"
+        },
+        {
+          "line": 3360,
+          "text": "2026-09-18T02:35:30.9887249Z patching file libavformat/tls_securetransport.c"
+        },
+        {
+          "line": 3361,
+          "text": "2026-09-18T02:35:30.9888600Z Hunk #1 succeeded at 166 (offset 1 line)."
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "2633cd6b5f9378516793967225c9129c964dd237aa3333cef13346e2c18ae44f",
+      "source_git_blob_sha1": "3982759c7a8593dde4aec2d3330c37b2089a6dd1"
+    },
+    {
+      "path": "patches/master/0035-ffbuild-filter-out-showIncludes-for-windres.patch",
+      "start_line": 3362,
+      "lines": [
+        {
+          "line": 3364,
+          "text": "2026-09-18T02:35:31.0144734Z patching file ffbuild/common.mak"
+        }
+      ],
+      "has_failure": false,
+      "source_sha256": "e358d1e4a7eeef41817e0e9bfdd6b24b4c46641ea27bcfe39e0c9c822e83cd5c",
+      "source_git_blob_sha1": "8edb649ebd23133dc496e593916f58e86c21d264"
+    },
+    {
+      "path": "patches/common/0001-add-h265-bit-depths.patch",
+      "start_line": 3365,
+      "lines": [
+        {
+          "line": 3367,
+          "text": "2026-09-18T02:35:31.0894484Z patching file configure"
+        },
+        {
+          "line": 3368,
+          "text": "2026-09-18T02:35:31.0897377Z Reversed (or previously applied) patch detected!  Skipping patch."
+        },
+        {
+          "line": 3371,
+          "text": "2026-09-18T02:35:31.0915385Z patching file libavcodec/hevc/dsp.c"
+        },
+        {
+          "line": 3372,
+          "text": "2026-09-18T02:35:31.0915974Z Reversed (or previously applied) patch detected!  Skipping patch."
+        },
+        {
+          "line": 3375,
+          "text": "2026-09-18T02:35:31.0930778Z patching file libavcodec/hevc/pred.c"
+        },
+        {
+          "line": 3376,
+          "text": "2026-09-18T02:35:31.0933237Z Hunk #1 FAILED at 24."
+        },
+        {
+          "line": 3377,
+          "text": "2026-09-18T02:35:31.0933648Z Hunk #2 FAILED at 61."
+        },
+        {
+          "line": 3378,
+          "text": "2026-09-18T02:35:31.0936987Z 2 out of 2 hunks FAILED -- saving rejects to file libavcodec/hevc/pred.c.rej"
+        }
+      ],
+      "has_failure": true,
+      "source_sha256": "add8a504f2f033432ea70bd3576315c64d2010cb16f6c4a04be76eaf20ee21b8",
+      "source_git_blob_sha1": "378c9614e98564eb44fa01919406c4ede4fdec7a"
+    },
+    {
+      "path": "patches/common/0001-add-spirv_compiler-to-avfilter_suggest.patch",
+      "start_line": 3379,
+      "lines": [
+        {
+          "line": 3381,
+          "text": "2026-09-18T02:35:31.1200144Z patching file configure"
+        },
+        {
+          "line": 3382,
+          "text": "2026-09-18T02:35:31.1207413Z Hunk #1 FAILED at 4044."
+        },
+        {
+          "line": 3383,
+          "text": "2026-09-18T02:35:31.1217626Z 1 out of 1 hunk FAILED -- saving rejects to file configure.rej"
+        }
+      ],
+      "has_failure": true,
+      "source_sha256": "845d371d2a2df9f1a0237fc2f27e0221882e6fd3412ba8a7fa2e15c6a92653c5",
+      "source_git_blob_sha1": "25e524368ae4879b5c1f7736ca2f9e0fd2efbd91"
+    },
+    {
+      "path": "patches/common/0001-avfilter-vf_scale_d3d11-ensure-guids-are-defined.patch",
+      "start_line": 3384,
+      "lines": [
+        {
+          "line": 3386,
+          "text": "2026-09-18T02:35:31.1456532Z patching file libavfilter/vf_scale_d3d11.c"
+        },
+        {
+          "line": 3387,
+          "text": "2026-09-18T02:35:31.1457589Z Reversed (or previously applied) patch detected!  Skipping patch."
+        }
+      ],
+      "has_failure": true,
+      "source_sha256": "ca2abf02a094e3851cb8719e6788c4c140e1063004b3ee59e01c8976b04c2ef8",
+      "source_git_blob_sha1": "597190f0af774cf4e51fb0839aa1188a35ae72ae"
+    },
+    {
+      "path": "patches/common/0001-lavfi-fix-undefined-ff_vk_shader_print-if-vulkan-fil.patch",
+      "start_line": 3389,
+      "lines": [
+        {
+          "line": 3391,
+          "text": "2026-09-18T02:35:31.1686824Z patching file libavfilter/Makefile"
+        },
+        {
+          "line": 3392,
+          "text": "2026-09-18T02:35:31.1689952Z Hunk #1 FAILED at 649."
+        },
+        {
+          "line": 3393,
+          "text": "2026-09-18T02:35:31.1694173Z 1 out of 1 hunk FAILED -- saving rejects to file libavfilter/Makefile.rej"
+        }
+      ],
+      "has_failure": true,
+      "source_sha256": "5c50a2ca30c8d589462d6339fe9a938702f234e03aeb3d2fbb5c7ae78a7b0b0b",
+      "source_git_blob_sha1": "943a5450865fbd617dc0ebb7ce88ccfd58456f7c"
+    },
+    {
+      "path": "patches/common/0001-lavu-monotonic-av_gettime_relative-for-msvc.patch",
+      "start_line": 3394,
+      "lines": [
+        {
+          "line": 3396,
+          "text": "2026-09-18T02:35:31.1935929Z patching file libavutil/time.c"
+        },
+        {
+          "line": 3397,
+          "text": "2026-09-18T02:35:31.1938563Z Hunk #1 FAILED at 64."
+        },
+        {
+          "line": 3398,
+          "text": "2026-09-18T02:35:31.1939894Z Hunk #2 succeeded at 85 with fuzz 2 (offset 9 lines)."
+        },
+        {
+          "line": 3399,
+          "text": "2026-09-18T02:35:31.1943636Z 1 out of 2 hunks FAILED -- saving rejects to file libavutil/time.c.rej"
+        }
+      ],
+      "has_failure": true,
+      "source_sha256": "da53d281af17c5e0206f9b42145c321fb02b99916e89cde38f4fa7f9076905e1",
+      "source_git_blob_sha1": "ad2479aa0b04f4b10f15aa05fea74bab62666d79"
+    }
+  ],
+  "limits": "Failure/skip categories are interpreted from retained log lines, not observed individual command exit codes. Do not require all 40 patch commands to succeed or discard partially applied hunks. Root has not independently repeated this ordered GNU patch run on Mac and has not reproduced the final DLL. Complete source, platform dependency and relinking requirements remain open."
+}

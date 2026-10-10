@@ -1,0 +1,5 @@
+# German translations for DRI driver options.
+# Copyright (C) 2005 Felix Kuehling
+# This file is distributed under the same license as the Mesa package.
+# Felix Kuehling <fxkuehl@gmx.de>, 2005.
+#

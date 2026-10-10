@@ -1,0 +1,8 @@
+Package: opencl
+Version: 2024.10.24
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Description: OpenCL SDK
+Status: install ok installed

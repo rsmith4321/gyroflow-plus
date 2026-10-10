@@ -1,0 +1,266 @@
+{
+  "schema": 1,
+  "scope": "libass x64 build inputs and source closure; no runtime or release approval",
+  "vendor_job_url": "https://github.com/wang-bin/devpkgs/actions/runs/36568481997/job/109406241216",
+  "vendor_log_sha256": "ec06b3224d7f0ccfe9228fe503381235e67d210341a722225775924cda324f98",
+  "binary_relation": "Vendor artifact has equal defined section payloads to the shipped libass DLL; raw PE header/padding differences remain. See ACTIONS-BUILD-CONTENT.json.",
+  "checked_out_source_pins": [
+    {
+      "component": "devpkgs",
+      "commit": "ce43c819981bb7ca028d08d1baa4847f1136f576",
+      "line": 505,
+      "text": "2026-09-29T12:32:57.5860822Z ce43c819981bb7ca028d08d1baa4847f1136f576"
+    },
+    {
+      "component": "libass",
+      "commit": "af5f116d243f060a708c82f0c6e3102a2270a336",
+      "line": 200,
+      "text": "2026-09-29T12:32:29.5217140Z Submodule path 'src/libass': checked out 'af5f116d243f060a708c82f0c6e3102a2270a336'"
+    },
+    {
+      "component": "HarfBuzz",
+      "commit": "863d3f7787c6df18d20e4535c5906bf3eb803bd5",
+      "line": 199,
+      "text": "2026-09-29T12:32:29.3909838Z Submodule path 'src/harfbuzz': checked out '863d3f7787c6df18d20e4535c5906bf3eb803bd5'"
+    },
+    {
+      "component": "FriBidi",
+      "commit": "b93119f5fdc7ea47672cc304c1455ffa6dfe7536",
+      "line": 197,
+      "text": "2026-09-29T12:32:27.5393626Z Submodule path 'src/fribidi': checked out 'b93119f5fdc7ea47672cc304c1455ffa6dfe7536'"
+    },
+    {
+      "component": "FreeType",
+      "commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+      "line": 193,
+      "text": "2026-09-29T12:32:26.3419932Z Submodule path 'src/freetype': checked out '0a0221a1347e2f1e07c395263540026e9a0aa7c7'"
+    }
+  ],
+  "retained_source_archives": [
+    {
+      "name": "devpkgs",
+      "commit": "ce43c819981bb7ca028d08d1baa4847f1136f576",
+      "archive": "devpkgs-ce43c819981bb7ca028d08d1baa4847f1136f576.tar.gz",
+      "bytes": 42840,
+      "sha256": "376c8908d652a5212c38e9d3e7fde4f9ba916d95edbf9996fc17fe29f246bd85"
+    },
+    {
+      "name": "libass",
+      "commit": "af5f116d243f060a708c82f0c6e3102a2270a336",
+      "archive": "libass-af5f116d243f060a708c82f0c6e3102a2270a336.tar.gz",
+      "bytes": 407760,
+      "sha256": "99c78073de5f059996ca0bc61e8e2c875761624316e8ecb3e0131cb9ba4b5b98"
+    },
+    {
+      "name": "HarfBuzz",
+      "commit": "863d3f7787c6df18d20e4535c5906bf3eb803bd5",
+      "archive": "HarfBuzz-863d3f7787c6df18d20e4535c5906bf3eb803bd5.tar.gz",
+      "bytes": 38660531,
+      "sha256": "8a2c75c09603b06515e1199033ed76bf7de5beabd2c80a4c92688aaf7db4f2fa"
+    },
+    {
+      "name": "FriBidi",
+      "commit": "b93119f5fdc7ea47672cc304c1455ffa6dfe7536",
+      "archive": "FriBidi-b93119f5fdc7ea47672cc304c1455ffa6dfe7536.tar.gz",
+      "bytes": 2189234,
+      "sha256": "51056192d61fa537f374739670b6b214b8510bb1d35c350cd5a991a645bf4d66"
+    },
+    {
+      "name": "FreeType",
+      "commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+      "archive": "FreeType-0a0221a1347e2f1e07c395263540026e9a0aa7c7.tar.gz",
+      "bytes": 2484792,
+      "sha256": "07ff1c932e35dfac27f220ddf82eda6c287a1ddd7a10c62c6d7898d762b4b378"
+    }
+  ],
+  "configure_command": {
+    "line": 645,
+    "text": "2026-09-29T12:33:04.6124788Z cmake -DMIN_SIZE=1 -DWITH_LTO_STATIC=1 -DCMAKE_VERBOSE_MAKEFILE=1 -DUSE_ARC=0 -GNinja -DBUILD_WOLFSSL=0 -DBUILD_VALD=1 -DBUILD_LIBASS=1 -DBUILD_DAV1D=1 -DFRIBIDI_GENTAB=1  -DCMAKE_SYSTEM_PROCESSOR=x64 -DCMAKE_SYSTEM_VERSION=\"6.0\"  -Bbuild/x64 -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=install/x64 ."
+  },
+  "link_command": {
+    "line": 1630,
+    "raw_line_sha256": "d426ceec4cd94820dadf2abf86c6f86c7d5bf307e5574136db869d78e48abd5a",
+    "direct_objects": [
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_arabic_charmap.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_bitmap.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_bitmap_engine.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_blur.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_cache.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_directwrite.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_drawing.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_face.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_face_ft.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_filesystem.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_font.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_fontselect.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_library.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_outline.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_parse.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_rasterizer.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_render.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_render_api.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_shaper.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_string.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_strtod.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\ass_utils.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\c\\c_be_blur.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\c\\c_blend_bitmaps.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\c\\c_blur.c.obj",
+      "projects\\libass\\CMakeFiles\\ass-objs.dir\\__\\__\\src\\libass\\libass\\c\\c_rasterizer.c.obj",
+      "projects\\libass\\CMakeFiles\\ass_asm.dir\\__\\__\\src\\libass\\libass\\x86\\be_blur.asm.obj",
+      "projects\\libass\\CMakeFiles\\ass_asm.dir\\__\\__\\src\\libass\\libass\\x86\\blend_bitmaps.asm.obj",
+      "projects\\libass\\CMakeFiles\\ass_asm.dir\\__\\__\\src\\libass\\libass\\x86\\blur.asm.obj",
+      "projects\\libass\\CMakeFiles\\ass_asm.dir\\__\\__\\src\\libass\\libass\\x86\\cpuid.asm.obj",
+      "projects\\libass\\CMakeFiles\\ass_asm.dir\\__\\__\\src\\libass\\libass\\x86\\rasterizer.asm.obj",
+      "projects\\libass\\CMakeFiles\\ass_asm.dir\\__\\__\\src\\libass\\libass\\x86\\utils.asm.obj",
+      "projects\\libass\\CMakeFiles\\ass_asm.dir\\__\\__\\src\\libass\\libass\\x86\\x86inc.asm.obj"
+    ],
+    "static_libraries": [
+      "projects\\fribidi\\libfribidi.lib",
+      "src\\freetype\\freetype.lib",
+      "src\\harfbuzz\\harfbuzz.lib"
+    ],
+    "has_ltcg": true,
+    "machine": "x64",
+    "runtime": "dynamic CRT (-MD on compile commands)"
+  },
+  "fribidi_generated_outputs": [
+    {
+      "output": "fribidi-unicode-version.h",
+      "line": 977,
+      "full_log_line_sha256": "c40b82bf0855da03dfb3d4c691ae881d592ec93361c69a77e0e2fed0bae72234",
+      "command_fragment": "\"cd /D D:\\a\\devpkgs\\devpkgs\\src\\fribidi\\gen.tab && D:\\a\\devpkgs\\devpkgs\\build\\x64\\projects\\fribidi\\gen-unicode-version.exe unidata/ReadMe.txt unidata/BidiMirroring.txt gen-unicode-version.c >fribidi-unicode-version.h\"\""
+    },
+    {
+      "output": "bidi-type.tab.i",
+      "line": 1028,
+      "full_log_line_sha256": "d0e178f8da677c2ea5fbdaab078cc1b1181a94430d0ae0f47adbc0e1650d69cd",
+      "command_fragment": "\"cd /D D:\\a\\devpkgs\\devpkgs\\src\\fribidi\\gen.tab && D:\\a\\devpkgs\\devpkgs\\build\\x64\\projects\\fribidi\\gen-bidi-type-tab.exe 2 unidata/UnicodeData.txt > bidi-type.tab.i\"\""
+    },
+    {
+      "output": "joining-type.tab.i",
+      "line": 1027,
+      "full_log_line_sha256": "981eea7123a6361129f067cd3f3eb2a5d88bf1332b2489f13c65b8c4ec2fdce6",
+      "command_fragment": "\"cd /D D:\\a\\devpkgs\\devpkgs\\src\\fribidi\\gen.tab && D:\\a\\devpkgs\\devpkgs\\build\\x64\\projects\\fribidi\\gen-joining-type-tab.exe 2 unidata/UnicodeData.txt unidata/ArabicShaping.txt >joining-type.tab.i\"\""
+    },
+    {
+      "output": "arabic-shaping.tab.i",
+      "line": 1018,
+      "full_log_line_sha256": "86ee5b93a55ccc42642e484d82751ec1eecb1a775ec08a6df5774bc7820cd70f",
+      "command_fragment": "\"cd /D D:\\a\\devpkgs\\devpkgs\\src\\fribidi\\gen.tab && D:\\a\\devpkgs\\devpkgs\\build\\x64\\projects\\fribidi\\gen-arabic-shaping-tab.exe 2 unidata/UnicodeData.txt >arabic-shaping.tab.i\"\""
+    },
+    {
+      "output": "mirroring.tab.i",
+      "line": 1019,
+      "full_log_line_sha256": "bddaf8ac12f6607289df7d24e6ff5e3af58273bfc61f72d9a5d2c288ef9b04bb",
+      "command_fragment": "\"cd /D D:\\a\\devpkgs\\devpkgs\\src\\fribidi\\gen.tab && D:\\a\\devpkgs\\devpkgs\\build\\x64\\projects\\fribidi\\gen-mirroring-tab.exe 2 unidata/BidiMirroring.txt >mirroring.tab.i\"\""
+    },
+    {
+      "output": "brackets.tab.i",
+      "line": 1015,
+      "full_log_line_sha256": "32b55672de43b1262cd1107098f049b088cd0773fd06530bfe5bb727f6b45380",
+      "command_fragment": "\"cd /D D:\\a\\devpkgs\\devpkgs\\src\\fribidi\\gen.tab && D:\\a\\devpkgs\\devpkgs\\build\\x64\\projects\\fribidi\\gen-brackets-tab.exe 2 unidata/BidiBrackets.txt unidata/UnicodeData.txt > brackets.tab.i\"\""
+    },
+    {
+      "output": "brackets-type.tab.i",
+      "line": 1014,
+      "full_log_line_sha256": "5aaf5b7614c4b2bb94ef6650c2c9a20b75b81d3295901bd3d0eca1fad6003961",
+      "command_fragment": "\"cd /D D:\\a\\devpkgs\\devpkgs\\src\\fribidi\\gen.tab && D:\\a\\devpkgs\\devpkgs\\build\\x64\\projects\\fribidi\\gen-brackets-type-tab.exe 2 unidata/BidiBrackets.txt > brackets-type.tab.i\"\""
+    }
+  ],
+  "unicode_data": {
+    "version": "18.0.0",
+    "files": [
+      {
+        "path": "gen.tab/unidata/ReadMe.txt",
+        "bytes": 729,
+        "sha256": "b0ea442f29dee90584aacd3665a6e1ce87ffc917a4d31f34e1916d2d6f7f9205"
+      },
+      {
+        "path": "gen.tab/unidata/UnicodeData.txt",
+        "bytes": 2243593,
+        "sha256": "0736451de439ae7baf1425136617da495e09ee5afbe6e394374db7009ea08950"
+      },
+      {
+        "path": "gen.tab/unidata/ArabicShaping.txt",
+        "bytes": 42356,
+        "sha256": "8ccde4ebd070500a68e8bcb9d5514522fb0bebe57b9ebad3ff925b8e1e669f83"
+      },
+      {
+        "path": "gen.tab/unidata/BidiMirroring.txt",
+        "bytes": 27294,
+        "sha256": "cd54810ebf52f0e61a730c8b9cb25975de6c85f6d788a559b416afd548923fd6"
+      },
+      {
+        "path": "gen.tab/unidata/BidiBrackets.txt",
+        "bytes": 8992,
+        "sha256": "4b3b62e4a14b84ee752808c810c602534921c09a4a1bf78cfbee566d66c125b3"
+      }
+    ],
+    "license": "Unicode License V3",
+    "license_url": "https://www.unicode.org/license.txt",
+    "license_sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "licensing_source": "https://www.unicode.org/copyright.html",
+    "source_copyright": "2026 Unicode, Inc.",
+    "original_readme_notice_retained": true
+  },
+  "freetype_dlg_source": {
+    "repository": "https://github.com/nyorain/dlg",
+    "commit": "395ccad2c1e0daae535c4d20bb0a3f2424648e17",
+    "tree": "2cb75941a2859cf0801048f5b613a1e02f500184",
+    "archive_bytes": 837047,
+    "archive_sha256": "a4ac4f5303e2f1ff49a0f7f5c53ee26f219cb9f1a0d705d9c09e8e2d383c1a06",
+    "files": 28,
+    "all_tree_blobs_exact": true,
+    "no_nested_gitlinks": true,
+    "relationship": "Exact FreeType0a0221a1 subprojects/dlg gitlink, independently checked in official Git tree.",
+    "usage": "Source superset only; no assertion that dlg code is linked. The actual x64 log has no dlg translation unit or FT_DEBUG_LOGGING flag."
+  },
+  "limits": [
+    "Source pins are directly observed for the vendor job; shipped raw DLL build identity remains a limited section comparison.",
+    "FriBidi generator inputs and commands are retained; generated outputs and a replacement DLL have not been reproduced.",
+    "Original devpkgs top-level configure includes unrelated projects; a standalone offline rebuild/relink path still needs qualification and platform execution.",
+    "No source/build/generator/compiler/DLL was executed. No source obligation or distribution approval is inferred."
+  ],
+  "complete_corresponding_source": false,
+  "public_release_approved": false,
+  "supplementary_source_delivery": {
+    "release_id": 408304995,
+    "draft": true,
+    "published_at": null,
+    "tag": "codex/ocio-source-prep-20261009",
+    "target": "de78d0da0fa54def28ac6ec08d015aec578d40f0",
+    "asset_count": 45,
+    "prior41assets_preserved": true,
+    "new_assets": [
+      {
+        "id": 626438975,
+        "name": "FreeType-dlg-395ccad2-source-README.txt",
+        "bytes": 878,
+        "sha256": "4adcb5c7e6458d6927a5f0bcf10d6fa93ad43e38f3b5f747f06c3ab59de606c3"
+      },
+      {
+        "id": 626438994,
+        "name": "FreeType-dlg-395ccad2-source-reviewed.json",
+        "bytes": 6853,
+        "sha256": "943d1e09d33fe3821ce9bd8e69dff110e36324328949d3273db9c8c78347a135"
+      },
+      {
+        "id": 626439011,
+        "name": "FreeType-dlg-395ccad2-source.tar.gz",
+        "bytes": 837047,
+        "sha256": "a4ac4f5303e2f1ff49a0f7f5c53ee26f219cb9f1a0d705d9c09e8e2d383c1a06"
+      },
+      {
+        "id": 626439025,
+        "name": "FreeType-dlg-395ccad2-source.sha256",
+        "bytes": 317,
+        "sha256": "f00853cc0edb1eaddfa3401cad8265cdc8fcdd5c9b9f137585a16e905559a321"
+      }
+    ],
+    "complete_corresponding_source": false,
+    "public_release_approved": false
+  },
+  "dlg_notice_scope": "Source superset: Boost license and header notice retained; no assertion that dlg is linked."
+}

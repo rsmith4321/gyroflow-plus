@@ -1,0 +1,219 @@
+{
+ "schema": 1,
+ "status": "verified deterministic source-edit candidates; incomplete final build source",
+ "vendor_job_url": "https://github.com/wang-bin/avbuild/actions/runs/35299810794/job/105459864279",
+ "full_vendor_log_sha256": "4518dc9999f7a80452701eb2d6d0ea07483fb79231156d712998aba03de5a3c4",
+ "avbuild_commit": "d91e8a9505ea38746053a8986a3a438c7261bed7",
+ "avbuild_sh_sha256": "0682216413eea71f72587a86721346fe617d5a6cb862359f0873ff90fcc39be2",
+ "stage_evidence": "FFMPEG-PATCH-STAGE.json",
+ "independent_peer_review": {
+  "scope": "40 ordered patches/169 hunk outcomes and 10,714 stage file hashes match prior root review; 25 later script commands classified.",
+  "handback_sha256": "920a15327f563b1e9ec21ca441dc547e6172ff6b304f9881ed93dc8951f9b19d",
+  "root_acceptance_sha256": "4c70e14231b901a6ae7cd67e7581185d2ef4dd821171f8e11daa15d6d277b0f1",
+  "initial_peer_configure_disagreement": "Preserved; corrected independent reverse-hunk detection. No final source mismatch.",
+  "peer_tools_executed_by_root": false
+ },
+ "nvcodec_override": {
+  "commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+  "archive_sha256": "6ddbff2ee35ecf0243371a81bdabea4f199b9ca87fe1ad008f7cf313fdf60631",
+  "official_source_blobs_previously_verified": 9,
+  "actual_override_log_lines": [
+   426,
+   427,
+   428,
+   429,
+   433
+  ],
+  "original_header_sha256": "144c0927b6009d5af34a3a7335b0c8c337eec287b4846dd3ac8519c06956662a",
+  "result_header_sha256": "210fbc7b15249f251098994c561437e8e5801c4d850893795201c1e512db39e1",
+  "original_bytes": 24897,
+  "result_bytes": 24917,
+  "diff_sha256": "b969241969a3a5897a27a5223b3ff77a620e12834c33bd1ac645702c636798a2",
+  "symbols": [
+   "cuGLGetDevices",
+   "cuDeviceGetAttribute",
+   "cuCtxSetLimit",
+   "cuvidGetDecodeStatus",
+   "cuvidReconfigureDecoder"
+  ],
+  "replacements": 5,
+  "subsequent_passes_byte_noop": true,
+  "guard": "Five header-version grep results prove entry into the same top-level source-edit loop.",
+  "limit": "Root reconstructs literal replacements as data; final runner source bytes/line endings are not retained."
+ },
+ "deterministic_candidates": [
+  {
+   "target": "FFmpeg configure",
+   "script_line": 297,
+   "operation": "replace both -lmfplat occurrences with -lMfplat",
+   "before_sha256": "a2b4cb256c2514b807ea28360c55f671c6e70f4e5eead05dbfa5cac40646f24d",
+   "after_sha256": "26d2f57a8b273e9b9c2d681ad71efac6ee5f8a14dc9eead99fdc5b12146a9fbf",
+   "bytes": 308885,
+   "diff": "mdk-0.39.0-e89bc0b/bundled/evidence/ffmpeg-later/configure-mfplat.diff",
+   "diff_sha256": "5360a7ee18329fe8ba98f139a1398d63e8858c494fb385e1318937b840d419c9"
+  },
+  {
+   "target": "FFmpeg configure",
+   "script_line": 298,
+   "operation": "delete check_cflags -Werror=partial-availability lines",
+   "matches": 0,
+   "result": "byte no-op; source has check_allcflags instead"
+  },
+  {
+   "target": "unsuffixed tools/nv-codec-headers/include/ffnvcodec/dynlink_loader.h",
+   "script_lines": [
+    290,
+    292
+   ],
+   "diff": "mdk-0.39.0-e89bc0b/bundled/evidence/ffmpeg-later/nvcodec-optional-symbols.diff",
+   "diff_sha256": "b969241969a3a5897a27a5223b3ff77a620e12834c33bd1ac645702c636798a2",
+   "operation": "five LOAD_SYMBOL to LOAD_SYMBOL_OPT replacements, repeated loop passes are no-ops"
+  }
+ ],
+ "packaged_generated_evidence": {
+  "artifact_id": 10529433028,
+  "archive_sha256": "c0e2e0e98e9fd89716744ef3feea60d97a6476d934deb046a3bf079a14340ace",
+  "members": [
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/config-x64.txt",
+    "bytes": 2860,
+    "sha256": "b6a29bc44d9c57341cb2ca0b0f9e68a2c2d40e9288c85f2cc91d8f6980a64421"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/config-x64.log",
+    "bytes": 719692,
+    "sha256": "017fc71002b0c740bf970389977cb1798b8d634282c5996dee54b5e78238fd3a"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/lib/x64/pkgconfig/libavcodec.pc",
+    "bytes": 675,
+    "sha256": "e09f937df9bb0b42a9ea82fa772aa502533f5e0f36e0c78c1be5921328df0ef2"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/lib/x64/pkgconfig/libavdevice.pc",
+    "bytes": 527,
+    "sha256": "de3af1ce8096e86d0581fb65a08cb60eed750881033dd13dfeeb827cfa3eb932"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/lib/x64/pkgconfig/libavfilter.pc",
+    "bytes": 711,
+    "sha256": "38bd633bf5ce6cbd2e43e1e15b077151e2b80dcea93b6a7bf0cf74ac4dd48fe3"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/lib/x64/pkgconfig/libavformat.pc",
+    "bytes": 499,
+    "sha256": "fda575dd68622ec0236431e5a0c3a6d6003dc162fea3752a6421344e0c53cf0a"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/lib/x64/pkgconfig/libavutil.pc",
+    "bytes": 691,
+    "sha256": "7e9ac974f80af36c41f55bdff446a4ac52321be264424fef937ee621e591fcd0"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/lib/x64/pkgconfig/libswresample.pc",
+    "bytes": 320,
+    "sha256": "9f0550102ab98b3a1d730b90cd235d94fe16cde26d4cfa8412c3dfdad455a060"
+   },
+   {
+    "member": "ffmpeg-master-windows-desktop-vs2026-lite/lib/x64/pkgconfig/libswscale.pc",
+    "bytes": 314,
+    "sha256": "056aca4cf4d82023a06b6f54e00d26494702dcc3a93a0c2915b2d5da32682f7c"
+   }
+  ],
+  "x64_config_txt": "configure --extra-version=avbuild --disable-doc --disable-debug --enable-shared --enable-runtime-cpudetect --disable-iamf --disable-response-files --enable-mediafoundation --enable-libvpl --toolchain=msvc --windres=llvm-windres --extra-windresflags='--target=x86_64-pc-windows-msvc -I/c/Program\\ Files/Microsoft\\ Visual\\ Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/include -I/c/Program\\ Files/Microsoft\\ Visual\\ Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/ATLMFC/include -I/c/Program\\ Files/Microsoft\\ Visual\\ Studio/18/Enterprise/VC/Auxiliary/VS/include -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/ucrt -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/um -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/shared -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/winrt -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/cppwinrt -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/NETFXSDK/4.8.1/include/um' --disable-stripping --enable-pic --extra-cflags=\"-I$THIS_DIR/tools/Vulkan-Headers/include -I$THIS_DIR/tools -MD -FS -guard:cf -Z7 -I/d/a/avbuild/avbuild/tools/dep/include -D_WIN32_WINNT=0x0600\" --extra-cxxflags=\"-I$THIS_DIR/tools/Vulkan-Headers/include -I$THIS_DIR/tools -MD -FS -guard:cf -Z7 -I/d/a/avbuild/avbuild/tools/dep/include -D_WIN32_WINNT=0x0600\" --extra-ldflags=\"-NODEFAULTLIB:libcmt -DEBUG -guard:cf -OPT:REF -SUBSYSTEM:CONSOLE\" --enable-small --disable-outdevs --disable-filters --disable-muxers --disable-encoders --disable-decoders --disable-demuxers --disable-protocols --disable-filter=scale_cuda --enable-decoder=*sub*,movtext,*web*,aac*,ac3*,eac3*,alac*,amr*,ape,apv,ass,av1*,ccaption,cfhd,cook,dca,dnxhd,exr,truehd,*yuv*,flv,flac,gif,h26[3-4]*,hevc*,hap,mp[1-3]*,prores*,*[mj]peg*,mlp,mpl2,mss*,nellymoser,opus,pcm*,qtrle,*png*,tiff,rawvideo,rv[1-4]*,sami,srt,ssa,v210*,vc1*,vorbis,vp[6-9]*,wm*,wrapped_avframe,ffv* --enable-demuxer=*sub*,sup,*ac3,*ac,*avs*,*[mj]peg*,*vc*,*web*,au,amr*,ape,ass,av[1i],concat,dhav,dnxhd,dts*,*dash*,*flv,gif,hls,h264,kux,matroska,mov,mp3,mxf,obu,ogg,pcm*,rawvideo,rt*p,spdif,srt,v210*,wav,*pipe,image2,mlv,nsv,nut --enable-encoder=*_at,aac,gif,h26[3-4]*,av1*,hevc*,mjpeg*,*png,opus,pcm*,prores*,rawvideo,spdif,speedhq,*png,vp[8-9]*,wrapped_avframe,ff*,*nvenc,*qsv,*v4l2m2m,*vaapi,*yuv* --enable-muxer=mjpeg,fifo,flv,gif,hls,h264,hevc,image2,mov,mp4,mpegts,matroska,null,pcm*,rawvideo,rt*,spdif,*pipe,*segment,webm,wav,dash,nu*,og* --enable-filter=*null*,afade,*fifo,*format,*resample,aeval,atempo,pan,crop,eq*,framerate,hw*,loudnorm,scale*,volume,yadif*,*movie,overlay,*_vulkan,_*vaapi,*_qsv,*_d3d*,*_vt,tonemap*,allrgb,allyuv,*bars,color,test*,*key,draw*,*_qsv,*_vaapi,*v4l2* --disable-filter=[^h]*_cuda --enable-protocol=cache,concat*,crypto*,data,fd,*file,ftp,h*,i*,pipe,rt*,s*,t*,u*,libcurl\nversion <next>:\n",
+  "x64_config_log_selected_lines": [
+   {
+    "line": 8379,
+    "text": "FFMPEG_CONFIGURATION='--extra-version=avbuild --disable-doc --disable-debug --enable-shared --enable-runtime-cpudetect --disable-iamf --disable-response-files --enable-mediafoundation --enable-libvpl --toolchain=msvc --windres=llvm-windres --extra-windresflags='\\''--target=x86_64-pc-windows-msvc -I/c/Program\\ Files/Microsoft\\ Visual\\ Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/include -I/c/Program\\ Files/Microsoft\\ Visual\\ Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/ATLMFC/include -I/c/Program\\ Files/Microsoft\\ Visual\\ Studio/18/Enterprise/VC/Auxiliary/VS/include -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/ucrt -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/um -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/shared -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/winrt -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/10/include/10.0.26100.0/cppwinrt -I/c/Program\\ Files\\ \\(x86\\)/Windows\\ Kits/NETFXSDK/4.8.1/include/um'\\'' --disable-stripping --enable-pic --extra-cflags='\\''-I/d/a/avbuild/avbuild/tools/Vulkan-Headers/include -I/d/a/avbuild/avbuild/tools -MD -FS -guard:cf -Z7 -I/d/a/avbuild/avbuild/tools/dep/include -D_WIN32_WINNT=0x0600'\\'' --extra-cxxflags='\\''-I/d/a/avbuild/avbuild/tools/Vulkan-Headers/include -I/d/a/avbuild/avbuild/tools -MD -FS -guard:cf -Z7 -I/d/a/avbuild/avbuild/tools/dep/include -D_WIN32_WINNT=0x0600'\\'' --extra-ldflags='\\''-NODEFAULTLIB:libcmt -DEBUG -guard:cf -OPT:REF -SUBSYSTEM:CONSOLE'\\'' --enable-small --disable-outdevs --disable-filters --disable-muxers --disable-encoders --disable-decoders --disable-demuxers --disable-protocols --disable-filter=scale_cuda --enable-decoder='\\''*sub*,movtext,*web*,aac*,ac3*,eac3*,alac*,amr*,ape,apv,ass,av1*,ccaption,cfhd,cook,dca,dnxhd,exr,truehd,*yuv*,flv,flac,gif,h26[3-4]*,hevc*,hap,mp[1-3]*,prores*,*[mj]peg*,mlp,mpl2,mss*,nellymoser,opus,pcm*,qtrle,*png*,tiff,rawvideo,rv[1-4]*,sami,srt,ssa,v210*,vc1*,vorbis,vp[6-9]*,wm*,wrapped_avframe,ffv*'\\'' --enable-demuxer='\\''*sub*,sup,*ac3,*ac,*avs*,*[mj]peg*,*vc*,*web*,au,amr*,ape,ass,av[1i],concat,dhav,dnxhd,dts*,*dash*,*flv,gif,hls,h264,kux,matroska,mov,mp3,mxf,obu,ogg,pcm*,rawvideo,rt*p,spdif,srt,v210*,wav,*pipe,image2,mlv,nsv,nut'\\'' --enable-encoder='\\''*_at,aac,gif,h26[3-4]*,av1*,hevc*,mjpeg*,*png,opus,pcm*,prores*,rawvideo,spdif,speedhq,*png,vp[8-9]*,wrapped_avframe,ff*,*nvenc,*qsv,*v4l2m2m,*vaapi,*yuv*'\\'' --enable-muxer='\\''mjpeg,fifo,flv,gif,hls,h264,hevc,image2,mov,mp4,mpegts,matroska,null,pcm*,rawvideo,rt*,spdif,*pipe,*segment,webm,wav,dash,nu*,og*'\\'' --enable-filter='\\''*null*,afade,*fifo,*format,*resample,aeval,atempo,pan,crop,eq*,framerate,hw*,loudnorm,scale*,volume,yadif*,*movie,overlay,*_vulkan,_*vaapi,*_qsv,*_d3d*,*_vt,tonemap*,allrgb,allyuv,*bars,color,test*,*key,draw*,*_qsv,*_vaapi,*v4l2*'\\'' --disable-filter='\\''[^h]*_cuda'\\'' --enable-protocol='\\''cache,concat*,crypto*,data,fd,*file,ftp,h*,i*,pipe,rt*,s*,t*,u*,libcurl'\\'''"
+   },
+   {
+    "line": 9720,
+    "text": "LDFLAGS=' -NODEFAULTLIB:libcmt -DEBUG -guard:cf -OPT:REF -SUBSYSTEM:CONSOLE'"
+   },
+   {
+    "line": 10179,
+    "text": "SHFLAGS='-shared -Wl,-soname,$$(@F)'"
+   },
+   {
+    "line": 10181,
+    "text": "SLIBNAME='$(SLIBPREF)$(FULLNAME)$(SLIBSUF)'"
+   },
+   {
+    "line": 13866,
+    "text": "mediafoundation_deps='mftransform_h MFCreateAlignedMemoryBuffer'"
+   },
+   {
+    "line": 18037,
+    "text": "check_func_headers mfapi.h MFCreateAlignedMemoryBuffer -lMfplat"
+   },
+   {
+    "line": 18043,
+    "text": "    3\tlong check_MFCreateAlignedMemoryBuffer(void) { return (long) MFCreateAlignedMemoryBuffer; }"
+   },
+   {
+    "line": 18045,
+    "text": "    5\t ret |= ((intptr_t)check_MFCreateAlignedMemoryBuffer) & 0xFFFF;"
+   }
+  ],
+  "all_seven_sdk_pc_first_lines_exact": "prefix=${pcfiledir}/../../..",
+  "limits": "Packaged generated records, not final source or config.mak. DLL defined payload equality has separate existing acceptance; raw DLL hashes differ."
+ },
+ "full_log_qualifications": {
+  "initial_nvcodec_gitlink": "15ee32753c92faddbabbff11676779618fc6db7e",
+  "post_override_nvcodec_commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+  "checkout_evidence_lines": [
+   426,
+   427,
+   428,
+   429,
+   433
+  ],
+  "all_configuration_finished_line": 4797,
+  "x64_build_configuration_ok_line": 6914,
+  "no_patching_lld_flags_message": true,
+  "limitations": "Logged completion and absent message do not reconstruct final config.mak or prove edit exit status."
+ },
+ "limits": [
+  "Source transformations were reconstructed as data; acquired scripts, sed/configure/compilers and DLLs were not executed.",
+  "The vendor job checks out eddcea9e after the initial gitlink. This proves the job pin, not raw shipped DLL identity.",
+  "Final runner source bytes/working-tree line endings are unavailable. Shared configure and ffmpeg.c writes race among three configure jobs; final insertion count remains unproved.",
+  "Generated x64 SDK pkg-config prefix is directly retained from the accepted archive. Pre-edit pkg-config content and complete config.mak are not retained.",
+  "Dependency closure, exact offline rebuild/relink, raw DLL reproduction and complete public corresponding-source delivery remain open.",
+  "Existing Windows app a9/runtime427a/notices6e27 is immutable and unchanged."
+ ],
+ "source_or_binary_build_executed": false,
+ "binary_reproduced": false,
+ "complete_corresponding_source": false,
+ "public_release_approved": false,
+ "later_edit_followup_review": {
+  "handback_sha256": "dc0e0381d6e17efca2b957d3ac0664427bdf3fda63bef7b889a8a81ea137c9d9",
+  "claim_sha256": "04af21dd168c2a833a69947d552ddd30a0bd221909448a93d47d495ff80c4d0d",
+  "root_data_review_sha256": "e10ecb0c5c6e40cc8b2121e0a529b0bd91235605170ebff2bf692faca6210546",
+  "claim_input_hashes_checked": 19,
+  "output_hashes_checked": 8,
+  "commands_and_prior_classes_preserved": 25,
+  "full_log_and_sdk_citations_checked": 24,
+  "condition_summary": {
+   "sed_proved": 7,
+   "sed_contradicted": 13,
+   "sed_unknown": 0,
+   "conditional_patches_contradicted": 5
+  },
+  "qualified_findings": [
+   "The five nvcodec optional-symbol replacements independently match the retained diff; passes 2 through 5 are byte no-ops.",
+   "The x64 successful configure branch and completion marker support the ffmpeg.c insertion condition. Its final count remains 1 through 3, and it affects ffmpeg.exe rather than ffmpeg-9.dll.",
+   "Both armasm insertion candidates remain possible; shell quote removal is exact, but sed version, final empty line and concurrent copy count remain unknown.",
+   "All seven packaged SDK pkg-config prefixes match the source packaging edit; pre-edit contents remain unavailable.",
+   "The full root vendor log contains no patching-lld-flags message; this supports the negative condition only and does not reconstruct config.mak."
+  ],
+  "limits": [
+   "E3 form/copycount and E4 copycount/working-tree line endings remain unknown.",
+   "No final config.mak or runner source bytes.",
+   "Negative full-log evidence qualifies lld condition, not generated config bytes.",
+   "No complete corresponding-source or public release approval."
+  ],
+  "source_or_peer_code_executed": false,
+  "complete_corresponding_source": false,
+  "public_release_approved": false
+ }
+}

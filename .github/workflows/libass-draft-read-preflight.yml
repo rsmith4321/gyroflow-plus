@@ -1,0 +1,34 @@
+name: libass draft read permission preflight
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  read-existing-source-note:
+    if: >-
+      github.repository == 'rsmith4321/gyrograde' &&
+      github.event_name == 'workflow_dispatch' &&
+      github.ref == 'refs/heads/codex/lut-preview-controls'
+    runs-on: windows-2025
+    timeout-minutes: 3
+    steps:
+      # No checkout, acquired code, new credential or write permission.
+      # Exercise the same draft lookup/download as the held archive candidate.
+      - name: Read the existing pinned source note from the unpublished draft
+        timeout-minutes: 2
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          gh release view codex/ocio-source-prep-20261009 --repo rsmith4321/gyrograde --json isDraft,tagName,targetCommitish
+          if ($LASTEXITCODE -ne 0) { throw 'Read-only draft lookup failed; no download or permission escalation attempted.' }
+          gh release download codex/ocio-source-prep-20261009 --repo rsmith4321/gyrograde --pattern FFmpeg-base-source-README.txt --dir "$env:RUNNER_TEMP/source-note"
+          if ($LASTEXITCODE -ne 0) { throw 'Read-only existing draft asset download failed.' }
+          $path = Join-Path $env:RUNNER_TEMP 'source-note/FFmpeg-base-source-README.txt'
+          $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $path).Hash.ToLowerInvariant()
+          if ((Get-Item -LiteralPath $path).Length -ne 959 -or $hash -ne '9be76a8a280686719e714eca52dc67ba2966107ca10f6b30482378100da36176') { throw 'Source note identity mismatch.' }
+          Write-Output "Read-only draft lookup and existing 959-byte asset verified: SHA256 $hash"

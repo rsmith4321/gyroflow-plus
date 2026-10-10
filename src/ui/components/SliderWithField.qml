@@ -18,6 +18,7 @@ Row {
     property alias precision: field.precision;
     property string keyframe: "";
     property bool keyframesEnabled: false;
+    property bool doubleClickResetEnabled: false;
     property real scaler: 1;
 
     property bool preventChange: false;
@@ -56,6 +57,14 @@ Row {
         onValueChanged: if (!preventChange) field.value = value;
         unit: field.unit;
         precision: field.precision;
+
+        TapHandler {
+            enabled: root.doubleClickResetEnabled;
+            acceptedButtons: Qt.LeftButton;
+            gesturePolicy: TapHandler.DragThreshold;
+            // Reset after the Slider finishes handling the release event.
+            onDoubleTapped: Qt.callLater(() => field.reset());
+        }
 
         ContextMenuMouseArea {
             underlyingItem: slider;
@@ -111,7 +120,9 @@ Row {
         onValueChanged: {
             slider.preventChange = true;
             slider.value = value;
-            Qt.callLater(() => { if (slider) slider.preventChange = false; });
+            // valueChanged is synchronous. Keep the guard local so a later
+            // pointer update in this event-loop turn still reaches the model.
+            slider.preventChange = false;
 
             if (!root.preventChange) {
                 root.preventChange = true;

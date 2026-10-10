@@ -1,0 +1,15 @@
+{
+  "ocio_version": "2.4.2",
+  "style": "GRADING_VIDEO",
+  "samples": 4097,
+  "parameter_percent": [
+    -50,
+    50
+  ],
+  "order": [
+    "highlights",
+    "shadows"
+  ],
+  "bytes": 3310376,
+  "sha256": "17e6a620420d7b535fb64b878d4cbe8801ba527dcdca7c35772462497310aa97"
+}

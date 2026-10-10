@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "component": "libva headers",
+  "header_version": "1.19.0",
+  "matched_package": "Microsoft.Direct3D.VideoAccelerationCompatibilityPack",
+  "matched_package_version": "1.0.2",
+  "package_url": "https://api.nuget.org/v3-flatcontainer/microsoft.direct3d.videoaccelerationcompatibilitypack/1.0.2/microsoft.direct3d.videoaccelerationcompatibilitypack.1.0.2.nupkg",
+  "package_bytes": 26588234,
+  "package_sha256": "f20bc4112538faa8013fbeee9b952f1cd004fe0638ce8a50a77740276aea2133",
+  "package_published": "2023-07-13T20:54:02.027+00:00",
+  "registration_url": "https://api.nuget.org/v3/registration5-gz-semver2/microsoft.direct3d.videoaccelerationcompatibilitypack/index.json",
+  "selection": "1.0.2 is the latest of the three versions in the current official registry, all published before the 2026 builds. Every one of 28 x64 header files matches the retained historical dependency artifact, including VA1.19.0.",
+  "historical_build": {
+    "repository": "wang-bin/devpkgs",
+    "run": 34963381196,
+    "head_sha": "5e7b21a7d98033be4b1c7e603cd8aa6d9f78b148",
+    "artifact": 10394431848,
+    "artifact_name": "libmdk-dep",
+    "artifact_zip_sha256": "ff7bad56bf825347b7ae9b5b1d2c3f1592dd7ce4b201145f129a670db66d3800",
+    "dep_av_bytes": 85421257,
+    "dep_av_sha256": "61ee678c54dc93c1bddcdf90c57aebb5d6e6dfa5af19171bb4131c3912e7e98a"
+  },
+  "ffmpeg_build": {
+    "run": 35299810794,
+    "job": 105459864279,
+    "log_sha256": "4518dc9999f7a80452701eb2d6d0ea07483fb79231156d712998aba03de5a3c4",
+    "dependency_url_line": 600,
+    "dep_av_size_line": 719,
+    "basis": "The build downloads latest successful build/main libmdk-dep via nightly.link. The retained run is the latest completed Build before that download; nested dep-av physical size matches the log. The log has no original redirect or download digest."
+  },
+  "files": [
+    {
+      "package_member": "build/native/x64/include/va/va.h",
+      "historical_member": "dep-av/windows/x64/include/va/va.h",
+      "bytes": 218532,
+      "sha256": "cb7eddaebb4b8804398046e74fa116990c58f24e4309ec8f84e3a773ae125345",
+      "notice_bytes": 1203,
+      "notice_sha256": "9a713f52dd0aada3bd0e75e6e21d5ba39817fd829ea20b57640d8595f488c2a1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/9a713f52dd0aada3bd0e75e6e21d5ba39817fd829ea20b57640d8595f488c2a1.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_backend.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_backend.h",
+      "bytes": 21228,
+      "sha256": "374dba17b951f8e5a4e41acfe22e4b486f8daec1ca74f9b30fee0a2fed709dfe",
+      "notice_bytes": 1210,
+      "notice_sha256": "03b1905ad79b116b5b13fa814673d35304584ad0d1f7776a4b0ca53179fd4dd7",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/03b1905ad79b116b5b13fa814673d35304584ad0d1f7776a4b0ca53179fd4dd7.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_backend_prot.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_backend_prot.h",
+      "bytes": 2436,
+      "sha256": "5c591d65cf70993ee6868f3e867bd76590264dac9c237a4504fc1562f988aa0b",
+      "notice_bytes": 1198,
+      "notice_sha256": "f279182b9e8f1dc7388a509b3ade0eaa6c0cf7b2724c2e4e37baa043c16a0bec",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/f279182b9e8f1dc7388a509b3ade0eaa6c0cf7b2724c2e4e37baa043c16a0bec.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_backend_vpp.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_backend_vpp.h",
+      "bytes": 2374,
+      "sha256": "cee62a8385573e92c42147eba8e38357940a6d815e523e31989656711463f6ec",
+      "notice_bytes": 1203,
+      "notice_sha256": "739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_compat.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_compat.h",
+      "bytes": 4183,
+      "sha256": "056f209d14850ec4e900bb674a6cf6f52ceb89301b1b54ee62173ac87286cb6d",
+      "notice_bytes": 1203,
+      "notice_sha256": "739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_dec_av1.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_dec_av1.h",
+      "bytes": 27998,
+      "sha256": "fea1545f17ef198f7a324751c65fa175d5a517515c32922eb00c7f13b0111154",
+      "notice_bytes": 1198,
+      "notice_sha256": "0e46698bd809c8f9dcb8116e8a9385c7f15bed34906b78cd6508d32985369a4c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/0e46698bd809c8f9dcb8116e8a9385c7f15bed34906b78cd6508d32985369a4c.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_dec_hevc.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_dec_hevc.h",
+      "bytes": 28213,
+      "sha256": "4dc8c990745d474f18c4ff003c10ef83065679c3f7c414b4b3d1c8a49e908e98",
+      "notice_bytes": 1198,
+      "notice_sha256": "244109277d300ced1df305738b059f1adb8cc5c3095a4449dc9963497597e214",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/244109277d300ced1df305738b059f1adb8cc5c3095a4449dc9963497597e214.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_dec_jpeg.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_dec_jpeg.h",
+      "bytes": 5678,
+      "sha256": "ed8330a6cedf113f02ba418eff58f0c689262725ffa50022e2d766d0159b7e2f",
+      "notice_bytes": 1203,
+      "notice_sha256": "2a3d140a10bf2cac38bc6cfa2c9e7bbca7e6278cc22d5a1a848b04000640323e",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/2a3d140a10bf2cac38bc6cfa2c9e7bbca7e6278cc22d5a1a848b04000640323e.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_dec_vp8.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_dec_vp8.h",
+      "bytes": 9032,
+      "sha256": "f6a64cc902c4e12ad10600b304b3a8610d254c667400e04e75e5de7ac7880464",
+      "notice_bytes": 1203,
+      "notice_sha256": "2a3d140a10bf2cac38bc6cfa2c9e7bbca7e6278cc22d5a1a848b04000640323e",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/2a3d140a10bf2cac38bc6cfa2c9e7bbca7e6278cc22d5a1a848b04000640323e.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_dec_vp9.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_dec_vp9.h",
+      "bytes": 12442,
+      "sha256": "8f6d11ecdea179dfa8124b51d978dd132b5555773f61e2aa36912a10d29f3a4d",
+      "notice_bytes": 1198,
+      "notice_sha256": "244109277d300ced1df305738b059f1adb8cc5c3095a4449dc9963497597e214",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/244109277d300ced1df305738b059f1adb8cc5c3095a4449dc9963497597e214.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_drmcommon.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_drmcommon.h",
+      "bytes": 7323,
+      "sha256": "4acccbc261b205c059d909bf35bc29180271d1a16c17e394b9bb4a6d41115210",
+      "notice_bytes": 1262,
+      "notice_sha256": "9176352036576891a1f0a115e3bcc4ddec08268efb2422aa4f0c5912d0ff0c91",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/9176352036576891a1f0a115e3bcc4ddec08268efb2422aa4f0c5912d0ff0c91.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_egl.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_egl.h",
+      "bytes": 1355,
+      "sha256": "5d8089cbff581c0e151b0b59b5829606987979c563f1000293de148fe9661819",
+      "notice_bytes": 1210,
+      "notice_sha256": "03b1905ad79b116b5b13fa814673d35304584ad0d1f7776a4b0ca53179fd4dd7",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/03b1905ad79b116b5b13fa814673d35304584ad0d1f7776a4b0ca53179fd4dd7.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_enc_av1.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_enc_av1.h",
+      "bytes": 41760,
+      "sha256": "09065f6d4742260d66aee3f5a707b7488bd887dacf7073d5b8f4d6a49a21373a",
+      "notice_bytes": 1198,
+      "notice_sha256": "c6ef44de495f48cb3e12490f22641cac9d98eff9a4426a55bd40b3f68fe0dc17",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/c6ef44de495f48cb3e12490f22641cac9d98eff9a4426a55bd40b3f68fe0dc17.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_enc_h264.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_enc_h264.h",
+      "bytes": 26745,
+      "sha256": "fb5b4859f0fe9c03fc2d398535b97a62a041b47dda4bf0edac1da9416875f2c2",
+      "notice_bytes": 1203,
+      "notice_sha256": "739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_enc_hevc.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_enc_hevc.h",
+      "bytes": 40972,
+      "sha256": "58efed1b31a3aef3c0d56b4e4f385ebd262d8eee15ec2bc08f2bfa1ee74a37c7",
+      "notice_bytes": 1203,
+      "notice_sha256": "bb28022ff3d8f99f9d25beb3cef2853ea4883fbae38e79efda566c9bd14b849c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/bb28022ff3d8f99f9d25beb3cef2853ea4883fbae38e79efda566c9bd14b849c.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_enc_jpeg.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_enc_jpeg.h",
+      "bytes": 5141,
+      "sha256": "bcac753dc7fe5f724fbac783bfd290ec8ec595e9d39428bdfb85e8724d48f71e",
+      "notice_bytes": 1203,
+      "notice_sha256": "02139e4e08f0aaa55fcca803df3044477152c698a73c45ad1bba401ddd722803",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/02139e4e08f0aaa55fcca803df3044477152c698a73c45ad1bba401ddd722803.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_enc_mpeg2.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_enc_mpeg2.h",
+      "bytes": 11539,
+      "sha256": "274f4407a8c4102f0334cf7bf3b7617704abdee262bef22c0efb10a371b8daf9",
+      "notice_bytes": 1198,
+      "notice_sha256": "2651f6b2574a1f64db0aca7715941f1134983f0afcdadea32ab9c56e7f4c234f",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/2651f6b2574a1f64db0aca7715941f1134983f0afcdadea32ab9c56e7f4c234f.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_enc_vp8.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_enc_vp8.h",
+      "bytes": 13039,
+      "sha256": "ebf406c59d4daf4cdb6b6941370fc419754079471a5babf3ccbe46732fa648ba",
+      "notice_bytes": 1203,
+      "notice_sha256": "2a3d140a10bf2cac38bc6cfa2c9e7bbca7e6278cc22d5a1a848b04000640323e",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/2a3d140a10bf2cac38bc6cfa2c9e7bbca7e6278cc22d5a1a848b04000640323e.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_enc_vp9.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_enc_vp9.h",
+      "bytes": 23742,
+      "sha256": "68ce69812159e85bcd8f5e596922a19b7779e182b5f3345f072919423de2b7b5",
+      "notice_bytes": 1203,
+      "notice_sha256": "4827dadbefe039d9475accaec71208a59596179e9410d41cf4adc6028ed34ba6",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/4827dadbefe039d9475accaec71208a59596179e9410d41cf4adc6028ed34ba6.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_fei.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_fei.h",
+      "bytes": 7122,
+      "sha256": "806e5c331f8c838ea3d9463cab696c5c9b80d7e3b721db29c742a2c1f343456f",
+      "notice_bytes": 1203,
+      "notice_sha256": "d215bedc7b0e354f8fa1a134167ad4def7fae9fde17e6235c132ec22eb103ff5",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/d215bedc7b0e354f8fa1a134167ad4def7fae9fde17e6235c132ec22eb103ff5.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_fei_h264.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_fei_h264.h",
+      "bytes": 23303,
+      "sha256": "5a45dc5d0f73c2477562e317383d922ef6c72218a4ce962819f4b2f0ff51c99a",
+      "notice_bytes": 1203,
+      "notice_sha256": "d215bedc7b0e354f8fa1a134167ad4def7fae9fde17e6235c132ec22eb103ff5",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/d215bedc7b0e354f8fa1a134167ad4def7fae9fde17e6235c132ec22eb103ff5.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_fei_hevc.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_fei_hevc.h",
+      "bytes": 11687,
+      "sha256": "059a9a897c4438a301c0d8d72150da6341c1c4ee3b9e5e9f983e81e3c76781af",
+      "notice_bytes": 1203,
+      "notice_sha256": "d215bedc7b0e354f8fa1a134167ad4def7fae9fde17e6235c132ec22eb103ff5",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/d215bedc7b0e354f8fa1a134167ad4def7fae9fde17e6235c132ec22eb103ff5.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_prot.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_prot.h",
+      "bytes": 23401,
+      "sha256": "39a6c19d04dfa37aa4c193204b95da5e2b049107c4760b1565e99b8747c038f8",
+      "notice_bytes": 1198,
+      "notice_sha256": "f279182b9e8f1dc7388a509b3ade0eaa6c0cf7b2724c2e4e37baa043c16a0bec",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/f279182b9e8f1dc7388a509b3ade0eaa6c0cf7b2724c2e4e37baa043c16a0bec.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_str.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_str.h",
+      "bytes": 1652,
+      "sha256": "a0863bc8f4a3e9c910d3340e0b55128265a2099d53a0416c7d75768a715465af",
+      "notice_bytes": 1198,
+      "notice_sha256": "3f6497154fc31c2378b8aee65e5d4772ed45e00c26c80ea0521eb0ea5eff1499",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/3f6497154fc31c2378b8aee65e5d4772ed45e00c26c80ea0521eb0ea5eff1499.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_tpi.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_tpi.h",
+      "bytes": 1331,
+      "sha256": "7e6cedb1668ef70c70ed6e6a28530f6d2be21818249339ddf4c69f4977f84bc3",
+      "notice_bytes": 1203,
+      "notice_sha256": "9a713f52dd0aada3bd0e75e6e21d5ba39817fd829ea20b57640d8595f488c2a1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/9a713f52dd0aada3bd0e75e6e21d5ba39817fd829ea20b57640d8595f488c2a1.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_version.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_version.h",
+      "bytes": 2745,
+      "sha256": "aed63f284809a45bb618acec7ab68e6e24d1f7d72cc886ce37a09e69f09d3e95",
+      "notice_bytes": 1219,
+      "notice_sha256": "e03a6fa526fa580bf5d32a8c88ee6b285fd0cf35c4da60b7969d410101a7aa72",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/e03a6fa526fa580bf5d32a8c88ee6b285fd0cf35c4da60b7969d410101a7aa72.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_vpp.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_vpp.h",
+      "bytes": 67211,
+      "sha256": "54b3af98cb3349bb524165846ef379fa4b67445a973f0e11ab45e7be7a14397b",
+      "notice_bytes": 1203,
+      "notice_sha256": "739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/739b192fbdcf961bbc7d37cf63dd908b6ea0f518028b37bad6cc38f095615ae9.txt"
+    },
+    {
+      "package_member": "build/native/x64/include/va/va_win32.h",
+      "historical_member": "dep-av/windows/x64/include/va/va_win32.h",
+      "bytes": 2931,
+      "sha256": "3b464207cf41b1c1ce1380140f9b10449e6458e4e50b7980dbc633ee60fb0a5c",
+      "notice_bytes": 1177,
+      "notice_sha256": "6ede89454b13ad9403411c9d1a14ef5aac6b85467984cda242477ba8476d0a93",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva-headers-nuget-1.0.2/header-notices/6ede89454b13ad9403411c9d1a14ef5aac6b85467984cda242477ba8476d0a93.txt"
+    }
+  ],
+  "retention": "All 28 exact leading header notices retained as 17 unique verbatim blocks; no later copyright/grant markers found. Full package NOTICE retained conservatively; it also describes unbundled package components. Microsoft package License and nuspec are provenance, not a selected license for the separately noticed header files.",
+  "limits": "Header notice text identity is established. The original build download checksum and redirect are not recorded; no raw dep-av byte identity for that download is claimed. No package DLL is installed or added by this work, and no Microsoft distributable-code permission, complete corresponding source, or public release approval is claimed."
+}

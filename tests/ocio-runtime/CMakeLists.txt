@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(gyroflow_ocio_probe LANGUAGES CXX)
+find_package(OpenColorIO 2.4.2 EXACT CONFIG REQUIRED)
+add_executable(ocio_probe probe.cpp)
+target_compile_features(ocio_probe PRIVATE cxx_std_17)
+target_link_libraries(ocio_probe PRIVATE OpenColorIO::OpenColorIO)

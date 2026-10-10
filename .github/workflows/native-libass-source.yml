@@ -1,0 +1,41 @@
+name: Native libass source qualification
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-libass-source-qualification
+  cancel-in-progress: false
+
+jobs:
+  source-rebuild:
+    # Manual only, on the default branch codex/lut-preview-controls; the script repeats these checks.
+    if: >-
+      github.repository == 'rsmith4321/gyrograde' &&
+      github.event_name == 'workflow_dispatch' &&
+      github.ref == 'refs/heads/codex/lut-preview-controls'
+    runs-on: windows-2025
+    timeout-minutes: 20
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          submodules: false
+          fetch-depth: 1
+      - name: Rebuild pinned source with original assembly enabled
+        timeout-minutes: 16
+        run: python -I _scripts/notices/rebuild_libass_windows.py
+      - name: Retain text evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-libass-source-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            native-source-evidence/*.json
+            native-source-evidence/*.log
+          if-no-files-found: error
+          retention-days: 14

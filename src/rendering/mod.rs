@@ -4,6 +4,14 @@
 mod ffmpeg_audio;
 mod ffmpeg_video;
 mod ffmpeg_video_converter;
+mod ffmpeg_encoder_color;
+mod export_lut;
+mod queued_color;
+#[cfg(feature = "ocio-runtime")]
+pub mod ocio_runtime;
+pub mod tone_curve;
+pub mod basic_grade;
+pub(crate) mod cube_lut;
 mod audio_resampler;
 pub mod ffmpeg_processor;
 pub mod ffmpeg_hw;
@@ -273,6 +281,13 @@ pub fn render<F, F2>(stab: Arc<StabilizationManager>, progress: F, input_file: &
     proc.video.encoder_params.options.set("threads", "auto");
     proc.video.encoder_params.metadata = render_options.get_metadata_dict();
     proc.video.processing_order = order;
+    if !render_options.lut_url.is_empty() || render_options.brightness != 0.0 || render_options.contrast != 0.0 || render_options.shadows != 0.0 || render_options.highlights != 0.0 || render_options.exposure != 0.0 || render_options.saturation != 0.0 || render_options.warmth != 0.0 || render_options.tint != 0.0 {
+        let bytes = if render_options.lut_url.is_empty() { None } else {
+            let mut file = gyroflow_core::filesystem::open_file(&render_options.lut_url, false, false).map_err(|e| FFmpegError::ExportLut(format!("Could not read the selected LUT: {e}")))?;
+            Some(cube_lut::CubeLut::read_bounded(file.get_file()).map_err(FFmpegError::ExportLut)?)
+        };
+        proc.video.export_lut = Some(export_lut::ExportLut::with_grading(bytes.as_deref(), render_options.brightness, render_options.contrast, render_options.shadows, render_options.highlights, basic_grade::BasicGradeSettings { exposure: render_options.exposure, saturation: render_options.saturation, warmth: render_options.warmth, tint: render_options.tint }).map_err(FFmpegError::ExportLut)?);
+    }
     log::debug!("video_codec: {:?}, processing_order: {:?}", &proc.video_codec, proc.video.processing_order);
 
     if !render_options.pad_with_black && !render_options.preserve_other_tracks && !trim_ranges.is_empty() {

@@ -1,0 +1,17 @@
+[package]
+name = "gyroflow-export-lut-tests"
+version = "0.1.0"
+edition = "2024"
+
+[features]
+ocio-runtime = []
+
+[build-dependencies]
+cc = "1.4"
+
+[dependencies]
+ffmpeg-next = { version = "9.0.0", default-features = false, features = ["codec", "filter", "format", "software-scaling"] }
+tempfile = "3"
+rayon = "1.10"
+bytemuck = "1.25"
+serde_json = "1.0"

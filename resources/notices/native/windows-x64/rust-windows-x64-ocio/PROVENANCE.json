@@ -1,0 +1,54 @@
+{
+ "component": "Gyroflow Rust crates (x86_64-pc-windows-msvc, opencv + ocio-runtime)",
+ "crates": 331,
+ "notice_location": "Tracked at resources/notices/rust/windows-x64-ocio/; include it in the combined --licenses input. Not duplicated here.",
+ "pinned_public_source": "41bc192cd945454834f5a799fb722e6e2944b2c9",
+ "cargo_sha256_at_pinned_source": {
+  "Cargo.toml": "6535261accde3014647feed912de18dc03f61b42224998abd9fa4db2c8c3651c",
+  "Cargo.lock": "5acbf75ad08addadf56d0c6793b595632351592cb30c4af141f5b4dd060c33e7"
+ },
+ "cargo_matches_REUSE_json": true,
+ "repo_paths": [
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/.gitattributes",
+   "bytes": 83,
+   "sha256": "f8d2049d40138334da56f9e425a4b29ebfd94cdcdadaa0b7a8c2c303a39eefa2"
+  },
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/README.md",
+   "bytes": 1635,
+   "sha256": "a18fb0475e9b3f37339132d9c00c5a76d21b1b158c728067b49bc47c56450abd"
+  },
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/REUSE.json",
+   "bytes": 1813,
+   "sha256": "d00f16dffdb75a9666666547e7a11bcf177fb31ccdf5035cee5a34b98483de04"
+  },
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/RUST-NOTICES-RECEIPT.json",
+   "bytes": 1341,
+   "sha256": "5ee1b0bb503d826f8f4fb9628ebf4a3214aa22fb645bf8d8aca7c159d7249cb5"
+  },
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/RUST-THIRD-PARTY-NOTICES.txt",
+   "bytes": 753506,
+   "sha256": "8462c06460774dd7b7d78eff27f7f8830dc80792cece838b0164f504464ac845"
+  },
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/SUPPLEMENT/crossbeam-channel-0.5.16-LICENSE-THIRD-PARTY",
+   "bytes": 33447,
+   "sha256": "b16db96b93b1d7cf7bea533f572091ec6bca3234fbe0a83038be772ff391a44c"
+  },
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/SUPPLEMENT/pulp-wasm-simd-flag-0.1.1-pulp-5eb07fd7-LICENSE",
+   "bytes": 1062,
+   "sha256": "d64f878c89bd5f1e5ada7e4aad57690b122727cf5229b7b87ea1980c188da1d9"
+  },
+  {
+   "path": "resources/notices/rust/windows-x64-ocio/linked-crates-x86_64-pc-windows-msvc.txt",
+   "bytes": 12051,
+   "sha256": "8477e9f2737a636aab1f984c8d40cc6ad53d8d20d8e163d9cff3b6631cbbf811"
+  }
+ ],
+ "gaps": []
+}

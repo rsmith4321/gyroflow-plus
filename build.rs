@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // Copyright © 2021-2022 Adrian <adrian.eddy at gmail>
 
+#[path = "_scripts/ocio_build.rs"]
+mod ocio_build;
+
 use std::process::Command;
 use std::path::Path;
 use std::env;
@@ -76,11 +79,19 @@ fn compile_qml(dir: &str, qt_include_path: &str, qt_library_path: &str) {
 }
 
 fn main() {
+    println!("cargo:rerun-if-env-changed=EXTRA_LINK_PATHS");
     let qt_include_path = env::var("DEP_QT_INCLUDE_PATH").unwrap();
     let qt_library_path = env::var("DEP_QT_LIBRARY_PATH").unwrap();
     let qt_version      = env::var("DEP_QT_VERSION").unwrap();
 
     let target_os = std::env::var("CARGO_CFG_TARGET_OS").unwrap();
+    if env::var_os("CARGO_FEATURE_OCIO_RUNTIME").is_some() {
+        assert!(!matches!(target_os.as_str(), "android" | "ios"), "ocio-runtime is a desktop experiment");
+        ocio_build::build_bridge(Path::new(&env::var("CARGO_MANIFEST_DIR").unwrap()));
+        println!("cargo:rerun-if-changed=src/qt_gpu/ocio_preview.cpp");
+        println!("cargo:rerun-if-changed=src/qt_gpu/ocio_preview.frag");
+    }
+
 
     if let Ok(out_dir) = env::var("OUT_DIR") {
         println!("cargo::rustc-check-cfg=cfg(compiled_qml)");
@@ -94,6 +105,13 @@ fn main() {
 
     for f in env::var("DEP_QT_COMPILE_FLAGS").unwrap().split_terminator(';') {
         config.flag(f);
+    }
+
+    if env::var_os("CARGO_FEATURE_OCIO_RUNTIME").is_some()
+        && env::var("CARGO_CFG_TARGET_ENV").as_deref() == Ok("msvc")
+    {
+        // Preview errors must release RAII locks before reporting failure.
+        config.flag("/EHsc");
     }
 
     if env::var("CARGO_CFG_TARGET_ARCH").as_deref() == Ok("aarch64") && (target_os == "ios" || target_os == "macos") {
@@ -197,6 +215,17 @@ fn main() {
     private_include("QtGui");
     private_include("QtQuick");
     private_include("QtQml");
+    if env::var_os("CARGO_FEATURE_OCIO_RUNTIME").is_some() {
+        private_include("QtShaderTools");
+        if target_os == "macos" {
+            config.include(format!("{qt_library_path}/QtShaderTools.framework/Headers"));
+            println!("cargo:rustc-link-lib=framework=QtShaderTools");
+        } else {
+            config.include(format!("{qt_include_path}/QtShaderTools"));
+            println!("cargo:rustc-link-lib=Qt6ShaderTools");
+        }
+    }
+
 
     match target_os.as_str() {
         "android" => {
@@ -236,10 +265,10 @@ fn main() {
             }
             let mut res = winres::WindowsResource::new();
             res.set_icon("resources/app_icon.ico");
-            res.set("FileVersion", env!("CARGO_PKG_VERSION"));
-            res.set("ProductVersion", env!("CARGO_PKG_VERSION"));
-            res.set("ProductName", "Gyroflow");
-            res.set("FileDescription", &format!("Gyroflow v{}", env!("CARGO_PKG_VERSION")));
+            res.set("FileVersion", "1.0.0.0");
+            res.set("ProductVersion", "1.0.0.0");
+            res.set("ProductName", "GyroGrade");
+            res.set("FileDescription", &format!("GyroGrade v{}, based on Gyroflow", env!("CARGO_PKG_VERSION")));
             res.compile().unwrap();
         }
         tos => panic!("unknown target os {:?}!", tos)

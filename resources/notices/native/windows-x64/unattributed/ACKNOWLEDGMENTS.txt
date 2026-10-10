@@ -1,0 +1,15 @@
+Software OpenGL: supplementary credits
+
+The retained regular expression library notices credit Henry Spencer and
+the Regents of the University of California (Berkeley). These documentation
+credits accompany the complete, unchanged COPYRIGHT.regex text in
+notices/LLVM-REGEX.txt.
+
+The retained ConvertUTF notices credit Unicode, Inc. Its unchanged notices
+are in notices/LLVM-UNICODE-HEADER.txt and notices/LLVM-UNICODE-C.txt.
+
+These supplementary notices and credits are included conservatively. The
+exact LLVM components linked into the Qt software OpenGL DLL have not been
+established; these credits do not assert that each component is present.
+The Mesa and LLVM notices describe their respective upstream components,
+not authorship of Gyroflow or Gyroflow Plus.

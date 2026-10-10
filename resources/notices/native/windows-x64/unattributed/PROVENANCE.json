@@ -1,0 +1,18 @@
+{
+ "component": "Unattributed staged files",
+ "staged": [
+  {
+   "name": "opengl32sw.dll",
+   "bytes": 20639888,
+   "sha256": "b04de4541863bc7d8879040a78889c4849c1b1da2784c4630f734c146c2998ce"
+  }
+ ],
+ "gaps": [
+  {
+   "id": "opengl32sw-provider",
+   "class": "blocker",
+   "text": "opengl32sw.dll (20639888 B, b04de454...) is staged with no provider, version or notice evidence.",
+   "needed_artifact": "Its provider and licence texts, or removal from the package if unused."
+  }
+ ]
+}

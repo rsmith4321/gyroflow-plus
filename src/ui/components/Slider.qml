@@ -24,7 +24,7 @@ QQC.Slider {
         Rectangle {
             width: parent.parent.visualPosition * parent.width
             height: parent.height
-            color: styleAccentColor
+            color: styleSliderAccentColor
             radius: parent.radius
         }
     }
@@ -36,6 +36,8 @@ QQC.Slider {
         width: height;
         anchors.verticalCenter: parent.verticalCenter;
         color: styleSliderHandle;
+        border.width: slider.visualFocus ? 2 * dpiScale : 0;
+        border.color: styleSliderAccentColor;
         Rectangle {
             radius: width;
             height: parent.height * 0.7;
@@ -43,7 +45,7 @@ QQC.Slider {
             Ease on scale { duration: 200; }
             width: height;
             anchors.centerIn: parent;
-            color: styleAccentColor
+            color: styleSliderAccentColor
         }
     }
 

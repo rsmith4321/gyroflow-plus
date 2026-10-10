@@ -7,11 +7,21 @@ use std::collections::HashMap;
 use std::sync::{ Arc, atomic::{ AtomicUsize, Ordering::SeqCst } };
 use std::path::PathBuf;
 
+#[path = "settings_location.rs"]
+mod settings_location;
+
 pub fn data_dir() -> PathBuf {
     static PATH: std::sync::OnceLock<PathBuf> = std::sync::OnceLock::new();
 
     PATH.get_or_init(|| {
-        let mut path = app_dirs2::get_app_dir(AppDataType::UserData, &AppInfo { name: "Gyroflow", author: "Gyroflow" }, "").unwrap();
+        if let Some(path) = settings_location::from_override(
+            // The old variable still works for scripts written before the rename.
+            std::env::var_os("GYROGRADE_DATA_DIR").or_else(|| std::env::var_os("GYROFLOW_PLUS_DATA_DIR"))
+        ).expect("Cannot initialize GYROGRADE_DATA_DIR profile") {
+            return path;
+        }
+
+        let mut path = app_dirs2::get_app_dir(AppDataType::UserData, &AppInfo { name: "GyroGrade", author: "Ryan Smith" }, "").unwrap();
         if path.file_name().unwrap() == path.parent().unwrap().file_name().unwrap() {
             path = path.parent().unwrap().to_path_buf();
         }
@@ -29,7 +39,7 @@ pub fn data_dir() -> PathBuf {
                     path = PathBuf::from(s);
                     path.push("AppData");
                     path.push("Local");
-                    path.push("Gyroflow");
+                    path.push("GyroGrade");
                     windows::Win32::System::Com::CoTaskMemFree(Some(raw_path.as_ptr() as *mut _));
                 }
             }
@@ -54,12 +64,18 @@ pub fn data_dir() -> PathBuf {
                     let pw_dir = OsString::from_vec(bytes);
                     path = PathBuf::from(pw_dir);
                     path.push("Library");
+                    // The App Store edition can only write inside its own container.
+                    if let Ok(id) = std::env::var("APP_SANDBOX_CONTAINER_ID") {
+                        path.extend(["Containers", id.as_str(), "Data", "Library"]);
+                    }
                     path.push("Application Support");
-                    path.push("Gyroflow");
+                    path.push("GyroGrade");
                 }
                 _ => { },
             }
         }
+        // GyroGrade was called Gyroflow Plus in 1.0.
+        settings_location::adopt_previous(&path, "Gyroflow Plus");
         let _ = std::fs::create_dir_all(&path);
         if let Err(e) = std::fs::create_dir_all(&path.join("lens_profiles")) {
             ::log::error!("Failed to create lens profiles directory at {:?}: {e:?}", path.join("lens_profiles"));

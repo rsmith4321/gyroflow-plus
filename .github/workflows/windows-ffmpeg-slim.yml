@@ -1,0 +1,211 @@
+# Build the slim Windows FFmpeg 9 bundle from BtbN's pinned build scripts with
+# only the components Gyroflow+ uses, then verify it natively on Windows and
+# report what it drops compared with the full BtbN bundle it replaces.
+# See docs/WINDOWS-FFMPEG-SLIM.md. Artifacts only; nothing is published.
+name: Windows FFmpeg slim
+
+on:
+  workflow_dispatch:
+    inputs:
+      verify_run_id:
+        description: Verify the bundles built by this earlier run instead of building
+        required: false
+        default: ''
+  push:
+    branches: [codex/lut-preview-controls]
+    paths:
+      - _scripts/ffmpeg-windows/**
+      - .github/workflows/windows-ffmpeg-slim.yml
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: windows-ffmpeg-slim-${{ github.ref }}-${{ inputs.verify_run_id }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.repository == 'rsmith4321/gyrograde' && !inputs.verify_run_id
+    name: Build ${{ matrix.target }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 340
+    strategy:
+      fail-fast: false
+      matrix:
+        target: [win64, winarm64]
+    env:
+      # BtbN's scripts derive image names from GITHUB_REPOSITORY, which a
+      # workflow cannot override, so each call sets it inline from this.
+      BTBN_REPO: btbn/ffmpeg-builds
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          sparse-checkout: _scripts/ffmpeg-windows
+
+      - name: Read pins
+        id: pin
+        run: |
+          pin() { sed -n "s/^$1=//p" _scripts/ffmpeg-windows/slim.pin; }
+          echo "btbn=$(pin btbn_commit)" >> "$GITHUB_OUTPUT"
+          echo "base=$(pin base_image)" >> "$GITHUB_OUTPUT"
+          echo "target_base=$(pin base_${{ matrix.target }}_image)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: BtbN/FFmpeg-Builds
+          ref: ${{ steps.pin.outputs.btbn }}
+          path: btbn
+          persist-credentials: false
+
+      - name: Free disk space
+        run: MIN_FREE_GB=60 ./btbn/util/free_disk_space.sh
+
+      - name: Trim BtbN scripts to Gyroflow+ components
+        run: bash _scripts/ffmpeg-windows/slim-btbn.sh btbn
+
+      - name: Pull pinned toolchain images
+        run: |
+          set -eux
+          docker pull "${{ steps.pin.outputs.base }}"
+          docker tag "${{ steps.pin.outputs.base }}" ghcr.io/btbn/ffmpeg-builds/base:latest
+          docker pull "${{ steps.pin.outputs.target_base }}"
+          docker image inspect --format '{{json .RepoDigests}}' "${{ steps.pin.outputs.target_base }}"
+
+      - name: Download component sources
+        working-directory: btbn
+        run: GITHUB_REPOSITORY="$BTBN_REPO" ./download.sh ${{ matrix.target }} gpl-shared 9.0
+
+      - name: Generate and pin the Dockerfile
+        working-directory: btbn
+        run: |
+          set -eux
+          GITHUB_REPOSITORY="$BTBN_REPO" ./generate.sh ${{ matrix.target }} gpl-shared 9.0
+          from="ghcr.io/btbn/ffmpeg-builds/base-${{ matrix.target }}:latest"
+          grep -q "^FROM ${from} AS base-layer$" Dockerfile
+          sed -i "s|^FROM ${from} AS base-layer\$|FROM ${{ steps.pin.outputs.target_base }} AS base-layer|" Dockerfile
+          if grep -n ':latest' Dockerfile; then exit 1; fi
+          grep -A7 '^ENV \\$' Dockerfile | tee ../ff-configure.txt
+
+      - name: Build component image
+        working-directory: btbn
+        run: docker buildx build --progress plain --load -t ghcr.io/btbn/ffmpeg-builds/${{ matrix.target }}-gpl-shared-9.0:latest .
+
+      - name: Build FFmpeg
+        working-directory: btbn
+        run: GITHUB_REPOSITORY="$BTBN_REPO" ./build.sh ${{ matrix.target }} gpl-shared 9.0
+
+      - name: Record hashes
+        run: |
+          set -eux
+          cp btbn/Dockerfile Dockerfile.generated
+          ls -l btbn/artifacts
+          (cd btbn/artifacts && sha256sum *.zip) | tee SHA256SUMS
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: ffmpeg-slim-${{ matrix.target }}
+          path: |
+            btbn/artifacts/*.zip
+            SHA256SUMS
+            Dockerfile.generated
+            ff-configure.txt
+          retention-days: 90
+          compression-level: 0
+
+  verify:
+    name: Verify ${{ matrix.target }}
+    needs: build
+    if: >-
+      always() && github.repository == 'rsmith4321/gyrograde' &&
+      (needs.build.result == 'success' || (inputs.verify_run_id && needs.build.result == 'skipped'))
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { target: win64, runner: windows-2022, arch: x64, python_arch: x64 }
+          - { target: winarm64, runner: windows-11-arm, arch: arm64, python_arch: arm64 }
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            _scripts/ffmpeg-windows
+            tests/export-lut/check_windows_ffmpeg.py
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.13'
+          architecture: ${{ matrix.python_arch }}
+
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: ffmpeg-slim-${{ matrix.target }}
+          path: slim-artifact
+          run-id: ${{ inputs.verify_run_id || github.run_id }}
+          github-token: ${{ github.token }}
+
+      - name: Extract slim bundle
+        run: |
+          $zip = Get-ChildItem slim-artifact -Recurse -Filter *.zip | Select-Object -First 1
+          Expand-Archive -LiteralPath $zip.FullName -DestinationPath slim
+          $dir = Get-ChildItem slim -Directory | Select-Object -First 1
+          "SLIM=$($dir.FullName)" >> $env:GITHUB_ENV
+
+      - name: Fetch the pinned full BtbN bundle for comparison
+        run: |
+          $pin = Get-Content _scripts/ffmpeg-windows/slim.pin -Raw
+          $release = [regex]::Match($pin, '(?m)^full_release=(\S+)').Groups[1].Value
+          $sha = [regex]::Match($pin, '(?m)^full_${{ matrix.target }}_sha256=([0-9a-f]{64})').Groups[1].Value
+          if (-not $release -or -not $sha) { throw "Missing full bundle pin" }
+          $name = "ffmpeg-n9.0.2-22-g46d8f462ee-${{ matrix.target }}-gpl-shared-9.0"
+          Invoke-WebRequest -Uri "https://github.com/BtbN/FFmpeg-Builds/releases/download/$release/$name.zip" -OutFile full.zip
+          if ((Get-FileHash full.zip -Algorithm SHA256).Hash.ToLowerInvariant() -ne $sha) { throw "Full bundle hash mismatch" }
+          Expand-Archive -LiteralPath full.zip -DestinationPath full
+          "FULL=$((Resolve-Path "full/$name").Path)" >> $env:GITHUB_ENV
+
+      - name: Build gate and app coverage (slim)
+        run: |
+          python tests/export-lut/check_windows_ffmpeg.py "$env:SLIM" --target-arch ${{ matrix.arch }} --app-coverage
+          if ($LASTEXITCODE -ne 0) { throw "slim bundle failed the coverage check" }
+
+      - name: App coverage of the full bundle (reference)
+        continue-on-error: true
+        run: |
+          python tests/export-lut/check_windows_ffmpeg.py "$env:FULL" --target-arch ${{ matrix.arch }} --app-coverage
+          if ($LASTEXITCODE -ne 0) { throw "full bundle failed the coverage check" }
+
+      - name: Encode smoke test (slim)
+        run: |
+          python _scripts/ffmpeg-windows/smoke_encode.py "$env:SLIM" --work smoke --arch ${{ matrix.arch }}
+          if ($LASTEXITCODE -ne 0) { throw "smoke test failed" }
+
+      - name: Compare with the full bundle
+        run: |
+          python _scripts/ffmpeg-windows/smoke_encode.py "$env:FULL" --dump full.json
+          if ($LASTEXITCODE -ne 0) { throw "dump failed" }
+          python _scripts/ffmpeg-windows/smoke_encode.py "$env:SLIM" --dump slim.json
+          if ($LASTEXITCODE -ne 0) { throw "dump failed" }
+          python _scripts/ffmpeg-windows/smoke_encode.py --diff full.json slim.json | Tee-Object comparison.json
+          Get-ChildItem "$env:SLIM/bin" | Select-Object Name, Length | Format-Table -AutoSize | Out-String | Tee-Object slim-bin.txt
+          Get-ChildItem "$env:FULL/bin" | Select-Object Name, Length | Format-Table -AutoSize | Out-String | Tee-Object full-bin.txt
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: ffmpeg-slim-${{ matrix.target }}-report
+          path: |
+            comparison.json
+            full.json
+            slim.json
+            slim-bin.txt
+            full-bin.txt
+          retention-days: 90

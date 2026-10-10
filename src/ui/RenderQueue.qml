@@ -766,7 +766,7 @@ Item {
             QT_TRANSLATE_NOOP("Popup", "Sleep"),
             QT_TRANSLATE_NOOP("Popup", "Hibernate"),
             QT_TRANSLATE_NOOP("Popup", "Logout"),
-            QT_TRANSLATE_NOOP("Popup", "Close Gyroflow")
+            QT_TRANSLATE_NOOP("Popup", "Close GyroGrade")
         ];
         text: qsTr("When rendering is finished: %1").arg(qsTranslate("Popup", options[currentOption])).trim();
         onClicked: if (p0.visible) { p0.close(); } else { p0.open(); }

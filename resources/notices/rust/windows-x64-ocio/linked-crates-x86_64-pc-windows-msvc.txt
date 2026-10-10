@@ -1,0 +1,331 @@
+adler2 v2.0.1|0BSD OR MIT OR Apache-2.0
+ahash v0.8.12|MIT OR Apache-2.0
+aho-corasick v1.1.5|Unlicense OR MIT
+ahrs v0.8.0|MIT
+akaze v0.7.0 (https://github.com/rust-cv/cv.git?rev=d271a9a#d271a9ac)|MIT
+allocator-api2 v0.2.21|MIT OR Apache-2.0
+anyhow v1.0.104|MIT OR Apache-2.0
+app_dirs2 v2.5.5 (https://github.com/app-dirs-rs/app_dirs2.git#1137ee05)|MIT
+approx v0.5.1|Apache-2.0
+argh v0.1.19|BSD-3-Clause
+argh_shared v0.1.19|BSD-3-Clause
+argmin v0.11.0|MIT OR Apache-2.0
+argmin-math v0.5.1|MIT OR Apache-2.0
+arrayvec v0.7.8|MIT OR Apache-2.0
+arrsac v0.11.0|MIT
+ash v0.38.0+1.3.281|MIT OR Apache-2.0
+base64 v0.23.1|MIT OR Apache-2.0
+base91 v0.1.0|MIT/Apache-2.0
+bincode v2.0.1|MIT
+biquad v0.6.0|MIT OR Apache-2.0
+bit-set v0.10.0|Apache-2.0 OR MIT
+bit-vec v0.9.1|Apache-2.0 OR MIT
+bit_field v0.10.3|Apache-2.0/MIT
+bitarray v0.9.3|MIT
+bitflags v1.3.2|MIT/Apache-2.0
+bitflags v2.13.1|MIT OR Apache-2.0
+bitreader v0.3.11|MIT OR Apache-2.0
+bstr v1.13.1|MIT OR Apache-2.0
+bytemuck v1.25.2|Zlib OR Apache-2.0 OR MIT
+byteorder v1.5.0|Unlicense OR MIT
+byteorder-lite v0.1.0|Unlicense OR MIT
+bytes v1.12.1|MIT
+cfg-if v1.0.4|MIT OR Apache-2.0
+chacha20 v0.10.2|MIT OR Apache-2.0
+chrono v0.4.45|MIT OR Apache-2.0
+ciborium v0.2.2|Apache-2.0
+ciborium-io v0.2.2|Apache-2.0
+ciborium-ll v0.2.2|Apache-2.0
+cl-sys v0.4.3|MIT OR Apache-2.0
+codespan-reporting v0.13.1|Apache-2.0
+console v0.16.4|MIT
+cpal v0.17.3|Apache-2.0
+cpp v0.5.11|MIT OR Apache-2.0
+cpufeatures v0.3.1|MIT OR Apache-2.0
+crc32fast v1.5.1|MIT OR Apache-2.0
+crossbeam v0.8.4|MIT OR Apache-2.0
+crossbeam-channel v0.5.16|MIT OR Apache-2.0
+crossbeam-deque v0.8.7|MIT OR Apache-2.0
+crossbeam-epoch v0.9.20|MIT OR Apache-2.0
+crossbeam-queue v0.3.13|MIT OR Apache-2.0
+crossbeam-utils v0.8.22|MIT OR Apache-2.0
+csv v1.4.0|Unlicense/MIT
+csv-core v0.1.13|Unlicense/MIT
+cv-core v0.15.0 (https://github.com/rust-cv/cv.git?rev=d271a9a#d271a9ac)|MIT
+cv-pinhole v0.6.0 (https://github.com/rust-cv/cv.git?rev=d271a9a#d271a9ac)|MIT
+dasp_sample v0.11.0|MIT OR Apache-2.0
+deranged v0.5.8|MIT OR Apache-2.0
+doc-comment v0.3.4|MIT
+dyn-clone v1.0.20|MIT OR Apache-2.0
+eight-point v0.8.0 (https://github.com/rust-cv/cv.git?rev=d271a9a#d271a9ac)|MIT
+either v1.18.0|MIT OR Apache-2.0
+encode_unicode v1.0.0|Apache-2.0 OR MIT
+encoding_rs v0.8.35|(Apache-2.0 OR MIT) AND BSD-3-Clause
+enterpolation v0.3.0|MIT OR Apache-2.0
+enum_primitive v0.1.1|MIT
+equivalent v1.0.2|Apache-2.0 OR MIT
+errno v0.3.14|MIT OR Apache-2.0
+exr v1.74.2|BSD-3-Clause
+fallible_collections v0.5.2|MIT OR Apache-2.0
+fastrand v2.5.0|Apache-2.0 OR MIT
+fc-blackbox v0.2.0 (https://github.com/ilya-epifanov/fc-blackbox.git?rev=de08350#de08350b)|MIT OR Apache-2.0
+ffmpeg-next v9.0.0|WTFPL
+ffmpeg-sys-next v9.0.0 (<checkout>/vendor/ffmpeg-sys-next-9.0.0)|WTFPL
+filetime v0.2.29|MIT/Apache-2.0
+filetime_creation v0.2.0|MIT/Apache-2.0
+fixedbitset v0.5.7|MIT OR Apache-2.0
+flate2 v1.1.10|MIT OR Apache-2.0
+float-ord v0.3.2|MIT / Apache-2.0
+foldhash v0.1.5|Zlib
+foldhash v0.2.0|Zlib
+form_urlencoded v1.2.2|MIT OR Apache-2.0
+fs_extra v1.3.0|MIT
+futures v0.1.31|MIT/Apache-2.0
+futures-core v0.3.34|MIT OR Apache-2.0
+futures-intrusive v0.5.0|MIT OR Apache-2.0
+generic-array v0.14.9|MIT
+getrandom v0.2.17|MIT OR Apache-2.0
+getrandom v0.3.4|MIT OR Apache-2.0
+getrandom v0.4.3|MIT OR Apache-2.0
+glam v0.29.3|MIT OR Apache-2.0
+globset v0.4.20|Unlicense OR MIT
+glow v0.17.0|MIT OR Apache-2.0 OR Zlib
+glutin_wgl_sys v0.6.1|Apache-2.0
+gpu-allocator v0.28.0|MIT OR Apache-2.0
+gyroflow v0.1.0-dev (<checkout>)|
+gyroflow-core v1.6.3 (<checkout>/src/core)|
+half v2.7.1|MIT OR Apache-2.0
+hamming v0.1.3|MIT/Apache-2.0
+hashbrown v0.14.5|MIT OR Apache-2.0
+hashbrown v0.15.5|MIT OR Apache-2.0
+hashbrown v0.16.1|MIT OR Apache-2.0
+hashbrown v0.17.1|MIT OR Apache-2.0
+hex-literal v1.1.0|MIT OR Apache-2.0
+home v0.5.12|MIT OR Apache-2.0
+http v1.5.0|MIT OR Apache-2.0
+httparse v1.10.1|MIT OR Apache-2.0
+human-sort v0.2.2|MIT
+icu_collections v2.3.0|Unicode-3.0
+icu_locale_core v2.3.0|Unicode-3.0
+icu_normalizer v2.3.0|Unicode-3.0
+icu_normalizer_data v2.3.0|Unicode-3.0
+icu_properties v2.3.0|Unicode-3.0
+icu_properties_data v2.3.0|Unicode-3.0
+icu_provider v2.3.1|Unicode-3.0
+idna v1.1.0|MIT OR Apache-2.0
+idna_adapter v1.2.2|Apache-2.0 OR MIT
+ignore v0.4.33|Unlicense OR MIT
+image v0.25.10|MIT OR Apache-2.0
+indexmap v2.14.1|Apache-2.0 OR MIT
+indicatif v0.18.6|MIT
+integer-encoding v3.0.4|MIT
+itertools v0.10.5|MIT/Apache-2.0
+itertools v0.15.0|MIT OR Apache-2.0
+itoa v1.0.18|MIT OR Apache-2.0
+keep-awake v0.1.0 (https://github.com/AdrianEddy/keep-awake-rs.git?rev=4f2a93f#4f2a93ff)|
+khronos-egl v6.0.0|MIT/Apache-2.0
+lazy_static v1.5.0|MIT OR Apache-2.0
+lebe v0.5.3|BSD-3-Clause
+libc v0.2.189|MIT OR Apache-2.0
+libloading v0.8.9|ISC
+libloading v0.9.0|ISC
+libm v0.2.16|MIT
+libmimalloc-sys v0.1.49|MIT
+line_drawing v1.0.1|MIT
+litemap v0.8.3|Unicode-3.0
+lock_api v0.4.14|MIT OR Apache-2.0
+log v0.4.34|MIT OR Apache-2.0
+lru v0.18.4|MIT
+matrixmultiply v0.3.11|MIT/Apache-2.0
+median v0.3.2|MPL-2.0
+memchr v2.8.3|Unlicense OR MIT
+mimalloc v0.1.52|MIT
+minimal-lexical v0.2.1|MIT/Apache-2.0
+miniz_oxide v0.8.9|MIT OR Zlib OR Apache-2.0
+miniz_oxide v0.9.1|MIT OR Zlib OR Apache-2.0
+moxcms v0.8.1|BSD-3-Clause OR Apache-2.0
+mp4-merge v0.1.11|MIT OR Apache-2.0
+mp4parse v0.17.0 (https://github.com/AdrianEddy/mp4parse-rust.git#ff910c61)|MPL-2.0
+naga v30.0.1|MIT OR Apache-2.0
+naga-types v30.0.1|MIT OR Apache-2.0
+nalgebra v0.30.1|BSD-3-Clause
+nalgebra v0.34.2|Apache-2.0
+ndarray v0.16.1|MIT OR Apache-2.0
+nodrop v0.1.14|MIT/Apache-2.0
+nom v7.1.3|MIT
+nshare v0.10.0|MIT
+num v0.4.3|MIT OR Apache-2.0
+num-bigint v0.4.8|MIT OR Apache-2.0
+num-complex v0.4.6|MIT OR Apache-2.0
+num-conv v0.2.2|MIT OR Apache-2.0
+num-integer v0.1.47|MIT OR Apache-2.0
+num-iter v0.1.46|MIT OR Apache-2.0
+num-rational v0.4.2|MIT OR Apache-2.0
+num-traits v0.1.43|MIT/Apache-2.0
+num-traits v0.2.19|MIT OR Apache-2.0
+ocl v0.19.7|MIT OR Apache-2.0
+ocl-core v0.11.5|MIT OR Apache-2.0
+ocl-core-vector v0.1.1|MIT/Apache-2.0
+ocl-interop v0.1.6|MIT OR Apache-2.0
+once_cell v1.21.4|MIT OR Apache-2.0
+opencv v0.99.1|MIT
+ordered-float v5.5.0|MIT
+parking_lot v0.12.5|MIT OR Apache-2.0
+parking_lot_core v0.9.12|MIT OR Apache-2.0
+percent-encoding v2.3.2|MIT OR Apache-2.0
+petgraph v0.8.3|MIT OR Apache-2.0
+pollster v1.0.1|Apache-2.0/MIT
+portable-atomic v1.15.0|Apache-2.0 OR MIT
+potential_utf v0.1.6|Unicode-3.0
+powerfmt v0.2.0|MIT OR Apache-2.0
+ppv-lite86 v0.2.21|MIT OR Apache-2.0
+presser v0.3.1|MIT OR Apache-2.0
+pretty-hex v0.4.2|MIT
+primal v0.3.3|MIT OR Apache-2.0
+primal-bit v0.3.2|MIT OR Apache-2.0
+primal-check v0.3.4|MIT OR Apache-2.0
+primal-estimate v0.3.3|MIT OR Apache-2.0
+primal-sieve v0.3.7|MIT OR Apache-2.0
+profiling v1.0.18|MIT OR Apache-2.0
+prost v0.14.4|Apache-2.0
+pulp v0.22.3|MIT
+pulp-wasm-simd-flag v0.1.1|MIT
+pxfm v0.1.30|BSD-3-Clause OR Apache-2.0
+qmetaobject v0.2.10 (https://github.com/AdrianEddy/qmetaobject-rs.git?rev=ff1e23d#ff1e23dc)|MIT
+qml-video-rs v0.1.0 (https://github.com/AdrianEddy/qml-video-rs.git?rev=855130d#855130d4)|
+qttypes v0.2.12 (https://github.com/AdrianEddy/qmetaobject-rs.git?rev=ff1e23d#ff1e23dc)|MIT
+qutex v0.2.6|MIT
+rand v0.10.2|MIT OR Apache-2.0
+rand v0.9.5|MIT OR Apache-2.0
+rand_chacha v0.9.0|MIT OR Apache-2.0
+rand_core v0.10.1|MIT OR Apache-2.0
+rand_core v0.9.5|MIT OR Apache-2.0
+rand_xoshiro v0.7.0|MIT OR Apache-2.0
+range-alloc v0.1.5|MIT OR Apache-2.0
+raw-cpuid v11.6.0|MIT
+raw-window-handle v0.6.2|MIT OR Apache-2.0 OR Zlib
+rawpointer v0.2.1|MIT/Apache-2.0
+rayon v1.12.0|MIT OR Apache-2.0
+rayon-core v1.13.0|MIT OR Apache-2.0
+reborrow v0.5.5|MIT
+regex v1.13.1|MIT OR Apache-2.0
+regex-automata v0.4.18|MIT OR Apache-2.0
+regex-syntax v0.8.11|MIT OR Apache-2.0
+renderdoc-sys v1.1.0|MIT OR Apache-2.0
+ring v0.17.14|Apache-2.0 AND ISC
+rodio v0.22.2|MIT OR Apache-2.0
+rs-sync v0.1.0 (https://github.com/gyroflow/rs-sync.git?rev=fc5cf51#fc5cf51f)|
+runas v1.2.0|Apache-2.0
+rustc-hash v1.1.0|Apache-2.0/MIT
+rustfft v6.4.1|MIT OR Apache-2.0
+rustix v0.38.44|Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT
+rustls v0.23.43|Apache-2.0 OR ISC OR MIT
+rustls-pki-types v1.15.1|MIT OR Apache-2.0
+rustls-webpki v0.103.15|ISC
+ryu v1.0.23|Apache-2.0 OR BSL-1.0
+safe_arch v0.7.4|Zlib OR Apache-2.0 OR MIT
+same-file v1.0.6|Unlicense/MIT
+sample-consensus v1.0.2|MIT
+scopeguard v1.2.0|MIT OR Apache-2.0
+semver v1.0.28|MIT OR Apache-2.0
+serde v1.0.229|MIT OR Apache-2.0
+serde_core v1.0.229|MIT OR Apache-2.0
+serde_json v1.0.151|MIT OR Apache-2.0
+serde_yaml v0.9.34+deprecated|MIT OR Apache-2.0
+simba v0.7.3|Apache-2.0
+simba v0.9.1|Apache-2.0
+simd-adler32 v0.3.10|MIT
+simple-easing v1.0.2|MIT OR Apache-2.0
+simplelog v0.12.2|MIT OR Apache-2.0
+smallvec v1.16.0|MIT OR Apache-2.0
+space v0.17.0|MIT
+spirv v0.4.0+sdk-1.4.341.0|Apache-2.0
+spirv-std v0.9.0 (https://github.com/Rust-GPU/rust-gpu?rev=854e9ba#854e9ba7)|MIT OR Apache-2.0
+spirv-std-types v0.9.0 (https://github.com/Rust-GPU/rust-gpu?rev=854e9ba#854e9ba7)|MIT OR Apache-2.0
+stabilize_spirv v0.0.0 (<checkout>/src/core/gpu/stabilize_spirv)|
+stable_deref_trait v1.2.1|MIT OR Apache-2.0
+static_assertions v1.1.0|MIT OR Apache-2.0
+strength_reduce v0.2.4|MIT OR Apache-2.0
+subtle v2.6.1|BSD-3-Clause
+superslice v1.0.0|Apache-2.0
+symphonia v0.5.5|MPL-2.0
+symphonia-codec-vorbis v0.5.5|MPL-2.0
+symphonia-core v0.5.5|MPL-2.0
+symphonia-format-ogg v0.5.5|MPL-2.0
+symphonia-metadata v0.5.5|MPL-2.0
+symphonia-utils-xiph v0.5.5|MPL-2.0
+system_shutdown v4.1.0|MIT/Apache-2.0
+tar v0.4.46|MIT OR Apache-2.0
+telemetry-parser v0.3.0 (https://github.com/AdrianEddy/telemetry-parser.git?rev=d45ebf2#d45ebf2a)|MIT OR Apache-2.0
+tempfile v3.27.0|MIT OR Apache-2.0
+termcolor v1.4.1|Unlicense OR MIT
+thiserror v1.0.69|MIT OR Apache-2.0
+thiserror v2.0.20|MIT OR Apache-2.0
+time v0.3.55|MIT OR Apache-2.0
+time-core v0.1.9|MIT OR Apache-2.0
+tinystr v0.8.4|Unicode-3.0
+topology-traits v0.1.2|MIT OR Apache-2.0
+transpose v0.2.3|MIT OR Apache-2.0
+trash v5.2.7|MIT
+typed-path v0.12.3|MIT OR Apache-2.0
+typenum v1.20.1|MIT OR Apache-2.0
+unicode-ident v1.0.24|(MIT OR Apache-2.0) AND Unicode-3.0
+unicode-width v0.2.2|MIT OR Apache-2.0
+unit-prefix v0.5.2|MIT
+unsafe-libyaml v0.2.11|MIT
+untrusted v0.9.0|ISC
+unty v0.0.4|MIT OR Apache-2.0
+ureq v3.4.0|MIT OR Apache-2.0
+ureq-proto v0.6.1|MIT OR Apache-2.0
+url v2.5.8|MIT OR Apache-2.0
+urlencoding v2.1.3|MIT
+utf8-zero v0.8.1|MIT OR Apache-2.0
+utf8_iter v1.0.4|Apache-2.0 OR MIT
+walkdir v2.5.0|Unlicense/MIT
+web-time v1.1.0|MIT OR Apache-2.0
+webpki-roots v1.0.9|CDLA-Permissive-2.0
+wgpu v30.0.1|MIT OR Apache-2.0
+wgpu-core v30.0.1|MIT OR Apache-2.0
+wgpu-core-deps-windows-linux-android v30.0.1|MIT OR Apache-2.0
+wgpu-hal v30.0.1|MIT OR Apache-2.0
+wgpu-naga-bridge v30.0.1|MIT OR Apache-2.0
+wgpu-types v30.0.1|MIT OR Apache-2.0
+which v4.4.2|MIT
+whoami v2.1.3|Apache-2.0 OR BSL-1.0 OR MIT
+wide v0.7.33|Zlib OR Apache-2.0 OR MIT
+winapi-util v0.1.11|Unlicense OR MIT
+windows v0.56.0|MIT OR Apache-2.0
+windows v0.58.0|MIT OR Apache-2.0
+windows v0.62.2|MIT OR Apache-2.0
+windows-collections v0.3.2|MIT OR Apache-2.0
+windows-core v0.56.0|MIT OR Apache-2.0
+windows-core v0.58.0|MIT OR Apache-2.0
+windows-core v0.62.2|MIT OR Apache-2.0
+windows-future v0.3.2|MIT OR Apache-2.0
+windows-link v0.2.1|MIT OR Apache-2.0
+windows-numerics v0.3.1|MIT OR Apache-2.0
+windows-result v0.1.2|MIT OR Apache-2.0
+windows-result v0.2.0|MIT OR Apache-2.0
+windows-result v0.4.1|MIT OR Apache-2.0
+windows-strings v0.1.0|MIT OR Apache-2.0
+windows-strings v0.5.1|MIT OR Apache-2.0
+windows-sys v0.48.0|MIT OR Apache-2.0
+windows-sys v0.52.0|MIT OR Apache-2.0
+windows-sys v0.59.0|MIT OR Apache-2.0
+windows-sys v0.61.2|MIT OR Apache-2.0
+windows-targets v0.48.5|MIT OR Apache-2.0
+windows-targets v0.52.6|MIT OR Apache-2.0
+windows-threading v0.2.1|MIT OR Apache-2.0
+windows_x86_64_msvc v0.48.5|MIT OR Apache-2.0
+windows_x86_64_msvc v0.52.6|MIT OR Apache-2.0
+writeable v0.6.4|Unicode-3.0
+yoke v0.8.3|Unicode-3.0
+zerocopy v0.8.56|BSD-2-Clause OR Apache-2.0 OR MIT
+zerofrom v0.1.8|Unicode-3.0
+zeroize v1.9.0|Apache-2.0 OR MIT
+zerotrie v0.2.5|Unicode-3.0
+zerovec v0.11.8|Unicode-3.0
+zip v8.6.0|MIT
+zip-extensions v0.14.1|MIT
+zmij v1.0.23|MIT
+zune-inflate v0.2.54|MIT OR Apache-2.0 OR Zlib

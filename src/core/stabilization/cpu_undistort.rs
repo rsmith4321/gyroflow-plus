@@ -615,7 +615,9 @@ impl Stabilization {
                         let mut xsum = Vector4::<f32>::from_element(0.0);
                         for xp in 0..I {
                             let pixel = if sx + xp >= params.source_rect[0] && sx + xp < params.source_rect[0] + params.source_rect[2] {
-                                let px1: &T = bytemuck::from_bytes(&input[src_index as usize + (params.bytes_per_pixel * xp) as usize..src_index as usize + (params.bytes_per_pixel * (xp + 1)) as usize]);
+                                // The interpolation footprint may start left of the image. Keep offsets signed until the checked pixel is in bounds.
+                                let pixel_index = (src_index + (params.bytes_per_pixel * xp) as isize) as usize;
+                                let px1: &T = bytemuck::from_bytes(&input[pixel_index..pixel_index + params.bytes_per_pixel as usize]);
                                 let src_px = PixelType::to_float(*px1);
                                 // draw_pixel(&mut src_px, sx + xp, sy + yp, true, params.width, params, drawing);
                                 src_px

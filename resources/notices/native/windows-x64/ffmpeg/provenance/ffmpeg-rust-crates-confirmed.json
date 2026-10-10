@@ -1,0 +1,892 @@
+[
+ {
+  "crate": "aligned",
+  "version": "0.4.2",
+  "url": "https://static.crates.io/crates/aligned/aligned-0.4.2.crate",
+  "sha256": "377e4c0ba83e4431b10df45c1d4666f178ea9c552cac93e60c3a88bf32785923",
+  "lock_checksum": "377e4c0ba83e4431b10df45c1d4666f178ea9c552cac93e60c3a88bf32785923",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "aligned-vec",
+  "version": "0.6.4",
+  "url": "https://static.crates.io/crates/aligned-vec/aligned-vec-0.6.4.crate",
+  "sha256": "dc890384c8602f339876ded803c97ad529f3842aba97f6392b3dba0dd171769b",
+  "lock_checksum": "dc890384c8602f339876ded803c97ad529f3842aba97f6392b3dba0dd171769b",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ]
+ },
+ {
+  "crate": "anstream",
+  "version": "0.6.19",
+  "url": "https://static.crates.io/crates/anstream/anstream-0.6.19.crate",
+  "sha256": "301af1932e46185686725e0fad2f8f2aa7da69dd70bf6ecc44d6b703844a3933",
+  "lock_checksum": "301af1932e46185686725e0fad2f8f2aa7da69dd70bf6ecc44d6b703844a3933",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "anstyle",
+  "version": "1.0.11",
+  "url": "https://static.crates.io/crates/anstyle/anstyle-1.0.11.crate",
+  "sha256": "862ed96ca487e809f1c8e5a8447f6ee2cf102f846893800b20cebdf541fc6bbd",
+  "lock_checksum": "862ed96ca487e809f1c8e5a8447f6ee2cf102f846893800b20cebdf541fc6bbd",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "anstyle-parse",
+  "version": "0.2.7",
+  "url": "https://static.crates.io/crates/anstyle-parse/anstyle-parse-0.2.7.crate",
+  "sha256": "4e7644824f0aa2c7b9384579234ef10eb7efb6a0deb83f9630a49594dd9c15c2",
+  "lock_checksum": "4e7644824f0aa2c7b9384579234ef10eb7efb6a0deb83f9630a49594dd9c15c2",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "anstyle-query",
+  "version": "1.1.3",
+  "url": "https://static.crates.io/crates/anstyle-query/anstyle-query-1.1.3.crate",
+  "sha256": "6c8bdeb6047d8983be085bab0ba1472e6dc604e7041dbf6fcd5e71523014fae9",
+  "lock_checksum": "6c8bdeb6047d8983be085bab0ba1472e6dc604e7041dbf6fcd5e71523014fae9",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "anstyle-wincon",
+  "version": "3.0.9",
+  "url": "https://static.crates.io/crates/anstyle-wincon/anstyle-wincon-3.0.9.crate",
+  "sha256": "403f75924867bb1033c59fbf0797484329750cfbe3c4325cd33127941fabc882",
+  "lock_checksum": "403f75924867bb1033c59fbf0797484329750cfbe3c4325cd33127941fabc882",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "anyhow",
+  "version": "1.0.98",
+  "url": "https://static.crates.io/crates/anyhow/anyhow-1.0.98.crate",
+  "sha256": "e16d2d3311acee920a9eb8d33b8cbc1787ce4a264e85f964c2404b969bdcd487",
+  "lock_checksum": "e16d2d3311acee920a9eb8d33b8cbc1787ce4a264e85f964c2404b969bdcd487",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "arrayvec",
+  "version": "0.7.6",
+  "url": "https://static.crates.io/crates/arrayvec/arrayvec-0.7.6.crate",
+  "sha256": "7c02d123df017efcdfbd739ef81735b36c5ba83ec3c59c80a9d7ecc718f92e50",
+  "lock_checksum": "7c02d123df017efcdfbd739ef81735b36c5ba83ec3c59c80a9d7ecc718f92e50",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "as-slice",
+  "version": "0.2.1",
+  "url": "https://static.crates.io/crates/as-slice/as-slice-0.2.1.crate",
+  "sha256": "516b6b4f0e40d50dcda9365d53964ec74560ad4284da2e7fc97122cd83174516",
+  "lock_checksum": "516b6b4f0e40d50dcda9365d53964ec74560ad4284da2e7fc97122cd83174516",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "av-metrics",
+  "version": "0.9.1",
+  "url": "https://static.crates.io/crates/av-metrics/av-metrics-0.9.1.crate",
+  "sha256": "996ce95bbdb0203e5b91d4a0c9b81c0d67d11c80f884482a0c1ea19e732e3530",
+  "lock_checksum": "996ce95bbdb0203e5b91d4a0c9b81c0d67d11c80f884482a0c1ea19e732e3530",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE",
+   "src-video-ciede-delta_e-LICENSE",
+   "src-video-ciede-rgbtolab-LICENSE"
+  ],
+  "files_note": "No top-level licence file in the .crate. LICENSE from https://github.com/rust-av/av-metrics at 1d43898f3e3cc843dd7a8898370f16e6fb5f9546 (earliest commit whose av_metrics/Cargo.toml equals the crate's Cargo.toml.orig); the two src-video-ciede-* files are the nested LICENSE files inside the .crate.",
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "av-scenechange",
+  "version": "0.14.1",
+  "url": "https://static.crates.io/crates/av-scenechange/av-scenechange-0.14.1.crate",
+  "sha256": "0f321d77c20e19b92c39e7471cf986812cbb46659d2af674adc4331ef3f18394",
+  "lock_checksum": "0f321d77c20e19b92c39e7471cf986812cbb46659d2af674adc4331ef3f18394",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ]
+ },
+ {
+  "crate": "av1-grain",
+  "version": "0.2.4",
+  "url": "https://static.crates.io/crates/av1-grain/av1-grain-0.2.4.crate",
+  "sha256": "4f3efb2ca85bc610acfa917b5aaa36f3fcbebed5b3182d7f877b02531c4b80c8",
+  "lock_checksum": "4f3efb2ca85bc610acfa917b5aaa36f3fcbebed5b3182d7f877b02531c4b80c8",
+  "checksum_match": true,
+  "license_field": "BSD-2-Clause",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "bitstream-io",
+  "version": "4.2.0",
+  "url": "https://static.crates.io/crates/bitstream-io/bitstream-io-4.2.0.crate",
+  "sha256": "6afa0fc725d5ac9efc66f47b4c533ee850eb34aa6105681b5349c27157346ffa",
+  "lock_checksum": "6afa0fc725d5ac9efc66f47b4c533ee850eb34aa6105681b5349c27157346ffa",
+  "checksum_match": true,
+  "license_field": "MIT/Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "cfg-if",
+  "version": "1.0.1",
+  "url": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.1.crate",
+  "sha256": "9555578bc9e57714c812a1f84e4fc5b4d21fcb063490c624de019f7464c91268",
+  "lock_checksum": "9555578bc9e57714c812a1f84e4fc5b4d21fcb063490c624de019f7464c91268",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "clap",
+  "version": "4.5.40",
+  "url": "https://static.crates.io/crates/clap/clap-4.5.40.crate",
+  "sha256": "40b6887a1d8685cebccf115538db5c0efe625ccac9696ad45c409d96566e910f",
+  "lock_checksum": "40b6887a1d8685cebccf115538db5c0efe625ccac9696ad45c409d96566e910f",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "clap_builder",
+  "version": "4.5.40",
+  "url": "https://static.crates.io/crates/clap_builder/clap_builder-4.5.40.crate",
+  "sha256": "e0c66c08ce9f0c698cbce5c0279d0bb6ac936d8674174fe48f736533b964f59e",
+  "lock_checksum": "e0c66c08ce9f0c698cbce5c0279d0bb6ac936d8674174fe48f736533b964f59e",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "clap_complete",
+  "version": "4.5.54",
+  "url": "https://static.crates.io/crates/clap_complete/clap_complete-4.5.54.crate",
+  "sha256": "aad5b1b4de04fead402672b48897030eec1f3bfe1550776322f59f6d6e6a5677",
+  "lock_checksum": "aad5b1b4de04fead402672b48897030eec1f3bfe1550776322f59f6d6e6a5677",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "clap_lex",
+  "version": "0.7.5",
+  "url": "https://static.crates.io/crates/clap_lex/clap_lex-0.7.5.crate",
+  "sha256": "b94f61472cee1439c0b966b47e3aca9ae07e45d070759512cd390ea2bebc6675",
+  "lock_checksum": "b94f61472cee1439c0b966b47e3aca9ae07e45d070759512cd390ea2bebc6675",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "colorchoice",
+  "version": "1.0.4",
+  "url": "https://static.crates.io/crates/colorchoice/colorchoice-1.0.4.crate",
+  "sha256": "b05b61dc5112cbb17e4b6cd61790d9845d13888356391624cbe7e41efeac1e75",
+  "lock_checksum": "b05b61dc5112cbb17e4b6cd61790d9845d13888356391624cbe7e41efeac1e75",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "console",
+  "version": "0.15.11",
+  "url": "https://static.crates.io/crates/console/console-0.15.11.crate",
+  "sha256": "054ccb5b10f9f2cbf51eb355ca1d05c2d279ce1804688d0db74b4733a5aeafd8",
+  "lock_checksum": "054ccb5b10f9f2cbf51eb355ca1d05c2d279ce1804688d0db74b4733a5aeafd8",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "core2",
+  "version": "0.4.0",
+  "url": "https://static.crates.io/crates/core2/core2-0.4.0.crate",
+  "sha256": "b49ba7ef1ad6107f8824dbe97de947cbaac53c44e7f9756a1fba0d37c1eec505",
+  "lock_checksum": "b49ba7ef1ad6107f8824dbe97de947cbaac53c44e7f9756a1fba0d37c1eec505",
+  "checksum_match": true,
+  "license_field": "Apache-2.0 OR MIT",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "crossbeam",
+  "version": "0.8.4",
+  "url": "https://static.crates.io/crates/crossbeam/crossbeam-0.8.4.crate",
+  "sha256": "1137cd7e7fc0fb5d3c5a8678be38ec56e819125d8d7907411fe24ccb943faca8",
+  "lock_checksum": "1137cd7e7fc0fb5d3c5a8678be38ec56e819125d8d7907411fe24ccb943faca8",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "crossbeam-channel",
+  "version": "0.5.15",
+  "url": "https://static.crates.io/crates/crossbeam-channel/crossbeam-channel-0.5.15.crate",
+  "sha256": "82b8f8f868b36967f9606790d1903570de9ceaf870a7bf9fbbd3016d636a2cb2",
+  "lock_checksum": "82b8f8f868b36967f9606790d1903570de9ceaf870a7bf9fbbd3016d636a2cb2",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT",
+   "LICENSE-THIRD-PARTY"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "crossbeam-deque",
+  "version": "0.8.6",
+  "url": "https://static.crates.io/crates/crossbeam-deque/crossbeam-deque-0.8.6.crate",
+  "sha256": "9dd111b7b7f7d55b72c0a6ae361660ee5853c9af73f70c3c2ef6858b950e2e51",
+  "lock_checksum": "9dd111b7b7f7d55b72c0a6ae361660ee5853c9af73f70c3c2ef6858b950e2e51",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "crossbeam-epoch",
+  "version": "0.9.18",
+  "url": "https://static.crates.io/crates/crossbeam-epoch/crossbeam-epoch-0.9.18.crate",
+  "sha256": "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e",
+  "lock_checksum": "5b82ac4a3c2ca9c3460964f020e1402edd5753411d7737aa39c3714ad1b5420e",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "crossbeam-queue",
+  "version": "0.3.12",
+  "url": "https://static.crates.io/crates/crossbeam-queue/crossbeam-queue-0.3.12.crate",
+  "sha256": "0f58bbc28f91df819d0aa2a2c00cd19754769c2fad90579b3592b1c9ba7a3115",
+  "lock_checksum": "0f58bbc28f91df819d0aa2a2c00cd19754769c2fad90579b3592b1c9ba7a3115",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "crossbeam-utils",
+  "version": "0.8.21",
+  "url": "https://static.crates.io/crates/crossbeam-utils/crossbeam-utils-0.8.21.crate",
+  "sha256": "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28",
+  "lock_checksum": "d0a5c400df2834b80a4c3327b3aad3a4c4cd4de0629063962b03235697506a28",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "either",
+  "version": "1.15.0",
+  "url": "https://static.crates.io/crates/either/either-1.15.0.crate",
+  "sha256": "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719",
+  "lock_checksum": "48c757948c5ede0e46177b7add2e67155f70e33c07fea8284df6576da70b3719",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "encode_unicode",
+  "version": "1.0.0",
+  "url": "https://static.crates.io/crates/encode_unicode/encode_unicode-1.0.0.crate",
+  "sha256": "34aa73646ffb006b8f5147f3dc182bd4bcb190227ce861fc4a4844bf8e3cb2c0",
+  "lock_checksum": "34aa73646ffb006b8f5147f3dc182bd4bcb190227ce861fc4a4844bf8e3cb2c0",
+  "checksum_match": true,
+  "license_field": "Apache-2.0 OR MIT",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "equator",
+  "version": "0.4.2",
+  "url": "https://static.crates.io/crates/equator/equator-0.4.2.crate",
+  "sha256": "4711b213838dfee0117e3be6ac926007d7f433d7bbe33595975d4190cb07e6fc",
+  "lock_checksum": "4711b213838dfee0117e3be6ac926007d7f433d7bbe33595975d4190cb07e6fc",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ]
+ },
+ {
+  "crate": "fern",
+  "version": "0.7.1",
+  "url": "https://static.crates.io/crates/fern/fern-0.7.1.crate",
+  "sha256": "4316185f709b23713e41e3195f90edef7fb00c3ed4adc79769cf09cc762a3b29",
+  "lock_checksum": "4316185f709b23713e41e3195f90edef7fb00c3ed4adc79769cf09cc762a3b29",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "is_terminal_polyfill",
+  "version": "1.70.1",
+  "url": "https://static.crates.io/crates/is_terminal_polyfill/is_terminal_polyfill-1.70.1.crate",
+  "sha256": "7943c866cc5cd64cbc25b2e01621d07fa8eb2a1a23160ee81ce38704e97b8ecf",
+  "lock_checksum": "7943c866cc5cd64cbc25b2e01621d07fa8eb2a1a23160ee81ce38704e97b8ecf",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "itertools",
+  "version": "0.10.5",
+  "url": "https://static.crates.io/crates/itertools/itertools-0.10.5.crate",
+  "sha256": "b0fd2260e829bddf4cb6ea802289de2f86d6a7a690192fbe91b3f46e0f2c8473",
+  "lock_checksum": "b0fd2260e829bddf4cb6ea802289de2f86d6a7a690192fbe91b3f46e0f2c8473",
+  "checksum_match": true,
+  "license_field": "MIT/Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "itertools",
+  "version": "0.14.0",
+  "url": "https://static.crates.io/crates/itertools/itertools-0.14.0.crate",
+  "sha256": "2b192c782037fadd9cfa75548310488aabdbf3d2da73885b31bd0abd03351285",
+  "lock_checksum": "2b192c782037fadd9cfa75548310488aabdbf3d2da73885b31bd0abd03351285",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "lab",
+  "version": "0.11.0",
+  "url": "https://static.crates.io/crates/lab/lab-0.11.0.crate",
+  "sha256": "bf36173d4167ed999940f804952e6b08197cae5ad5d572eb4db150ce8ad5d58f",
+  "lock_checksum": "bf36173d4167ed999940f804952e6b08197cae5ad5d572eb4db150ce8ad5d58f",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "libc",
+  "version": "0.2.172",
+  "url": "https://static.crates.io/crates/libc/libc-0.2.172.crate",
+  "sha256": "d750af042f7ef4f724306de029d18836c26c1765a54a6a3f094cbd23a7267ffa",
+  "lock_checksum": "d750af042f7ef4f724306de029d18836c26c1765a54a6a3f094cbd23a7267ffa",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "log",
+  "version": "0.4.34",
+  "url": "https://static.crates.io/crates/log/log-0.4.34.crate",
+  "sha256": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+  "lock_checksum": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "maybe-rayon",
+  "version": "0.1.1",
+  "url": "https://static.crates.io/crates/maybe-rayon/maybe-rayon-0.1.1.crate",
+  "sha256": "8ea1f30cedd69f0a2954655f7188c6a834246d2bcf1e315e2ac40c4b24dc9519",
+  "lock_checksum": "8ea1f30cedd69f0a2954655f7188c6a834246d2bcf1e315e2ac40c4b24dc9519",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "memchr",
+  "version": "2.7.5",
+  "url": "https://static.crates.io/crates/memchr/memchr-2.7.5.crate",
+  "sha256": "32a282da65faaf38286cf3be983213fcf1d2e2a58700e808f83f4ea9a4804bc0",
+  "lock_checksum": "32a282da65faaf38286cf3be983213fcf1d2e2a58700e808f83f4ea9a4804bc0",
+  "checksum_match": true,
+  "license_field": "Unlicense OR MIT",
+  "files": [
+   "COPYING",
+   "LICENSE-MIT",
+   "UNLICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "minimal-lexical",
+  "version": "0.2.1",
+  "url": "https://static.crates.io/crates/minimal-lexical/minimal-lexical-0.2.1.crate",
+  "sha256": "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a",
+  "lock_checksum": "68354c5c6bd36d73ff3feceb05efa59b6acb7626617f4962be322a825e61f79a",
+  "checksum_match": true,
+  "license_field": "MIT/Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT",
+   "LICENSE.md"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "new_debug_unreachable",
+  "version": "1.0.6",
+  "url": "https://static.crates.io/crates/new_debug_unreachable/new_debug_unreachable-1.0.6.crate",
+  "sha256": "650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086",
+  "lock_checksum": "650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "nom",
+  "version": "7.1.3",
+  "url": "https://static.crates.io/crates/nom/nom-7.1.3.crate",
+  "sha256": "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a",
+  "lock_checksum": "d273983c5a657a70a3e8f2a01329822f3b8c8172b73826411a55751e404a0a4a",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "nom",
+  "version": "8.0.0",
+  "url": "https://static.crates.io/crates/nom/nom-8.0.0.crate",
+  "sha256": "df9761775871bdef83bee530e60050f7e54b1105350d6884eb0fb4f46c2f9405",
+  "lock_checksum": "df9761775871bdef83bee530e60050f7e54b1105350d6884eb0fb4f46c2f9405",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "num-bigint",
+  "version": "0.4.6",
+  "url": "https://static.crates.io/crates/num-bigint/num-bigint-0.4.6.crate",
+  "sha256": "a5e44f723f1133c9deac646763579fdb3ac745e418f2a7af9cd0c431da1f20b9",
+  "lock_checksum": "a5e44f723f1133c9deac646763579fdb3ac745e418f2a7af9cd0c431da1f20b9",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "num-integer",
+  "version": "0.1.46",
+  "url": "https://static.crates.io/crates/num-integer/num-integer-0.1.46.crate",
+  "sha256": "7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f",
+  "lock_checksum": "7969661fd2958a5cb096e56c8e1ad0444ac2bbcd0061bd28660485a44879858f",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "num-rational",
+  "version": "0.4.2",
+  "url": "https://static.crates.io/crates/num-rational/num-rational-0.4.2.crate",
+  "sha256": "f83d14da390562dca69fc84082e73e548e1ad308d24accdedd2720017cb37824",
+  "lock_checksum": "f83d14da390562dca69fc84082e73e548e1ad308d24accdedd2720017cb37824",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "num-traits",
+  "version": "0.2.19",
+  "url": "https://static.crates.io/crates/num-traits/num-traits-0.2.19.crate",
+  "sha256": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
+  "lock_checksum": "071dfc062690e90b734c0b2273ce72ad0ffa95f0c74596bc250dcfd960262841",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "once_cell",
+  "version": "1.21.3",
+  "url": "https://static.crates.io/crates/once_cell/once_cell-1.21.3.crate",
+  "sha256": "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d",
+  "lock_checksum": "42f5e15c9953c5e4ccceeb2e7382a716482c34515315f7b03532b8b4e8393d2d",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "once_cell_polyfill",
+  "version": "1.70.1",
+  "url": "https://static.crates.io/crates/once_cell_polyfill/once_cell_polyfill-1.70.1.crate",
+  "sha256": "a4895175b425cb1f87721b59f0f286c2092bd4af812243672510e1ac53e2e0ad",
+  "lock_checksum": "a4895175b425cb1f87721b59f0f286c2092bd4af812243672510e1ac53e2e0ad",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "profiling",
+  "version": "1.0.16",
+  "url": "https://static.crates.io/crates/profiling/profiling-1.0.16.crate",
+  "sha256": "afbdc74edc00b6f6a218ca6a5364d6226a259d4b8ea1af4a0ea063f27e179f4d",
+  "lock_checksum": "afbdc74edc00b6f6a218ca6a5364d6226a259d4b8ea1af4a0ea063f27e179f4d",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "files_note": "No licence file in the .crate. Files from https://github.com/aclysma/profiling at 0ba524064aae5b4972e6be3424a2acb316f93ba3, the commit recorded in the crate's .cargo_vcs_info.json.",
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "rayon",
+  "version": "1.10.0",
+  "url": "https://static.crates.io/crates/rayon/rayon-1.10.0.crate",
+  "sha256": "b418a60154510ca1a002a752ca9714984e21e4241e804d32555251faf8b78ffa",
+  "lock_checksum": "b418a60154510ca1a002a752ca9714984e21e4241e804d32555251faf8b78ffa",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "rayon-core",
+  "version": "1.12.1",
+  "url": "https://static.crates.io/crates/rayon-core/rayon-core-1.12.1.crate",
+  "sha256": "1465873a3dfdaa8ae7cb14b4383657caab0b3e8a0aa9ae8e04b044854c8dfce2",
+  "lock_checksum": "1465873a3dfdaa8ae7cb14b4383657caab0b3e8a0aa9ae8e04b044854c8dfce2",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ]
+ },
+ {
+  "crate": "scan_fmt",
+  "version": "0.2.6",
+  "url": "https://static.crates.io/crates/scan_fmt/scan_fmt-0.2.6.crate",
+  "sha256": "0b53b0a5db882a8e2fdaae0a43f7b39e7e9082389e978398bdf223a55b581248",
+  "lock_checksum": "0b53b0a5db882a8e2fdaae0a43f7b39e7e9082389e978398bdf223a55b581248",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ]
+ },
+ {
+  "crate": "stable_deref_trait",
+  "version": "1.2.0",
+  "url": "https://static.crates.io/crates/stable_deref_trait/stable_deref_trait-1.2.0.crate",
+  "sha256": "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3",
+  "lock_checksum": "a8f112729512f8e442d81f95a8a7ddf2b7c6b8a1a6f509a95864142b30cab2d3",
+  "checksum_match": true,
+  "license_field": "MIT/Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "terminal_size",
+  "version": "0.4.2",
+  "url": "https://static.crates.io/crates/terminal_size/terminal_size-0.4.2.crate",
+  "sha256": "45c6481c4829e4cc63825e62c49186a34538b7b2750b73b266581ffb612fb5ed",
+  "lock_checksum": "45c6481c4829e4cc63825e62c49186a34538b7b2750b73b266581ffb612fb5ed",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "thiserror",
+  "version": "1.0.69",
+  "url": "https://static.crates.io/crates/thiserror/thiserror-1.0.69.crate",
+  "sha256": "b6aaf5339b578ea85b50e080feb250a3e8ae8cfcdff9a461c9ec2904bc923f52",
+  "lock_checksum": "b6aaf5339b578ea85b50e080feb250a3e8ae8cfcdff9a461c9ec2904bc923f52",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "thiserror",
+  "version": "2.0.12",
+  "url": "https://static.crates.io/crates/thiserror/thiserror-2.0.12.crate",
+  "sha256": "567b8a2dae586314f7be2a752ec7474332959c6460e02bde30d702a66d488708",
+  "lock_checksum": "567b8a2dae586314f7be2a752ec7474332959c6460e02bde30d702a66d488708",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "unicode-width",
+  "version": "0.2.1",
+  "url": "https://static.crates.io/crates/unicode-width/unicode-width-0.2.1.crate",
+  "sha256": "4a1a07cc7db3810833284e8d372ccdc6da29741639ecc70c9ec107df0fa6154c",
+  "lock_checksum": "4a1a07cc7db3810833284e8d372ccdc6da29741639ecc70c9ec107df0fa6154c",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "COPYRIGHT",
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "utf8parse",
+  "version": "0.2.2",
+  "url": "https://static.crates.io/crates/utf8parse/utf8parse-0.2.2.crate",
+  "sha256": "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821",
+  "lock_checksum": "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821",
+  "checksum_match": true,
+  "license_field": "Apache-2.0 OR MIT",
+  "files": [
+   "LICENSE-APACHE",
+   "LICENSE-MIT"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "v_frame",
+  "version": "0.3.9",
+  "url": "https://static.crates.io/crates/v_frame/v_frame-0.3.9.crate",
+  "sha256": "666b7727c8875d6ab5db9533418d7c764233ac9c0cff1d469aec8fa127597be2",
+  "lock_checksum": "666b7727c8875d6ab5db9533418d7c764233ac9c0cff1d469aec8fa127597be2",
+  "checksum_match": true,
+  "license_field": "BSD-2-Clause",
+  "files": [
+   "LICENSE"
+  ]
+ },
+ {
+  "crate": "windows-sys",
+  "version": "0.59.0",
+  "url": "https://static.crates.io/crates/windows-sys/windows-sys-0.59.0.crate",
+  "sha256": "1e38bc4d79ed67fd075bcc251a1c39b32a1776bbe92e5bef1f0bf1f8c531853b",
+  "lock_checksum": "1e38bc4d79ed67fd075bcc251a1c39b32a1776bbe92e5bef1f0bf1f8c531853b",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "license-apache-2.0",
+   "license-mit"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "windows-targets",
+  "version": "0.52.6",
+  "url": "https://static.crates.io/crates/windows-targets/windows-targets-0.52.6.crate",
+  "sha256": "9b724f72796e036ab90c1021d4780d4d3d648aca59e491e6b98e725b84e99973",
+  "lock_checksum": "9b724f72796e036ab90c1021d4780d4d3d648aca59e491e6b98e725b84e99973",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "license-apache-2.0",
+   "license-mit"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "windows_x86_64_gnu",
+  "version": "0.52.6",
+  "url": "https://static.crates.io/crates/windows_x86_64_gnu/windows_x86_64_gnu-0.52.6.crate",
+  "sha256": "147a5c80aabfbf0c7d901cb5895d1de30ef2907eb21fbbab29ca94c5b08b1a78",
+  "lock_checksum": "147a5c80aabfbf0c7d901cb5895d1de30ef2907eb21fbbab29ca94c5b08b1a78",
+  "checksum_match": true,
+  "license_field": "MIT OR Apache-2.0",
+  "files": [
+   "license-apache-2.0",
+   "license-mit"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ },
+ {
+  "crate": "y4m",
+  "version": "0.8.0",
+  "url": "https://static.crates.io/crates/y4m/y4m-0.8.0.crate",
+  "sha256": "7a5a4b21e1a62b67a2970e6831bc091d7b87e119e7f9791aef9702e3bef04448",
+  "lock_checksum": "7a5a4b21e1a62b67a2970e6831bc091d7b87e119e7f9791aef9702e3bef04448",
+  "checksum_match": true,
+  "license_field": "MIT",
+  "files": [
+   "LICENSE"
+  ],
+  "basis": "rav1e 31435de9 links it: cargo tree -e normal,no-proc-macro --target x86_64-pc-windows-gnu --features capi (default features on), at rav1e's Cargo.lock"
+ }
+]

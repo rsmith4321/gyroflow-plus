@@ -1,0 +1,139 @@
+{
+ "staged": [
+  {
+   "name": "opencv_calib3d4.dll",
+   "bytes": 2548224,
+   "sha256": "5ca8ea7c6cdc041985b3d29333868bf1c5cb4e3d107f7441980d327ab866e8cf"
+  },
+  {
+   "name": "opencv_core4.dll",
+   "bytes": 4082176,
+   "sha256": "7d4dff92ffb4c9be853fc1c6fa1f49fb1dd7a81a221bf5ea40fd1da29171bf21"
+  },
+  {
+   "name": "opencv_features2d4.dll",
+   "bytes": 856064,
+   "sha256": "26be7b26639b5c82f8aaa02130001d9ea29db299bf40140a2c56e798cf57693c"
+  },
+  {
+   "name": "opencv_flann4.dll",
+   "bytes": 402432,
+   "sha256": "b12592c3ac5483327ea75f52157d8bde6f4a1ea9d5dbf8d8069effe2be229d5a"
+  },
+  {
+   "name": "opencv_imgcodecs4.dll",
+   "bytes": 363008,
+   "sha256": "e7d4c7ac466993e42fd06841f5566f989d2d001bbfd20eead04148db3dcfd2e4"
+  },
+  {
+   "name": "opencv_imgproc4.dll",
+   "bytes": 5611520,
+   "sha256": "165a6bfe99ce3c7d78ca63bd5fb6227183d7212aab3c5b3f5c092fbe956d9bf3"
+  },
+  {
+   "name": "opencv_ml4.dll",
+   "bytes": 557056,
+   "sha256": "048943def076d4556a89bed788f452ba4a6095e78243a34809b01fb5d29e9a25"
+  },
+  {
+   "name": "opencv_objdetect4.dll",
+   "bytes": 1231872,
+   "sha256": "92cc2f55d76691ce696966e06e793447e331c4818a8808c3935e0d6b6226f4de"
+  },
+  {
+   "name": "opencv_photo4.dll",
+   "bytes": 648704,
+   "sha256": "83c9da81fd7dbcad82c317a356cbaaefdafaa4b2e5e9385510e2f17c832ca4b4"
+  },
+  {
+   "name": "opencv_stitching4.dll",
+   "bytes": 777728,
+   "sha256": "5c3871bb571ec1653efa3fb7a700c78a0714d870b84fe9546a12be1762800f62"
+  },
+  {
+   "name": "opencv_video4.dll",
+   "bytes": 670720,
+   "sha256": "5dee8d1289d8da2f5c32b245d8344c71cf19e343af11893cc0c9941b0fb0bae8"
+  },
+  {
+   "name": "opencv_videoio4.dll",
+   "bytes": 379904,
+   "sha256": "8a4ca1d062695a9ed00a10e0e3ca854c99ce81f482f64ecfbaaccf534fdc4f52"
+  }
+ ],
+ "imported_directly_by_exe": [
+  "opencv_calib3d4.dll",
+  "opencv_core4.dll",
+  "opencv_imgproc4.dll",
+  "opencv_video4.dll"
+ ],
+ "spdx_packages": [
+  {
+   "name": "opencv4",
+   "SPDXID": "SPDXRef-port",
+   "versionInfo": "4.14.0",
+   "downloadLocation": "git+https://github.com/Microsoft/vcpkg#ports/opencv4",
+   "homepage": "https://opencv.org/",
+   "licenseConcluded": "LicenseRef-vcpkg-null",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "description": "Open Source Computer Vision Library",
+   "comment": "This is the port (recipe) consumed by vcpkg.",
+   "externalRefs": [
+    {
+     "referenceCategory": "PACKAGE-MANAGER",
+     "referenceType": "purl",
+     "referenceLocator": "pkg:vcpkg/opencv4@4.14.0?triplet=x64-windows&vcs_url=git%2Bhttps%3A%2F%2Fgithub.com%2FMicrosoft%2Fvcpkg%23ports%2Fopencv4"
+    }
+   ]
+  },
+  {
+   "name": "opencv4:x64-windows",
+   "SPDXID": "SPDXRef-binary",
+   "versionInfo": "NONE",
+   "downloadLocation": "NONE",
+   "licenseConcluded": "LicenseRef-vcpkg-null",
+   "licenseDeclared": "NOASSERTION",
+   "copyrightText": "NOASSERTION",
+   "comment": "This is a binary package built by vcpkg."
+  },
+  {
+   "SPDXID": "SPDXRef-resource-0",
+   "checksums": [
+    {
+     "algorithm": "SHA512",
+     "checksumValue": "4f1e606cd24f74b49227a32bd1558882d3b01dbbadca8b49a0e07dd9fc6291b4c584d7f2c3951409758c3128dc53d38d84c4c7642c7a6f6a054a5eb9d5c6f91e"
+    }
+   ],
+   "copyrightText": "NOASSERTION",
+   "downloadLocation": "git+https://github.com/opencv/opencv@4.14.0",
+   "licenseConcluded": "NOASSERTION",
+   "licenseDeclared": "NOASSERTION",
+   "name": "opencv/opencv"
+  }
+ ],
+ "abi_record_present": false,
+ "records": [
+  {
+   "path": "vcpkg/opencv4/copyright",
+   "bytes": 18203,
+   "sha256": "303a7e8934a8f707ad91380ae076d24963dbec4be6d536222c372737360c8dd2"
+  },
+  {
+   "path": "vcpkg/opencv4/vcpkg.spdx.json",
+   "bytes": 149957,
+   "sha256": "9e52d0f640952c81b68abf6a36786243a875aa3330e4e42916b47898e2af764f"
+  },
+  {
+   "path": "vcpkg/opencv4/vcpkg-spdx-resources.json",
+   "bytes": 512,
+   "sha256": "aff99994d2ea949e347791fa02c62153ecb12ce92339b1e8653cb0f56b776c99"
+  },
+  {
+   "path": "vcpkg/opencv4/OpenCVConfig-version.cmake",
+   "bytes": 434,
+   "sha256": "343f3d3fef18aed6c6996ee48d53827a158e2e7d53e90855329c1b9cf4571bd7"
+  }
+ ],
+ "spdx_and_installed_files_delivered": false
+}

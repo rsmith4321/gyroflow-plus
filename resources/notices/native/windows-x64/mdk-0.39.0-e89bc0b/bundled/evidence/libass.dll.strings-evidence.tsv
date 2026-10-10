@@ -1,0 +1,11 @@
+3707	Failed to initialize directwrite.
+3720	directwrite (with GDI)
+3743	commit: 0.13.1-924-gaf5f116d243f060a708c82f0c6e3102a2270a336
+3744	libass source: %s
+3747	Raster: FreeType %d.%d.%d
+3760	Shaper: FriBidi 1.0.13 (SIMPLE) HarfBuzz-ng %s (COMPLEX)
+6862	libharfbuzz-0.dll
+6906	incorrect header check
+6911	invalid block type
+6934	14.5.0
+6953	harfbuzz 

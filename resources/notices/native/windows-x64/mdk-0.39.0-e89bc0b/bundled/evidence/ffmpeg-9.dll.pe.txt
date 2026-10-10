@@ -1,0 +1,39 @@
+# ffmpeg-9.dll sha256 9b9526af072d898875a24eb9825c7e1b19f1bd82a179ae406e25f1ed13e2b1cd bytes 12207104
+ffmpeg-9.dll coff_timedatestamp 0x6aaca6a2 2026-09-18T02:49:06+00:00 linker 14.51
+ffmpeg-9.dll codeview D:\a\avbuild\avbuild\build_sdk-vc-x64-clvs2026\ffmpeg-9.pdb guid 7277e34e3edc0d41a069996c45f43c8c age 1 dir_timestamp 0x6aaca6a2
+ffmpeg-9.dll debug_type 12 timestamp 0x6aaca6a2
+ffmpeg-9.dll debug_type 13 timestamp 0x6aaca6a2
+ffmpeg-9.dll versioninfo CompanyName 'FFmpeg Project. Built by https://github.com/wang-bin/avbuild'
+ffmpeg-9.dll versioninfo FileDescription 'FFmpeg library'
+ffmpeg-9.dll versioninfo FileVersion '9.0.0'
+ffmpeg-9.dll versioninfo ProductName 'FFmpeg'
+ffmpeg-9.dll versioninfo ProductVersion 'git-2026-09-17-590fb40-avbuild'
+ffmpeg-9.dll versioninfo LegalCopyright 'Copyright (C) 2000-2026 FFmpeg Project'
+ffmpeg-9.dll versioninfo OriginalFilename 'ffmpeg-9.dll'
+ffmpeg-9.dll versioninfo InternalName 'libffmpeg'
+ffmpeg-9.dll export-name ffmpeg-9.dll
+ffmpeg-9.dll import ole32.dll
+ffmpeg-9.dll import USER32.dll
+ffmpeg-9.dll import ADVAPI32.dll
+ffmpeg-9.dll import GDI32.dll
+ffmpeg-9.dll import Secur32.dll
+ffmpeg-9.dll import ncrypt.dll
+ffmpeg-9.dll import CRYPT32.dll
+ffmpeg-9.dll import WS2_32.dll
+ffmpeg-9.dll import OLEAUT32.dll
+ffmpeg-9.dll import SHLWAPI.dll
+ffmpeg-9.dll import AVICAP32.dll
+ffmpeg-9.dll import MSVCP140.dll
+ffmpeg-9.dll import KERNEL32.dll
+ffmpeg-9.dll import VCRUNTIME140.dll
+ffmpeg-9.dll import VCRUNTIME140_1.dll
+ffmpeg-9.dll import api-ms-win-crt-runtime-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-utility-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-stdio-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-math-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-string-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-convert-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-heap-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-time-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-filesystem-l1-1-0.dll
+ffmpeg-9.dll import api-ms-win-crt-environment-l1-1-0.dll

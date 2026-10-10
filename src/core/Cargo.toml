@@ -120,3 +120,7 @@ ndk-context = { version = "0.1.1" }
 
 [build-dependencies]
 ureq = "3.3"
+# Already in Cargo.lock through ureq/rustls; verifies the pinned lens profile input.
+ring = "0.17"
+# Already a gyroflow-core dependency; validates fresh downloads exactly as the app decodes them.
+flate2 = "1.1"

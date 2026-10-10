@@ -32,8 +32,8 @@ macro_rules! connect {
     };
 }
 
-/** Gyroflow v1.6.3
-Video stabilization using gyroscope data
+/** GyroGrade, based on Gyroflow
+Video stabilization using gyroscope data, with LUTs and color correction
 */
 #[derive(FromArgs)]
 struct Opts {
@@ -144,7 +144,7 @@ pub fn run(open_file: &mut String, open_preset: &mut String) -> bool {
         let opts: Opts = argh::from_env();
 
         if opts.version {
-            println!("Gyroflow v{}", crate::util::get_version());
+            println!("GyroGrade v{}", crate::util::get_version());
             return true;
         }
 
@@ -354,11 +354,13 @@ pub fn run(open_file: &mut String, open_preset: &mut String) -> bool {
                     cpp!(unsafe [] { qApp->quit(); });
                 }
             });
-            connect!(queue_ptr, q, render_progress, |job_id: &u32, _progress: &f64, current_frame: &usize, total_frames: &usize, _finished: &bool, _start_time: &f64, _is_conversion: &bool| {
+            connect!(queue_ptr, q, render_progress, |job_id: &u32, _progress: &f64, current_frame: &usize, total_frames: &usize, finished: &bool, _start_time: &f64, _is_conversion: &bool| {
                 let pb = pbs.get(job_id).unwrap();
                 let queue = &mut *queue.as_ptr();
                 let qi = queue.queue.borrow();
-                if *current_frame >= *total_frames {
+                // Frame totals may be estimates; only the queue completion
+                // signal establishes that rendering has finished.
+                if *finished {
                     let mut ok = true;
                     for item in qi.iter() {
                         if item.job_id == *job_id {

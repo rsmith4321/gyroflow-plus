@@ -1,0 +1,54 @@
+{
+ "schema": "gyroflow-plus/mdk-bundled-provenance/v1",
+ "staged_identity": {
+  "path": "libass.dll",
+  "bytes": 1766400,
+  "sha256": "cb7b8f511ebc5c62dad517906a7b9280e9fcf69bd8215cdc59d0fca24c21b749",
+  "equals_official_archive_member": "mdk-sdk/bin/x64/libass.dll",
+  "official_archives": [
+   "mdk-sdk-windows-vs2026.7z c3fe4c8f5b2ac6622040678a9d5665bfa54f6434a0bb2ac29c27295eeb9c9a96",
+   "mdk-sdk-windows-clang.7z b4663245fa77ceb598455098594437712898a678dbec440202380c2064f54925",
+   "mdk-sdk-windows-x64-vs2026.7z e492fd45f3a6828e44f75ce665708c9040abaa60602605437b71c95c714808e3"
+  ]
+ },
+ "components": [
+  {
+   "directory": "freetype-2.14.3-0a0221a1",
+   "identity_basis": "inferred",
+   "basis": "FreeType entry points are present; devpkgs pins src/freetype at 0a0221a1 (FreeType 2.14.3) in every commit from 2026-09-14 through 2026-09-29, with Brotli and PNG disabled. The gzip module licence lines are verbatim from FreeType src/gzip/zlib.h (zlib 1.3.1 copy); whether that copy or devpkgs zlib was linked is not established.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/LICENSE.TXT",
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/docs/FTL.TXT",
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/docs/GPLv2.TXT",
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/src-gzip-zlib.h.licence-lines-1-29.txt"
+   ]
+  },
+  {
+   "directory": "fribidi-1.0.17-b93119f5",
+   "identity_basis": "inferred",
+   "basis": "The embedded \"FriBidi 1.0.13\" is the version hard-coded in devpkgs projects/fribidi/CMakeLists.txt, not the source version. devpkgs ce43c819 pins src/fribidi at b93119f5, whose meson.build says 1.0.17; the prior pin 68162bab is 1.0.16. Selected by the same HarfBuzz/link-time evidence.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/fribidi-1.0.17-b93119f5/COPYING",
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/fribidi-1.0.17-b93119f5/AUTHORS"
+   ]
+  },
+  {
+   "directory": "harfbuzz-14.5.0-863d3f77",
+   "identity_basis": "inferred",
+   "basis": "Embedded HarfBuzz version string \"14.5.0\" equals HB_VERSION_STRING at devpkgs pin 863d3f77 (the previous pin 36cb489c is 14.4.0). libass.dll was linked 2026-09-29T12:36:56Z after devpkgs ce43c819 (2026-09-29T05:56:41Z) moved the pin. The version match does not prove the full source commit; that pin remains inferred until the provider build record is available.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/harfbuzz-14.5.0-863d3f77/COPYING"
+   ],
+   "version_identity_basis": "exact embedded version 14.5.0"
+  },
+  {
+   "directory": "libass-wang-bin-af5f116d",
+   "identity_basis": "exact",
+   "basis": "Embedded \"commit: 0.13.1-924-gaf5f116d243f060a708c82f0c6e3102a2270a336\" names the full wang-bin/libass commit.",
+   "members": [
+    "mdk-0.39.0-e89bc0b/bundled/libass.dll/libass-wang-bin-af5f116d/COPYING"
+   ]
+  }
+ ],
+ "limits": "Identities come from embedded strings, PE metadata and public repository history read offline. Build-run logs were not reachable here; inferred items say so. Not a legal opinion."
+}

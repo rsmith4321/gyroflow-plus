@@ -1,0 +1,9 @@
+/*
+ * Copyright 2006, Philippe Houdoin. All rights reserved.
+ * Distributed under the terms of the MIT License.
+
+ * This header defines BGLRenderer, the base class making up
+ * the Haiku GL renderer add-ons (essentially selfcontained C++
+ * shared libraries that do the actual rendering such as
+ * libswpipe.so and libswrast.so)
+ */

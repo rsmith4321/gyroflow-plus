@@ -1,0 +1,7 @@
+# translation of es.po to Spanish
+# Spanish translations for PACKAGE package.
+# Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# David <deifo@ono.com>, 2005.
+# David Rubio Miguélez <deifo@ono.com>, 2005.
+#

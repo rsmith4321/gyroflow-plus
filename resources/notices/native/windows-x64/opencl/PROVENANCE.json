@@ -1,0 +1,30 @@
+{
+ "component": "OpenCL loader and utility DLLs",
+ "staged": [
+  {
+   "name": "OpenCL.dll",
+   "bytes": 57344,
+   "sha256": "1fe479702ef9a9bf49881d7f2ebd4bf5e8000fd6a53d85ed528e8acca4f719c7"
+  },
+  {
+   "name": "OpenCLUtils.dll",
+   "bytes": 25088,
+   "sha256": "bb1293dc4f40c060cf40d8139093df0b1ba98742da75ebef655719b691ec4481"
+  },
+  {
+   "name": "OpenCLUtilsCpp.dll",
+   "bytes": 68096,
+   "sha256": "85019b95cae9fc38ac67551f6f73de913a7c46f3abd2bf921c5156e8929441f7"
+  }
+ ],
+ "mapping_basis": "exe import of opencl.dll; opencv4 installed with feature opencl",
+ "notice_text": "None supplied.",
+ "gaps": [
+  {
+   "id": "opencl-notice",
+   "class": "blocker",
+   "text": "OpenCL.dll, OpenCLUtils.dll and OpenCLUtilsCpp.dll are staged (the exe imports opencl.dll) and no notice text for them is in the package; their provider and version are not established by the facts.",
+   "needed_artifact": "The installed provider's copyright/licence file for these DLLs (e.g. vcpkg share/opencl/copyright) with its hash and package version."
+  }
+ ]
+}

@@ -279,6 +279,10 @@ pub fn init_logging() {
     });
 }
 
+#[cfg(not(feature = "crash-reporting"))]
+pub fn install_crash_handler() -> std::io::Result<()> { Ok(()) }
+
+#[cfg(feature = "crash-reporting")]
 pub fn install_crash_handler() -> std::io::Result<()> {
     let cur_dir = std::env::current_dir()?;
 
@@ -328,22 +332,8 @@ pub fn install_crash_handler() -> std::io::Result<()> {
         }
     }
 
-    // Upload crash dumps
-    crate::core::run_threaded(move || {
-        if let Ok(files) = std::fs::read_dir(cur_dir) {
-            for path in files.flatten() {
-                let path = path.path();
-                if path.to_string_lossy().ends_with(".dmp") {
-                    if let Ok(content) = std::fs::read(&path) {
-                        if let Ok(Ok(body)) = ureq::post("https://api.gyroflow.xyz/upload_dump").header("Content-Type", "application/octet-stream").send(&content).map(|x| x.into_body().read_to_string()) {
-                            ::log::debug!("Minidump uploaded: {}", body.as_str());
-                            let _ = std::fs::remove_file(path);
-                        }
-                    }
-                }
-            }
-        }
-    });
+    // Dumps remain local. Never scan the working directory or upload files
+    // automatically to upstream services from this community fork.
     Ok(())
 }
 

@@ -1,0 +1,643 @@
+## scripts.d/10-mingw-std-threads.sh
+SCRIPT_REPO="https://github.com/meganz/mingw-std-threads.git"
+SCRIPT_COMMIT="c931bac289dd431f1dd30fc4a5d1a7be36668073"
+   en:     [[ $TARGET == win* ]] || return -1
+   en:     return 0
+## scripts.d/10-mingw.sh
+SCRIPT_REPO="https://git.code.sf.net/p/mingw-w64/mingw-w64.git"
+SCRIPT_COMMIT="57b595039040eaa15bece85b7cc71d952281b269"
+   en:     [[ $TARGET == win* ]] || return -1
+   en:     return 0
+## scripts.d/10-xorg-macros.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/util/macros.git"
+SCRIPT_COMMIT="ea1e15a4909ac8b03b2c5a08ac3810b385985157"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/15-base.sh
+SCRIPT_SKIP="1"
+   en:     return 0
+## scripts.d/20-libiconv.sh
+SCRIPT_REPO="https://git.savannah.gnu.org/git/libiconv.git"
+SCRIPT_MIRROR="git://git.git.savannah.gnu.org/libiconv.git"
+SCRIPT_COMMIT="1df3087ba8110c7f3ed3eb5f8869b814dbbe00b0"
+SCRIPT_REPO2="https://git.savannah.gnu.org/git/gnulib.git"
+SCRIPT_MIRROR2="https://github.com/coreutils/gnulib.git"
+SCRIPT_COMMIT2="eb72eb6f75f5621c5d648acd11467fd124584617"
+   en:     return 0
+## scripts.d/20-zlib.sh
+SCRIPT_REPO="https://github.com/madler/zlib.git"
+SCRIPT_COMMIT="767c4c947852e143f582c85f14cf573411df1b35"
+   en:     return 0
+## scripts.d/25-fftw3.sh
+SCRIPT_REPO="https://github.com/FFTW/fftw3.git"
+SCRIPT_COMMIT="93ed4c786934aec9946f8dda4b4e3eb08f8be41c"
+   en:     return 0
+## scripts.d/25-fribidi.sh
+SCRIPT_REPO="https://github.com/fribidi/fribidi.git"
+SCRIPT_COMMIT="4c914a92e94a9fe4f30ae83a1130099841566448"
+   en:     return 0
+## scripts.d/25-gmp.sh
+SCRIPT_REPO="https://github.com/BtbN/gmplib.git"
+SCRIPT_COMMIT="763b40df71c0f4d5f5d7b33dc55038c8c9377ecf"
+   en:     return 0
+## scripts.d/25-libogg.sh
+SCRIPT_REPO="https://github.com/xiph/ogg.git"
+SCRIPT_COMMIT="06a5e0262cdc28aa4ae6797627a783b5010440f0"
+   en:     return 0
+## scripts.d/25-libpng.sh
+SCRIPT_REPO="https://github.com/glennrp/libpng.git"
+SCRIPT_COMMIT="964b4135949703b705fc760fc3fb546b86e5ab47"
+   en:     return 0
+## scripts.d/25-libxml2.sh
+SCRIPT_REPO="https://github.com/GNOME/libxml2.git"
+SCRIPT_COMMIT="91586dc6742ab335682235120363f6e126eea5e2"
+   en:     return 0
+## scripts.d/25-openssl.sh
+SCRIPT_REPO="https://github.com/openssl/openssl.git"
+SCRIPT_COMMIT="openssl-3.6.4"
+SCRIPT_TAGFILTER="openssl-3.6.*"
+   en:     return 0
+## scripts.d/25-xz.sh
+SCRIPT_REPO="https://github.com/tukaani-project/xz.git"
+SCRIPT_COMMIT="3b1efb04d17c3a9ef7f473d73af13f1531428ffe"
+   en:     return 0
+## scripts.d/45-brotli.sh
+SCRIPT_REPO="https://github.com/google/brotli.git"
+SCRIPT_COMMIT="a3abcbee0d945e51dddeec81e647ffe0cde182c2"
+   en:     return 0
+## scripts.d/45-fonts/25-freetype.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/freetype/freetype.git"
+SCRIPT_COMMIT="d333439633039de426f943f28a2926c7f97b5ae5"
+   en:     return 0
+## scripts.d/45-fonts/35-fontconfig.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/fontconfig/fontconfig.git"
+SCRIPT_COMMIT="bd8f7b597de96761750d0365abb49b19d2f8d5c3"
+   en:     return 0
+## scripts.d/45-fonts/45-harfbuzz.sh
+SCRIPT_REPO="https://github.com/harfbuzz/harfbuzz.git"
+SCRIPT_COMMIT="b3bab62307017934dd7f532c52a696fefb12b3ad"
+   en:     return 0
+## scripts.d/45-fonts/50-freetype.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/freetype/freetype.git"
+SCRIPT_COMMIT="d333439633039de426f943f28a2926c7f97b5ae5"
+   en:     return 0
+## scripts.d/45-lcms2.sh
+SCRIPT_REPO="https://github.com/mm2/Little-CMS.git"
+SCRIPT_COMMIT="35cef8775e0ab46f0dda0b46aae1e69d27524432"
+   en:     (( $(ffbuild_ffver) >= 501 )) || return -1
+   en:     return 0
+## scripts.d/45-libffi.sh
+SCRIPT_REPO="https://github.com/libffi/libffi.git"
+SCRIPT_COMMIT="bc553867367246d140cd156f060bd0409f57f157"
+   en:     return 0
+## scripts.d/45-libsamplerate.sh
+SCRIPT_REPO="https://github.com/libsndfile/libsamplerate.git"
+SCRIPT_COMMIT="0844c208f683527c08ea8a80acc13b398aa9c8bf"
+   en:     return 0
+## scripts.d/45-libudfread.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/libudfread.git"
+SCRIPT_COMMIT="b0bc6957e7e07d5f35391f210596d9eb71cffdd9"
+   en:     return 0
+## scripts.d/45-libunibreak.sh
+SCRIPT_REPO="https://github.com/adah1972/libunibreak.git"
+SCRIPT_COMMIT="28a2756b864c343f438cd22537d49d394d4666a5"
+   en:     return 0
+## scripts.d/45-libvorbis.sh
+SCRIPT_REPO="https://github.com/xiph/vorbis.git"
+SCRIPT_COMMIT="1b75110b5a2754ba1931d82dd83cb822b266a21d"
+   en:     return 0
+## scripts.d/45-opencl.sh
+SCRIPT_REPO="https://github.com/KhronosGroup/OpenCL-Headers.git"
+SCRIPT_COMMIT="e6060189f4ebe8b52d885c37af71b9a50c272154"
+SCRIPT_REPO2="https://github.com/KhronosGroup/OpenCL-ICD-Loader.git"
+SCRIPT_COMMIT2="5192c84f8059e5f703e5452929b613f9487f6e4c"
+   en:     return 0
+## scripts.d/45-pcre2.sh
+SCRIPT_REPO="https://github.com/PCRE2Project/pcre2.git"
+SCRIPT_COMMIT="09eb19dc1102b34e7557408f33318364cb97d2b0"
+   en:     return 0
+## scripts.d/45-pixman.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/pixman/pixman.git"
+SCRIPT_COMMIT="96c04d1b87934dc4b9396197a2dff737698ab310"
+   en:     return 0
+## scripts.d/45-pulseaudio.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/pulseaudio/pulseaudio.git"
+SCRIPT_COMMIT="77d25a1e613095bdf87a1d13b65e7c330565077a"
+   en:     [[ $TARGET == linux* ]] || return 1
+   en:     return 0
+## scripts.d/45-vmaf.sh
+SCRIPT_REPO="https://github.com/Netflix/vmaf.git"
+SCRIPT_COMMIT="86da14d0306a138fd3f01319860b905169746516"
+   en:     return 0
+## scripts.d/45-x11/10-xcbproto.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/proto/xcbproto.git"
+SCRIPT_COMMIT="cf7e2581b613802f2f8ec2a4b50a6a20aad4bf52"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/10-xproto.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/proto/xorgproto.git"
+SCRIPT_COMMIT="fd86fbff46eb7ab8e193c12b8a529e90bae31835"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/10-xtrans.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxtrans.git"
+SCRIPT_COMMIT="79f6b0bfe2170496e8c37626043d009f4cd3f1e1"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/20-libxau.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxau.git"
+SCRIPT_COMMIT="be1daeb909f1d678e7859ac1555e90b4e768d5c4"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/30-libxcb.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxcb.git"
+SCRIPT_COMMIT="d4e07bab5729c7d7cc3d2b95568cd9a661a53c4f"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/40-libx11.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libx11.git"
+SCRIPT_COMMIT="13f9b8de400335f4b86bb0672da02f8166c0e796"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/50-libxext.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxext.git"
+SCRIPT_COMMIT="508f8adca2540ff8926ac8456cb1c553a8caae76"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/50-libxfixes.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxfixes.git"
+SCRIPT_COMMIT="55bb2d1d57d43e0595ce45393f26eb433d75a7cc"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/50-libxi.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxi.git"
+SCRIPT_COMMIT="3a0adabd16d8bf19c772061ad67f25c51281edf3"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/50-libxinerama.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxinerama.git"
+SCRIPT_COMMIT="d7162b962710bc724b41cabab4e7cea303c4b541"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/50-libxrender.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxrender.git"
+SCRIPT_COMMIT="f32afe9f877ae032c6bc9c27b17b7978b1b4c856"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/50-libxscrnsaver.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxscrnsaver.git"
+SCRIPT_COMMIT="3f753e7a4050db083474444ae91cc17a849eaa4d"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/50-libxxf86vm.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxxf86vm.git"
+SCRIPT_COMMIT="c76fde6bffcc87e5dd98d8196bb01a299bdc3236"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/60-libglvnd.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/glvnd/libglvnd.git"
+SCRIPT_COMMIT="c046a760d845416e98ac4128757b2b356c47fdaa"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/60-libxcursor.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxcursor.git"
+SCRIPT_COMMIT="15efad7ccd035f5d1ddc8d437e047569d1775fa7"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/60-libxrandr.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxrandr.git"
+SCRIPT_COMMIT="8a4ba1974bcf07057cf891128d86ae1ab5303574"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/60-libxv.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libxv.git"
+SCRIPT_COMMIT="f315ec50fcad9bdbaed46c3e78dc5e7fe209f933"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     [[ $ADDINS_STR == *4.4* ]] && return -1
+   en:     return 0
+## scripts.d/45-x11/99-finalize.sh
+SCRIPT_SKIP="1"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/45-xxhash.sh
+SCRIPT_REPO="https://github.com/Cyan4973/xxHash.git"
+SCRIPT_COMMIT="680bf463fa1ca0461b9a7c2dab7556e1f54cf4cf"
+   en:     return 0
+## scripts.d/45-zstd.sh
+SCRIPT_REPO="https://github.com/facebook/zstd.git"
+SCRIPT_COMMIT="01b7154f1172432f8abe9b3bb9909e14a1176b7d"
+   en:     return 0
+## scripts.d/47-vulkan/40-vulkan-headers.sh
+SCRIPT_REPO="https://github.com/KhronosGroup/Vulkan-Headers.git"
+SCRIPT_COMMIT="v1.4.363"
+SCRIPT_TAGFILTER="v?.*.*"
+   en:     (( $(ffbuild_ffver) > 404 )) || return -1
+   en:     return 0
+## scripts.d/47-vulkan/45-vulkan-loader.sh
+SCRIPT_REPO="https://github.com/BtbN/Vulkan-Shim-Loader.git"
+SCRIPT_COMMIT="65b3936528cd92eb4ea3de485d03f858a3850484"
+SCRIPT_REPO2="https://github.com/KhronosGroup/Vulkan-Headers.git"
+SCRIPT_COMMIT2="v1.4.363"
+SCRIPT_TAGFILTER2="v?.*.*"
+   en:     (( $(ffbuild_ffver) > 404 )) || return -1
+   en:     return 0
+## scripts.d/47-vulkan/50-shaderc.sh
+SCRIPT_REPO="https://github.com/google/shaderc.git"
+SCRIPT_COMMIT="a8abeb0b8a9d4b11e3d59ca9f4550b8213e733ab"
+   en:     (( $(ffbuild_ffver) > 404 )) || return -1
+   en:     return 0
+## scripts.d/47-vulkan/55-spirv-cross.sh
+SCRIPT_REPO="https://github.com/KhronosGroup/SPIRV-Cross.git"
+SCRIPT_COMMIT="aa217aeb6c9f0ace7a0ab233b28807edf45eb165"
+   en:     (( $(ffbuild_ffver) > 404 )) || return -1
+   en:     return 0
+## scripts.d/47-vulkan/60-spirv-headers.sh
+SCRIPT_REPO="https://github.com/KhronosGroup/SPIRV-Headers.git"
+SCRIPT_COMMIT="2b7475f6d664efbad4d4315c94ecec9640831e5b"
+   en:     (( $(ffbuild_ffver) > 404 )) || return -1
+   en:     return 0
+## scripts.d/47-vulkan/99-enable.sh
+SCRIPT_SKIP="1"
+   en:     (( $(ffbuild_ffver) > 404 )) || return -1
+   en:     return 0
+## scripts.d/50-amf.sh
+SCRIPT_REPO="https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git"
+SCRIPT_COMMIT="6277e353fd625121a8f627b1d0540323ef372a49"
+   en:     return 0
+## scripts.d/50-aom.sh
+SCRIPT_REPO="https://aomedia.googlesource.com/aom"
+SCRIPT_COMMIT="b4ce2cd097b00921b0327bfb5f07b5f8361ade99"
+   en:     [[ $TARGET == winarm64 ]] && return -1
+   en:     return 0
+## scripts.d/50-avisynth.sh
+SCRIPT_REPO="https://github.com/AviSynth/AviSynthPlus.git"
+SCRIPT_COMMIT="5c82777b374bdef16e13007a11e77d735ac1e4eb"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     return 0
+## scripts.d/50-chromaprint.sh
+SCRIPT_REPO="https://github.com/acoustid/chromaprint.git"
+SCRIPT_COMMIT="aed8eba2202dd9d7b3b0a56c77904cc805490d72"
+   en:     (( $(ffbuild_ffver) >= 600 )) || return -1
+   en:     return 0
+## scripts.d/50-dav1d.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/dav1d.git"
+SCRIPT_COMMIT="9711965b60bb692ae24004659acf61f5c7d9ed61"
+   en:     (( $(ffbuild_ffver) >= 404 )) || return -1
+   en:     return 0
+## scripts.d/50-davs2.sh
+SCRIPT_REPO="https://github.com/pkuvcl/davs2.git"
+SCRIPT_COMMIT="b41cf117452e2d73d827f02d3e30aa20f1c721ac"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     [[ $TARGET == win32 ]] && return -1
+   en:     # davs2 aarch64 support is broken
+   en:     [[ $TARGET == *arm64 ]] && return -1
+   en:     return 0
+## scripts.d/50-dvd/30-libdvdcss.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/libdvdcss.git"
+SCRIPT_COMMIT="811ce97a1d4d1c9d936f4b2707f533a9ef768251"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     (( $(ffbuild_ffver) >= 700 )) || return -1
+   en:     return 0
+## scripts.d/50-dvd/40-libdvdread.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/libdvdread.git"
+SCRIPT_COMMIT="0f30df53125b564ef45903714403ce0a1e6c5e9e"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     (( $(ffbuild_ffver) >= 700 )) || return -1
+   en:     return 0
+## scripts.d/50-dvd/50-libdvdnav.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/libdvdnav.git"
+SCRIPT_COMMIT="8147ccd35e5aae4afdd21171cf7b6b4d8f179d28"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     (( $(ffbuild_ffver) >= 700 )) || return -1
+   en:     return 0
+## scripts.d/50-fdk-aac.sh
+SCRIPT_REPO="https://github.com/mstorsjo/fdk-aac.git"
+SCRIPT_COMMIT="7c83d08002332b2730c845eec3497e6bf585dd28"
+   en:     [[ $VARIANT == nonfree* ]] || return -1
+   en:     return 0
+## scripts.d/50-ffnvcodec.sh
+SCRIPT_REPO="https://github.com/FFmpeg/nv-codec-headers.git"
+SCRIPT_COMMIT="eddcea9e27f6b772057c9b3f87de2cc1737faffc"
+SCRIPT_REPO2="https://github.com/FFmpeg/nv-codec-headers.git"
+SCRIPT_COMMIT2="ced4f8eba3ba5dd431932cba17928f0dffdaeb2b"
+SCRIPT_BRANCH2="sdk/13.0"
+SCRIPT_REPO3="https://github.com/FFmpeg/nv-codec-headers.git"
+SCRIPT_COMMIT3="833faee5f7b8d3f56444347c587f4aed11ee213f"
+SCRIPT_BRANCH3="sdk/11.1"
+   en:     [[ $TARGET == winarm64 ]] && (( $(ffbuild_ffver) <= 801 )) && return -1
+   en:     (( $(ffbuild_ffver) >= 404 )) || return -1
+   en:     return 0
+## scripts.d/50-frei0r.sh
+SCRIPT_REPO="https://github.com/dyne/frei0r.git"
+SCRIPT_COMMIT="4c95b2a02b2d03c71d5f6d7980d16c99acfd5a5f"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     (( $(ffbuild_ffver) >= 500 )) || return -1
+   en:     return 0
+## scripts.d/50-gme.sh
+SCRIPT_REPO="https://github.com/libgme/game-music-emu.git"
+SCRIPT_COMMIT="f68963b1de0633149b05732113d3c3113c6f63a1"
+   en:     return 0
+## scripts.d/50-kvazaar.sh
+SCRIPT_REPO="https://github.com/ultravideo/kvazaar.git"
+SCRIPT_COMMIT="2b06691bb5844404c0e703f12a5d7b0fee914ec7"
+   en:     return 0
+## scripts.d/50-lcevcdec.sh
+SCRIPT_REPO="https://github.com/v-novaltd/LCEVCdec.git"
+SCRIPT_COMMIT="17804ac54db8fbb42717f3275b1e73f3c0b067d3"
+   en:     (( $(ffbuild_ffver) >= 800 )) || return -1
+   en:     [[ $TARGET != winarm* ]] || return -1
+   en:     return 0
+## scripts.d/50-libaribb24.sh
+SCRIPT_REPO="https://github.com/nkoriyama/aribb24.git"
+SCRIPT_COMMIT="5e9be272f96e00f15a2f3c5f8ba7e124862aec38"
+   en:     return 0
+## scripts.d/50-libaribcaption.sh
+SCRIPT_REPO="https://github.com/xqq/libaribcaption.git"
+SCRIPT_COMMIT="c64c23b8905ba514b87c9789269e9f66f949ffe0"
+   en:     (( $(ffbuild_ffver) > 600 )) || return -1
+   en:     return 0
+## scripts.d/50-libass.sh
+SCRIPT_REPO="https://github.com/libass/libass.git"
+SCRIPT_COMMIT="f61db567e6593df3470e91594bcd4ad2d0473aff"
+   en:     return 0
+## scripts.d/50-libbluray.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/libbluray.git"
+SCRIPT_COMMIT="a24f4fad4d62893de647abc8671397747b2359dd"
+   en:     return 0
+## scripts.d/50-libcurl/40-libpsl.sh
+SCRIPT_REPO="https://github.com/rockdaboot/libpsl.git"
+SCRIPT_COMMIT="a629c831d09011f76974d931be7f6167be90673e"
+SCRIPT_REPO2="https://github.com/publicsuffix/list.git"
+SCRIPT_COMMIT2="a179a48c465e818cfd8d626691cb317985da87fb"
+   en:     return 0
+## scripts.d/50-libcurl/40-nghttp2.sh
+SCRIPT_REPO="https://github.com/nghttp2/nghttp2.git"
+SCRIPT_COMMIT="19d06e62185d93d2398d85241cdbb460349bfe44"
+   en:     return 0
+## scripts.d/50-libcurl/40-nghttp3.sh
+SCRIPT_REPO="https://github.com/ngtcp2/nghttp3.git"
+SCRIPT_COMMIT="2304973e5a0c8b1fa4bb380b47945a000357f87f"
+   en:     return 0
+## scripts.d/50-libcurl/40-ngtcp2.sh
+SCRIPT_REPO="https://github.com/ngtcp2/ngtcp2.git"
+SCRIPT_COMMIT="a4925d70647b75286b28c37be260de3729c2de3d"
+   en:     return 0
+## scripts.d/50-libcurl/50-libcurl.sh
+SCRIPT_REPO="https://github.com/curl/curl.git"
+SCRIPT_COMMIT="4c67658f953751de9e66bb5f9729af821a641341"
+   en:     (( $(ffbuild_ffver) <= 900 )) && return -1
+   en:     return 0
+## scripts.d/50-libjxl/50-libjxl.sh
+SCRIPT_REPO="https://github.com/libjxl/libjxl.git"
+SCRIPT_COMMIT="b87738951c1254cd8cccaa6d47712ba735da56d8"
+   en:     (( $(ffbuild_ffver) > 600 )) || return -1
+   en:     return 0
+## scripts.d/50-libmp3lame.sh
+SCRIPT_REPO="https://svn.code.sf.net/p/lame/svn/trunk/lame"
+SCRIPT_REV="6835"
+   en:     return 0
+## scripts.d/50-libopus.sh
+SCRIPT_REPO="https://github.com/xiph/opus.git"
+SCRIPT_COMMIT="503d81b138d76621aae4b12786e90de48aa8db3a"
+   en:     return 0
+## scripts.d/50-libplacebo.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/libplacebo.git"
+SCRIPT_COMMIT="1937beef3a2f508266c68efea1491e3fc4600e04"
+   en:     (( $(ffbuild_ffver) > 600 )) || return -1
+   en:     return 0
+## scripts.d/50-librist/40-mbedtls.sh
+SCRIPT_REPO="https://github.com/ARMmbed/mbedtls.git"
+SCRIPT_COMMIT="v4.2.0"
+SCRIPT_TAGFILTER="v4.*"
+   en:     return 0
+## scripts.d/50-librist/50-librist.sh
+SCRIPT_REPO="https://code.videolan.org/rist/librist.git"
+SCRIPT_COMMIT="4f45ef8f78983892d52ccd52d9f675435b23738f"
+   en:     (( $(ffbuild_ffver) >= 404 )) || return -1
+   en:     return 0
+## scripts.d/50-librsvg/10-glib.sh
+SCRIPT_REPO="https://github.com/GNOME/glib.git"
+SCRIPT_COMMIT="5a124d1e66a6c2dc56989303b4d6d4781c2952ed"
+   en:     return 0
+## scripts.d/50-librsvg/20-cairo.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/cairo/cairo.git"
+SCRIPT_COMMIT="74755964edef651691d5cd36ff140108298e4e6e"
+   en:     return 0
+## scripts.d/50-librsvg/30-pango.sh
+SCRIPT_REPO="https://github.com/GNOME/pango.git"
+SCRIPT_COMMIT="8e74c27c113c98664b77272d16b14bbce542c184"
+   en:     return 0
+## scripts.d/50-librsvg/99-librsvg.sh
+SCRIPT_REPO="https://github.com/GNOME/librsvg.git"
+SCRIPT_COMMIT="7612431eb02dc009319094f8513d63c1faaecfb4"
+   en:     (( $(ffbuild_ffver) >= 404 )) || return -1
+   en:     return 0
+## scripts.d/50-libssh.sh
+SCRIPT_REPO="https://gitlab.com/libssh/libssh-mirror.git"
+SCRIPT_COMMIT="76e0a8639e61436c28d877586f65a7707edc6ee5"
+   en:     return 0
+## scripts.d/50-libtheora.sh
+SCRIPT_REPO="https://github.com/xiph/theora.git"
+SCRIPT_COMMIT="28fd5ec77f0ad0e07a371cef1047828116f6bd8a"
+   en:     return 0
+## scripts.d/50-libvpx.sh
+SCRIPT_REPO="https://chromium.googlesource.com/webm/libvpx"
+SCRIPT_COMMIT="5e680f30801d03c21078f8c4b772464752516211"
+   en:     [[ $TARGET == winarm64 ]] && return -1
+   en:     return 0
+## scripts.d/50-libwebp.sh
+SCRIPT_REPO="https://chromium.googlesource.com/webm/libwebp"
+SCRIPT_COMMIT="5c168cd23b1872969c38e34b01b04dcf29849288"
+   en:     return 0
+## scripts.d/50-libzmq.sh
+SCRIPT_REPO="https://github.com/zeromq/libzmq.git"
+SCRIPT_COMMIT="46493370217ac135246617fa2f6ac819d8b61bfc"
+   en:     return 0
+## scripts.d/50-lilv/96-lv2.sh
+SCRIPT_REPO="https://github.com/lv2/lv2.git"
+SCRIPT_COMMIT="3c57dae600a5ad8d05acd53ee3490f7d91cb7be6"
+   en:     return 0
+## scripts.d/50-lilv/96-serd.sh
+SCRIPT_REPO="https://github.com/drobilla/serd.git"
+SCRIPT_COMMIT="b6053bb2a4533e6a8e3821c1061f140d5e666938"
+   en:     return 0
+## scripts.d/50-lilv/96-zix.sh
+SCRIPT_REPO="https://github.com/drobilla/zix.git"
+SCRIPT_COMMIT="17d632393f5addb6fa24dda2927b96515407cca7"
+   en:     return 0
+## scripts.d/50-lilv/97-sord.sh
+SCRIPT_REPO="https://github.com/drobilla/sord.git"
+SCRIPT_COMMIT="4b5232bb91e7f2f1b84df384494d073fabbcd312"
+   en:     return 0
+## scripts.d/50-lilv/98-sratom.sh
+SCRIPT_REPO="https://github.com/lv2/sratom.git"
+SCRIPT_COMMIT="9e8ee84eed502e6030ce8bb49694fd28542b08fc"
+   en:     return 0
+## scripts.d/50-lilv/99-lilv.sh
+SCRIPT_REPO="https://github.com/lv2/lilv.git"
+SCRIPT_COMMIT="4b8f30055fa5cb4134a2eb45fc1555bc04289314"
+   en:     return 0
+## scripts.d/50-onevpl.sh
+SCRIPT_REPO="https://github.com/intel/libvpl.git"
+SCRIPT_COMMIT="674d015bcb294bc39fa276e99a652ea045423e82"
+   en:     [[ $TARGET == *arm64 ]] && return -1
+   en:     (( $(ffbuild_ffver) >= 600 )) || return -1
+   en:     return 0
+## scripts.d/50-openal.sh
+SCRIPT_REPO="https://github.com/kcat/openal-soft.git"
+SCRIPT_COMMIT="c89b8cf7bba4822f230c69f0a6696a52e5322dca"
+   en:     (( $(ffbuild_ffver) > 501 )) || return -1
+   en:     return 0
+## scripts.d/50-openapv.sh
+SCRIPT_REPO="https://github.com/AcademySoftwareFoundation/openapv.git"
+SCRIPT_COMMIT="a58ce739be0dfb083643d929aee8f0e0ba9bdf63"
+   en:     (( $(ffbuild_ffver) > 701 )) || return -1
+   en:     return 0
+## scripts.d/50-opencore-amr.sh
+SCRIPT_REPO="https://git.code.sf.net/p/opencore-amr/code"
+SCRIPT_COMMIT="7dba8c32238418ce0b316a852b2224df586ca896"
+   en:     return 0
+## scripts.d/50-openh264.sh
+SCRIPT_REPO="https://github.com/cisco/openh264.git"
+SCRIPT_COMMIT="8b2d28faade10d74d99ac80e199aef664c9c5a3b"
+   en:     return 0
+## scripts.d/50-openjpeg.sh
+SCRIPT_REPO="https://github.com/uclouvain/openjpeg.git"
+SCRIPT_COMMIT="8314119b067c0fc77834731168daaebd379fdb12"
+   en:     return 0
+## scripts.d/50-openmpt.sh
+SCRIPT_REPO="https://github.com/OpenMPT/openmpt.git"
+SCRIPT_COMMIT="f83cedb0cd5446e4dfaa83ac97e3087107e26767"
+   en:     [[ $TARGET == winarm64 ]] && return -1
+   en:     return 0
+## scripts.d/50-rav1e.sh
+SCRIPT_REPO="https://github.com/xiph/rav1e.git"
+SCRIPT_COMMIT="31435de9d76fddd38f6dcc31d4014574cebb2092"
+   en:     [[ $TARGET == win32 ]] && return -1
+   en:     return 0
+## scripts.d/50-rubberband.sh
+SCRIPT_REPO="https://github.com/breakfastquay/rubberband.git"
+SCRIPT_COMMIT="e4296ac80b1170018a110bc326fd0d45a0eb27d6"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     return 0
+## scripts.d/50-schannel.sh
+SCRIPT_SKIP="1"
+   en:     [[ $TARGET == win* ]]
+## scripts.d/50-sdl.sh
+SCRIPT_REPO="https://github.com/libsdl-org/SDL.git"
+SCRIPT_COMMIT="b90ac95029d801c5abc59472ba8e2200dff31e1e"
+SCRIPT_BRANCH="SDL2"
+   en:     return 0
+## scripts.d/50-snappy.sh
+SCRIPT_REPO="https://github.com/google/snappy.git"
+SCRIPT_COMMIT="9c28114a38866f6deeaa826db918293bc28ae410"
+   en:     return 0
+## scripts.d/50-soxr.sh
+SCRIPT_REPO="https://git.code.sf.net/p/soxr/code"
+SCRIPT_COMMIT="945b592b70470e29f917f4de89b4281fbbd540c0"
+   en:     return 0
+## scripts.d/50-srt.sh
+SCRIPT_REPO="https://github.com/Haivision/srt.git"
+SCRIPT_COMMIT="ff8ab25c57aece5b7351defe36dacc94fc28527f"
+   en:     return 0
+## scripts.d/50-svtav1.sh
+SCRIPT_REPO="https://gitlab.com/AOMediaCodec/SVT-AV1.git"
+SCRIPT_COMMIT="5ed9ffbcb5086da23f30fe9bc5b00145358462da"
+   en:     [[ $TARGET == win32 ]] && return -1
+   en:     (( $(ffbuild_ffver) > 700 )) || return -1
+   en:     return 0
+## scripts.d/50-twolame.sh
+SCRIPT_REPO="https://github.com/njh/twolame.git"
+SCRIPT_COMMIT="6fced852d4d5cfad58cf9dbe3ea619b08e87d398"
+   en:     return 0
+## scripts.d/50-uavs3d.sh
+SCRIPT_REPO="https://github.com/uavs3/uavs3d.git"
+SCRIPT_COMMIT="0e20d2c291853f196c68922a264bcd8471d75b68"
+   en:     [[ $TARGET == win32 ]] && return -1
+   en:     [[ $TARGET == winarm64 ]] && return -1
+   en:     (( $(ffbuild_ffver) >= 404 )) || return -1
+   en:     return 0
+## scripts.d/50-vaapi/30-libpciaccess.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/xorg/lib/libpciaccess.git"
+SCRIPT_COMMIT="38e6f15f839fba2c49982e7ad61cde681fd5d4d6"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/50-vaapi/40-libdrm.sh
+SCRIPT_REPO="https://gitlab.freedesktop.org/mesa/drm.git"
+SCRIPT_COMMIT="b97cbde15c5c3abfe44d78e8f57139e50f612fec"
+   en:     [[ $TARGET != linux* ]] && return -1
+   en:     return 0
+## scripts.d/50-vaapi/50-libva.sh
+SCRIPT_REPO="https://github.com/intel/libva.git"
+SCRIPT_COMMIT="6b07f7100512817f736967e899b8c26313c20623"
+   en:     [[ $ADDINS_STR == *4.4* && $TARGET == win* ]] && return -1
+   en:     [[ $ADDINS_STR == *5.0* && $TARGET == win* ]] && return -1
+   en:     [[ $ADDINS_STR == *5.1* && $TARGET == win* ]] && return -1
+   en:     [[ $ADDINS_STR == *6.0* && $TARGET == win* ]] && return -1
+   en:     return 0
+## scripts.d/50-vaapi/99-finalize.sh
+SCRIPT_SKIP="1"
+   en:     return 0
+## scripts.d/50-vapoursynth.sh
+SCRIPT_REPO="https://github.com/vapoursynth/vapoursynth.git"
+SCRIPT_COMMIT="R80"
+SCRIPT_TAGFILTER="R[0-9][0-9]"
+   en:     # Older FFmpeg links the VSScript library instead of loading it at runtime
+   en:     (( $(ffbuild_ffver) >= 701 )) || return -1
+   en:     return 0
+## scripts.d/50-vidstab.sh
+SCRIPT_REPO="https://github.com/georgmartius/vid.stab.git"
+SCRIPT_COMMIT="e2445c4081658318223762a696eb1c645c2d7168"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     return 0
+## scripts.d/50-vvenc.sh
+SCRIPT_REPO="https://github.com/fraunhoferhhi/vvenc.git"
+SCRIPT_COMMIT="b1cfb2ad495af6ae4cc214b7a060e8b4166c4629"
+   en:     [[ $TARGET != *32 ]] || return -1
+   en:     (( $(ffbuild_ffver) > 700 )) || return -1
+   en:     return 0
+## scripts.d/50-whisper.sh
+SCRIPT_REPO="https://github.com/ggml-org/whisper.cpp.git"
+SCRIPT_COMMIT="a44e07845931421bb6f3447ce0010ed9dc76a118"
+   en:     [[ $TARGET != *32 ]] || return -1
+   en:     (( $(ffbuild_ffver) >= 800 )) || return -1
+   en:     return -1
+## scripts.d/50-x264.sh
+SCRIPT_REPO="https://code.videolan.org/videolan/x264.git"
+SCRIPT_COMMIT="0480cb05fa188d37ae87e8f4fd8f1aea3711f7ee"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     return 0
+## scripts.d/50-x265.sh
+SCRIPT_REPO="https://github.com/Multicorewareinc/x265.git"
+SCRIPT_COMMIT="020d7054dbecfd3be8e62efe33ff8a305d41856e"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     return 0
+## scripts.d/50-xavs2.sh
+SCRIPT_REPO="https://github.com/pkuvcl/xavs2.git"
+SCRIPT_COMMIT="eae1e8b9d12468059bdd7dee893508e470fa83d8"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     [[ $TARGET == win32 ]] && return -1
+   en:     # xavs2 aarch64 support is broken
+   en:     [[ $TARGET == *arm64 ]] && return -1
+   en:     return 0
+## scripts.d/50-xvid.sh
+SCRIPT_REPO="https://svn.xvid.org/trunk/xvidcore"
+SCRIPT_REV="2204"
+   en:     [[ $VARIANT == lgpl* ]] && return -1
+   en:     return 0
+## scripts.d/50-zimg.sh
+SCRIPT_REPO="https://github.com/sekrit-twc/zimg.git"
+SCRIPT_COMMIT="67e0603271c080e22c8429856dd4a8a56587e61e"
+   en:     return 0
+## scripts.d/50-zvbi.sh
+SCRIPT_REPO="https://github.com/zapping-vbi/zvbi"
+SCRIPT_COMMIT="d3a5ee9f2b047bf16cd1ee5ccf6ec05ee75409d0"
+   en:     return 0
+## scripts.d/55-rustdedup.sh
+SCRIPT_SKIP="1"
+   en:     ( source scripts.d/50-rav1e.sh && ffbuild_enabled ) || return -1
+   en:     ( source scripts.d/50-librsvg/99-librsvg.sh && ffbuild_enabled ) || return -1
+   en:     return 0
+## scripts.d/zz-final.sh
+SCRIPT_SKIP="1"
+   en:     return 0

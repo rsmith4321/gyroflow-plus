@@ -1,0 +1,39 @@
+--- a/include/ffnvcodec/dynlink_loader.h
++++ b/include/ffnvcodec/dynlink_loader.h
+@@ -333,14 +333,14 @@
+     LOAD_SYMBOL(cuDriverGetVersion, tcuDriverGetVersion, "cuDriverGetVersion");
+     LOAD_SYMBOL(cuDeviceGetCount, tcuDeviceGetCount, "cuDeviceGetCount");
+     LOAD_SYMBOL(cuDeviceGet, tcuDeviceGet, "cuDeviceGet");
+-    LOAD_SYMBOL(cuDeviceGetAttribute, tcuDeviceGetAttribute, "cuDeviceGetAttribute");
++    LOAD_SYMBOL_OPT(cuDeviceGetAttribute, tcuDeviceGetAttribute, "cuDeviceGetAttribute");
+     LOAD_SYMBOL(cuDeviceGetName, tcuDeviceGetName, "cuDeviceGetName");
+     LOAD_SYMBOL(cuDeviceComputeCapability, tcuDeviceComputeCapability, "cuDeviceComputeCapability");
+     LOAD_SYMBOL(cuCtxCreate, tcuCtxCreate_v2, "cuCtxCreate_v2");
+     LOAD_SYMBOL(cuCtxSynchronize, tcuCtxSynchronize, "cuCtxSynchronize");
+     LOAD_SYMBOL(cuCtxGetStreamPriorityRange, tcuCtxGetStreamPriorityRange, "cuCtxGetStreamPriorityRange");
+     LOAD_SYMBOL(cuCtxGetCurrent, tcuCtxGetCurrent, "cuCtxGetCurrent");
+-    LOAD_SYMBOL(cuCtxSetLimit, tcuCtxSetLimit, "cuCtxSetLimit");
++    LOAD_SYMBOL_OPT(cuCtxSetLimit, tcuCtxSetLimit, "cuCtxSetLimit");
+     LOAD_SYMBOL(cuCtxPushCurrent, tcuCtxPushCurrent_v2, "cuCtxPushCurrent_v2");
+     LOAD_SYMBOL(cuCtxPopCurrent, tcuCtxPopCurrent_v2, "cuCtxPopCurrent_v2");
+     LOAD_SYMBOL(cuCtxDestroy, tcuCtxDestroy_v2, "cuCtxDestroy_v2");
+@@ -404,7 +404,7 @@
+     LOAD_SYMBOL(cuTexObjectCreate, tcuTexObjectCreate, "cuTexObjectCreate");
+     LOAD_SYMBOL(cuTexObjectDestroy, tcuTexObjectDestroy, "cuTexObjectDestroy");
+ 
+-    LOAD_SYMBOL(cuGLGetDevices, tcuGLGetDevices_v2, "cuGLGetDevices_v2");
++    LOAD_SYMBOL_OPT(cuGLGetDevices, tcuGLGetDevices_v2, "cuGLGetDevices_v2");
+     LOAD_SYMBOL(cuGraphicsGLRegisterImage, tcuGraphicsGLRegisterImage, "cuGraphicsGLRegisterImage");
+     LOAD_SYMBOL(cuGraphicsUnregisterResource, tcuGraphicsUnregisterResource, "cuGraphicsUnregisterResource");
+     LOAD_SYMBOL(cuGraphicsMapResources, tcuGraphicsMapResources, "cuGraphicsMapResources");
+@@ -461,8 +461,8 @@
+     LOAD_SYMBOL_OPT(cuvidRegisterDecodeSurfaces, tcuvidRegisterDecodeSurfaces, "cuvidRegisterDecodeSurfaces");
+     LOAD_SYMBOL_OPT(cuvidDecodePictureAsync, tcuvidDecodePictureAsync, "cuvidDecodePictureAsync");
+     LOAD_SYMBOL(cuvidDecodePicture, tcuvidDecodePicture, "cuvidDecodePicture");
+-    LOAD_SYMBOL(cuvidGetDecodeStatus, tcuvidGetDecodeStatus, "cuvidGetDecodeStatus");
+-    LOAD_SYMBOL(cuvidReconfigureDecoder, tcuvidReconfigureDecoder, "cuvidReconfigureDecoder");
++    LOAD_SYMBOL_OPT(cuvidGetDecodeStatus, tcuvidGetDecodeStatus, "cuvidGetDecodeStatus");
++    LOAD_SYMBOL_OPT(cuvidReconfigureDecoder, tcuvidReconfigureDecoder, "cuvidReconfigureDecoder");
+ #ifdef __CUVID_DEVPTR64
+     LOAD_SYMBOL(cuvidMapVideoFrame, tcuvidMapVideoFrame, "cuvidMapVideoFrame64");
+     LOAD_SYMBOL(cuvidUnmapVideoFrame, tcuvidUnmapVideoFrame, "cuvidUnmapVideoFrame64");

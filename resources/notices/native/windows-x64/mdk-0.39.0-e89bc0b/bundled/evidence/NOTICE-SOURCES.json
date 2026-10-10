@@ -1,0 +1,587 @@
+{
+ "schema": "gyroflow-plus/native-notices-mdk-delta/v1",
+ "status": "CANDIDATE",
+ "public_release_approved": false,
+ "legal_review": "not performed",
+ "scope": "MDK 0.39.0 bundled ffmpeg-9.dll and libass.dll only; additive to v5. Touches no Qt or other component member.",
+ "base": {
+  "v5_manifest_sha256": "ecba5b051c8d9c1df59d8f90f3ad3e8db0b614979d41034173af56e7bf4976b7",
+  "requires_component": "mdk",
+  "requires_gap_ids": [
+   "mdk-ffmpeg9-notice",
+   "mdk-ffmpeg9-source",
+   "mdk-libass-notice"
+  ],
+  "note": "Reviewed against root manifest 53ba3583fb02dea1581b0fb9d9107bbdaed3af2c43ce3907ef2cb4906016d398; original Claude v6 delta remains frozen in the private handback."
+ },
+ "candidate_path": "resources/notices/native/windows-x64",
+ "add_members": [
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/evidence/avbuild-d91e8a95-patch-set.tsv",
+   "bytes": 7680,
+   "sha256": "a930f43d42c744ad9f2a0cba24a62a14f837a4d72d368c1522c877b9c0b00bd8",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/evidence/ffmpeg-9.dll.pe.txt",
+   "bytes": 2004,
+   "sha256": "253fa4dc963a769b7ef9dffc56bcb1f060d073614f43a547895b9c5e25aadd90",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/evidence/ffmpeg-9.dll.strings-evidence.tsv",
+   "bytes": 4594,
+   "sha256": "220637fc111462ed4fb60099fbb32a8cc475ba4c72c188c7e38ed2897c126812",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/evidence/libass.dll.pe.txt",
+   "bytes": 793,
+   "sha256": "567345d609e00855b6b665ccfca25eb7bc68c2679814bffe1f91e300d57da0c4",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/evidence/libass.dll.strings-evidence.tsv",
+   "bytes": 351,
+   "sha256": "69dd2f3c632178bf16963d4d30e890809aa9e19e164c7b06b64ca135507d357b",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/evidence/official-mdk-v0.39.0-archive-members.tsv",
+   "bytes": 629,
+   "sha256": "223b45bb1a58a9c1d8f3998a965604426307919fc28e523ab27113c84738b9a9",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/evidence/repository-facts.tsv",
+   "bytes": 7172,
+   "sha256": "c4820b5028dafa110875af4814414e5f3670b1fb42bb7995ee0ef0b468f1d5f0",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/PROVENANCE.json",
+   "bytes": 4636,
+   "sha256": "867688fb94b4ad5ef34434fac23a86041ee9b7d0cbd9f801aadb0c1022704765",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/avbuild-d91e8a95/LICENSE",
+   "bytes": 7652,
+   "sha256": "97628afebc60f026f5c2b25d7491c46a5c4ee61f693e7cfa07fbd2c03605979b",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/wang-bin/avbuild",
+    "commit": "d91e8a9505ea38746053a8986a3a438c7261bed7",
+    "path": "LICENSE",
+    "git_blob_sha1": "341c30bda4457610db4829294e5d7e526d4c835b"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/ffmpeg-590fb407/COPYING.LGPLv2.1",
+   "bytes": 26517,
+   "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "exact",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/FFmpeg/FFmpeg",
+    "commit": "590fb407b09bbf19aac0ea2fbd0ba16f93494601",
+    "path": "COPYING.LGPLv2.1",
+    "git_blob_sha1": "40924c2a6da76a2b0c639f6fe7ef0b2d095a6adb"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/ffmpeg-590fb407/LICENSE.md",
+   "bytes": 4358,
+   "sha256": "8c880fa51b7e1d8dbc09a92685da98c129532f3b0a766a9a58a2321ad67bab6c",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "exact",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/FFmpeg/FFmpeg",
+    "commit": "590fb407b09bbf19aac0ea2fbd0ba16f93494601",
+    "path": "LICENSE.md",
+    "git_blob_sha1": "27d37e9e819f24e5d44bb03bc9fbdd0e4f72a284"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva_loader-7d814d7b/LICENSE",
+   "bytes": 1064,
+   "sha256": "ea1bbbd3fc730b4aab3ac40e254ab2952e71d47fad677510768c5f57af67d30e",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/wang-bin/libva_loader",
+    "commit": "7d814d7b6496246d729a085ec1d6d3d0e823cb2b",
+    "path": "LICENSE",
+    "git_blob_sha1": "515cd4997141df34338c92f93878ef23e7c57d7c"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libvpl-2.17.0-wang-bin-oneVPL-3a3ca48d/LICENSE",
+   "bytes": 1074,
+   "sha256": "bf1cfac2e2792b6e1e995ce103d70796aecaf2ec7e4c5fe5474f7acec7b4a677",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/wang-bin/oneVPL",
+    "commit": "3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c",
+    "path": "LICENSE",
+    "git_blob_sha1": "4e66ab4cc8efac2c57f22e1c6fb78ee91321a9e7"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libvpl-2.17.0-wang-bin-oneVPL-3a3ca48d/third-party-programs.txt",
+   "bytes": 14142,
+   "sha256": "e3c92992b1df02b467ac086d7d3730f4c1fc2c2a1f2c520657c4c9f2085305a3",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/wang-bin/oneVPL",
+    "commit": "3a3ca48d176ceb9733c2ea81d4f16a17d6c1702c",
+    "path": "third-party-programs.txt",
+    "git_blob_sha1": "eda45135e9eb8b312ead2d2c5b36f58c7736ea86"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_cuda.h.licence-lines-1-26.txt",
+   "bytes": 1175,
+   "sha256": "6f0d5ad2609c6fda3e0fb07fa286e7b46c2ea7b87ab12d926ab7a82c69ffe09d",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "excerpt",
+    "lines": [
+     1,
+     26
+    ],
+    "repository": "https://github.com/FFmpeg/nv-codec-headers",
+    "commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+    "path": "include/ffnvcodec/dynlink_cuda.h",
+    "git_blob_sha1": "25077cdf38dbbf22d66c49ffe125e479910291e9"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_cuviddec.h.licence-lines-1-26.txt",
+   "bytes": 1199,
+   "sha256": "8f115901902ad05ce3a1ba48ae15393a1853ac0a3e7835ebe986cc80e1039b19",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "excerpt",
+    "lines": [
+     1,
+     26
+    ],
+    "repository": "https://github.com/FFmpeg/nv-codec-headers",
+    "commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+    "path": "include/ffnvcodec/dynlink_cuviddec.h",
+    "git_blob_sha1": "54e3bec902836c10bce2a01a3a0645221c55b509"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_loader.h.licence-lines-1-26.txt",
+   "bytes": 1175,
+   "sha256": "6f0d5ad2609c6fda3e0fb07fa286e7b46c2ea7b87ab12d926ab7a82c69ffe09d",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "excerpt",
+    "lines": [
+     1,
+     26
+    ],
+    "repository": "https://github.com/FFmpeg/nv-codec-headers",
+    "commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+    "path": "include/ffnvcodec/dynlink_loader.h",
+    "git_blob_sha1": "1be0dbf599e127a6e79fa7fcdcd14ddfe3613918"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_nvcuvid.h.licence-lines-1-26.txt",
+   "bytes": 1199,
+   "sha256": "8f115901902ad05ce3a1ba48ae15393a1853ac0a3e7835ebe986cc80e1039b19",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "excerpt",
+    "lines": [
+     1,
+     26
+    ],
+    "repository": "https://github.com/FFmpeg/nv-codec-headers",
+    "commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+    "path": "include/ffnvcodec/dynlink_nvcuvid.h",
+    "git_blob_sha1": "5064f13db3946e8e2c47001f3f031708108f6443"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/nvEncodeAPI.h.licence-lines-1-26.txt",
+   "bytes": 1199,
+   "sha256": "8f115901902ad05ce3a1ba48ae15393a1853ac0a3e7835ebe986cc80e1039b19",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "excerpt",
+    "lines": [
+     1,
+     26
+    ],
+    "repository": "https://github.com/FFmpeg/nv-codec-headers",
+    "commit": "eddcea9e27f6b772057c9b3f87de2cc1737faffc",
+    "path": "include/ffnvcodec/nvEncodeAPI.h",
+    "git_blob_sha1": "f059ac07ae25107beb855aa7f38b63872835c80a"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSE.md",
+   "bytes": 458,
+   "sha256": "ac24e5ea920e4318e4d02c4086ae51f53cfb03feed06c18df1019e7ada1ec7bc",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/KhronosGroup/Vulkan-Headers",
+    "commit": "450bd2232225d6c7728a4108055ac2e37cef6475",
+    "path": "LICENSE.md",
+    "git_blob_sha1": "d6a0648b652ade1defb1eb481643d2f8d14828b5"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSES/Apache-2.0.txt",
+   "bytes": 11358,
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/KhronosGroup/Vulkan-Headers",
+    "commit": "450bd2232225d6c7728a4108055ac2e37cef6475",
+    "path": "LICENSES/Apache-2.0.txt",
+    "git_blob_sha1": "d645695673349e3947e8e5ae42332d0ac3164cd7"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSES/MIT.txt",
+   "bytes": 1084,
+   "sha256": "1ca3502222d967f3be5751c55f6b7ee735b5383909c3b501495f54b216dbf227",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/KhronosGroup/Vulkan-Headers",
+    "commit": "450bd2232225d6c7728a4108055ac2e37cef6475",
+    "path": "LICENSES/MIT.txt",
+    "git_blob_sha1": "8495fe9e901b430947d54980af7c77c0bb8a6221"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/zlib-1.3.2-da607da7/LICENSE",
+   "bytes": 1002,
+   "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "ffmpeg-9.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/madler/zlib",
+    "commit": "da607da739fa6047df13e66a2af6b8bec7c2a498",
+    "path": "LICENSE",
+    "git_blob_sha1": "b7a69d058e616651eae27b3f90c0b7fd36c099b2"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/PROVENANCE.json",
+   "bytes": 3115,
+   "sha256": "1292c0a66db70f2645bac07371de87cd8a2396f0c691524494a9365ee3181229",
+   "component": "mdk",
+   "role": "provenance"
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/LICENSE.TXT",
+   "bytes": 2149,
+   "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/freetype/freetype",
+    "commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+    "path": "LICENSE.TXT",
+    "git_blob_sha1": "0f9df2177a47a3e463e45d295afdcc783766836e"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/docs/FTL.TXT",
+   "bytes": 6743,
+   "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/freetype/freetype",
+    "commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+    "path": "docs/FTL.TXT",
+    "git_blob_sha1": "b9e8cbd66ffff526113350953f4a2f4252a92f49"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/docs/GPLv2.TXT",
+   "bytes": 17994,
+   "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/freetype/freetype",
+    "commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+    "path": "docs/GPLv2.TXT",
+    "git_blob_sha1": "b2fe7b6af3535ebc1e018dd2fe6c993330c031fa"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/src-gzip-zlib.h.licence-lines-1-29.txt",
+   "bytes": 1328,
+   "sha256": "02421fcfbfb1d656ef0b6ff4cd3c39f2946f08c3219fa42db482add7ce1f53ea",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "excerpt",
+    "lines": [
+     1,
+     29
+    ],
+    "repository": "https://github.com/freetype/freetype",
+    "commit": "0a0221a1347e2f1e07c395263540026e9a0aa7c7",
+    "path": "src/gzip/zlib.h",
+    "git_blob_sha1": "8c3c42a32320b678ee696cd90d8d5ab266af5bff"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/fribidi-1.0.17-b93119f5/AUTHORS",
+   "bytes": 1640,
+   "sha256": "cb173f55c9514c8f38f4647ac3fedd5f8611358d331e65ab955da931e826861c",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/fribidi/fribidi",
+    "commit": "b93119f5fdc7ea47672cc304c1455ffa6dfe7536",
+    "path": "AUTHORS",
+    "git_blob_sha1": "a47e0dc93650dfa93410a389b6eff84787e6d7cb"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/fribidi-1.0.17-b93119f5/COPYING",
+   "bytes": 26419,
+   "sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/fribidi/fribidi",
+    "commit": "b93119f5fdc7ea47672cc304c1455ffa6dfe7536",
+    "path": "COPYING",
+    "git_blob_sha1": "f6683e74e0f0130f246dbf7054f4cacc88ca84b0"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/harfbuzz-14.5.0-863d3f77/COPYING",
+   "bytes": 1971,
+   "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "inferred",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/harfbuzz/harfbuzz",
+    "commit": "863d3f7787c6df18d20e4535c5906bf3eb803bd5",
+    "path": "COPYING",
+    "git_blob_sha1": "1dd917e9f2e72167de69e3b5dadbc4e7db417da1"
+   }
+  },
+  {
+   "path": "mdk-0.39.0-e89bc0b/bundled/libass.dll/libass-wang-bin-af5f116d/COPYING",
+   "bytes": 755,
+   "sha256": "f7e30699d02798351e7f839e3d3bfeb29ce65e44efa7735c225464c4fd7dfe9c",
+   "component": "mdk",
+   "role": "notice",
+   "bundled_in": "libass.dll",
+   "identity_basis": "exact",
+   "upstream": {
+    "kind": "file",
+    "repository": "https://github.com/wang-bin/libass",
+    "commit": "af5f116d243f060a708c82f0c6e3102a2270a336",
+    "path": "COPYING",
+    "git_blob_sha1": "3ff0e11457a6edccfab065cae0f905a6e1ed80ee"
+   }
+  }
+ ],
+ "mdk_notice_members_add": [
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/avbuild-d91e8a95/LICENSE",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/ffmpeg-590fb407/COPYING.LGPLv2.1",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/ffmpeg-590fb407/LICENSE.md",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libva_loader-7d814d7b/LICENSE",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libvpl-2.17.0-wang-bin-oneVPL-3a3ca48d/LICENSE",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/libvpl-2.17.0-wang-bin-oneVPL-3a3ca48d/third-party-programs.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_cuda.h.licence-lines-1-26.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_cuviddec.h.licence-lines-1-26.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_loader.h.licence-lines-1-26.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/dynlink_nvcuvid.h.licence-lines-1-26.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/nv-codec-headers-eddcea9e/nvEncodeAPI.h.licence-lines-1-26.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSE.md",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSES/Apache-2.0.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/vulkan-headers-1.4.337-450bd223/LICENSES/MIT.txt",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/zlib-1.3.2-da607da7/LICENSE",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/LICENSE.TXT",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/docs/FTL.TXT",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/docs/GPLv2.TXT",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/freetype-2.14.3-0a0221a1/src-gzip-zlib.h.licence-lines-1-29.txt",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/fribidi-1.0.17-b93119f5/AUTHORS",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/fribidi-1.0.17-b93119f5/COPYING",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/harfbuzz-14.5.0-863d3f77/COPYING",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/libass-wang-bin-af5f116d/COPYING"
+ ],
+ "mdk_provenance_members_add": [
+  "mdk-0.39.0-e89bc0b/bundled/evidence/avbuild-d91e8a95-patch-set.tsv",
+  "mdk-0.39.0-e89bc0b/bundled/evidence/ffmpeg-9.dll.pe.txt",
+  "mdk-0.39.0-e89bc0b/bundled/evidence/ffmpeg-9.dll.strings-evidence.tsv",
+  "mdk-0.39.0-e89bc0b/bundled/evidence/libass.dll.pe.txt",
+  "mdk-0.39.0-e89bc0b/bundled/evidence/libass.dll.strings-evidence.tsv",
+  "mdk-0.39.0-e89bc0b/bundled/evidence/official-mdk-v0.39.0-archive-members.tsv",
+  "mdk-0.39.0-e89bc0b/bundled/evidence/repository-facts.tsv",
+  "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/PROVENANCE.json",
+  "mdk-0.39.0-e89bc0b/bundled/libass.dll/PROVENANCE.json"
+ ],
+ "mdk_gap_changes": {
+  "set_gaps": [
+   {
+    "id": "mdk-archive-origin",
+    "class": "advisory",
+    "v4_gap": "mdk-1",
+    "text": "Original filename and download URL of archive 5620e05359f692f6d9ecabc6e49bf62adf4e061f568a18355210bfac70f716a5 remain unknown."
+   },
+   {
+    "id": "mdk-build-identity",
+    "class": "advisory",
+    "v4_gap": "mdk-3",
+    "text": "Staged mdk.dll, mdk-braw.dll and mdk-r3d.dll (git e89bc0b) differ from the official v0.39.0 release (git eed59da) and the 2026-10-09 nightly (git 474d079); only mdk.lib matches and it is identical across both."
+   },
+   {
+    "id": "mdk-ffmpeg9-source",
+    "class": "obligation",
+    "text": "ffmpeg-9.dll is LGPL-2.1-or-later. Its corresponding source is FFmpeg 590fb407b09bbf19aac0ea2fbd0ba16f93494601 with the avbuild patch set applied (patches/master 0001-0035 and patches/common, 40 files, at avbuild d91e8a95, inferred) and the avbuild default configuration recorded in bundled/evidence/ffmpeg-9.dll.strings-evidence.tsv. That source must accompany or be offered with the package; not done here.",
+    "needed_artifact": "A source archive (or root's chosen source route) for FFmpeg 590fb407 plus the avbuild d91e8a95 patch files listed in bundled/evidence/avbuild-d91e8a95-patch-set.tsv."
+   },
+   {
+    "id": "mdk-ffmpeg9-amf-headers",
+    "class": "blocker",
+    "text": "ffmpeg-9.dll compiles AMD AMF encoder code against AMF headers downloaded as AMF-headers-v$AMF_VER.tar.gz, where AMF_VER is a private avbuild repository variable. The version, and so the exact notice text, is not established; no AMF notice is in the package.",
+    "needed_artifact": "AMF_VER for the avbuild run that built ffmpeg-9.dll (public Actions log of wang-bin/avbuild for d91e8a95, VS2026 windows-desktop default job), then License.txt from GPUOpen-LibrariesAndSDKs/AMF at that tag."
+   },
+   {
+    "id": "mdk-ffmpeg9-libva-headers",
+    "class": "blocker",
+    "text": "ffmpeg-9.dll compiles VA-API code (VA 1.19.0) against libva headers that devpkgs takes from the latest Microsoft.Direct3D.VideoAccelerationCompatibilityPack NuGet package at run time. The package version, and so the exact notice text, is not established; no libva-header notice is in the package.",
+    "needed_artifact": "The NuGet package version used by the devpkgs run that produced the avbuild dep-av input, and the licence file inside that package."
+   },
+   {
+    "id": "mdk-ffmpeg9-build-revision",
+    "class": "advisory",
+    "text": "avbuild d91e8a95, nv-codec-headers eddcea9e and the devpkgs dep-av revision (oneVPL 3a3ca48d, zlib da607da7, libva_loader 7d814d7b, pins unchanged 2026-07-12 to 2026-09-29) are inferred from link time and repository history, not from embedded ids. The texts at those pins are exact.",
+    "needed_artifact": null
+   },
+   {
+    "id": "mdk-libass-fribidi-source",
+    "class": "obligation",
+    "text": "libass.dll statically links FriBidi (LGPL-2.1-or-later, b93119f5, 1.0.17). Its corresponding source, and what LGPL-2.1 requires for relinking a statically linked library, must accompany or be offered with the package; not done here.",
+    "needed_artifact": "Root's source route for FriBidi b93119f5 together with the libass af5f116d, HarfBuzz 863d3f77, FreeType 0a0221a1 and devpkgs ce43c819 build files used for libass.dll."
+   },
+   {
+    "id": "mdk-libass-freetype-credit",
+    "class": "obligation",
+    "text": "FreeType is dual-licensed (FTL or GPLv2+, LICENSE.TXT). If the FTL is the elected licence, FTL.TXT asks that distribution documentation acknowledge use of FreeType code; the texts are included, the acknowledgement and the election are not.",
+    "needed_artifact": "Root's licence election for FreeType and, under the FTL, the credit line in distribution documentation."
+   },
+   {
+    "id": "mdk-libass-build-revision",
+    "class": "advisory",
+    "text": "devpkgs ce43c819 (FriBidi b93119f5, FreeType 0a0221a1) is inferred from the embedded HarfBuzz version 14.5.0 and the 2026-09-29T12:36:56Z link time; libass af5f116d is exact from its embedded commit id. HarfBuzz 14.5.0 is embedded exactly, but its source commit 863d3f77 remains inferred from the devpkgs pin; a matching version alone is not an exact commit identity.",
+    "needed_artifact": null
+   }
+  ],
+  "add_resolved": [
+   {
+    "id": "mdk-ffmpeg9-notice",
+    "class": "resolved",
+    "text": "FFmpeg 590fb407 LICENSE.md and COPYING.LGPLv2.1, and the libvpl, zlib, libva_loader, Vulkan-Headers and nv-codec-headers texts at their pins, are in bundled/ffmpeg-9.dll/. The AMF and libva header notices remain open as separate blockers."
+   },
+   {
+    "id": "mdk-libass-notice",
+    "class": "resolved",
+    "text": "libass af5f116d COPYING, HarfBuzz 14.5.0 COPYING, FriBidi 1.0.17 COPYING and AUTHORS, FreeType 2.14.3 LICENSE.TXT, FTL.TXT, GPLv2.TXT and the gzip zlib licence lines are in bundled/libass.dll/."
+   },
+   {
+    "id": "mdk-libass-fribidi-version-lead",
+    "class": "resolved",
+    "text": "The embedded \"FriBidi 1.0.13\" is a version hard-coded in devpkgs projects/fribidi/CMakeLists.txt; the source pin is FriBidi 1.0.17 (b93119f5)."
+   }
+  ]
+ },
+ "review_note": "Root verified all 23 notice bytes against official upstream commits. HarfBuzz commit identity was downgraded to inferred; embedded version remains exact. No legal or public release approval."
+}

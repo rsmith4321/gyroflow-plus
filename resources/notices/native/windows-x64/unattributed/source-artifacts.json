@@ -1,0 +1,128 @@
+{
+ "schema": "gyroflow-plus/software-opengl-source-artifacts/v1",
+ "source_status": "Version-matched official upstream archives retained; not exact Qt build/patch provenance",
+ "notice_review_source_commit": "3c617c290170adb13c190fc6093eb9ecfa14b89f",
+ "archives": [
+  {
+   "name": "mesa-11.2.2.tar.xz",
+   "url": "https://archive.mesa3d.org/older-versions/11.x/11.2.2/mesa-11.2.2.tar.xz",
+   "bytes": 7860932,
+   "sha256": "40e148812388ec7c6d7b6657d5a16e2e8dabba8b97ddfceea5197947647bdfb4"
+  },
+  {
+   "name": "llvm-3.6.2.src.tar.xz",
+   "url": "https://releases.llvm.org/3.6.2/llvm-3.6.2.src.tar.xz",
+   "bytes": 12802380,
+   "sha256": "f60dc158bfda6822de167e87275848969f0558b3134892ff54fced87e4667b94"
+  }
+ ],
+ "llvm_release_tag_comparison": {
+  "tree_sha": "d526bd475207ed98aacd4867912661d36508b5dc",
+  "tree_truncated": false,
+  "official_tag_commit": "ee46064b83e7acd5a215ea5bb1c9708d75de6164",
+  "archive_sha256": "f60dc158bfda6822de167e87275848969f0558b3134892ff54fced87e4667b94",
+  "exact_git_blobs": 15815,
+  "different": [
+   {
+    "path": "utils/vim/llvm.vim",
+    "archive_blob_sha1": "f767fda16f87301cc1cddd52c1af7cfc3bfae389",
+    "tag_blob_sha1": "b7411c3cd31ef339010a14516178512ba2dd6377",
+    "diff_lines": [
+     "--- git-tag\n",
+     "+++ release-tar\n",
+     "@@ -3,3 +3,3 @@\n",
+     " \" Maintainer: The LLVM team, http://llvm.org/",
+     "-\" Version:      $Revision$",
+     "+\" Version:      $Revision: 225830 $",
+     " "
+    ]
+   },
+   {
+    "path": "utils/vim/vimrc",
+    "archive_blob_sha1": "c35eb0ecbbeb409f9b61e1e58a0c4b034df39d63",
+    "tag_blob_sha1": "fd87d767d6f414adde0356b4dd77611af894b7ce",
+    "diff_lines": [
+     "--- git-tag\n",
+     "+++ release-tar\n",
+     "@@ -1,3 +1,3 @@\n",
+     " \" LLVM coding guidelines conformance for VIM",
+     "-\" $Revision$",
+     "+\" $Revision: 176235 $",
+     " \""
+    ]
+   },
+   {
+    "path": "utils/vim/tablegen.vim",
+    "archive_blob_sha1": "40d8d78bba128c1574b48a071d61fb7e4aa1c097",
+    "tag_blob_sha1": "a9b0e4e3a4e7beab71da4ee47fdd7ea3e16a336c",
+    "diff_lines": [
+     "--- git-tag\n",
+     "+++ release-tar\n",
+     "@@ -3,3 +3,3 @@\n",
+     " \" Maintainer: The LLVM team, http://llvm.org/",
+     "-\" Version:    $Revision$",
+     "+\" Version:    $Revision: 151164 $",
+     " "
+    ]
+   }
+  ],
+  "unlisted": [],
+  "special": [],
+  "missing_from_release_archive": [],
+  "gitlinks": [],
+  "public_release_approved": false
+ },
+ "retained_bundle": {
+  "name": "software-opengl-upstream-sources-20261009.tar",
+  "bytes": 20674560,
+  "sha256": "37d36aed945cfeef1356cf0628130321859256d9c562889b187b74a0619e0688",
+  "members": [
+   "mesa-11.2.2.tar.xz",
+   "llvm-3.6.2.src.tar.xz",
+   "SOURCE-REVIEWED.json",
+   "SOURCE-README.txt",
+   "SHA256SUMS.txt"
+  ]
+ },
+ "github_preparation": {
+  "repository": "rsmith4321/gyroflow-plus",
+  "release_id": 408304995,
+  "tag": "codex/ocio-source-prep-20261009",
+  "target_commit": "de78d0da0fa54def28ac6ec08d015aec578d40f0",
+  "observed_draft": true,
+  "observed_published_at": null,
+  "observed_utc": "2026-10-09T22:06:29.287967+00:00",
+  "assets": [
+   {
+    "id": 626300552,
+    "name": "software-opengl-upstream-sources-20261009.tar",
+    "size": 20674560,
+    "digest": "sha256:37d36aed945cfeef1356cf0628130321859256d9c562889b187b74a0619e0688"
+   },
+   {
+    "id": 626300634,
+    "name": "software-opengl-upstream-reviewed.json",
+    "size": 2939,
+    "digest": "sha256:aeb4a9fafe6b01841a1d5074c811a650ed36347834969aedfd9ca446685b8912"
+   },
+   {
+    "id": 626300653,
+    "name": "software-opengl-upstream-README.txt",
+    "size": 1708,
+    "digest": "sha256:3f4dbfd49481afda9fa97294b2e53227f88536207d11863d9a9e6dac6f5ea37a"
+   },
+   {
+    "id": 626300673,
+    "name": "software-opengl-upstream-sources-20261009.sha256",
+    "size": 319,
+    "digest": "sha256:b22616413f650e45eb92a9ea1ed21f7f9b8237166299890ac41e8b7c4db7baba"
+   }
+  ]
+ },
+ "limits": [
+  "Both archives are version-matched upstream source. Qt patches/build configuration and exact linked object list are unestablished.",
+  "The three Vim differences in the LLVM release archive are expanded SVN Revision comments, recorded verbatim; all include/lib files match the official release-tag Git tree.",
+  "The retained source-only draft is unpublished. No app binary, complete corresponding-source claim, written source offer, source-delivery approval or public release approval."
+ ],
+ "public_release_approved": false
+}

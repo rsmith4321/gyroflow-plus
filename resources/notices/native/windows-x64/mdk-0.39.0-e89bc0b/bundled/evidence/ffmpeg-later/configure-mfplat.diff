@@ -1,0 +1,20 @@
+--- a/configure
++++ b/configure
+@@ -7089,7 +7089,7 @@
+ check_type "windows.h" "DPI_AWARENESS_CONTEXT" -D_WIN32_WINNT=0x0A00
+ check_type "windows.h security.h schnlsp.h" SecPkgContext_KeyingMaterialInfo -DSECURITY_WIN32
+ check_type "d3d9.h dxva2api.h" DXVA2_ConfigPictureDecode -D_WIN32_WINNT=0x0602
+-check_func_headers mfapi.h MFCreateAlignedMemoryBuffer -lmfplat
++check_func_headers mfapi.h MFCreateAlignedMemoryBuffer -lMfplat
+ check_type "windows.h windows.graphics.capture.h" __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSession3 -D_WIN32_WINNT=0x0A00 -DWINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION=0x130000 -DCOBJMACROS
+ check_type "windows.h windows.graphics.capture.h" __x_ABI_CWindows_CGraphics_CCapture_CIGraphicsCaptureSession5 -D_WIN32_WINNT=0x0A00 -DWINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION=0x130000 -DCOBJMACROS
+ check_type "windows.h windows.graphics.capture.interop.h" IGraphicsCaptureItemInterop -D_WIN32_WINNT=0x0A00 -DWINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION=0x130000 -DCOBJMACROS
+@@ -7641,7 +7641,7 @@
+     d3d11va_extralibs="-ldxgi -ld3d11"
+     d3d12va_extralibs="-ldxgi -ld3d12"
+     vaapi_win32_extralibs="-ldxgi"
+-    mediafoundation_extralibs="-lmfplat $mediafoundation_extralibs"
++    mediafoundation_extralibs="-lMfplat $mediafoundation_extralibs"
+ fi
+ 
+ enabled libdrm &&

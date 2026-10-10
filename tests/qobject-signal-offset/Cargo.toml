@@ -1,0 +1,7 @@
+[package]
+name = "gyroflow-qobject-offset-repro"
+version = "0.0.0"
+edition = "2021"
+[workspace]
+[dependencies]
+qmetaobject = { git = "https://github.com/AdrianEddy/qmetaobject-rs.git", rev = "ff1e23dcdd722a0c335bbd51f7dcfdb722384db2" }

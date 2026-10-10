@@ -1,0 +1,144 @@
+# Candidate cargo-about 0.9.2 config for Gyroflow+ Rust dependency notices.
+# Task C rust-dependency-notices-v2: v1 config plus exr and libm clarifications;
+# run for real with cargo-about 0.9.2 on public de8bd219 (Linux container).
+# Proposed location: _scripts/about/about.toml (pass with -c; not auto-discovered there).
+
+# Priority order. Apache-2.0 comes first on purpose: about 30 crates offered under
+# "... OR Apache-2.0" ship no licence file, and cargo-about then falls back to the
+# canonical SPDX text, which for MIT/BSD/ISC would lack the copyright line the
+# licence requires us to reproduce. Apache-2.0's canonical text carries no holder.
+accepted = [
+    "Apache-2.0",
+    "MIT",
+    "BSD-3-Clause",
+    "BSD-2-Clause",
+    "ISC",
+    "Zlib",
+    "0BSD",
+    "Unlicense",
+    "BSL-1.0",
+    "Unicode-3.0",
+    "MPL-2.0",
+    "CDLA-Permissive-2.0",
+    "WTFPL",
+    "LGPL-2.1-or-later",
+    "GPL-3.0-or-later",
+]
+
+# Ship-scope filters. Proc-macro crates still appear (cargo-about keeps normal-kind
+# edges, and proc-macros are normal dependencies); that over-includes notices,
+# which is harmless. rust_notices_check.py reports them separately.
+ignore-build-dependencies = true
+ignore-dev-dependencies = true
+
+# No `workarounds`: the built-in "ring" workaround targets ring's old single-file
+# LICENSE and its start markers are absent from ring 0.17.14 (it fails silently
+# at debug level). ring 0.17.14 declares "Apache-2.0 AND ISC" and ships
+# LICENSE-BoringSSL / LICENSE-other-bits, which plain scanning finds.
+
+# Targets are always passed with --target (one Windows run; one Mac run with
+# both Mac triples for a lipo'd universal binary, or the single shipped triple).
+
+# ---- crate clarifications (must come last) --------------------------------
+# Checksums are sha256 of the exact byte slice cargo-about hashes
+# (src/licenses.rs apply_clarification: start/end substring, end inclusive).
+# They were computed from the public crate sources in Cargo's cache with LF line
+# endings preserved. Generate on a host whose checkouts keep upstream line endings
+# (see REPORT, "Host").
+
+# Own crates: no `license` field in Cargo.toml. GPL-3.0-or-later with the
+# additional section 7 permissions at the end of LICENSE.
+[gyroflow.clarify]
+license = "GPL-3.0-or-later"
+[[gyroflow.clarify.files]]
+path = "LICENSE"
+checksum = "68d582065b2bb3f3daf767409f0bccfae1c71b9f72c332d1473a2d2e269b3209"
+
+[gyroflow-core.clarify]
+license = "GPL-3.0-or-later"
+[[gyroflow-core.clarify.files]]
+path = "../../LICENSE"
+checksum = "68d582065b2bb3f3daf767409f0bccfae1c71b9f72c332d1473a2d2e269b3209"
+
+[stabilize_spirv.clarify]
+license = "GPL-3.0-or-later"
+[[stabilize_spirv.clarify.files]]
+path = "../../../../LICENSE"
+checksum = "68d582065b2bb3f3daf767409f0bccfae1c71b9f72c332d1473a2d2e269b3209"
+
+# git dependencies with no `license` field.
+# rs-sync: LICENSE is the LGPL-2.1 text; every source file says
+# "SPDX-License-Identifier: LGPL-2.1-or-later" (src/lib.rs:1).
+[rs-sync.clarify]
+license = "LGPL-2.1-or-later"
+[[rs-sync.clarify.files]]
+path = "LICENSE"
+checksum = "20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331"
+
+# keep-awake: LICENSE is the Apache-2.0 text (template appendix, no holder line).
+[keep-awake.clarify]
+license = "Apache-2.0"
+[[keep-awake.clarify.files]]
+path = "LICENSE"
+checksum = "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+
+# qml-video-rs: LICENSE is MIT, "Copyright (c) 2021 AdrianEddy".
+[qml-video-rs.clarify]
+license = "MIT"
+[[qml-video-rs.clarify.files]]
+path = "LICENSE"
+checksum = "a3acfcc937b02ea81c4ae3985ac23355389a578fd04863a8e955dd99360be4d4"
+
+# qmetaobject / qttypes (git rev ff1e23d): MIT is declared but the text sits at the
+# workspace root, not in the crate directories. `git` entries for git sources are
+# read locally via `cargo locate-project --workspace` (src/licenses/fetch.rs
+# retrieve_local), so this works offline. Same bytes as vendor/qmetaobject-rs/LICENSE.
+[qmetaobject.clarify]
+license = "MIT"
+[[qmetaobject.clarify.git]]
+path = "LICENSE"
+checksum = "7564ed93a1bbad139cebdfdf5e0540c3c30d3f2c22a1f5c744150fd90cb738b6"
+
+[qttypes.clarify]
+license = "MIT"
+[[qttypes.clarify.git]]
+path = "LICENSE"
+checksum = "7564ed93a1bbad139cebdfdf5e0540c3c30d3f2c22a1f5c744150fd90cb738b6"
+
+# breakpad-sys 0.2.0: declares BSD-3-Clause but ships no licence at the crate root.
+# This picks up the Google BSD-3 block, with its copyright line, from
+# breakpad/LICENSE. The other blocks that apply to compiled files (Unicode terms for
+# convert_UTF on every OS; APSL-2.0 and 4-clause UC BSD for the macOS-only
+# breakpad_nlist_64.cc) are carried whole by supplement.json, and are a release
+# decision (REPORT gap G2).
+[breakpad-sys.clarify]
+license = "BSD-3-Clause"
+[[breakpad-sys.clarify.files]]
+path = "breakpad/LICENSE"
+checksum = "052184248051659c97e778a13e36458bb5919892b1214240f2d2deb42e96633a"
+start = "Copyright 2006 Google LLC"
+end = "EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+
+# ---- v2 additions, found by the real cargo-about 0.9.2 run on de8bd219 ----
+# Both crates ship their licence with the copyright holders inside a combined file
+# that cargo-about's detector does not classify at the default 0.8 threshold, so
+# v1 config fell back to holder-less canonical text (gate errors on both targets).
+# The expressions are unchanged from the crates' own `license` fields; only the
+# crate's own file is named as the text.
+
+# exr 1.74.2: LICENSE.md holds two BSD-3-Clause grants with holder lines
+# (OpenEXR contributors; exrs contributors). CRLF bytes.
+[exr.clarify]
+license = "BSD-3-Clause"
+[[exr.clarify.files]]
+path = "LICENSE.md"
+checksum = "97e4d3aa7a9e8ac31979c16ca8bb2b628a9cb72c3362185ad2bf4ad77f43551f"
+
+# libm 0.2.16: LICENSE.txt is the MIT grant, the contributors' Apache-2.0 grant and
+# the copyright list (Jorge Aparicio; musl/Rich Felker et al.; Sun, Schultz, Kargl,
+# Evans, Moshier, Arm).
+[libm.clarify]
+license = "MIT"
+[[libm.clarify.files]]
+path = "LICENSE.txt"
+checksum = "3823dda7cf046602f4b4e77ec8e227863dc4736037cc85bb33d9f19febe16bb7"

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 100 824 824"><defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23262c"/><stop offset="1" stop-color="#0f1013"/></linearGradient><filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-opacity=".35"/></filter></defs><rect x="0" y="0" width="1024" height="1024" fill="url(#bg)"/>
+<defs><clipPath id="frame"><rect x="222" y="222" width="580" height="580" rx="70"/></clipPath>
+<clipPath id="right"><polygon points="560,180 860,180 860,860 460,860"/></clipPath>
+<linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8c9096"/><stop offset="1" stop-color="#a7aaae"/></linearGradient>
+<linearGradient id="skyC" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d7fc4"/><stop offset="1" stop-color="#f2b27a"/></linearGradient></defs>
+<g clip-path="url(#frame)">
+ <rect x="222" y="222" width="580" height="580" fill="url(#skyG)"/>
+ <circle cx="640" cy="420" r="58" fill="#c3c5c8"/>
+ <path d="M222 640 L380 470 L470 560 L590 430 L802 650 V802 H222Z" fill="#6c7076"/>
+ <path d="M222 700 Q512 640 802 700 V802 H222Z" fill="#5a5d62"/>
+ <g clip-path="url(#right)">
+  <rect x="222" y="222" width="580" height="580" fill="url(#skyC)"/>
+  <circle cx="640" cy="420" r="58" fill="#ffd27a"/>
+  <path d="M222 640 L380 470 L470 560 L590 430 L802 650 V802 H222Z" fill="#245a46"/>
+  <path d="M222 700 Q512 640 802 700 V802 H222Z" fill="#183d31"/>
+ </g>
+ <path d="M560 180 L460 860" stroke="#ffffff" stroke-width="10"/>
+</g>
+<rect x="222" y="222" width="580" height="580" rx="70" fill="none" stroke="#ffffff" stroke-opacity=".9" stroke-width="16"/>
+<ellipse cx="512" cy="512" rx="392" ry="120" fill="none" stroke="#a2dbbd" stroke-width="14" stroke-opacity=".85" transform="rotate(-14 512 512)" stroke-dasharray="1400 180"/>
+</svg>

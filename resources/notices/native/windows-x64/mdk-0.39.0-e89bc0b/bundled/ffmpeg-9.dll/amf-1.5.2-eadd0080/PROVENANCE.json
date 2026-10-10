@@ -1,0 +1,474 @@
+{
+  "schema": 1,
+  "component": "AMD AMF headers",
+  "version": "1.5.2",
+  "repository": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF",
+  "commit": "eadd00804d5f7e5cd8c85d540073198312870776",
+  "tag_object": "eae4a4b7efc35f8b0a3977a0984c0d642efc4e63",
+  "archive_url": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/releases/download/v1.5.2/AMF-headers-v1.5.2.tar.gz",
+  "archive_bytes": 83716,
+  "archive_sha256": "d3c12eb324edf05e214608b6a395a51dd95770ed9d45520185d6c3a206811c99",
+  "license_blob": "7e6e2140915b281143e056ff88c941f7d31d64c2",
+  "license_sha256": "eb297397aaa455b5668ab67d216b83828466152dab123fa92384c6ec16b74170",
+  "basis": "AMF_VER 1.5.2 in the successful VS2026 lite Actions job; corresponding artifact defined section payloads match the official and staged FFmpeg DLL. Raw DLLs differ only in SizeOfInitializedData and padding beyond .text VirtualSize; retained build-content record describes all differences.",
+  "retention": "Full upstream LICENSE, including standards notice, and complete verbatim leading comment preambles from every one of 57 release headers; exact byte deduplication gives 34 retained preambles. The AV1 header has the MIT grant without a literal MIT label.",
+  "files": [
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VideoCapture.h",
+      "bytes": 2863,
+      "sha256": "08f0162a631833f847d1b4b751e41e28b147a79ed19545b43631222d22e74507",
+      "notice_bytes": 1969,
+      "notice_sha256": "486d5c5314348792dee36fde4686b1ee642115767aa05d2423b2cf64e007deec",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/486d5c5314348792dee36fde4686b1ee642115767aa05d2423b2cf64e007deec.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGAudioConverter.h",
+      "bytes": 3586,
+      "sha256": "9dde7e850c8bdecda82b0cee1b331294f6cc91b32b1d1504344a023cd4dda8af",
+      "notice_bytes": 1986,
+      "notice_sha256": "8dd8dfb337a5027c5be153a053854ee3cb7594b9726d0c6ab42e9cbb217e7086",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/8dd8dfb337a5027c5be153a053854ee3cb7594b9726d0c6ab42e9cbb217e7086.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGVideoDecoder.h",
+      "bytes": 3036,
+      "sha256": "297b0ab2291baeb44f30f03ffbf791a5603289ab34f625d60a33150f2be1f7b6",
+      "notice_bytes": 1979,
+      "notice_sha256": "72b76de65b858a8c883bc97f875c127707c7703ca487c4f9b55c8db980bacc3d",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/72b76de65b858a8c883bc97f875c127707c7703ca487c4f9b55c8db980bacc3d.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGFileDemuxer.h",
+      "bytes": 3631,
+      "sha256": "be992e14086b04e2a7b5503471a6c262c58fda163c45ad6d00f8e425d9f4a820",
+      "notice_bytes": 1974,
+      "notice_sha256": "fd5384ba46f5aee151a59dd738e9f78e83e4410532a581bc8cee8fa519b4d750",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/fd5384ba46f5aee151a59dd738e9f78e83e4410532a581bc8cee8fa519b4d750.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/ZCamLiveStream.h",
+      "bytes": 4803,
+      "sha256": "3c6e6515a8fec111eb1847e349124a8c66c1e78be2d148bc0b8f85b9d9994e2d",
+      "notice_bytes": 1969,
+      "notice_sha256": "486d5c5314348792dee36fde4686b1ee642115767aa05d2423b2cf64e007deec",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/486d5c5314348792dee36fde4686b1ee642115767aa05d2423b2cf64e007deec.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/Component.h",
+      "bytes": 25393,
+      "sha256": "f3f18680d55a65fdf5e0351d3fde1dcd9bdd2d6caec268c8c915c4227ffa1edc",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/AMFXInput.h",
+      "bytes": 6321,
+      "sha256": "41303e3038e8e5717e174cd3e37625163d244bd3ed0bc2d47d8ad347cce65cc5",
+      "notice_bytes": 1736,
+      "notice_sha256": "7258f9e75dcddaf8c98b9297c7568137537a4a46ac3c360296d5b1edcb583666",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/7258f9e75dcddaf8c98b9297c7568137537a4a46ac3c360296d5b1edcb583666.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/CursorCapture.h",
+      "bytes": 2486,
+      "sha256": "7c22337ff313320bd7fe20ef0fb00756735012367a5daa7c621725030f578863",
+      "notice_bytes": 1975,
+      "notice_sha256": "9a21f01a31782f1b0e0c5b8187fe1a16e904f5612ab411b268e6b06983ebd296",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/9a21f01a31782f1b0e0c5b8187fe1a16e904f5612ab411b268e6b06983ebd296.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VQEnhancer.h",
+      "bytes": 2633,
+      "sha256": "146e7cd35acc846f6b75b696bbe13a5d790f885bc23d9913e7de66f515da789b",
+      "notice_bytes": 1734,
+      "notice_sha256": "7d4ea6bf4a55d84e6cac931fcf55063cf65120a8d4616220a29ce89b8bb3a980",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/7d4ea6bf4a55d84e6cac931fcf55063cf65120a8d4616220a29ce89b8bb3a980.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/ChromaKey.h",
+      "bytes": 4937,
+      "sha256": "a3a89490d44adaffc2fa2cccc14313f8f65e5af7a6431d89d85bd80e36c628a1",
+      "notice_bytes": 1736,
+      "notice_sha256": "82fb87bf462a2277ab097c966bc7aa70649de08fcd70f51f4e4106576efd9dea",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/82fb87bf462a2277ab097c966bc7aa70649de08fcd70f51f4e4106576efd9dea.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGFileMuxer.h",
+      "bytes": 2948,
+      "sha256": "3fefbe1aa7aaa4c000a97efb2e5ba26dc87ec15d11b07ceb0f43c768a1d589a2",
+      "notice_bytes": 1972,
+      "notice_sha256": "a36bd6230b7a52aaad55cde681053778a4c82b8e307c8ecd2169895da06a4a0e",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/a36bd6230b7a52aaad55cde681053778a4c82b8e307c8ecd2169895da06a4a0e.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/HQScaler.h",
+      "bytes": 3699,
+      "sha256": "714bd1aff002d4df5f2d468efdd487a5aeb46437b7b036abaaa286d953c55d13",
+      "notice_bytes": 1734,
+      "notice_sha256": "7d4ea6bf4a55d84e6cac931fcf55063cf65120a8d4616220a29ce89b8bb3a980",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/7d4ea6bf4a55d84e6cac931fcf55063cf65120a8d4616220a29ce89b8bb3a980.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGComponents.h",
+      "bytes": 2374,
+      "sha256": "87a9ae9480c3af6210b1282d1768e36673fcc1ef4970afa6edaa74481cf0831b",
+      "notice_bytes": 1969,
+      "notice_sha256": "9e83a68b5854261298f7ffde145a747fe4e8ac85a33421ae0d442a1a77d40075",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/9e83a68b5854261298f7ffde145a747fe4e8ac85a33421ae0d442a1a77d40075.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/AudioCapture.h",
+      "bytes": 4633,
+      "sha256": "05a9ebc32217e69b6c4659f4744dbda9e5a2792f3e56bc1bcf61c15dcfd46cab",
+      "notice_bytes": 1974,
+      "notice_sha256": "2603e95561749b2d5289655dc09cdda3de92fbf5824339a8c76fd1393c8fd7c1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/2603e95561749b2d5289655dc09cdda3de92fbf5824339a8c76fd1393c8fd7c1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/PreProcessing.h",
+      "bytes": 3736,
+      "sha256": "5a01d71e128cf8bcaa4945fe76d9aad0156c409df3b25616a75645ef15972dc3",
+      "notice_bytes": 1730,
+      "notice_sha256": "45c144ede891b53c8b0d32bacb6330c3e1ed65dda14fbefd537f0cb3b8f51ece",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/45c144ede891b53c8b0d32bacb6330c3e1ed65dda14fbefd537f0cb3b8f51ece.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGAudioEncoder.h",
+      "bytes": 4131,
+      "sha256": "2493067de9b3f540ffaae8a6466e57ef75af4772f037a81785b11ee9511029f5",
+      "notice_bytes": 1979,
+      "notice_sha256": "70389d93bc5363710d2f015d0e3f090ef098a2153509431b5c5837410d3016ac",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/70389d93bc5363710d2f015d0e3f090ef098a2153509431b5c5837410d3016ac.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FRC.h",
+      "bytes": 3756,
+      "sha256": "5779e08444fa55c2cf91ccc655a012d17110f1b8336f197eabf0b8fef755b0ea",
+      "notice_bytes": 1730,
+      "notice_sha256": "64a1bba4e7cb79697c547e5c57e0ef8194ae4c60b950496cfeeb6a9851be5ea0",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/64a1bba4e7cb79697c547e5c57e0ef8194ae4c60b950496cfeeb6a9851be5ea0.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGEncoderH264.h",
+      "bytes": 2149,
+      "sha256": "3dae38db05bc55af525000c28559ff76625e0cddc2ad2c4c2af52eab69e915bc",
+      "notice_bytes": 1978,
+      "notice_sha256": "6583d9e270085715dba55c164b0bbb9adb0d37b9609bc386ceac5729bf51147a",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/6583d9e270085715dba55c164b0bbb9adb0d37b9609bc386ceac5729bf51147a.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGEncoderHEVC.h",
+      "bytes": 2149,
+      "sha256": "3ad5cc5d3284b253a671499efa29c7a46b83a6e6373aad7142c7adcbfae31875",
+      "notice_bytes": 1978,
+      "notice_sha256": "a5f38cc710e6502c5ac1e596b9feb3c94e8f85d05bb61938e9ae0deb575b22f1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/a5f38cc710e6502c5ac1e596b9feb3c94e8f85d05bb61938e9ae0deb575b22f1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/Ambisonic2SRenderer.h",
+      "bytes": 4333,
+      "sha256": "27770ae77d2f7a16eca9ab1f8b9ce87cf0c0350425b950bdd39189c2c91a519a",
+      "notice_bytes": 1991,
+      "notice_sha256": "50eef705458413ebaeb4e4f185612eb437e5d31a13a174eb2b742f211fc4c5df",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/50eef705458413ebaeb4e4f185612eb437e5d31a13a174eb2b742f211fc4c5df.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/PreAnalysis.h",
+      "bytes": 7959,
+      "sha256": "801a197f578104c4481d21f68c3dd6ea8fbe2f9774424277499c5de70d213662",
+      "notice_bytes": 1730,
+      "notice_sha256": "1e389c7b8f2e251c6b2d3dcd8094ebeadeb228459b4841b898f069389b2a43ba",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/1e389c7b8f2e251c6b2d3dcd8094ebeadeb228459b4841b898f069389b2a43ba.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VideoStitch.h",
+      "bytes": 7082,
+      "sha256": "9bc2d8477d67693b0cd4d433fbc6a5812277190f67be5f188f0206b463f256ec",
+      "notice_bytes": 1737,
+      "notice_sha256": "aefcbd2d280111045b1220ef7abe4d1ec13a3fef43e8f332b0e789caaf174dfd",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/aefcbd2d280111045b1220ef7abe4d1ec13a3fef43e8f332b0e789caaf174dfd.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/ColorSpace.h",
+      "bytes": 9453,
+      "sha256": "4ef6392bb4b9c6b05d00b5cd1486b99866e40e61449206a3a515063e4ffd289b",
+      "notice_bytes": 1960,
+      "notice_sha256": "26a8f4acc6a95f82f6801c986463152a58b480f28fd76049e267020cbeb7a710",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/26a8f4acc6a95f82f6801c986463152a58b480f28fd76049e267020cbeb7a710.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/MediaSource.h",
+      "bytes": 3680,
+      "sha256": "c4e168d29e3f7d9318435958c3c784ad4c497159a617bd7a5598a2951b1b15f6",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VideoDecoderUVD.h",
+      "bytes": 10062,
+      "sha256": "588622f7d945c85c1ed334b497174fd46031e01664338bcf59c4b242920df886",
+      "notice_bytes": 1972,
+      "notice_sha256": "3e8ba57fb74b656f7a572670d0f6916fd723fc8911d97e3185852f7856e86cc2",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3e8ba57fb74b656f7a572670d0f6916fd723fc8911d97e3185852f7856e86cc2.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VideoConverter.h",
+      "bytes": 8866,
+      "sha256": "a7d565fbe50d82db7be7922a0d4408e989a632bc46d38cba6d9f107ad8d6dcb5",
+      "notice_bytes": 1978,
+      "notice_sha256": "513caa441b1b7e6711e071d578a0d054cdc5a4fee67722d908f1e9d32961b237",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/513caa441b1b7e6711e071d578a0d054cdc5a4fee67722d908f1e9d32961b237.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGEncoderAV1.h",
+      "bytes": 2141,
+      "sha256": "5d64b7d2d50ca17ba601885dcdb51bb16ef4dccf88323437967e8524f26194bc",
+      "notice_bytes": 1974,
+      "notice_sha256": "2c5f725f8c49ec58496b2ce6a7964b9f999b4e016c29b338d4db2367337f1894",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/2c5f725f8c49ec58496b2ce6a7964b9f999b4e016c29b338d4db2367337f1894.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/Capture.h",
+      "bytes": 10327,
+      "sha256": "bbe91a1e744685a36269d3b6af9cd36d9716ee748c8d0ed95255a6a42b46892f",
+      "notice_bytes": 1967,
+      "notice_sha256": "c1e91487f1df88f1312a54f3d3e9905f82fcdb7a56f713d1752a76c3c1e3fec9",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/c1e91487f1df88f1312a54f3d3e9905f82fcdb7a56f713d1752a76c3c1e3fec9.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VideoEncoderVCE.h",
+      "bytes": 31462,
+      "sha256": "8dcddd6df00debd096db29f00fa155e3e179ebc6ea4c6c1edc5027eb857cffd5",
+      "notice_bytes": 1978,
+      "notice_sha256": "e91106c84e56640ce2e841e57c29f5cb85c65bae67363b89797a472f77949ffa",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/e91106c84e56640ce2e841e57c29f5cb85c65bae67363b89797a472f77949ffa.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/SupportedCodecs.h",
+      "bytes": 2895,
+      "sha256": "550900e56c8254bf9c42d1b1d6538a390f7f7d3bf4826ee385b019585cb6cd22",
+      "notice_bytes": 2040,
+      "notice_sha256": "a69af583386dac313f069e6af165d2c5a06dac458cc7a6f4103cacb436b90ae8",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/a69af583386dac313f069e6af165d2c5a06dac458cc7a6f4103cacb436b90ae8.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/FFMPEGAudioDecoder.h",
+      "bytes": 4358,
+      "sha256": "92f50d789bc18d5ebd143b2925e124594a89110eef7efaa8189eb063bf2f3aa8",
+      "notice_bytes": 1979,
+      "notice_sha256": "cd91ad948c33bdd42475168cbacf77cf46d56650f844bd0db09d2806c6013af2",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/cd91ad948c33bdd42475168cbacf77cf46d56650f844bd0db09d2806c6013af2.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VideoEncoderAV1.h",
+      "bytes": 35845,
+      "sha256": "2c4e18f6d0be4701d9a9d9ad4298ed5d7ed7c1fd7a909995c4e745874d8203a0",
+      "notice_bytes": 1406,
+      "notice_sha256": "251c6e80d2802ea90bd1b291351ac00e45ad4ed5e4a1dc573be5b47259b1cbf4",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/251c6e80d2802ea90bd1b291351ac00e45ad4ed5e4a1dc573be5b47259b1cbf4.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/DisplayCapture.h",
+      "bytes": 5734,
+      "sha256": "9c661b9d23dc240e59758246865d8a3a3162b5c61077b54417d07bb0b9d2fa2c",
+      "notice_bytes": 1976,
+      "notice_sha256": "2162672896311989ec30ca8cd389bea46ddf924b335fb662f817681bdaf8af30",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/2162672896311989ec30ca8cd389bea46ddf924b335fb662f817681bdaf8af30.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/VideoEncoderHEVC.h",
+      "bytes": 29453,
+      "sha256": "138ad005e4b7131582fc1f82dad8851c1362f0d156bf62f10a64e462c8a037c0",
+      "notice_bytes": 1402,
+      "notice_sha256": "9458b420bf2fc06e8de02afdbf1193dd642c878c05ba691a32b33f7fa1091235",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/9458b420bf2fc06e8de02afdbf1193dd642c878c05ba691a32b33f7fa1091235.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/components/ComponentCaps.h",
+      "bytes": 8420,
+      "sha256": "2479eb2a6174a1b63552c509abac1b701eddcab5a5eac5a7f4d9f40274d588b4",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Context.h",
+      "bytes": 44321,
+      "sha256": "f9b4acb784038aad234ddec490e5f6ad6dacc4b14794eb84f3523d56dc3d6dd2",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Result.h",
+      "bytes": 5655,
+      "sha256": "a469ff33875484b5762199da757819056ff4a7535bfdcec1f4cf2ffc403b98f2",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Variant.h",
+      "bytes": 92794,
+      "sha256": "5d15e778f3b846fa6eb95737e7222e0726b09615eb6270aac12bd2caa7137234",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Factory.h",
+      "bytes": 6139,
+      "sha256": "644814e97dd359f08d66a73748b60262149b106d28423c31b573cecb4be57979",
+      "notice_bytes": 1730,
+      "notice_sha256": "3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Plane.h",
+      "bytes": 5260,
+      "sha256": "5ad5165e9de2afcfc2da828e8704c838b1f82e8ead7422fbcfc32c758672e1f3",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/CurrentTime.h",
+      "bytes": 2165,
+      "sha256": "76d16ba57d48ae9e457f3d904698a1e7c625007ac8887db9bcecdb90fd36d835",
+      "notice_bytes": 1155,
+      "notice_sha256": "3cd69a91bd9c21eb9da4c0d3e2707114acd63389f7412169df6746882fa5cfa9",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3cd69a91bd9c21eb9da4c0d3e2707114acd63389f7412169df6746882fa5cfa9.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Buffer.h",
+      "bytes": 14987,
+      "sha256": "3e52733b46e168f1b0118381df1ce17eed17353ca89b39c77394f59e254aef67",
+      "notice_bytes": 1730,
+      "notice_sha256": "3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Data.h",
+      "bytes": 9350,
+      "sha256": "eaac4d80dd3215638c70f8a4ca01791d26d9df77586f665a772bb51907a8035b",
+      "notice_bytes": 1730,
+      "notice_sha256": "3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/AudioBuffer.h",
+      "bytes": 11816,
+      "sha256": "74b4bbc22c66520c233f258dba0642c3f4de66ae02d16201c3e224f9238b5d5d",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/VulkanAMF.h",
+      "bytes": 6319,
+      "sha256": "a7cd8455fb5dd1b7a09bb4a770235d4cde7cf9549a0c6604dc5300e0c5e6ba4e",
+      "notice_bytes": 1730,
+      "notice_sha256": "3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Platform.h",
+      "bytes": 16398,
+      "sha256": "c060dc2466d0d886d1a09e5fea891aa3bc2efd08dc8d5ef59faa4d0a7f42abd4",
+      "notice_bytes": 1730,
+      "notice_sha256": "3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/ComputeFactory.h",
+      "bytes": 8147,
+      "sha256": "50acf69fb670bc6cf093384d1b698bf9e44cda8dd49e02ef24eacfb86ad8ccae",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Version.h",
+      "bytes": 2878,
+      "sha256": "739f6559891d627fc373bfd63c4bcc3c8a432766703928d94cc1b92bc7bcfdf3",
+      "notice_bytes": 1734,
+      "notice_sha256": "b91a907c8530e53c93b92683f8c2200811029e630214532a245e933e1a4a7cb7",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b91a907c8530e53c93b92683f8c2200811029e630214532a245e933e1a4a7cb7.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Dump.h",
+      "bytes": 5435,
+      "sha256": "a5e0fa9290cae767a4d135962ee5e30302e65e8d0ca5e016c620e72b759c86c6",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Trace.h",
+      "bytes": 9835,
+      "sha256": "ae8c5fee671f02b90d3ccab312cfa6f74424351f070a7dd4ed7aba437fd55c30",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Surface.h",
+      "bytes": 23758,
+      "sha256": "2f7f899a9f6291e0b02a447af6dd0e2c367a02271e7295c26cfd3b15de7d82a9",
+      "notice_bytes": 1730,
+      "notice_sha256": "3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Debug.h",
+      "bytes": 3317,
+      "sha256": "56666589bf6ad20c6286a048da751c2d7722f70c73d962ee3c205a6d709b6aff",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/D3D12AMF.h",
+      "bytes": 3512,
+      "sha256": "f05771305598b534e1efa0dd28825267ea87418c477b198e373f6764d060c666",
+      "notice_bytes": 1730,
+      "notice_sha256": "3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/3a1462053635a930534b4a6a3831e87281d6fd5181c1c4139a48bd85bd369dd1.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Compute.h",
+      "bytes": 18620,
+      "sha256": "dc35befae2cecf5d2b866632a8b16c2f2ec3a543a6b474f941a33fcd7a8d1e0a",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/Interface.h",
+      "bytes": 8345,
+      "sha256": "304f6d6077e9b0733859d44a5e43a343ae374c8fe72c7d79741c0aca89c21162",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/PropertyStorageEx.h",
+      "bytes": 10249,
+      "sha256": "871136e46586baa1fc77121935b503aaa16523d006c3e435ce50698605675fad",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    },
+    {
+      "path": "amf-headers-v1.5.2/AMF/core/PropertyStorage.h",
+      "bytes": 12981,
+      "sha256": "0059b787e78cd7c4e57212ccaab56ad7e17e9474a31337da0eac5b2d056a5dd8",
+      "notice_bytes": 1734,
+      "notice_sha256": "b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c",
+      "retained_notice": "mdk-0.39.0-e89bc0b/bundled/ffmpeg-9.dll/amf-1.5.2-eadd0080/header-notices/b43a0c13133eeeb90068d6b8b767fd8e10488ad0ff61755c74dd9cabd03d429c.txt"
+    }
+  ],
+  "limits": "No raw DLL identity, complete corresponding source, provider modification identity, relinkability, codec patent license, or public release approval is claimed."
+}

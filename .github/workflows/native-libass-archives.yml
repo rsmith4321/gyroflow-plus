@@ -1,0 +1,78 @@
+name: Native libass retained source archives
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-libass-source-qualification
+  cancel-in-progress: false
+
+jobs:
+  fetch-retained-source:
+    if: >-
+      github.repository == 'rsmith4321/gyrograde' &&
+      github.event_name == 'workflow_dispatch' &&
+      github.ref == 'refs/heads/codex/lut-preview-controls'
+    runs-on: windows-2025
+    timeout-minutes: 4
+    # GitHub hides draft releases from contents:read tokens (run 38017447900).
+    # This isolated job downloads inert bytes only: no checkout or source execution.
+    permissions:
+      contents: write
+    steps:
+      - name: Acquire retained source bundle
+        timeout-minutes: 2
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          gh release download codex/ocio-source-prep-20261009 --repo rsmith4321/gyrograde --pattern libass-retained-source-archives-v18.zip --dir "$env:RUNNER_TEMP/libass-source-input"
+          if ($LASTEXITCODE -ne 0) { throw 'Retained source download failed.' }
+          $path = Join-Path $env:RUNNER_TEMP 'libass-source-input/libass-retained-source-archives-v18.zip'
+          if ((Get-Item -LiteralPath $path).Length -ne 62447389 -or (Get-FileHash -Algorithm SHA256 -LiteralPath $path).Hash.ToLowerInvariant() -ne '8cdbf56eb72add8f592bccd9dfc93a39395d51e4bc91c77f67d6781a5e8ea2e5') { throw 'Retained source identity mismatch.' }
+      - name: Pass the verified inert archive to the read-only build job
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: retained-libass-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/libass-source-input/libass-retained-source-archives-v18.zip
+          if-no-files-found: error
+          retention-days: 1
+
+  source-rebuild:
+    needs: fetch-retained-source
+    runs-on: windows-2025
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout reviewed build glue
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          submodules: false
+          fetch-depth: 1
+      - name: Receive the inert archive from this run
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: retained-libass-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/libass-source-input
+      - name: Rebuild retained source with original assembly enabled
+        timeout-minutes: 16
+        env:
+          GYROFLOWPLUS_LIBASS_SOURCE_MODE: archives
+          LIBASS_SOURCE_BUNDLE: ${{ runner.temp }}/libass-source-input/libass-retained-source-archives-v18.zip
+        run: python -I _scripts/notices/rebuild_libass_windows.py
+      - name: Retain text evidence only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-libass-archive-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            native-source-evidence/*.json
+            native-source-evidence/*.log
+          if-no-files-found: error
+          retention-days: 14
